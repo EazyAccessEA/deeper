@@ -104,6 +104,8 @@ Those numbers answer one question: is deeper worth maintaining, and for which ag
 cd site && npm install && npm run dev
 ```
 
+It runs on Cloudflare as static files. To publish a change: `cd site && npm run build && npx wrangler deploy`.
+
 ## Licence
 
 Apache 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
