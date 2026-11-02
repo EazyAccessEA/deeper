@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import Base from "../layouts/Base.astro";
 import Markup from "../components/Markup.astro";
 import Copy from "../components/Copy.astro";
-import { averages, wins, pairs } from "../lib/evidence";
+import { averages2, round2, bestCount } from "../lib/evidence";
 import pencil from "../assets/pencil-tip.webp";
 
 const questions = [
@@ -41,16 +41,18 @@ const questions = [
 
   <section class="wrap block evidence">
     <div class="ev-copy">
-      <h2>{wins} of {pairs.length} blind pairs.</h2>
-      <p class="muted">Five real tasks, rewritten with and without deeper, scored by a judge that didn't know which was which. Scope is the weak spot: on one task deeper added an A/B test nobody asked for.</p>
+      <h2>Best on {bestCount("v1.1b")} of {round2.length} blind tasks.</h2>
+      <p class="muted">Five real tasks, each rewritten without the skill and by two versions of deeper, then scored in one pass by a judge that didn't know which was which. Version 1.1 stops adding work you didn't ask for and keeps every check.</p>
       <a href="/research">Every prompt, score and reason</a>
     </div>
     <table>
-      <thead><tr><th scope="col">Out of 5</th><th scope="col">No skill</th><th scope="col">deeper</th></tr></thead>
+      <thead><tr><th scope="col">Average</th><th scope="col">No skill</th><th scope="col">1.0</th><th scope="col">1.1</th></tr></thead>
       <tbody>
-        {averages.map((a) => (
-          <tr><th scope="row">{a.label}</th><td>{a.plain}</td><td class:list={{ up: Number(a.deeper) > Number(a.plain) }}>{a.deeper}</td></tr>
-        ))}
+        {averages2.map((a) => {
+          const lowerIsBetter = a.label.startsWith("Extra");
+          const better = lowerIsBetter ? Number(a["v1.1b"]) < Number(a["v1.0"]) : Number(a["v1.1b"]) > Number(a["v1.0"]);
+          return <tr><th scope="row">{a.label}</th><td>{a.plain}</td><td>{a["v1.0"]}</td><td class:list={{ up: better }}>{a["v1.1b"]}</td></tr>;
+        })}
       </tbody>
     </table>
   </section>
@@ -86,7 +88,7 @@ const questions = [
   .ev-copy p { margin: 1rem 0; max-width: 30em; }
   .ev-copy a { display: inline-flex; align-items: center; min-height: 2.75rem; }
   .evidence tbody th { font-weight: 400; }
-  .evidence td { font-size: 1.15rem; font-weight: 500; width: 5.5rem; }
+  .evidence td { font-size: 1.15rem; font-weight: 500; width: 4.5rem; }
   .evidence td.up { color: var(--red); }
   .evidence tbody tr + tr { border-top: 1px solid var(--rule); }
 

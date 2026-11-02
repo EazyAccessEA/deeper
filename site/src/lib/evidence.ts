@@ -62,3 +62,43 @@ const avg = (arm: "plain" | "deeper", m: string) =>
 
 export const averages = MEASURES.map(([k, label]) => ({ label, plain: avg("plain", k), deeper: avg("deeper", k) }));
 export const wins = pairs.filter((p) => p.winner === "deeper").length;
+
+// Round 2: no skill, 1.0, the first guard and the final 1.1, judged blind in one pass.
+export const ARMS = [
+  ["plain", "No skill"],
+  ["v1.0", "deeper 1.0"],
+  ["v1.1a", "First 1.1 draft"],
+  ["v1.1b", "deeper 1.1"],
+] as const;
+type Arm = (typeof ARMS)[number][0];
+const label = Object.fromEntries(ARMS) as Record<Arm, string>;
+const key4: Record<string, Record<string, Arm>> = JSON.parse(read("v1.1/round2-key.json"));
+const judge4: Record<string, any> = JSON.parse(read("v1.1/round2-judge.json"));
+
+export const round2 = Object.keys(key4).sort().map((id) => {
+  const byArm = Object.fromEntries(
+    Object.entries(key4[id]).map(([letter, arm]) => [arm, judge4[id][letter]]),
+  ) as Record<Arm, any>;
+  const best = key4[id][judge4[id].best] ?? "tie";
+  return {
+    id,
+    short: SHORT[id],
+    task: tasks[id],
+    byArm,
+    best,
+    // The judge wrote "A" to "D"; swap in the real labels, leaving "A/B test" alone.
+    reason: (judge4[id].reason as string)
+      .replace(/A\/B/g, "\u0000")
+      .replace(/\b([A-D])('s)?\b/g, (_: string, l: string, s = "") => label[key4[id][l]] + s)
+      .replace(/\u0000/g, "A/B"),
+  };
+});
+
+const avg2 = (arm: Arm, m: string) =>
+  (round2.reduce((s, r) => s + (m === "added" ? r.byArm[arm].added.length : r.byArm[arm][m]), 0) / round2.length).toFixed(1);
+
+export const averages2 = [...MEASURES, ["added", "Extra deliverables per task"]].map(([k, l]) => ({
+  label: l,
+  ...Object.fromEntries(ARMS.map(([a]) => [a, avg2(a, k)])),
+})) as Array<{ label: string } & Record<Arm, string>>;
+export const bestCount = (arm: Arm) => round2.filter((r) => r.best === arm).length;

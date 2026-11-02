@@ -1,51 +1,63 @@
 ---
 import Base from "../layouts/Base.astro";
-import { pairs, averages, wins, MEASURES } from "../lib/evidence";
+import { averages, averages2, round2, bestCount, ARMS, MEASURES } from "../lib/evidence";
 const gh = "https://github.com/EazyAccessEA/deeper/blob/main/examples/raw";
+const name = Object.fromEntries(ARMS);
 ---
-<Base title="Research | deeper" description="A blind test of /deeper against a plain rewrite on five real tasks, with every prompt and score.">
+<Base title="Research | deeper" description="Blind tests of deeper against a plain rewrite on five real tasks, with every prompt, score and reason.">
   <article class="wrap page">
     <div class="prose">
-      <h1>The blind test</h1>
-      <p>Five tasks from real use, with names and project details taken out. Each was rewritten twice and judged blind. /deeper won {wins} of {pairs.length}.</p>
+      <h1>The blind tests</h1>
+      <p>Five tasks from real use, with names and project details taken out: a product caption, book typesetting, selling a car, moving an app off Vercel and tidying a Downloads folder. Each test rewrote them in several ways and had a judge score the results without knowing which was which. deeper 1.1 was judged best on {bestCount("v1.1b")} of {round2.length}.</p>
 
-      <h2>How it ran</h2>
+      <h2>Why there's a 1.1</h2>
+      <p>deeper 1.0 made prompts more expert, but it also grew them. In a sample of 40 of my own past runs, 33 asked for at least one deliverable I hadn't. Version 1.1 adds a rule: the prompt asks for the same deliverables as the task, and anything else goes on one line, "Worth knowing, not in this task", for you to choose.</p>
+      <p>The first wording of that rule kept scope tight but thinned the methods and checks. The final wording keeps every check that tests what you asked for, however much work it takes, and only cuts things you'd be left to keep or maintain.</p>
+
+      <h2>How the current test ran</h2>
       <ol>
-        <li>One agent rewrote each task as a better prompt, with no skill.</li>
-        <li>A second agent ran /deeper on the same tasks, told it had no files, shell or installed skills.</li>
-        <li>A script shuffled each pair into A and B and kept the answer key in a separate file.</li>
-        <li>A judge on a different model saw only the shuffled pairs. It scored four measures from 1 to 5 and picked a winner per task.</li>
+        <li>The same five tasks were rewritten four ways: with no skill, with deeper 1.0, with the first 1.1 draft and with the final 1.1.</li>
+        <li>A script shuffled the four prompts for each task into A to D and kept the answer key in a separate file.</li>
+        <li>One judge on a different model scored all of them in a single pass, so its quirks hit every version equally. It also listed anything each prompt added beyond the task.</li>
       </ol>
-      <p>Both writers ran on Claude Opus 5.5 and the judge on Claude Sonnet 5.5. Everything is in <a href={gh}>examples/raw</a>: the tasks, both sets of prompts, the shuffled pairs, the key and the judge's reply.</p>
+      <p>The writers ran on Claude Opus 5.5 and the judge on Claude Sonnet 5.5. Every prompt, key and score is in <a href={`${gh}/v1.1/`}>examples/raw/v1.1</a>.</p>
     </div>
 
     <h2 class="sec">Averages</h2>
-    <table class="avg">
-      <thead><tr><th scope="col">Measure</th><th scope="col">No skill</th><th scope="col">/deeper</th></tr></thead>
-      <tbody>{averages.map((a) => <tr><th scope="row">{a.label}</th><td>{a.plain}</td><td>{a.deeper}</td></tr>)}</tbody>
-    </table>
+    <div class="scroll">
+      <table class="avg">
+        <thead><tr><th scope="col">Out of 5</th>{ARMS.map(([, l]) => <th scope="col">{l}</th>)}</tr></thead>
+        <tbody>{averages2.map((a) => <tr><th scope="row">{a.label}</th>{ARMS.map(([k]) => <td>{a[k]}</td>)}</tr>)}</tbody>
+      </table>
+    </div>
 
     <h2 class="sec">Task by task</h2>
     <div class="tasks">
-      {pairs.map((p) => (
+      {round2.map((r) => (
         <section class="task">
-          <h3>{p.id} {p.short}</h3>
-          <p class="muted">{p.task}</p>
-          <table>
-            <thead><tr><th scope="col"></th>{MEASURES.map(([, l]) => <th scope="col">{l.split(" ").slice(0, 2).join(" ")}</th>)}</tr></thead>
-            <tbody>
-              <tr><th scope="row">No skill</th>{MEASURES.map(([k]) => <td>{p.scores.plain[k]}</td>)}</tr>
-              <tr><th scope="row">/deeper</th>{MEASURES.map(([k]) => <td>{p.scores.deeper[k]}</td>)}</tr>
-            </tbody>
-          </table>
-          <p class="why"><b>{p.winner === "deeper" ? "/deeper won." : p.winner === "tie" ? "Tie." : "No skill won."}</b> {p.reason}</p>
+          <h3>{r.id} {r.short}</h3>
+          <p class="muted">{r.task}</p>
+          <div class="scroll">
+            <table>
+              <thead><tr><th scope="col"></th>{MEASURES.map(([, l]) => <th scope="col">{l.split(" ").slice(0, 2).join(" ")}</th>)}<th scope="col">Added</th></tr></thead>
+              <tbody>
+                {ARMS.map(([k, l]) => (
+                  <tr class:list={{ best: r.best === k }}><th scope="row">{l}</th>{MEASURES.map(([m]) => <td>{r.byArm[k][m]}</td>)}<td class="added">{r.byArm[k].added.length ? r.byArm[k].added.join("; ") : "Nothing"}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p class="why"><b>Best: {name[r.best] ?? "tie"}.</b> {r.reason}</p>
         </section>
       ))}
     </div>
 
     <div class="prose">
+      <h2>The first test</h2>
+      <p>Before 1.1, deeper 1.0 was tested against a plain rewrite alone, by a judge who wasn't asked to count extra deliverables. deeper won 5 of 5, and scope was already its weak spot. Its numbers, out of 5: expert method {averages[0].plain} to {averages[0].deeper}, raw material {averages[1].plain} to {averages[1].deeper}, outside check {averages[2].plain} to {averages[2].deeper}, scope {averages[3].plain} to {averages[3].deeper}. The files are in <a href={gh}>examples/raw</a>.</p>
+
       <h2>Limits</h2>
-      <p>Five tasks is a small sample. There was one judge, and it was a model, though a different one from the writers. The writers knew they were in a test. A person judging the pairs blind would be a stronger check, and <a href={`${gh}/pairs.md`}>pairs.md</a> is ready for that.</p>
+      <p>Five tasks is a small sample, and each round is one run. Scores for the same prompts moved by up to 0.6 between the two judging passes, which is why the current test judged every version together. The judge is a model, though a different one from the writers, and the writers knew they were in a test. A person judging <a href={`${gh}/v1.1/round2-quads.md`}>the shuffled prompts</a> blind would be a stronger check.</p>
       <p>The skill's own rule applies here too: a model grading model output doesn't count as proof. Treat these numbers as a reason to try it, not as a verdict.</p>
     </div>
   </article>
@@ -53,14 +65,17 @@ const gh = "https://github.com/EazyAccessEA/deeper/blob/main/examples/raw";
 
 <style>
   .sec { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); font-size: 1.6rem; }
-  .avg { max-width: 40rem; margin-top: 1rem; }
+  .scroll { overflow-x: auto; max-width: 100%; }
+  .tasks > * { min-width: 0; }
+  .avg { min-width: 34rem; max-width: 52rem; margin-top: 1rem; }
   .avg td { font-weight: 500; }
-  .tasks { display: grid; gap: 2.5rem; margin-top: 1.5rem; }
+  .tasks { display: grid; gap: 2.75rem; margin-top: 1.5rem; }
   .task h3 { font-size: 1.15rem; }
   .task > p.muted { margin: 0.35rem 0 0.75rem; max-width: var(--measure); }
-  .task table { font-size: 0.9rem; display: block; overflow-x: auto; }
+  .task table { font-size: 0.9rem; min-width: 40rem; }
+  .task tr.best th, .task tr.best td:not(.added) { color: var(--red); font-weight: 500; }
+  .added { color: var(--graphite); font-size: 0.85rem; max-width: 18rem; }
   .why { margin-top: 0.75rem; max-width: var(--measure); font-size: 0.95rem; color: var(--graphite); }
   .why b { color: var(--ink); font-weight: 500; }
-  .prose { margin-top: 0; }
   .prose + h2, .tasks + .prose { margin-top: 3rem; }
 </style>
