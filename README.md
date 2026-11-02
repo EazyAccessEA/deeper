@@ -76,8 +76,6 @@ A blind test on five real tasks from my own history, with project details stripp
 
 Two things to weigh before you trust that. The judge is a model, and the skill itself says a model grading its own work doesn't count. And /deeper drifted on scope once: on the caption it added an A/B test nobody asked for. Every prompt, the answer key and the judge's reasons are in [`examples/`](examples/), so you can check them yourself.
 
-I've used the skill about 230 times since October 2026. In roughly two of every three runs, my next message was "run it". Most of the rest were corrections to the rewrite, not rejections.
-
 Tested so far in Claude Code. The install into Codex and Cursor folders is tested; running it inside those agents isn't yet. Reports welcome.
 
 ## Related skills
