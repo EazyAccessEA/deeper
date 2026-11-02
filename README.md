@@ -98,7 +98,7 @@ Those numbers answer one question: is deeper worth maintaining, and for which ag
 
 ## The site
 
-`site/` is the docs and demo site, built with Astro. Every score on it is read from `examples/raw/` at build time, so the site can't drift from the evidence.
+[deeper.tools](https://deeper.tools) is the docs and demo site. Its source is in `site/`, built with Astro. Every score on it is read from `examples/raw/` at build time, so the site can't drift from the evidence.
 
 ```bash
 cd site && npm install && npm run dev
