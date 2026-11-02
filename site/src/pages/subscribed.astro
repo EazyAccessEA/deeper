@@ -1,0 +1,19 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Signed up: deeper">
+  <section class="wrap block prose">
+    <!-- worker.js redirects here with #ok, #invalid or #limit; :target shows the matching line, #ok is the default. -->
+    <div id="invalid" class="msg"><h1>That address didn't look right.</h1><p class="muted">Nothing was saved. <a href="/#updates">Try again</a>.</p></div>
+    <div id="limit" class="msg"><h1>Too many signups from here today.</h1><p class="muted">Nothing was saved. Try again tomorrow, or write to <a href="mailto:hello@deeper.tools">hello@deeper.tools</a>.</p></div>
+    <div id="ok" class="msg"><h1>You're on the list.</h1><p class="muted">You'll get one email when there's a new version or a new test. <a href="/">Back to deeper</a>.</p></div>
+  </section>
+</Base>
+
+<style>
+  .block { padding-top: clamp(3rem, 8vw, 6rem); }
+  .msg { display: none; }
+  .msg:target, .msg#ok { display: block; }
+  .prose:has(.msg:target:not(#ok)) #ok { display: none; }
+  h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+</style>

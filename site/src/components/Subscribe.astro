@@ -1,0 +1,29 @@
+---
+// A plain form post to worker.js. The page URL's ?ref= travels in the Referer header, so the signup records its source.
+---
+<form class="subscribe" method="post" action="/api/subscribe">
+  <label for="email">Email</label>
+  <div class="row">
+    <input id="email" name="email" type="email" required maxlength="254" autocomplete="email" placeholder="you@example.com" />
+    <button type="submit">Get updates</button>
+  </div>
+  <input class="trap" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+  <p class="muted note">One email per new version or new test. Unsubscribe from any of them. We keep the address, the date, your country and the link you came from, plus a one-way hash of your IP that stops repeat signups. <a href="/privacy">Privacy notice</a>.</p>
+</form>
+
+<style>
+  .subscribe { max-width: 30rem; }
+  label { display: block; font-weight: 500; margin-bottom: 0.4rem; }
+  .row { display: flex; gap: 0.5rem; }
+  input[type="email"] {
+    flex: 1; min-width: 0; min-height: 2.75rem; padding: 0 0.9rem; border: 1px solid var(--rule); border-radius: 4px;
+    background: var(--page); color: var(--ink); font: inherit;
+  }
+  button {
+    flex: none; min-height: 2.75rem; padding: 0 1.1rem; border: 0; border-radius: 4px; cursor: pointer;
+    background: var(--ink); color: var(--page); font: 600 0.95rem var(--sans);
+  }
+  .trap { position: absolute; left: -9999px; width: 1px; height: 1px; }
+  .note { margin-top: 0.6rem; font-size: 0.9rem; }
+  @media (max-width: 400px) { .row { flex-direction: column; } }
+</style>

@@ -1,0 +1,42 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Privacy: deeper" description="What deeper.tools collects, why, how long it keeps it, and your rights under UK GDPR.">
+  <article class="wrap block prose">
+    <h1>Privacy</h1>
+    <p class="muted">Last updated 2 November 2026.</p>
+
+    <h2>Who we are</h2>
+    <p>deeper.tools is run by Eazy Access Ltd, the controller of the data on this page. It's registered in England and Wales, company number 13205428, at 71-75 Shelton Street, Covent Garden, London WC2H 9JQ. Write to <a href="mailto:hello@deeper.tools">hello@deeper.tools</a> about anything here.</p>
+
+    <h2>The skill</h2>
+    <p>The deeper skill is a text file your agent reads. It has no code and sends us nothing.</p>
+
+    <h2>The email list</h2>
+    <p>When you sign up for updates we store:</p>
+    <ul>
+      <li>your email address and the date you signed up;</li>
+      <li>the link that brought you to the page, such as <code>?ref=tiktok</code>, so we know which posts work;</li>
+      <li>your country, as Cloudflare reports it;</li>
+      <li>a one-way hash of your IP address, mixed with a secret and the date. It stops one address signing up many people. We delete it after a day.</li>
+    </ul>
+    <p>We use it for one thing: emailing you when there's a new version of deeper or a new test result. The legal basis is your consent (UK GDPR Article 6(1)(a)). The first email asks you to confirm, and every email has an unsubscribe link. We don't sell or share the list, and we don't add you to anything else.</p>
+
+    <h2>How long we keep it</h2>
+    <p>Until you unsubscribe, or two years after the last email we sent you, whichever comes first. If we never email you, the two years run from the day you signed up. Deletion runs automatically every day.</p>
+
+    <h2>Who else handles it</h2>
+    <p>Cloudflare, Inc. hosts the site and the database the list lives in. It may process data outside the UK, under its data processing agreement with us. The site also uses Cloudflare Web Analytics, which counts visits without cookies.</p>
+
+    <h2>Your rights</h2>
+    <p>You can ask to see the data we hold on you, correct it, delete it, restrict or object to its use, or take a copy. You can withdraw consent at any time by unsubscribing or writing to us. We reply within one month.</p>
+    <p>If you're unhappy with how we've handled your data, you can complain to the Information Commissioner's Office at <a href="https://ico.org.uk/make-a-complaint/">ico.org.uk/make-a-complaint</a> or on 0303 123 1113.</p>
+  </article>
+</Base>
+
+<style>
+  .block { padding-top: clamp(3rem, 8vw, 6rem); }
+  h1 { font-size: clamp(2.4rem, 5vw, 3.5rem); }
+  ul { padding-left: 1.2em; }
+  li + li { margin-top: 0.5em; }
+</style>

@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import Base from "../layouts/Base.astro";
 import Markup from "../components/Markup.astro";
 import Copy from "../components/Copy.astro";
+import Subscribe from "../components/Subscribe.astro";
 import { averages2, round2, bestCount } from "../lib/evidence";
 import pencil from "../assets/pencil-tip.webp";
 
@@ -63,6 +64,13 @@ const questions = [
     <p class="muted">The command above installs deeper into Claude Code, Codex, Cursor and about seventy other agents through the <a href="https://github.com/vercel-labs/skills">skills CLI</a>. Running it is tested in Claude Code; installing into Codex and Cursor is tested, running inside them isn't yet. There's also a Claude Code plugin, a copy-by-hand route, and a way to paste it into ChatGPT or any chat app.</p>
     <a href="/docs/#install">Install, update or remove</a>
   </section>
+
+  <section class="wrap block updates" id="updates">
+    <h2>Hear when it changes.</h2>
+    <p class="muted">Each version is tested blind before it ships. Get the new skill and the scores when they land.</p>
+    <Subscribe />
+    <p class="muted team">Rolling deeper out to a team? <a href="mailto:hello@deeper.tools?subject=deeper%20for%20a%20team">Tell us what you need</a>.</p>
+  </section>
 </Base>
 
 <style>
@@ -97,6 +105,9 @@ const questions = [
 
   .install p { max-width: var(--measure); margin-bottom: 1rem; }
   .install a { display: inline-flex; align-items: center; min-height: 2.75rem; }
+
+  .updates > p { max-width: var(--measure); margin-bottom: 1.5rem; }
+  .updates .team { margin-top: 2rem; }
 
   @media (max-width: 900px) {
     .hero, .evidence { grid-template-columns: minmax(0, 1fr); }

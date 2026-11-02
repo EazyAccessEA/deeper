@@ -86,7 +86,7 @@ Tested in Claude Code. Installing into Codex and Cursor is tested; running insid
 
 The skill sends nothing. It's a text file your agent reads, with no code and no network calls. If it suggests searching for other skills with `npx skills find`, it asks first.
 
-The skills CLI has its own anonymous install telemetry, which is where the install count on skills.sh comes from. Turn it off with `DISABLE_TELEMETRY=1` or `DO_NOT_TRACK=1`. The site uses Cloudflare Web Analytics, which sets no cookies. `scripts/traffic-snapshot.sh` saves the repo's GitHub traffic to `data/traffic.csv`, because GitHub keeps only 14 days.
+The skills CLI has its own anonymous install telemetry, which is where the install count on skills.sh comes from. Turn it off with `DISABLE_TELEMETRY=1` or `DO_NOT_TRACK=1`. The site uses Cloudflare Web Analytics, which sets no cookies. The email form on the site stores your address, the signup date, your country, the page link you signed up from, and a SHA-256 hash of your IP with a secret salt and the date, which limits repeat signups and is cleared after a day. It sits in Cloudflare D1, and no email is sent from it until confirmation and unsubscribe are built. Records are deleted two years after the last email, or on unsubscribe. The full notice is at [deeper.tools/privacy](https://deeper.tools/privacy). `scripts/traffic-snapshot.sh` saves the repo's GitHub traffic to `data/traffic.csv`, because GitHub keeps only 14 days.
 
 ## The site
 
