@@ -54,17 +54,17 @@ Then it writes one prompt in a code block and asks whether to run it. The prompt
 
 ## Does it work?
 
-Five real tasks, with project details stripped out: a product caption, book typesetting, selling a car, moving an app off Vercel, tidying a Downloads folder. Each was rewritten with no skill, with deeper 1.0 and with deeper 1.1, then scored blind by a judge on a different model. Average out of 5:
+Five real tasks, with project details stripped out: a product caption, book typesetting, selling a car, moving an app off Vercel, tidying a Downloads folder. Each was rewritten with no skill, with deeper 1.0 and with deeper 1.1, then scored blind in one pass by a judge on a different model. Average out of 5:
 
 | | No skill | deeper 1.0 | deeper 1.1 |
 |---|---|---|---|
-| Expert method | 2.4 | 4.6 | 4.0 |
-| Starts from raw material | 1.2 | 4.6 | 5.0 |
-| Check outside the model, with a pass mark | 1.0 | 4.4 | 4.0 |
-| Kept to the original scope | 2.4 | 2.4 | 4.0 |
-| Extra deliverables per task | 3.2 | 4.4 | 1.4 |
+| Expert method | 2.6 | 4.6 | 5.0 |
+| Starts from raw material | 1.8 | 4.8 | 5.0 |
+| Check outside the model, with a pass mark | 1.0 | 3.8 | 4.8 |
+| Kept to the original scope | 2.2 | 2.8 | 4.0 |
+| Extra deliverables per task | 3.2 | 3.6 | 1.8 |
 
-Version 1.1 exists because 1.0 grew tasks. In a sample of 40 of my own past runs, 33 asked for at least one deliverable I hadn't. 1.1 keeps the scope much better and the judge picked it on all five tasks, but it gave up a little on method and checks. The judge is a model, and the skill itself says that doesn't count as proof. Every prompt, answer key and score is in [`examples/`](examples/).
+Version 1.1 exists because 1.0 grew tasks. In a sample of 40 of my own past runs, 33 asked for at least one deliverable I hadn't. A first fix kept scope but weakened method and checks, so the rule was rewritten and tested again; [`examples/raw/v1.1/`](examples/raw/v1.1/) has both rounds. The judge is a model, and the skill itself says that doesn't count as proof. It's one run on five tasks.
 
 Tested in Claude Code. Installing into Codex and Cursor is tested; running inside them isn't yet. Reports welcome.
 

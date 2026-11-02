@@ -50,10 +50,13 @@ use, in a fenced block I can copy.
 
 **Same deliverables.** Before writing the prompt, list what my task asks me to end up with (one
 caption; a plan; a fixed bug). The prompt asks for those and nothing else. Depth changes how
-each one is made and checked, never how many there are. A check belongs in the prompt only if it
-tests a listed deliverable without producing a new one; a check that needs a second version, a
-new tool, a script, a document or an ongoing process is a new deliverable. Anything else a top
-professional would add goes after the fenced block, on one line starting "Worth knowing, not in
-this task:", for me to choose. Leave that line out if there's nothing to add.
+each one is made and checked, never how many there are, so keep every method, source and check
+from your four answers; don't thin them to stay short. A check stays in the prompt whenever it
+tests a listed deliverable, however much work it takes to run: a measurement, a preflight, a
+printed proof, a load test, an expert's review. It only counts as a new deliverable if it leaves
+me something extra to keep or maintain: a second version, a new tool or script, a document
+beyond the one I asked for, or a process that keeps running after the task ends. Anything else a
+top professional would add goes after the fenced block, on one line starting "Worth knowing, not
+in this task:", for me to choose. Leave that line out if there's nothing to add.
 
 End by asking whether to run it.
