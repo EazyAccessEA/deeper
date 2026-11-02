@@ -1,0 +1,136 @@
+---
+import Base from "../layouts/Base.astro";
+import Demo from "../components/Demo.astro";
+import Copy from "../components/Copy.astro";
+import { averages, wins, pairs } from "../lib/evidence";
+
+const questions = [
+  ["Expert moves", "What would a top professional in this field do that you didn't ask for? One or two moves, not a list."],
+  ["Raw material", "What would they start from? The data, files and originals, never a summary. And one belief the material could disprove."],
+  ["Instruments", "Which methods and tools would they use? A database and a test, not a nicer table. Plus the skills and agents already installed."],
+  ["Outside check", "What would show the result is right, other than you or the model? With a pass mark the best in the field would set."],
+];
+---
+<Base>
+  <section class="wrap hero">
+    <div class="hero-copy rise">
+      <h1>Ask for the version an expert would ask for.</h1>
+      <p class="sub">deeper rewrites any task with the method, sources and checks a top professional would use. Same scope. You approve before it runs.</p>
+      <div class="ctas">
+        <Copy text="npx skills add EazyAccessEA/deeper" primary />
+        <a class="btn" href="#demo">See it work</a>
+      </div>
+    </div>
+    <figure class="sounding rise" aria-label="A /deeper reply, shortened">
+      <p class="cmd"><span>&gt;</span> /deeper evaluate the typesetting of my manuscript, the inner margins look too large</p>
+      <ol>
+        <li><b>Expert moves</b> Work the margins out from the binding and a page canon. Measure before changing anything.</li>
+        <li><b>Raw material</b> Send the print PDF and the printer's spec. A thick spine eats the gutter, so wide may be right.</li>
+        <li><b>Instruments</b> Van de Graaf canon, baseline grid, 45 to 75 characters a line, Acrobat Preflight.</li>
+        <li><b>Outside check</b> A printed proof. Pass: no text lost in the gutter, zero widows, preflight clean.</li>
+      </ol>
+      <p class="ask">Here is the deeper version of your task. Run it?</p>
+    </figure>
+  </section>
+
+  <section class="wrap block" id="demo">
+    <h2>Same task, two rewrites.</h2>
+    <p class="lede muted">Five real tasks. One rewrite with no skill, one with /deeper. A judge on another model scored them without knowing which was which.</p>
+    <Demo />
+  </section>
+
+  <section class="wrap block questions">
+    <h2>Four questions, asked before any rewrite.</h2>
+    <ol class="depth">
+      {questions.map(([q, a], i) => (
+        <li>
+          <span class="n" aria-hidden="true">{i + 1}</span>
+          <h3>{q}</h3>
+          <p class="muted">{a}</p>
+        </li>
+      ))}
+    </ol>
+    <p class="note">Then it writes one prompt you can copy, and asks whether to run it. Too small a task for depth to matter? It says so in one line and stops.</p>
+  </section>
+
+  <section class="wrap block evidence">
+    <div>
+      <h2>{wins} of {pairs.length} blind pairs.</h2>
+      <p class="muted lede">Average scores out of 5. Scope is the weak spot: on the caption, /deeper added an A/B test nobody asked for.</p>
+      <a class="more" href="/research">How the test ran, and every prompt</a>
+    </div>
+    <table>
+      <thead><tr><th scope="col">Measure</th><th scope="col">No skill</th><th scope="col">/deeper</th></tr></thead>
+      <tbody>
+        {averages.map((a) => (
+          <tr><th scope="row">{a.label}</th><td>{a.plain}</td><td class={Number(a.deeper) >= Number(a.plain) ? "up" : "down"}>{a.deeper}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  <section class="wrap block" id="install">
+    <h2>Install in one line.</h2>
+    <p class="lede muted">The skills CLI puts it where your agent looks. It knows about seventy agents, Claude Code and Codex among them.</p>
+    <Copy text="npx skills add EazyAccessEA/deeper" />
+    <ul class="agents" aria-label="Agents it installs into">
+      <li>Claude Code</li><li>Codex</li><li>Cursor</li><li class="more-agents">and about seventy more</li>
+    </ul>
+    <p class="alt">Then type <code>/deeper</code> and your task. In ChatGPT or another chat app, paste the skill file first. <a href="/docs#install">Every install route</a></p>
+  </section>
+</Base>
+
+<style>
+  .hero > *, .evidence > * { min-width: 0; }
+  .hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; padding-top: clamp(3rem, 8vw, 6rem); padding-bottom: 4rem; }
+  h1 { font-size: clamp(2.4rem, 5.2vw, 4rem); letter-spacing: -0.035em; line-height: 1.02; max-width: 14ch; }
+  .sub { margin-top: 1.5rem; font-size: 1.15rem; color: var(--ink-2); max-width: 40ch; }
+  .ctas { display: flex; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap; align-items: stretch; }
+  .ctas :global(.copy) { flex: 1 1 22rem; }
+
+  .sounding { margin: 0; border: 1px solid var(--line); background: var(--paper-2); padding: 1.5rem; font-family: var(--mono); font-size: 0.82rem; line-height: 1.55; animation-delay: 0.12s; }
+  .cmd { color: var(--ink); }
+  .cmd span { color: var(--accent); margin-right: 0.4rem; }
+  .sounding ol { list-style: none; padding: 0 0 0 1.25rem; margin: 1.25rem 0; border-left: 2px solid var(--accent); }
+  .sounding li { position: relative; color: var(--ink-2); padding: 0.45rem 0; }
+  .sounding li::before { content: ""; position: absolute; left: -1.25rem; top: 1.05em; width: 0.75rem; height: 1px; background: var(--accent); }
+  .sounding b { display: block; color: var(--ink); font-weight: 500; }
+  .ask { color: var(--accent); }
+
+  .block { padding-top: clamp(4rem, 9vw, 7rem); }
+  .block h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); max-width: 22ch; }
+  .lede { margin-top: 1rem; max-width: var(--measure); }
+  #demo .lede { margin-bottom: 2rem; }
+
+  .depth { list-style: none; padding: 0; margin: 3rem 0 0 0.75rem; border-left: 2px solid var(--accent); max-width: 52rem; }
+  .depth li { position: relative; padding: 0 0 2.75rem 2.5rem; }
+  .depth li:last-child { padding-bottom: 0.5rem; }
+  .depth li::before { content: ""; position: absolute; left: 0; top: 0.75rem; width: 1.5rem; height: 2px; background: var(--accent); }
+  .n { position: absolute; left: -2.15rem; top: 0.2rem; width: 1.6rem; text-align: right; font: 500 0.95rem var(--mono); color: var(--accent); }
+  .depth h3 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); margin-bottom: 0.5rem; }
+  .depth p { max-width: var(--measure); }
+  .note { margin-top: 2.5rem; max-width: var(--measure); }
+
+  .evidence { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+  .more { display: inline-flex; align-items: center; min-height: 2.75rem; margin-top: 1rem; color: var(--accent); }
+  .evidence tbody th { font-weight: 400; }
+  .evidence td { font: 500 1.05rem var(--mono); width: 6rem; }
+  .evidence td.up { color: var(--accent); }
+  .evidence tbody tr + tr { border-top: 1px solid var(--line); }
+
+  #install .lede { margin-bottom: 1.75rem; }
+  .agents { list-style: none; display: flex; flex-wrap: wrap; gap: 0; margin: 1.25rem 0 0; padding: 0; border: 1px solid var(--line); max-width: 34rem; }
+  .agents li { padding: 0.7rem 1rem; border-right: 1px solid var(--line); font-size: 0.95rem; }
+  .agents li.more-agents { color: var(--ink-2); border-right: 0; }
+  .alt { margin-top: 1.25rem; color: var(--ink-2); max-width: var(--measure); }
+
+  @media (max-width: 900px) {
+    .hero, .evidence { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .depth { margin-left: 2rem; }
+    .depth li { padding-left: 1.75rem; }
+    .depth li::before { width: 1rem; }
+    .hero { padding-top: 2.5rem; }
+  }
+</style>

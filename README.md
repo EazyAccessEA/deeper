@@ -27,6 +27,13 @@ npx skills add EazyAccessEA/deeper
 
 The [skills CLI](https://github.com/vercel-labs/skills) asks which agents to install into. It knows about seventy agents, Claude Code and Codex among them. Add `-g` to install for your user rather than one project.
 
+### Claude Code, as a plugin
+
+```
+/plugin marketplace add EazyAccessEA/deeper
+/plugin install deeper@deeper
+```
+
 ### By hand
 
 Copy `skills/deeper/SKILL.md` into a folder named `deeper` in your agent's skills directory:
@@ -80,6 +87,14 @@ Tested so far in Claude Code. The install into Codex and Cursor folders is teste
 **be-ambitious** (mine, not published) grew out of deeper. deeper is the Depth lens only. It reads the workspace, names the skills and agents to use, writes the prompt and stops. be-ambitious covers altitude, depth and range, adds hard targets, assumption checks and a list of what counts as finished, then does the work. Both insist on a check outside the model. Use deeper when you want to see and edit the prompt first. Use be-ambitious when you want the work done.
 
 **[DannyMac180/skills@be-ambitious](https://github.com/DannyMac180/skills/tree/main/be-ambitious)** (MIT) is a separate skill built on the same prompt from the article. It behaves much like deeper: rewrite, then offer to run. It shares a name with my be-ambitious, which will need a new name if I ever publish it.
+
+## The site
+
+`site/` is the docs and demo site, built with Astro. Every score on it is read from `examples/raw/` at build time, so the site can't drift from the evidence.
+
+```bash
+cd site && npm install && npm run dev
+```
 
 ## Licence
 

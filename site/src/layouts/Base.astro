@@ -1,0 +1,74 @@
+---
+import "../styles/global.css";
+
+interface Props { title?: string; description?: string; }
+const {
+  title = "deeper: ask for the version an expert would ask for",
+  description = "A free skill for AI agents. It rewrites a task with the method, sources and checks a top professional would use, then waits for your go-ahead.",
+} = Astro.props;
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const links = [
+  ["/docs", "Docs"],
+  ["/patterns", "Patterns"],
+  ["/research", "Research"],
+  ["/changelog", "Changelog"],
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-head">
+      <nav class="wrap nav" aria-label="Main">
+        <a class="mark" href="/" aria-current={path === "/" ? "page" : undefined}>deeper</a>
+        <ul>
+          {links.map(([href, label]) => (
+            <li><a href={href} aria-current={path === href ? "page" : undefined}>{label}</a></li>
+          ))}
+          <li><a href="https://github.com/EazyAccessEA/deeper">GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-foot">
+      <div class="wrap foot">
+        <p>
+          Apache 2.0. The four questions adapt a prompt from Felix Rieseberg's
+          <a href="https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/">How to be more ambitious</a>.
+        </p>
+        <p><a href="https://github.com/EazyAccessEA/deeper">Source on GitHub</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 1rem; top: 1rem; background: var(--paper); padding: 0.5rem; z-index: 10; }
+  .site-head { border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4rem; flex-wrap: wrap; }
+  .mark { font: 600 1.15rem var(--mono); text-decoration: none; letter-spacing: -0.03em; padding: 0.5rem 0; }
+  .mark::before { content: ""; display: inline-block; width: 2px; height: 1.1em; background: var(--accent); margin-right: 0.5rem; vertical-align: -0.2em; }
+  ul { list-style: none; display: flex; gap: 0.25rem; margin: 0; padding: 0; flex-wrap: wrap; }
+  ul a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 0.6rem; text-decoration: none; color: var(--ink-2); font-size: 0.95rem; }
+  ul a:hover, ul a[aria-current="page"] { color: var(--ink); }
+  ul a[aria-current="page"] { box-shadow: inset 0 -2px var(--accent); }
+  @media (max-width: 640px) {
+    .nav { padding-top: 0.5rem; }
+    ul { width: 100%; margin-left: -0.6rem; }
+  }
+  .site-foot { border-top: 1px solid var(--line); margin-top: 6rem; padding: 2rem 0 3rem; color: var(--ink-2); font-size: 0.9rem; }
+  .foot { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+  .foot p { max-width: var(--measure); }
+  .foot p:first-child { max-width: var(--measure); }
+  .foot p:last-child a { display: inline-flex; align-items: center; min-height: 2.75rem; }
+</style>

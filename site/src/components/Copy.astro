@@ -1,0 +1,38 @@
+---
+interface Props { text: string; primary?: boolean; }
+const { text, primary = false } = Astro.props;
+---
+<div class:list={["copy", { primary }]}>
+  <code><span aria-hidden="true">$</span>{text}</code>
+  <button type="button" data-copy={text} aria-label={`Copy: ${text}`}>Copy</button>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>("[data-copy]").forEach((b) => {
+    b.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(b.dataset.copy!);
+        b.textContent = "Copied";
+      } catch {
+        b.textContent = "Select and copy";
+      }
+      setTimeout(() => (b.textContent = "Copy"), 1800);
+    });
+  });
+</script>
+
+<style>
+  .copy { min-width: 0; display: flex; align-items: stretch; border: 1px solid var(--line); background: var(--paper-2); max-width: 34rem; }
+  code { flex: 1; min-width: 0; display: flex; align-items: center; padding: 0 1rem; min-height: 2.75rem; overflow-x: auto; white-space: nowrap; font-size: 0.9rem; }
+  code span { color: var(--ink-2); margin-right: 0.5ch; }
+  button {
+    min-width: 5rem; border: 0; border-left: 1px solid var(--line);
+    background: transparent; color: var(--ink); font: 500 0.9rem var(--sans); cursor: pointer;
+  }
+  button:hover { color: var(--accent); }
+  .primary { background: var(--ink); border-color: var(--ink); }
+  .primary code, .primary button { color: var(--paper); }
+  .primary code span { color: color-mix(in srgb, var(--paper) 60%, var(--ink)); }
+  .primary button { border-left-color: color-mix(in srgb, var(--paper) 25%, var(--ink)); }
+  .primary button:hover { background: var(--accent); color: var(--accent-ink); }
+</style>

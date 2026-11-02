@@ -1,0 +1,67 @@
+---
+import Base from "../layouts/Base.astro";
+import { pairs, averages, wins, MEASURES } from "../lib/evidence";
+const gh = "https://github.com/EazyAccessEA/deeper/blob/main/examples/raw";
+---
+<Base title="Research | deeper" description="A blind test of /deeper against a plain rewrite on five real tasks, with every prompt and score.">
+  <article class="wrap page">
+    <div class="prose">
+      <h1>The blind test</h1>
+      <p>Five tasks from real use, with names and project details taken out. Each was rewritten twice and judged blind. /deeper won {wins} of {pairs.length}.</p>
+
+      <h2>How it ran</h2>
+      <ol>
+        <li>One agent rewrote each task as a better prompt, with no skill.</li>
+        <li>A second agent ran /deeper on the same tasks, told it had no files, shell or installed skills.</li>
+        <li>A script shuffled each pair into A and B and kept the answer key in a separate file.</li>
+        <li>A judge on a different model saw only the shuffled pairs. It scored four measures from 1 to 5 and picked a winner per task.</li>
+      </ol>
+      <p>Both writers ran on Claude Opus 5.5 and the judge on Claude Sonnet 5.5. Everything is in <a href={gh}>examples/raw</a>: the tasks, both sets of prompts, the shuffled pairs, the key and the judge's reply.</p>
+    </div>
+
+    <h2 class="sec">Averages</h2>
+    <table class="avg">
+      <thead><tr><th scope="col">Measure</th><th scope="col">No skill</th><th scope="col">/deeper</th></tr></thead>
+      <tbody>{averages.map((a) => <tr><th scope="row">{a.label}</th><td>{a.plain}</td><td>{a.deeper}</td></tr>)}</tbody>
+    </table>
+
+    <h2 class="sec">Task by task</h2>
+    <div class="tasks">
+      {pairs.map((p) => (
+        <section class="task">
+          <h3>{p.id} {p.short}</h3>
+          <p class="muted">{p.task}</p>
+          <table>
+            <thead><tr><th scope="col"></th>{MEASURES.map(([, l]) => <th scope="col">{l.split(" ").slice(0, 2).join(" ")}</th>)}</tr></thead>
+            <tbody>
+              <tr><th scope="row">No skill</th>{MEASURES.map(([k]) => <td>{p.scores.plain[k]}</td>)}</tr>
+              <tr><th scope="row">/deeper</th>{MEASURES.map(([k]) => <td>{p.scores.deeper[k]}</td>)}</tr>
+            </tbody>
+          </table>
+          <p class="why"><b>{p.winner === "deeper" ? "/deeper won." : p.winner === "tie" ? "Tie." : "No skill won."}</b> {p.reason}</p>
+        </section>
+      ))}
+    </div>
+
+    <div class="prose">
+      <h2>Limits</h2>
+      <p>Five tasks is a small sample. There was one judge, and it was a model, though a different one from the writers. The writers knew they were in a test. A person judging the pairs blind would be a stronger check, and <a href={`${gh}/pairs.md`}>pairs.md</a> is ready for that.</p>
+      <p>The skill's own rule applies here too: a model grading model output doesn't count as proof. Treat these numbers as a reason to try it, not as a verdict.</p>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .sec { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); font-size: 1.6rem; }
+  .avg { max-width: 40rem; margin-top: 1rem; }
+  .avg td { font: 500 1rem var(--mono); }
+  .tasks { display: grid; gap: 2.5rem; margin-top: 1.5rem; }
+  .task h3 { font-size: 1.15rem; }
+  .task > p.muted { margin: 0.35rem 0 0.75rem; max-width: var(--measure); }
+  .task table { font-size: 0.9rem; display: block; overflow-x: auto; }
+  .task td { font-family: var(--mono); }
+  .why { margin-top: 0.75rem; max-width: var(--measure); font-size: 0.95rem; color: var(--ink-2); }
+  .why b { color: var(--ink); font-weight: 500; }
+  .prose { margin-top: 0; }
+  .prose + h2, .tasks + .prose { margin-top: 3rem; }
+</style>
