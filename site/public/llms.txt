@@ -1,0 +1,18 @@
+# deeper
+
+> A free, open-source skill for coding agents such as Claude Code and Codex. Typing `/deeper` before a task makes the agent answer four questions (what a top professional would do, what raw material they'd start from, which methods and tools they'd use, and what outside check would show the result is right), then write one prompt that asks for the same deliverables as the task and wait for the user's go-ahead. Apache 2.0.
+
+Install: `npx skills add EazyAccessEA/deeper`. The skill is one Markdown file with no code and no network calls.
+
+## Docs
+
+- [Docs](https://deeper.tools/docs/): install, update, first run, the four questions, the same-deliverables rule
+- [Shallow patterns](https://deeper.tools/patterns/): seven ways a prompt looks expert without being expert
+- [Research](https://deeper.tools/research/): blind tests against a plain rewrite, with every prompt and score
+
+## Source
+
+- [SKILL.md](https://github.com/EazyAccessEA/deeper/blob/main/skills/deeper/SKILL.md): the skill itself
+- [Repository](https://github.com/EazyAccessEA/deeper)
+- [Changelog](https://deeper.tools/changelog/)
+- [Security policy](https://github.com/EazyAccessEA/deeper/blob/main/SECURITY.md)

@@ -1,6 +1,6 @@
 ---
 import { markups } from "../lib/markup";
-const start = 1;
+const start = 0;
 ---
 <div class="markup" data-markup>
   <div class="tabs" role="tablist" aria-label="Example tasks">
@@ -16,15 +16,15 @@ const start = 1;
           <ins class="ins" style={`--k:${k}`}><span class="caret" aria-hidden="true"></span>{phrase}</ins>
         ))}
       </p>
-      <p class="source muted">Red is what deeper inserted, word for word from its rewrite. Your scope stays the same.</p>
+      <p class="source muted">Red is what deeper 1.1 inserted, word for word from its rewrite. It asks for the same deliverable you did.</p>
       <details>
-        <summary>Read the full /deeper prompt</summary>
+        <summary>Read the full deeper prompt</summary>
         <pre>{m.deeper}</pre>
       </details>
       <details>
         <summary>Compare the plain rewrite</summary>
         <pre>{m.plain}</pre>
-        <p class="verdict">{m.reason}</p>
+        <p class="verdict"><b>Blind judge:</b> {m.reason}</p>
       </details>
     </section>
   ))}

@@ -6,9 +6,25 @@ const {
   title = "deeper: ask for the version an expert would ask for",
   description = "A free skill for AI agents. It rewrites a task with the method, sources and checks a top professional would use, then waits for your go-ahead.",
 } = Astro.props;
-const path = Astro.url.pathname.replace(/\/$/, "") || "/";
-const links = [["/docs", "Docs"], ["/patterns", "Patterns"], ["/research", "Research"]];
+const path = Astro.url.pathname;
+const links = [["/docs/", "Docs"], ["/patterns/", "Patterns"], ["/research/", "Research"]];
 const og = new URL("/og.png", Astro.site).href;
+const canonical = new URL(path, Astro.site).href;
+// Structured data for search engines; a data block, so the CSP's script-src doesn't apply.
+const software = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "deeper",
+  description,
+  url: "https://deeper.tools/",
+  applicationCategory: "DeveloperApplication",
+  operatingSystem: "Any",
+  license: "https://www.apache.org/licenses/LICENSE-2.0",
+  softwareVersion: "1.1.0",
+  codeRepository: "https://github.com/EazyAccessEA/deeper",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  author: { "@type": "Organization", name: "Eazy Access", url: "https://github.com/EazyAccessEA" },
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -24,6 +40,9 @@ const og = new URL("/og.png", Astro.site).href;
     <meta property="og:description" content={description} />
     <meta property="og:image" content={og} />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:url" content={canonical} />
+    {path === "/" && <script type="application/ld+json" set:html={JSON.stringify(software)} />}
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -40,8 +59,8 @@ const og = new URL("/og.png", Astro.site).href;
     <main id="main"><slot /></main>
     <footer class="wrap foot">
       <img src="/favicon.svg" alt="" width="20" height="20" />
-      <p class="muted">Apache 2.0. The four questions adapt a prompt from Felix Rieseberg's <a href="https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/">How to be more ambitious</a>.</p>
-      <nav aria-label="Footer"><a href="mailto:hello@deeper.tools">hello@deeper.tools</a><a href="https://github.com/EazyAccessEA/deeper/issues">Report an issue</a><a href="/changelog">Changelog</a><a href="https://github.com/EazyAccessEA/deeper">GitHub</a></nav>
+      <p class="muted">Made by Eazy Access. Apache 2.0. The four questions adapt a prompt from Felix Rieseberg's <a href="https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/">How to be more ambitious</a>.</p>
+      <nav aria-label="Footer"><a href="mailto:hello@deeper.tools">hello@deeper.tools</a><a href="https://github.com/EazyAccessEA/deeper/issues">Report an issue</a><a href="https://github.com/EazyAccessEA/deeper/blob/main/SECURITY.md">Security</a><a href="/changelog/">Changelog</a><a href="https://github.com/EazyAccessEA/deeper">GitHub</a></nav>
     </footer>
   </body>
 </html>

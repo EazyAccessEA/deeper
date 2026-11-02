@@ -17,9 +17,9 @@ const questions = [
   <section class="wrap hero">
     <div class="hero-copy">
       <h1>Ask for the version an expert would ask for.</h1>
-      <p class="sub muted">deeper rewrites any task with the method, sources and checks a top professional would use. Same scope. You approve before it runs.</p>
+      <p class="sub muted">A free skill for coding agents like Claude Code and Codex. Type <code>/deeper</code> before a task and it asks for the method, sources and checks a top professional would use. Same scope. You approve before it runs.</p>
       <Copy text="npx skills add EazyAccessEA/deeper" />
-      <a class="see" href="#markup">See it mark up a real task</a>
+      <p class="next">Then type <code>/deeper</code> and your task. <a href="#markup">See it mark up a real one</a>.</p>
     </div>
     <Image class="hero-img" src={pencil} alt="The tip of a red pencil touching white paper" widths={[480, 800, 1200]} sizes="(max-width: 900px) 100vw, 40vw" loading="eager" />
   </section>
@@ -36,16 +36,17 @@ const questions = [
         <li><h3>{q}</h3><p class="muted">{a}</p></li>
       ))}
     </ol>
-    <p class="after">Then one prompt you can copy, and a question: run it? If a task is too small for depth to matter, it says so in one line and stops.</p>
+    <p class="after">Then one prompt you can copy, asking for the same deliverables you did, and a question: run it? Anything else an expert would add goes on one line, "Worth knowing, not in this task", for you to choose. If a task is too small for depth to matter, it says so in one line and stops.</p>
   </section>
 
   <section class="wrap block evidence">
     <div class="ev-copy">
       <h2>Best on {bestCount("v1.1b")} of {round2.length} blind tasks.</h2>
-      <p class="muted">Five real tasks, each rewritten without the skill and by two versions of deeper, then scored in one pass by a judge that didn't know which was which. Version 1.1 stops adding work you didn't ask for and keeps every check.</p>
-      <a href="/research">Every prompt, score and reason</a>
+      <p class="muted">Five real tasks, each rewritten without the skill and by two versions of deeper, then scored in one pass by a judge on a different model that didn't know which was which. It's one run on five tasks, judged by a model, so treat it as a reason to try deeper rather than proof. Version 1.1 stops adding work you didn't ask for and keeps every check.</p>
+      <a href="/research/">Every prompt, score and reason</a>
     </div>
     <table>
+      <caption class="sr">Average blind-test scores out of 5</caption>
       <thead><tr><th scope="col">Average</th><th scope="col">No skill</th><th scope="col">1.0</th><th scope="col">1.1</th></tr></thead>
       <tbody>
         {averages2.map((a) => {
@@ -58,9 +59,9 @@ const questions = [
   </section>
 
   <section class="wrap block install" id="install">
-    <h2>Runs where you already work.</h2>
-    <p class="muted">The command above puts deeper in Claude Code, Codex, Cursor and about seventy other agents. Prefer something else? There's a Claude Code plugin, a copy-by-hand route, and a way to paste it into ChatGPT or any chat app.</p>
-    <a href="/docs#install">All install routes</a>
+    <h2>Installs where you already work.</h2>
+    <p class="muted">The command above installs deeper into Claude Code, Codex, Cursor and about seventy other agents through the <a href="https://github.com/vercel-labs/skills">skills CLI</a>. Running it is tested in Claude Code; installing into Codex and Cursor is tested, running inside them isn't yet. There's also a Claude Code plugin, a copy-by-hand route, and a way to paste it into ChatGPT or any chat app.</p>
+    <a href="/docs/#install">Install, update or remove</a>
   </section>
 </Base>
 
@@ -69,7 +70,8 @@ const questions = [
   .hero > * { min-width: 0; }
   h1 { font-size: clamp(2.6rem, 5.4vw, 4.5rem); line-height: 1.04; max-width: 13em; }
   .sub { margin: 1.5rem 0 2rem; font-size: 1.2rem; max-width: 30em; }
-  .see { display: inline-flex; align-items: center; min-height: 2.75rem; margin-top: 0.75rem; }
+  .next { margin-top: 1rem; }
+  .next a { display: inline-flex; align-items: center; min-height: 2.75rem; }
   .hero :global(.hero-img) { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 40% 60%; border-radius: 4px; }
 
   @media (prefers-color-scheme: dark) { .hero :global(.hero-img) { filter: brightness(0.86); } }
@@ -82,6 +84,7 @@ const questions = [
   .questions h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
   .after { margin-top: 3rem; max-width: var(--measure); }
 
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .evidence { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(2rem, 6vw, 5rem); align-items: start; }
   .evidence > * { min-width: 0; }
   .ev-copy h2 { font-size: clamp(1.9rem, 3.6vw, 2.75rem); }

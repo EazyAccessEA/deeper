@@ -26,6 +26,7 @@ const name = Object.fromEntries(ARMS);
     <h2 class="sec">Averages</h2>
     <div class="scroll">
       <table class="avg">
+        <caption class="sr">Average scores out of 5 for each version, round 2</caption>
         <thead><tr><th scope="col">Out of 5</th>{ARMS.map(([, l]) => <th scope="col">{l}</th>)}</tr></thead>
         <tbody>{averages2.map((a) => <tr><th scope="row">{a.label}</th>{ARMS.map(([k]) => <td>{a[k]}</td>)}</tr>)}</tbody>
       </table>
@@ -39,7 +40,8 @@ const name = Object.fromEntries(ARMS);
           <p class="muted">{r.task}</p>
           <div class="scroll">
             <table>
-              <thead><tr><th scope="col"></th>{MEASURES.map(([, l]) => <th scope="col">{l.split(" ").slice(0, 2).join(" ")}</th>)}<th scope="col">Added</th></tr></thead>
+              <caption class="sr">Scores for {r.short} by version</caption>
+              <thead><tr><th scope="col">Version</th>{MEASURES.map(([, l]) => <th scope="col">{l.split(" ").slice(0, 2).join(" ")}</th>)}<th scope="col">Added</th></tr></thead>
               <tbody>
                 {ARMS.map(([k, l]) => (
                   <tr class:list={{ best: r.best === k }}><th scope="row">{l}</th>{MEASURES.map(([m]) => <td>{r.byArm[k][m]}</td>)}<td class="added">{r.byArm[k].added.length ? r.byArm[k].added.join("; ") : "Nothing"}</td></tr>
@@ -64,6 +66,7 @@ const name = Object.fromEntries(ARMS);
 </Base>
 
 <style>
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .sec { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); font-size: 1.6rem; }
   .scroll { overflow-x: auto; max-width: 100%; }
   .tasks > * { min-width: 0; }

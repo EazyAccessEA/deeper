@@ -36,7 +36,7 @@ Prose or a Markdown table where the work calls for a database, a script or a sta
 
 The rewrite adds features, deliverables or side quests. A caption becomes a content strategy.
 
-**Deeper:** keep the scope. Higher standard, same job. deeper itself slipped once here in the blind test, by adding an A/B test to a caption.
+**Deeper:** keep the scope. Higher standard, same job. deeper 1.0 slipped here, adding an A/B test to a caption. Since 1.1 the prompt asks for the same deliverables as the task, and anything extra goes on a "Worth knowing" line for you to choose.
 
 ## Taking the belief as given
 

@@ -63,6 +63,9 @@ const avg = (arm: "plain" | "deeper", m: string) =>
 export const averages = MEASURES.map(([k, label]) => ({ label, plain: avg("plain", k), deeper: avg("deeper", k) }));
 export const wins = pairs.filter((p) => p.winner === "deeper").length;
 
+// The final deeper 1.1 prompts, as tested.
+export const finals = sections(read("v1.1/final.md"));
+
 // Round 2: no skill, 1.0, the first guard and the final 1.1, judged blind in one pass.
 export const ARMS = [
   ["plain", "No skill"],
