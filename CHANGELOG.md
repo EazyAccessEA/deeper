@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.0 (2026-11-02)
+
+- Same deliverables: the rewritten prompt asks for what the task asked for and nothing more. Anything else an expert would add goes on one line, "Worth knowing, not in this task". In a blind test the scope score rose from 2.4 to 4.0 and extra deliverables fell from 4.4 to 1.4 per task, while method and checks dropped slightly. Details in `examples/raw/v1.1/`.
+- The skill now offers the `npx skills find` search and runs it only on your yes, since it downloads code from npm.
+- SECURITY.md: private reporting, and how to install a pinned release.
+- Plugin manifests carry the same version as the skill.
+
 ## 1.0.0 (2026-11-02)
 
 First public release.

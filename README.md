@@ -1,108 +1,96 @@
-# deeper
+<p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="brand/assets/wordmark-dark.svg">
+    <img src="brand/assets/wordmark.svg" alt="deeper" height="56">
+  </picture>
+</p>
 
-A skill that turns a task into the version an expert would ask for. Same scope, better method. It writes the prompt, then stops and asks before anything runs.
+**Ask for the version an expert would ask for.** deeper is a free skill for coding agents such as Claude Code and Codex. It rewrites your task with the method, sources and checks a top professional would use. It keeps your scope and asks before running.
 
-You type:
-
+```bash
+npx skills add EazyAccessEA/deeper
 ```
-/deeper evaluate the typesetting of my book manuscript, the inner margins look too large
-```
 
-Before rewriting anything, it answers four questions about your task:
+Then type `/deeper` and your task.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="brand/assets/proof-dark.png">
+  <img src="brand/assets/proof-light.png" alt="A real /deeper run: a request to evaluate a manuscript's typesetting, with deeper's three insertions in red, from the print PDF to a printed proof copy." width="820">
+</picture>
+
+A real run. Red is what deeper inserted, word for word from its rewrite. Docs, the live demo and the test results are on [deeper.tools](https://deeper.tools).
+
+## How it works
+
+Before rewriting anything, deeper answers four questions about your task:
 
 1. What would a top professional in this field do here that you haven't asked for?
 2. What raw material would they start from? The data, files or originals, never a summary of them.
 3. Which methods and tools would they use? Instruments, not vocabulary.
 4. What would show the result is right, other than you or the model?
 
-Then it hands you one rewritten prompt in a code block and asks whether to run it. On the margins task above, the plain rewrite asked you to describe your settings. The /deeper rewrite asked for the print PDF and the printer's spec, measured the margins against classic page canons and passed only after preflight and a printed proof.
+Then it writes one prompt in a code block and asks whether to run it. The prompt asks for the same deliverables you did. Anything else an expert would add goes on one line, "Worth knowing, not in this task", for you to choose.
+
+- `/deeper <task>` deepens that task.
+- `/deeper` on its own deepens the task already under discussion.
+- If the task is too small for depth to matter, it says so in one line and stops.
 
 ## Install
 
-### Any agent, with the skills CLI
+**Any agent.** `npx skills add EazyAccessEA/deeper` asks which agents to install into. The [skills CLI](https://github.com/vercel-labs/skills) knows about seventy, Claude Code and Codex among them. Add `-g` to install for your user rather than one project.
 
-```bash
-npx skills add EazyAccessEA/deeper
-```
-
-The [skills CLI](https://github.com/vercel-labs/skills) asks which agents to install into. It knows about seventy agents, Claude Code and Codex among them. Add `-g` to install for your user rather than one project.
-
-### Claude Code, as a plugin
+**Claude Code plugin.**
 
 ```
 /plugin marketplace add EazyAccessEA/deeper
 /plugin install deeper@deeper
 ```
 
-### By hand
+**By hand.** Copy `skills/deeper/SKILL.md` into a `deeper` folder: `~/.claude/skills/` for Claude Code, `~/.agents/skills/` for Codex, Cursor and others that read the shared folder.
 
-Copy `skills/deeper/SKILL.md` into a folder named `deeper` in your agent's skills directory:
+**A chat app.** ChatGPT, Claude.ai and Gemini have no skills folder. Paste the contents of `skills/deeper/SKILL.md` into the chat, then type `/deeper` and your task. With no files to read, deeper asks you for the raw material.
 
-| Agent | Folder |
-|---|---|
-| Claude Code | `~/.claude/skills/deeper/` |
-| Codex, Cursor and others that read the shared folder | `~/.agents/skills/deeper/` |
-
-### In a chat app
-
-ChatGPT, Claude.ai, Gemini and the rest have no skills folder. Paste the contents of `skills/deeper/SKILL.md` into the chat, then type `/deeper` and your task on the next line. The skill knows it may have no files or shell, and it asks you for the raw material instead.
-
-## Use
-
-- `/deeper <task>` deepens that task.
-- `/deeper` on its own deepens the task already under discussion.
-- If the task is too small for depth to matter, it says so in one line and stops.
-
-It never starts the work. You read the rewrite, change what you like, and run it yourself or say "run it".
-
-The skill's description tells the model to load it only when you type `/deeper` or ask for the deeper version, so it stays out of the way the rest of the time.
+**A fixed version.** The commands above follow `main`. To install an exact release, see [SECURITY.md](SECURITY.md).
 
 ## Does it work?
 
-A blind test on five real tasks from my own history, with project details stripped out: a product caption, book typesetting, selling a car, moving an app off Vercel, tidying a Downloads folder.
+Five real tasks, with project details stripped out: a product caption, book typesetting, selling a car, moving an app off Vercel, tidying a Downloads folder. Each was rewritten with no skill, with deeper 1.0 and with deeper 1.1, then scored blind by a judge on a different model. Average out of 5:
 
-- One agent rewrote each task as a better prompt, with no skill.
-- A second agent rewrote the same tasks with /deeper, in a plain chat setting with no files or tools.
-- The pairs were shuffled into A and B, and a third agent on a different model scored them without knowing which was which.
+| | No skill | deeper 1.0 | deeper 1.1 |
+|---|---|---|---|
+| Expert method | 2.4 | 4.6 | 4.0 |
+| Starts from raw material | 1.2 | 4.6 | 5.0 |
+| Check outside the model, with a pass mark | 1.0 | 4.4 | 4.0 |
+| Kept to the original scope | 2.4 | 2.4 | 4.0 |
+| Extra deliverables per task | 3.2 | 4.4 | 1.4 |
 
-/deeper won 5 of 5. Average scores out of 5:
+Version 1.1 exists because 1.0 grew tasks. In a sample of 40 of my own past runs, 33 asked for at least one deliverable I hadn't. 1.1 keeps the scope much better and the judge picked it on all five tasks, but it gave up a little on method and checks. The judge is a model, and the skill itself says that doesn't count as proof. Every prompt, answer key and score is in [`examples/`](examples/).
 
-| | No skill | /deeper |
-|---|---|---|
-| Expert method | 2.6 | 4.8 |
-| Starts from raw material | 1.8 | 4.8 |
-| Check outside the model, with a pass mark | 1.2 | 4.8 |
-| Kept to the original scope | 4.2 | 4.0 |
+Tested in Claude Code. Installing into Codex and Cursor is tested; running inside them isn't yet. Reports welcome.
 
-Two things to weigh before you trust that. The judge is a model, and the skill itself says a model grading its own work doesn't count. And /deeper drifted on scope once: on the caption it added an A/B test nobody asked for. Every prompt, the answer key and the judge's reasons are in [`examples/`](examples/), so you can check them yourself.
+## Contact
 
-Tested so far in Claude Code. The install into Codex and Cursor folders is tested; running it inside those agents isn't yet. Reports welcome.
+- Questions and bugs: [open an issue](https://github.com/EazyAccessEA/deeper/issues).
+- Anything private: hello@deeper.tools.
+- Security problems: use the private form in [SECURITY.md](SECURITY.md), not a public issue.
 
 ## Related skills
 
-**The source.** The four questions are Felix Rieseberg's, from the Depth section of [How to be more ambitious: A tutorial for humans with models](https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/) (13 October 2026). deeper turns that one prompt into a command, and adds the workspace check, the skills search and the stop rule.
+**The source.** The four questions are Felix Rieseberg's, from the Depth section of [How to be more ambitious: A tutorial for humans with models](https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/) (13 October 2026). deeper turns that one prompt into a command, and adds the workspace check, the skills and agents list, the scope rule and the stop rule.
 
-**be-ambitious** (mine, not published) grew out of deeper. deeper is the Depth lens only. It reads the workspace, names the skills and agents to use, writes the prompt and stops. be-ambitious covers altitude, depth and range, adds hard targets, assumption checks and a list of what counts as finished, then does the work. Both insist on a check outside the model. Use deeper when you want to see and edit the prompt first. Use be-ambitious when you want the work done.
+**be-ambitious** (mine, not published) grew out of deeper. It covers altitude, depth and range, adds hard targets and a list of what counts as finished, then does the work. Use deeper when you want to see and edit the prompt first, be-ambitious when you want the work done.
 
-**[DannyMac180/skills@be-ambitious](https://github.com/DannyMac180/skills/tree/main/be-ambitious)** (MIT) is a separate skill built on the same prompt from the article. It behaves much like deeper: rewrite, then offer to run. It shares a name with my be-ambitious, which will need a new name if I ever publish it.
+**[DannyMac180/skills@be-ambitious](https://github.com/DannyMac180/skills/tree/main/be-ambitious)** (MIT) is a separate skill built on the same prompt from the article. It behaves much like deeper: rewrite, then offer to run.
 
 ## Privacy
 
-The skill sends nothing. It's a text file your agent reads, with no code and no network calls.
+The skill sends nothing. It's a text file your agent reads, with no code and no network calls. If it suggests searching for other skills with `npx skills find`, it asks first.
 
-The skills CLI that installs it has its own anonymous install telemetry, which is where the install count on skills.sh comes from. Turn it off with `DISABLE_TELEMETRY=1` or `DO_NOT_TRACK=1`. The site uses Cloudflare Web Analytics, which sets no cookies.
-
-Those numbers answer one question: is deeper worth maintaining, and for which agents? `scripts/traffic-snapshot.sh` saves the repo's GitHub traffic to `data/traffic.csv` each day, because GitHub only keeps 14 days.
+The skills CLI has its own anonymous install telemetry, which is where the install count on skills.sh comes from. Turn it off with `DISABLE_TELEMETRY=1` or `DO_NOT_TRACK=1`. The site uses Cloudflare Web Analytics, which sets no cookies. `scripts/traffic-snapshot.sh` saves the repo's GitHub traffic to `data/traffic.csv`, because GitHub keeps only 14 days.
 
 ## The site
 
-[deeper.tools](https://deeper.tools) is the docs and demo site. Its source is in `site/`, built with Astro. Every score on it is read from `examples/raw/` at build time, so the site can't drift from the evidence.
-
-```bash
-cd site && npm install && npm run dev
-```
-
-It runs on Cloudflare as static files. To publish a change: `cd site && npm run build && npx wrangler deploy`.
+[deeper.tools](https://deeper.tools) is built with Astro from `site/`. Every score on it is read from `examples/raw/` at build time, so it can't drift from the evidence. Publish a change with `cd site && npm run build && npx wrangler deploy`.
 
 ## Licence
 

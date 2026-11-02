@@ -3,7 +3,7 @@ name: deeper
 description: Rewrite a task into its deeper version (same scope, more expert) before doing it. Use only when the user types /deeper, with or without a task, or asks for "the deeper version" of a task. Do not use it on your own initiative.
 license: Apache-2.0
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   source: "Felix Rieseberg, How to be more ambitious: A tutorial for humans with models (13 October 2026), Depth section"
 ---
 
@@ -36,7 +36,8 @@ First answer these four, briefly and specifically for this task:
    Then the skills and agents for the field, if your environment has them. List the installed
    skills that fit (for example `.agents/skills`, `~/.claude/skills`, `~/.codex/skills`,
    `~/.cursor/skills`, enabled plugins) and the subagent types on offer. If you can run shell
-   commands, search the open skills ecosystem with `npx skills find <field>` and name each result
+   commands, offer to search the open skills ecosystem with `npx skills find <field>`, which
+   downloads and runs the skills CLI from npm, and run it only if I say yes. Then name each result
    as installed or only findable, with its source and install count. If you can't run commands,
    say so rather than guessing. Ask before downloading or installing anything.
 4. **What, other than you or me, would show the result is right?** A test, a measurement, a
@@ -45,4 +46,14 @@ First answer these four, briefly and specifically for this task:
    set it, not where it's easy to reach, and say what result would count as a fail.
 
 Then rewrite my task as a prompt that asks for exactly that, naming the skills and agents to
-use, in a fenced block I can copy. End by asking whether to run it.
+use, in a fenced block I can copy.
+
+**Same deliverables.** Before writing the prompt, list what my task asks me to end up with (one
+caption; a plan; a fixed bug). The prompt asks for those and nothing else. Depth changes how
+each one is made and checked, never how many there are. A check belongs in the prompt only if it
+tests a listed deliverable without producing a new one; a check that needs a second version, a
+new tool, a script, a document or an ongoing process is a new deliverable. Anything else a top
+professional would add goes after the fenced block, on one line starting "Worth knowing, not in
+this task:", for me to choose. Leave that line out if there's nothing to add.
+
+End by asking whether to run it.
