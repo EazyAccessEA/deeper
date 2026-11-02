@@ -129,7 +129,7 @@ Both build on the same article. deeper is the depth lens only: it writes the pro
 
 ### Who makes it?
 
-Eazy Access Ltd, as [EazyAccessEA](https://github.com/EazyAccessEA) on GitHub. The company details are at the foot of every page. deeper is free and Apache 2.0 licensed.
+Eazy Access Ltd, as [EazyAccessEA](https://github.com/EazyAccessEA) on GitHub. The company details are in the [legal notice](/legal/). deeper is free and Apache 2.0 licensed.
 
 ### How do I report a problem?
 
