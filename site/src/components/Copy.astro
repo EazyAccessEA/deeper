@@ -1,9 +1,9 @@
 ---
-interface Props { text: string; primary?: boolean; }
-const { text, primary = false } = Astro.props;
+interface Props { text: string; }
+const { text } = Astro.props;
 ---
-<div class:list={["copy", { primary }]}>
-  <code><span aria-hidden="true">$</span>{text}</code>
+<div class="copy">
+  <code>{text}</code>
   <button type="button" data-copy={text} aria-label={`Copy: ${text}`}>Copy</button>
 </div>
 
@@ -22,17 +22,13 @@ const { text, primary = false } = Astro.props;
 </script>
 
 <style>
-  .copy { min-width: 0; display: flex; align-items: stretch; border: 1px solid var(--line); background: var(--paper-2); max-width: 34rem; }
-  code { flex: 1; min-width: 0; display: flex; align-items: center; padding: 0 1rem; min-height: 2.75rem; overflow-x: auto; white-space: nowrap; font-size: 0.9rem; }
-  code span { color: var(--ink-2); margin-right: 0.5ch; }
+  .copy { display: flex; align-items: center; gap: 0.5rem; min-width: 0; max-width: 30rem; background: var(--margin); border-radius: 4px; padding: 0.4rem 0.4rem 0.4rem 1rem; }
+  code { flex: 1; min-width: 0; overflow-x: auto; white-space: nowrap; font-size: 0.92rem; }
   button {
-    min-width: 5rem; border: 0; border-left: 1px solid var(--line);
-    background: transparent; color: var(--ink); font: 500 0.9rem var(--sans); cursor: pointer;
+    flex: none; min-height: 2.75rem; padding: 0 1.1rem; border: 0; border-radius: 4px; cursor: pointer;
+    background: var(--red); color: var(--on-red); font: 600 0.95rem var(--sans);
+    transition: transform 0.12s;
   }
-  button:hover { color: var(--accent); }
-  .primary { background: var(--ink); border-color: var(--ink); }
-  .primary code, .primary button { color: var(--paper); }
-  .primary code span { color: color-mix(in srgb, var(--paper) 60%, var(--ink)); }
-  .primary button { border-left-color: color-mix(in srgb, var(--paper) 25%, var(--ink)); }
-  .primary button:hover { background: var(--accent); color: var(--accent-ink); }
+  button:active { transform: translateY(1px); }
+  @media (max-width: 480px) { code { white-space: normal; overflow-wrap: anywhere; font-size: 0.85rem; } }
 </style>

@@ -1,0 +1,83 @@
+---
+import { markups } from "../lib/markup";
+const start = 1;
+---
+<div class="markup" data-markup>
+  <div class="tabs" role="tablist" aria-label="Example tasks">
+    {markups.map((m, i) => (
+      <button role="tab" id={`mt-${m.id}`} aria-controls={`mp-${m.id}`} aria-selected={i === start ? "true" : "false"} tabindex={i === start ? 0 : -1}>{m.short}</button>
+    ))}
+  </div>
+  {markups.map((m, i) => (
+    <section class="panel" role="tabpanel" id={`mp-${m.id}`} aria-labelledby={`mt-${m.id}`} hidden={i !== start}>
+      <p class="request">
+        {m.task}
+        {m.inserts.map((phrase, k) => (
+          <ins class="ins" style={`--k:${k}`}><span class="caret" aria-hidden="true"></span>{phrase}</ins>
+        ))}
+      </p>
+      <p class="source muted">Red is what deeper inserted, word for word from its rewrite. Your scope stays the same.</p>
+      <details>
+        <summary>Read the full /deeper prompt</summary>
+        <pre>{m.deeper}</pre>
+      </details>
+      <details>
+        <summary>Compare the plain rewrite</summary>
+        <pre>{m.plain}</pre>
+        <p class="verdict">{m.reason}</p>
+      </details>
+    </section>
+  ))}
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-markup]").forEach((root) => {
+    const tabs = [...root.querySelectorAll<HTMLButtonElement>('[role="tab"]')];
+    const show = (tab: HTMLButtonElement) => {
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.setAttribute("aria-selected", String(on));
+        t.tabIndex = on ? 0 : -1;
+        const panel = root.querySelector<HTMLElement>(`#${t.getAttribute("aria-controls")}`)!;
+        panel.hidden = !on;
+        if (on) { panel.classList.remove("play"); void panel.offsetWidth; panel.classList.add("play"); }
+      });
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener("click", () => show(t));
+      t.addEventListener("keydown", (e) => {
+        const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+        if (!d) return;
+        const next = tabs[(i + d + tabs.length) % tabs.length];
+        show(next);
+        next.focus();
+      });
+    });
+    root.querySelector<HTMLElement>(".panel:not([hidden])")?.classList.add("play");
+  });
+</script>
+
+<style>
+  .tabs { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; margin-bottom: 2rem; }
+  [role="tab"] {
+    min-height: 2.75rem; padding: 0; background: none; border: 0; cursor: pointer;
+    font: 500 1rem var(--sans); color: var(--graphite);
+  }
+  [role="tab"][aria-selected="true"] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 0.35em; }
+  .request { font-size: clamp(1.7rem, 3.6vw, 2.9rem); line-height: 1.32; letter-spacing: -0.025em; font-weight: 500; max-width: 26em; }
+  .ins { display: inline; margin-left: 0.3em; }
+  .caret {
+    display: inline-block; width: 0.42em; height: 0.32em; margin-right: 0.12em; vertical-align: -0.12em; background: var(--red);
+    clip-path: polygon(0 100%, 50% 0, 100% 100%, 70% 100%, 50% 40%, 30% 100%);
+  }
+  .source { margin-top: 1.5rem; max-width: var(--measure); }
+  details { margin-top: 1rem; max-width: 48rem; }
+  details + details { margin-top: 0.25rem; }
+  summary { display: inline-flex; align-items: center; min-height: 2.75rem; cursor: pointer; text-decoration: underline; text-underline-offset: 0.18em; }
+  pre { margin: 0.5rem 0 0; background: var(--margin); padding: 1.25rem; border-radius: 4px; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.82rem; line-height: 1.6; max-height: 28rem; overflow-y: auto; }
+  .verdict { margin-top: 0.75rem; color: var(--graphite); max-width: var(--measure); }
+  @media (prefers-reduced-motion: no-preference) {
+    .play .ins { animation: write 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both; animation-delay: calc(0.35s + var(--k) * 0.32s); }
+    @keyframes write { from { opacity: 0; transform: translateY(4px); } }
+  }
+</style>

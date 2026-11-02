@@ -88,6 +88,14 @@ Tested so far in Claude Code. The install into Codex and Cursor folders is teste
 
 **[DannyMac180/skills@be-ambitious](https://github.com/DannyMac180/skills/tree/main/be-ambitious)** (MIT) is a separate skill built on the same prompt from the article. It behaves much like deeper: rewrite, then offer to run. It shares a name with my be-ambitious, which will need a new name if I ever publish it.
 
+## Privacy
+
+The skill sends nothing. It's a text file your agent reads, with no code and no network calls.
+
+The skills CLI that installs it has its own anonymous install telemetry, which is where the install count on skills.sh comes from. Turn it off with `DISABLE_TELEMETRY=1` or `DO_NOT_TRACK=1`. The site uses Cloudflare Web Analytics, which sets no cookies.
+
+Those numbers answer one question: is deeper worth maintaining, and for which agents? `scripts/traffic-snapshot.sh` saves the repo's GitHub traffic to `data/traffic.csv` each day, because GitHub only keeps 14 days.
+
 ## The site
 
 `site/` is the docs and demo site, built with Astro. Every score on it is read from `examples/raw/` at build time, so the site can't drift from the evidence.
