@@ -1,0 +1,15 @@
+{
+  "name": "deeper",
+  "owner": {
+    "name": "EazyAccessEA"
+  },
+  "metadata": {
+    "description": "Rewrites a task into the version an expert would ask for: same scope, better method. Asks four questions, writes the prompt, then stops for your go-ahead."
+  },
+  "plugins": [
+    {
+      "name": "deeper",
+      "source": "./"
+    }
+  ]
+}

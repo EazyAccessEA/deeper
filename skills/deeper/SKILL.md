@@ -1,7 +1,7 @@
 ---
 name: deeper
 description: Rewrite a task into its deeper version (same scope, more expert) before doing it. Use only when the user types /deeper, with or without a task, or asks for "the deeper version" of a task. Do not use it on your own initiative.
-license: MIT
+license: Apache-2.0
 metadata:
   version: "1.0.0"
   source: "Felix Rieseberg, How to be more ambitious: A tutorial for humans with models (13 October 2026), Depth section"

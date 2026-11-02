@@ -29,7 +29,7 @@ The [skills CLI](https://github.com/vercel-labs/skills) asks which agents to ins
 
 ### By hand
 
-Copy `SKILL.md` into a folder named `deeper` in your agent's skills directory:
+Copy `skills/deeper/SKILL.md` into a folder named `deeper` in your agent's skills directory:
 
 | Agent | Folder |
 |---|---|
@@ -38,7 +38,7 @@ Copy `SKILL.md` into a folder named `deeper` in your agent's skills directory:
 
 ### In a chat app
 
-ChatGPT, Claude.ai, Gemini and the rest have no skills folder. Paste the contents of `SKILL.md` into the chat, then type `/deeper` and your task on the next line. The skill knows it may have no files or shell, and it asks you for the raw material instead.
+ChatGPT, Claude.ai, Gemini and the rest have no skills folder. Paste the contents of `skills/deeper/SKILL.md` into the chat, then type `/deeper` and your task on the next line. The skill knows it may have no files or shell, and it asks you for the raw material instead.
 
 ## Use
 
@@ -83,4 +83,4 @@ Tested so far in Claude Code. The install into Codex and Cursor folders is teste
 
 ## Licence
 
-MIT. See [LICENSE](LICENSE).
+Apache 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).

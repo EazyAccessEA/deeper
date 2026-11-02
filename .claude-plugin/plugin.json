@@ -1,0 +1,17 @@
+{
+  "name": "deeper",
+  "version": "1.0.0",
+  "description": "Rewrites a task into the version an expert would ask for: same scope, better method. Asks four questions, writes the prompt, then stops for your go-ahead.",
+  "author": {
+    "name": "EazyAccessEA"
+  },
+  "repository": "https://github.com/EazyAccessEA/deeper",
+  "license": "Apache-2.0",
+  "keywords": [
+    "prompting",
+    "skills",
+    "expertise",
+    "verification"
+  ],
+  "skills": "./skills/"
+}
