@@ -1,0 +1,52 @@
+{
+  "car": {
+    "kind": "markup",
+    "hook": "Asking AI to sell your car?",
+    "task": "I need to sell my car, a VW Polo, and buy a new one, perhaps a Golf.",
+    "insertions": ["Price it from comparable listings", "Two binding offers set the floor", "Inspect any used car before you buy", "Check a Golf fits how you drive"],
+    "payoff": "Same task. The method a dealer would use.",
+    "source": "examples/raw/v1.1/final.md, T3"
+  },
+  "downloads": {
+    "kind": "markup",
+    "hook": "Even this has an expert version.",
+    "task": "Tidy my Downloads folder.",
+    "insertions": ["Find duplicates by hash, not by name", "Flag files that exist nowhere else", "Trash, never rm", "Count every file before and after"],
+    "payoff": "Nothing lost. Every step reversible.",
+    "source": "examples/raw/v1.1/final.md, T5"
+  },
+  "book": {
+    "kind": "markup",
+    "hook": "“The margins look too big.” Do they?",
+    "task": "Evaluate the typesetting of my book manuscript. The inner margins look exceedingly large.",
+    "insertions": ["Treat that as a guess to test", "Judge margins on two-page spreads", "45 to 75 characters per line", "Print a proof at 100% and look"],
+    "payoff": "What a book typographer checks first.",
+    "source": "examples/raw/v1.1/final.md, T2"
+  },
+  "vercel": {
+    "kind": "markup",
+    "hook": "Leaving Vercel? Ask it like this.",
+    "task": "Can we move our Next.js app off Vercel to Cloudflare?",
+    "insertions": ["List every @vercel/* dependency", "Build it with the OpenNext adapter", "Diff every route against production", "Answer yes, no or not yet"],
+    "payoff": "A platform engineer's checklist, in your prompt.",
+    "source": "examples/raw/v1.1/final.md, T4"
+  },
+  "blind": {
+    "kind": "data",
+    "hook": "We tested it blind.",
+    "intro": "Five real tasks, rewritten with and without deeper. A judge on another model scored them without knowing which was which.",
+    "columns": ["No skill", "deeper 1.1"],
+    "rows": [["Starts from raw material", "1.8", "5.0"], ["Expert method", "2.6", "5.0"], ["Check outside the model", "1.0", "4.8"]],
+    "payoff": "Average out of 5. Five tasks is a small test, and every prompt is public.",
+    "source": "README.md, Does it work? table"
+  },
+  "scope": {
+    "kind": "data",
+    "hook": "Version 1.0 had a problem.",
+    "intro": "In 40 of my own runs, 33 asked for work I hadn't asked for. So 1.1 keeps your scope.",
+    "columns": ["deeper 1.0", "deeper 1.1"],
+    "rows": [["Extra deliverables per task", "3.6", "1.8"], ["Kept to the original scope", "2.8", "4.0"]],
+    "payoff": "Deeper, not bigger.",
+    "source": "README.md, Does it work? table and the paragraph under it"
+  }
+}
