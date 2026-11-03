@@ -1,6 +1,6 @@
 {
   "name": "deeper",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Rewrites a task into the version an expert would ask for: same scope, better method. Asks four questions, writes the prompt, then stops for your go-ahead.",
   "author": {
     "name": "EazyAccessEA"

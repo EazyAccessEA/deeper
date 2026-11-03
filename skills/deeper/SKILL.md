@@ -3,7 +3,7 @@ name: deeper
 description: Rewrite a task into its deeper version (same scope, more expert) before doing it. Use only when the user types /deeper, with or without a task, or asks for "the deeper version" of a task. Do not use it on your own initiative.
 license: Apache-2.0
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
   source: "Felix Rieseberg, How to be more ambitious: A tutorial for humans with models (13 October 2026), Depth section"
 ---
 
@@ -34,12 +34,10 @@ First answer these four, briefly and specifically for this task:
    their vocabulary without changing their method. Say which of these tools are already here.
    Don't swap in a weaker tool just because it's to hand.
    Then the skills and agents for the field, if your environment has them. List the installed
-   skills that fit (for example `.agents/skills`, `~/.claude/skills`, `~/.codex/skills`,
-   `~/.cursor/skills`, enabled plugins) and the subagent types on offer. If you can run shell
-   commands, offer to search the open skills ecosystem with `npx skills find <field>`, which
-   downloads and runs the skills CLI from npm, and run it only if I say yes. Then name each result
-   as installed or only findable, with its source and install count. If you can't run commands,
-   say so rather than guessing. Ask before downloading or installing anything.
+   skills that fit and the subagent types on offer, by name. For skills beyond those, give me a
+   search term for the field to try at https://skills.sh, the open skills directory, and leave
+   the searching to me. Name each skill you list as installed, or as one to look for there. Don't
+   download, install or run anything to find skills.
 4. **What, other than you or me, would show the result is right?** A test, a measurement, a
    tool, a real audience, a domain expert. Prefer something that can be run straight away. A
    model grading its own work doesn't count. Set the pass mark where the best in the field would
