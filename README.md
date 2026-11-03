@@ -66,7 +66,7 @@ Five real tasks, with project details stripped out: a product caption, book type
 
 Version 1.1 exists because 1.0 grew tasks. In a sample of 40 of my own past runs, 33 asked for at least one deliverable I hadn't. A first fix kept scope but weakened method and checks, so the rule was rewritten and tested again; [`examples/raw/v1.1/`](examples/raw/v1.1/) has both rounds. The judge is a model, and the skill itself says that doesn't count as proof. It's one run on five tasks.
 
-Tested in Claude Code. Installing into Codex and Cursor is tested; running inside them isn't yet. Reports welcome.
+Tested in Claude Code, Cursor and Codex. Reports welcome.
 
 ## Contact
 
