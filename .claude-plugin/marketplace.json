@@ -11,7 +11,7 @@
     {
       "name": "deeper",
       "description": "Rewrites a task into the version an expert would ask for: same scope, better method. Asks four questions, writes the prompt, then stops for your go-ahead.",
-      "version": "1.1.1",
+      "version": "1.1.2",
       "source": "./",
       "category": "productivity",
       "tags": [
