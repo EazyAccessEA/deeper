@@ -19,7 +19,7 @@ deeper has one maintainer. Expect a first reply within 7 days.
 `npx skills add EazyAccessEA/deeper` installs whatever is on `main` today. To install an exact release instead, name its tag:
 
 ```bash
-npx skills add https://github.com/EazyAccessEA/deeper/tree/v1.1.1/skills/deeper
+npx skills add https://github.com/EazyAccessEA/deeper/tree/v1.1.2/skills/deeper
 ```
 
 Each release on GitHub lists the SHA-256 of its `SKILL.md`, so you can check the file you got:

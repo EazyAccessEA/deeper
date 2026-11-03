@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.2 (2026-11-03)
+
+- The skills search is back. Question 3 again offers to run `npx skills find <field>` and runs it only if you say yes, so you get live results with sources and install counts. Its wording is 1.1.0's, word for word. 1.1.1's search term for you to look up yourself was a step down. The trade-off: the skills.sh security audit (Gen Agent Trust Hub) rates this wording high risk, because the search downloads and runs the skills CLI from npm.
+
 ## 1.1.1 (2026-11-03)
 
 - Question 3 no longer offers to run `npx skills find`. It lists the installed skills that fit and gives you a search term for [skills.sh](https://skills.sh) instead, and it runs nothing to find skills. The skills.sh security audit (Gen Agent Trust Hub) rated 1.1.0 high risk, with three of its five findings citing that npm download.
