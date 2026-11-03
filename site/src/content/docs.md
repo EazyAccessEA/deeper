@@ -10,7 +10,7 @@ deeper is one skill file for coding agents. Type `/deeper` before a task and it 
 npx skills add EazyAccessEA/deeper
 ```
 
-The [skills CLI](https://github.com/vercel-labs/skills) is an open-source installer for agent skills. It asks which agents to install into, then copies or links the skill into each one's folder. Add `-g` to install it for your user rather than one project. Its install telemetry can be turned off with `DISABLE_TELEMETRY=1`.
+The [skills CLI](https://github.com/vercel-labs/skills) is an open-source installer for agent skills. It asks which agents to install into, then copies or links the skill into each one's folder. Add `-g` to install it for your user rather than one project. Its install telemetry can be turned off with `DISABLE_TELEMETRY=1`. The CLI asks for Node.js 22.20 or later; `node --version` shows yours.
 
 ### Claude Code, as a plugin
 
@@ -28,7 +28,7 @@ Copy `skills/deeper/SKILL.md` from the repo into a folder named `deeper`:
 
 ### In a chat app
 
-ChatGPT, Claude.ai and Gemini have no skills folder. Paste the contents of `SKILL.md` into the chat, then type `/deeper` and your task on the next line. With no files or shell to look at, the skill asks you for the raw material instead.
+ChatGPT, Claude.ai and Gemini have no skills folder. Paste the contents of `SKILL.md` into the chat, then type `/deeper` and your task on the next line. With no files or shell to look at, the skill asks you for the raw material instead. [Start here](/start/#chat) has a copy button and how to keep it in a Project or Gem so you don't paste it every time.
 
 ### Where it's tested
 
@@ -130,6 +130,10 @@ Both build on the same article. deeper is the depth lens only: it writes the pro
 ### Who makes it?
 
 Eazy Access Ltd, as [EazyAccessEA](https://github.com/EazyAccessEA) on GitHub. The company details are in the [legal notice](/legal/). deeper is free and Apache 2.0 licensed.
+
+### /deeper doesn't appear. What do I check?
+
+Start a new session, then run `npx skills list`. [Start here](/start/#stuck) has the full checklist.
 
 ### How do I report a problem?
 

@@ -1,0 +1,34 @@
+PASS  impeccable    200 /tutorials/getting-started   'npx impeccable install'
+PASS  deeper        200 /docs/                       '/plugin install deeper@deeper'
+PASS  impeccable    200 /faq                         'appearing or responding'
+PASS  deeper        200 /docs/                       'deeper appears in the list of commands'
+PASS  impeccable    200 /tutorials/getting-started   'Impeccable supports Claude Code, Codex, Cursor'
+PASS  deeper        200 /docs/                       'Installing into Codex and Cursor is tested'
+PASS  deeper        200 /start/                      'ask for the deeper version'
+PASS  deeper        200 /start/                      'Copy the skill'
+PASS  deeper        200 /start/                      "so you don't paste it every time"
+PASS  impeccable    200 /faq                         'You don’t need design experience'
+PASS  deeper        200 /start/                      "It doesn't do the task"
+PASS  impeccable    200 /tutorials/getting-started   'a coding tool, a project folder, and Node.js'
+PASS  deeper        200 /start/                      'Node.js 22.20'
+PASS  impeccable    200 /faq                         'new to AI coding tools'
+PASS  deeper        200 /start/                      'Pick the way you already talk to an AI'
+PASS  impeccable    200 /cases/neo-mirai             'from mockup to working site'
+PASS  deeper        200 /research/                   'blind'
+PASS  deeper        200 /research/                   'Limits'
+PASS  impeccable    200 /faq                         'npx impeccable update'
+PASS  deeper        200 /docs/                       'npx skills update deeper'
+PASS  impeccable    200 /faq                         'appearing or responding'
+PASS  deeper        200 /start/                      "If /deeper doesn't appear"
+PASS  impeccable    200 /tutorials/getting-started   'shared team version'
+PASS  deeper        200 /docs/                       'To install an exact release'
+PASS  deeper        200 /start/                      'works on a phone'
+
+Unanswered cells:
+  none  impeccable    Cursor/Codex user: How do I call it there?
+  none  impeccable    Chat-app user: Can I use it without a terminal?
+  none  impeccable    Chat-app user: How do I keep it between chats?
+  none  impeccable    Skeptic: What are the limits of that evidence?
+  none  impeccable    Phone visitor: Can I use it from my phone?
+
+0 failing cells

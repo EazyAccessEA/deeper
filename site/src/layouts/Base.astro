@@ -7,7 +7,7 @@ const {
   description = "A free skill for AI agents. It rewrites a task with the method, sources and checks a top professional would use, then waits for your go-ahead.",
 } = Astro.props;
 const path = Astro.url.pathname;
-const links = [["/docs/", "Docs"], ["/patterns/", "Patterns"], ["/research/", "Research"]];
+const links = [["/start/", "Start"], ["/docs/", "Docs"], ["/patterns/", "Patterns"], ["/research/", "Research"]];
 const og = new URL("/og.png", Astro.site).href;
 const canonical = new URL(path, Astro.site).href;
 // Structured data for search engines; a data block, so the CSP's script-src doesn't apply.

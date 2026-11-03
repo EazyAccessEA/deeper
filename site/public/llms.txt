@@ -6,6 +6,7 @@ Install: `npx skills add EazyAccessEA/deeper`. The skill is one Markdown file wi
 
 ## Docs
 
+- [Start here](https://deeper.tools/start/): use it in a chat app or a coding agent, what you need, and what to check if /deeper doesn't appear
 - [Docs](https://deeper.tools/docs/): install, update, first run, the four questions, the same-deliverables rule
 - [Shallow patterns](https://deeper.tools/patterns/): seven ways a prompt looks expert without being expert
 - [Research](https://deeper.tools/research/): blind tests against a plain rewrite, with every prompt and score

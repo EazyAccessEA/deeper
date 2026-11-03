@@ -1,0 +1,100 @@
+---
+import fs from "node:fs";
+import path from "node:path";
+import Base from "../layouts/Base.astro";
+import Copy from "../components/Copy.astro";
+
+// The page copies the same file the installer installs, read at build time so the two can't drift.
+const skill = fs.readFileSync(path.resolve(process.cwd(), "../skills/deeper/SKILL.md"), "utf8");
+const words = Math.round(skill.split(/\s+/).length / 50) * 50;
+---
+<Base title="Start here | deeper" description="Use deeper in a chat app like ChatGPT or Claude.ai, or install it in a coding agent. What you need, the steps, and what to check if /deeper doesn't appear.">
+  <article class="wrap prose page">
+    <h1>Start here</h1>
+    <p>deeper is a short set of instructions for an AI assistant. Type <code>/deeper</code> before a request, and the assistant rewrites the request the way an expert in that field would ask for it: what they'd do, what they'd start from, and how they'd check the result.</p>
+    <p>It doesn't do the task. It shows you the better request and waits for you to say go, so you can fix a wrong assumption before any work starts.</p>
+
+    <h2 id="pick">Pick the way you already talk to an AI</h2>
+    <ul class="fork">
+      <li><a href="#chat"><span>In a chat app</span> ChatGPT, Claude.ai or Gemini, in a browser or on a phone. Nothing to install.</a></li>
+      <li><a href="#agent"><span>In a coding agent</span> Claude Code, Codex, Cursor or another agent that works in your files.</a></li>
+    </ul>
+
+    <h2 id="chat">In a chat app</h2>
+    <p>The skill is plain text you paste in, so it works on a phone too. Chat apps aren't tested yet, so treat the reply below as what should happen, and <a href="mailto:hello@deeper.tools?subject=deeper%20in%20a%20chat%20app">tell us how it went</a>.</p>
+    <ol>
+      <li>
+        <p>Copy the skill. It's one text file of about {words} words.</p>
+        <button class="copy-skill" type="button" data-skill={skill}>Copy the skill</button>
+        <details><summary>Read it before you paste it</summary><pre>{skill}</pre></details>
+      </li>
+      <li>Paste it into a new chat. On the next line, type <code>/deeper</code> and your request, then send. For example: <code>/deeper help me write a cover letter for a junior data analyst job</code></li>
+      <li>Read the reply. It should give four short answers, then a rewritten request in a box, then ask whether to run it. Anything extra an expert would do goes on one line, "Worth knowing, not in this task", for you to choose. It can't see your files from a chat, so it asks you to paste what it needs, such as the job ad and your CV.</li>
+      <li>Say yes, or edit the rewritten request first.</li>
+    </ol>
+    <h3 id="keep">Keep it so you don't paste it every time</h3>
+    <ul>
+      <li>ChatGPT and Claude.ai: make a Project and paste the skill into its instructions. Chats in that Project should then take <code>/deeper</code>.</li>
+      <li>Gemini: make a Gem and paste the skill into its instructions.</li>
+    </ul>
+
+    <h2 id="agent">In a coding agent</h2>
+    <p>You need:</p>
+    <ul>
+      <li>a coding agent, such as Claude Code, Codex or Cursor;</li>
+      <li>a terminal, and Node.js 22.20 or later for the installer. <code>node --version</code> shows yours. Without Node, use the Claude Code plugin or copy the file by hand, both in <a href="/docs/#install">Install</a>.</li>
+    </ul>
+    <ol>
+      <li>
+        <p>In a terminal, in your project folder, run:</p>
+        <Copy text="npx skills add EazyAccessEA/deeper" />
+        <p>It asks which agents to install into. Add <code>-g</code> to install it for every project, not just this one.</p>
+      </li>
+      <li>Check it's there: <code>npx skills list</code> shows deeper. In Claude Code, type <code>/</code> and deeper is in the list of commands.</li>
+      <li>Type <code>/deeper</code> and a real task you were about to ask anyway. If <code>/deeper</code> isn't recognised, ask for the deeper version of the task in words. The skill is written to load when you do.</li>
+      <li>Read the four answers and the prompt, then say whether to run it.</li>
+    </ol>
+    <p>Running deeper is tested in Claude Code. Installing into Codex and Cursor is tested, running inside them isn't yet.</p>
+
+    <h2 id="stuck">If /deeper doesn't appear</h2>
+    <ul>
+      <li>Installed during a session? Start a new one. Your agent may only look for skills when a session starts.</li>
+      <li>Run <code>npx skills list</code>. No deeper there? Install again and pick your agent when it asks. Installed as a Claude Code plugin? Check <code>/plugin</code> instead.</li>
+      <li>Installed without <code>-g</code>? It only shows inside that project folder.</li>
+      <li>An error about Node during install? Update Node to 22.20 or later, or <a href="/docs/#by-hand">copy the file by hand</a>.</li>
+      <li>In a chat app, the skill has to be in the same chat or Project. Paste it again.</li>
+    </ul>
+    <p>Still stuck? <a href="https://github.com/EazyAccessEA/deeper/issues">Open an issue</a> or email <a href="mailto:hello@deeper.tools">hello@deeper.tools</a>.</p>
+
+    <h2 id="next">After the first run</h2>
+    <p>Give it tasks where getting the method wrong would cost you: a migration, a purchase, a piece of writing that has to land. For a status question or a one-line fix it says depth won't help, and stops.</p>
+    <p>The docs cover <a href="/docs/#update-remove-or-pin">updating and pinning a version</a> for a team. <a href="/patterns/">Shallow patterns</a> shows what it guards against, and <a href="/research/">Research</a> shows how it was tested.</p>
+  </article>
+</Base>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>("[data-skill]").forEach((b) => {
+    b.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(b.dataset.skill!);
+        b.textContent = "Copied. Now paste it into a new chat";
+      } catch {
+        b.textContent = "Copy failed. Open 'Read it' below, then select all";
+      }
+      setTimeout(() => (b.textContent = "Copy the skill"), 4000);
+    });
+  });
+</script>
+
+<style>
+  .fork { list-style: none; padding: 0; display: grid; gap: 0.75rem; }
+  .fork a { display: block; padding: 1rem 1.25rem; border: 1px solid var(--rule); border-radius: 4px; text-decoration: none; color: var(--graphite); }
+  .fork a:hover { border-color: var(--red); }
+  .fork span { display: block; color: var(--ink); font-weight: 600; font-size: 1.15rem; margin-bottom: 0.2rem; }
+  .copy-skill { min-height: 2.75rem; padding: 0 1.25rem; border: 0; border-radius: 4px; cursor: pointer; background: var(--red); color: var(--on-red); font: 600 1rem var(--sans); margin: 0.5rem 0; }
+  .copy-skill:active { transform: translateY(1px); }
+  details { margin-top: 0.5rem; }
+  summary { display: inline-flex; align-items: center; min-height: 2.75rem; cursor: pointer; text-decoration: underline; text-underline-offset: 0.18em; }
+  details pre { max-height: 24rem; overflow: auto; white-space: pre-wrap; font-size: 0.8rem; }
+  ol > li + li { margin-top: 0.75rem; }
+</style>
