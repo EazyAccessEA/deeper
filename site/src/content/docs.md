@@ -44,7 +44,7 @@ npx skills remove deeper
 `add` and `update` follow the main branch. To install an exact release instead, name its tag:
 
 ```
-npx skills add https://github.com/EazyAccessEA/deeper/tree/v1.1.0/skills/deeper
+npx skills add https://github.com/EazyAccessEA/deeper/tree/v1.1.1/skills/deeper
 ```
 
 Each [release](https://github.com/EazyAccessEA/deeper/releases) lists the SHA-256 of its `SKILL.md`, so you can check the file you got.
@@ -93,7 +93,7 @@ What would they start from? Not the summary, template or digest, but what sits u
 
 Which methods and tools would they use? The instruments themselves: a database and a statistical model, a profiler, a test suite. Models tend to change their vocabulary without changing their method, and this question is there to catch that.
 
-It then lists the installed skills and agents that fit. If it can run commands, it offers to search the open skills ecosystem with `npx skills find <field>` and runs the search only if you say yes, because it downloads the skills CLI from npm. It asks before installing anything.
+It then lists the installed skills and agents that fit, by name. For skills beyond those, it gives you a search term to try at [skills.sh](https://skills.sh) and leaves the search to you. It doesn't download, install or run anything to find skills.
 
 ### 4. Outside check
 
