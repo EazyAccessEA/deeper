@@ -1,0 +1,657 @@
+site,url,heading,words,diataxis,readers
+impeccable.style,https://impeccable.style/cases/neo-mirai,(intro),8,explanation,Skeptic
+impeccable.style,https://impeccable.style/cases/neo-mirai,Neo Mirai: from mockup to working site.,102,explanation,all
+impeccable.style,https://impeccable.style/cases/neo-mirai,The design became a page people can use.,0,explanation,all
+impeccable.style,https://impeccable.style/cases/neo-mirai,Keep the composition,20,explanation,all
+impeccable.style,https://impeccable.style/cases/neo-mirai,Prepare the images,20,explanation,all
+impeccable.style,https://impeccable.style/cases/neo-mirai,Refine it in the browser,71,explanation,all
+impeccable.style,https://impeccable.style/cases/neo-mirai,Describe the site you want.,39,explanation,all
+impeccable.style,https://impeccable.style/changelog,(intro),3,reference,all
+impeccable.style,https://impeccable.style/changelog,Transparent assets. Faster comps.,51,reference,all
+impeccable.style,https://impeccable.style/changelog,Release history,17,reference,all
+impeccable.style,https://impeccable.style/changelog,(intro),22,reference,Existing user
+impeccable.style,https://impeccable.style/changelog,"Devin, findings on your pull requests, and checked engine downloads.",658,reference,Cursor/Codex user | Existing user
+impeccable.style,https://impeccable.style/changelog,Annotate pull requests from CI.,147,reference,Cursor/Codex user | Existing user
+impeccable.style,https://impeccable.style/changelog,"Desktop apps, fewer false alarms, and a skill that loads lighter.",331,reference,Skeptic
+impeccable.style,https://impeccable.style/changelog,Scan a running desktop app.,74,reference,all
+impeccable.style,https://impeccable.style/changelog,"Oh My Pi, a real off switch, and a detector that looks where visitors look.",267,reference,Claude Code user | Skeptic | Existing user
+impeccable.style,https://impeccable.style/changelog,Installs again on Node 22.17 and earlier.,83,how-to,all
+impeccable.style,https://impeccable.style/changelog,"App screens and docs are designed in code, and you choose from sketches.",181,reference,Skeptic
+impeccable.style,https://impeccable.style/changelog,"One version number, and the current detector.",90,reference,all
+impeccable.style,https://impeccable.style/changelog,"Fewer false alarms, and a direction round you can always see.",269,reference,all
+impeccable.style,https://impeccable.style/changelog,Every kind of page gets its own rules.,228,reference,Skeptic
+impeccable.style,https://impeccable.style/changelog,You approve the parts before the page.,331,reference,Skeptic | Existing user
+impeccable.style,https://impeccable.style/changelog,Clearer setup failures.,75,reference,Existing user
+impeccable.style,https://impeccable.style/changelog,Transparent assets. Faster comps.,158,reference,all
+impeccable.style,https://impeccable.style/changelog,Design hooks that understand your project.,262,reference,Cursor/Codex user | Existing user
+impeccable.style,https://impeccable.style/changelog,Image generation gets native transparency.,117,reference,all
+impeccable.style,https://impeccable.style/changelog,Windows updates and managed certificates.,100,reference,Existing user
+impeccable.style,https://impeccable.style/changelog,A new home in DeepSeek Harness.,110,reference,all
+impeccable.style,https://impeccable.style/changelog,"DeepSeek Harness, from the command line.",57,reference,all
+impeccable.style,https://impeccable.style/changelog,Signed downloads. Smoother starts.,104,reference,Claude Code user
+impeccable.style,https://impeccable.style/changelog,"Signed Windows engines, ready to install.",35,reference,all
+impeccable.style,https://impeccable.style/changelog,One engine. Everywhere you work.,174,reference,all
+impeccable.style,https://impeccable.style/changelog,Verify the download before it installs.,45,reference,all
+impeccable.style,https://impeccable.style/changelog,--version reports the package version.,78,reference,all
+impeccable.style,https://impeccable.style/changelog,npx impeccable runs the binary.,114,reference,Existing user
+impeccable.style,https://impeccable.style/changelog,"One rule engine, now in your browser.",98,reference,all
+impeccable.style,https://impeccable.style/changelog,A closer match from comp to code.,195,reference,Cursor/Codex user | Skeptic
+impeccable.style,https://impeccable.style/changelog,Bundle downloads follow the whole redirect chain.,62,reference,Existing user
+impeccable.style,https://impeccable.style/changelog,Better context for bigger projects.,116,reference,Cursor/Codex user
+impeccable.style,https://impeccable.style/changelog,A more discerning finish review.,77,reference,Skeptic
+impeccable.style,https://impeccable.style/changelog,A better way to choose a direction.,701,reference,Claude Code user | Cursor/Codex user | Non-developer / new to agents | Skeptic
+impeccable.style,https://impeccable.style/changelog,Contrast findings stop assuming white.,269,reference,Skeptic
+impeccable.style,https://impeccable.style/changelog,"The quieter detector, in your browser.",112,reference,all
+impeccable.style,https://impeccable.style/changelog,The finish review grew a spine.,487,reference,Cursor/Codex user | Non-developer / new to agents | Skeptic
+impeccable.style,https://impeccable.style/changelog,Documentation stops flagging itself.,286,reference,Cursor/Codex user | Non-developer / new to agents | Skeptic | Existing user
+impeccable.style,https://impeccable.style/changelog,The detector sees whole pages again.,84,reference,Skeptic
+impeccable.style,https://impeccable.style/changelog,The decision page grew up.,261,reference,Skeptic
+impeccable.style,https://impeccable.style/changelog,Kickers are banned.,199,reference,Cursor/Codex user
+impeccable.style,https://impeccable.style/changelog,"The updated detector, in your browser.",82,reference,all
+impeccable.style,https://impeccable.style/changelog,Security.,218,reference,Existing user
+impeccable.style,https://impeccable.style/changelog,Play it straight.,242,reference,Cursor/Codex user
+impeccable.style,https://impeccable.style/changelog,CLI v3.3.1,148,reference,Existing user
+impeccable.style,https://impeccable.style/changelog,A world beyond the first idea.,1583,reference,Cursor/Codex user | Non-developer / new to agents | Skeptic | Existing user
+impeccable.style,https://impeccable.style/changelog,A dozen new anti-pattern rules.,171,reference,Cursor/Codex user
+impeccable.style,https://impeccable.style/changelog,Node 22 and 23 install cleanly again.,238,reference,Existing user
+impeccable.style,https://impeccable.style/changelog,Codex loads the plugin design hook again.,70,reference,Claude Code user | Cursor/Codex user
+impeccable.style,https://impeccable.style/changelog,Decorative grid backgrounds are now a named tell.,236,reference,Cursor/Codex user
+impeccable.style,https://impeccable.style/changelog,New rule: Codex grid-line backgrounds.,167,reference,Claude Code user | Cursor/Codex user
+impeccable.style,https://impeccable.style/changelog,Design hooks for GitHub Copilot.,136,reference,Cursor/Codex user
+impeccable.style,https://impeccable.style/changelog,Inline ignore comments.,139,reference,all
+impeccable.style,https://impeccable.style/changelog,The toolbar badge count matches the popup and panel.,195,reference,all
+impeccable.style,https://impeccable.style/changelog,Existing installs now pick up script-only skill fixes.,130,reference,Cursor/Codex user | Existing user
+impeccable.style,https://impeccable.style/changelog,/impeccable critique works again.,52,reference,all
+impeccable.style,https://impeccable.style/changelog,Design-aware hook detections.,172,reference,Existing user
+impeccable.style,https://impeccable.style/changelog,impeccable detect now understands your design system.,194,reference,Existing user
+impeccable.style,https://impeccable.style/changelog,Exact motion findings.,108,reference,all
+impeccable.style,https://impeccable.style/changelog,Ablation-tested skill core.,332,reference,Cursor/Codex user | Skeptic
+impeccable.style,https://impeccable.style/changelog,Breaking: Node 24 minimum.,251,reference,Cursor/Codex user | Existing user
+impeccable.style,https://impeccable.style/changelog,Firefox support.,152,reference,all
+impeccable.style,https://impeccable.style/changelog,The i- command prefix is gone.,203,reference,Existing user
+impeccable.style,https://impeccable.style/changelog,"Better design, measured in the work.",854,reference,Cursor/Codex user | Non-developer / new to agents | Existing user
+impeccable.style,https://impeccable.style/changelog,Codex agent delivery simplified.,187,reference,Cursor/Codex user | Existing user
+impeccable.style,https://impeccable.style/changelog,Codex subagent delivery.,94,reference,Cursor/Codex user | Existing user
+impeccable.style,https://impeccable.style/changelog,"Static engine, no jsdom.",202,reference,all
+impeccable.style,https://impeccable.style/changelog,The new detection rules flag in the overlay.,106,reference,all
+impeccable.style,https://impeccable.style/changelog,/impeccable critique works on Windows.,129,reference,all
+impeccable.style,https://impeccable.style/changelog,Codex asset producer agent.,361,reference,Cursor/Codex user | Skeptic | Existing user
+impeccable.style,https://impeccable.style/changelog,Detector flags italic-serif display heroes.,297,reference,all
+impeccable.style,https://impeccable.style/changelog,Live mode preserves identity by default.,218,reference,all
+impeccable.style,https://impeccable.style/changelog,Live mode lands valid TSX through the wrap → preview → accept → carbonize loop on Vite/Next React/TSX projects.,173,reference,all
+impeccable.style,https://impeccable.style/changelog,/impeccable craft now treats approved mocks as visual contracts.,186,reference,all
+impeccable.style,https://impeccable.style/changelog,Claude Code plugin install shrunk by 380×.,108,reference,Claude Code user
+impeccable.style,https://impeccable.style/changelog,Live mode runs in strict-CSP apps.,179,reference,all
+impeccable.style,https://impeccable.style/changelog,Live Mode (Alpha).,276,reference,Cursor/Codex user | Existing user
+impeccable.style,https://impeccable.style/changelog,Streamlined from 21 to 18 commands.,80,reference,all
+impeccable.style,https://impeccable.style/changelog,Renamed frontend-design to impeccable.,164,reference,Cursor/Codex user | Skeptic
+impeccable.style,https://impeccable.style/changelog,v1.x release history,118,reference,Claude Code user | Cursor/Codex user | Skeptic
+impeccable.style,https://impeccable.style/changelog,No releases found,19,reference,all
+impeccable.style,https://impeccable.style/designing,(intro),36,explanation,all
+impeccable.style,https://impeccable.style/designing,Start with whatyou want to make,79,explanation,all
+impeccable.style,https://impeccable.style/designing,Give it context it can reuse,130,explanation,Non-developer / new to agents
+impeccable.style,https://impeccable.style/designing,Choose a direction you can see,133,explanation,Skeptic
+impeccable.style,https://impeccable.style/designing,Can I go straight to code instead?,142,how-to,Skeptic
+impeccable.style,https://impeccable.style/designing,Improve what is already there,250,explanation,Non-developer / new to agents
+impeccable.style,https://impeccable.style/designing,Check the work before release,144,explanation,Skeptic
+impeccable.style,https://impeccable.style/designing,Keep the design consistent as it grows,188,explanation,Existing user
+impeccable.style,https://impeccable.style/designing,"Work in chat, inspect in the browser, check in automation",78,explanation,all
+impeccable.style,https://impeccable.style/designing,What did the visitor come to do?,118,explanation,all
+impeccable.style,https://impeccable.style/designing,A few habits that help,87,explanation,Existing user
+impeccable.style,https://impeccable.style/designing,Where to start,22,explanation,all
+impeccable.style,https://impeccable.style/docs,(intro),34,reference,Cursor/Codex user
+impeccable.style,https://impeccable.style/docs,Install options and tool support,87,how-to,Claude Code user
+impeccable.style,https://impeccable.style/docs,Get started,45,tutorial,Claude Code user | Cursor/Codex user | Existing user
+impeccable.style,https://impeccable.style/docs,Build something new,33,tutorial,all
+impeccable.style,https://impeccable.style/docs,Improve an existing design,25,tutorial,all
+impeccable.style,https://impeccable.style/docs,Want to see a mockup before building?,156,explanation,all
+impeccable.style,https://impeccable.style/docs,Create 2,21,reference,all
+impeccable.style,https://impeccable.style/docs,Evaluate 2,20,reference,all
+impeccable.style,https://impeccable.style/docs,Refine 8,89,reference,all
+impeccable.style,https://impeccable.style/docs,Simplify 3,35,reference,all
+impeccable.style,https://impeccable.style/docs,Harden 4,44,reference,all
+impeccable.style,https://impeccable.style/docs,System 5,54,reference,all
+impeccable.style,https://impeccable.style/docs/adapt,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/adapt,On this page 3 sections,44,reference,all
+impeccable.style,https://impeccable.style/docs/adapt,Try it,41,tutorial,all
+impeccable.style,https://impeccable.style/docs/adapt,How it works,132,reference,all
+impeccable.style,https://impeccable.style/docs/adapt,Check the result,51,reference,all
+impeccable.style,https://impeccable.style/docs/adapt,Adapting a native app,39,reference,all
+impeccable.style,https://impeccable.style/docs/animate,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/animate,On this page 3 sections,35,reference,all
+impeccable.style,https://impeccable.style/docs/animate,Try it,36,tutorial,all
+impeccable.style,https://impeccable.style/docs/animate,How it works,139,reference,Existing user
+impeccable.style,https://impeccable.style/docs/animate,Check the result,61,reference,all
+impeccable.style,https://impeccable.style/docs/audit,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/audit,On this page 3 sections,45,reference,all
+impeccable.style,https://impeccable.style/docs/audit,Try it,26,tutorial,all
+impeccable.style,https://impeccable.style/docs/audit,How it works,114,reference,all
+impeccable.style,https://impeccable.style/docs/audit,Fix the most serious problems first,89,reference,Non-developer / new to agents
+impeccable.style,https://impeccable.style/docs/audit,How scoring works,35,reference,Skeptic
+impeccable.style,https://impeccable.style/docs/audit,Auditing an iOS or Android app,43,reference,all
+impeccable.style,https://impeccable.style/docs/bolder,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/bolder,On this page 3 sections,30,reference,all
+impeccable.style,https://impeccable.style/docs/bolder,Try it,41,tutorial,all
+impeccable.style,https://impeccable.style/docs/bolder,How it works,161,reference,all
+impeccable.style,https://impeccable.style/docs/bolder,Check the result,45,reference,all
+impeccable.style,https://impeccable.style/docs/bolder,What if I’m still choosing a design direction?,27,explanation,all
+impeccable.style,https://impeccable.style/docs/clarify,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/clarify,On this page 3 sections,34,reference,all
+impeccable.style,https://impeccable.style/docs/clarify,Try it,35,tutorial,all
+impeccable.style,https://impeccable.style/docs/clarify,How it works,151,reference,Non-developer / new to agents | Existing user
+impeccable.style,https://impeccable.style/docs/clarify,Check the result,55,reference,all
+impeccable.style,https://impeccable.style/docs/colorize,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/colorize,On this page 3 sections,35,reference,all
+impeccable.style,https://impeccable.style/docs/colorize,Try it,42,tutorial,all
+impeccable.style,https://impeccable.style/docs/colorize,How it works,134,reference,Existing user
+impeccable.style,https://impeccable.style/docs/colorize,Check the result,50,reference,all
+impeccable.style,https://impeccable.style/docs/config,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/config,On this page 7 sections,55,reference,all
+impeccable.style,https://impeccable.style/docs/config,Choose a build workflow,111,reference,all
+impeccable.style,https://impeccable.style/docs/config,Record a specific exception,70,reference,Existing user
+impeccable.style,https://impeccable.style/docs/config,Limit the scope,54,reference,all
+impeccable.style,https://impeccable.style/docs/config,Exclude whole files or rules,86,reference,Existing user
+impeccable.style,https://impeccable.style/docs/config,Share the decision or keep it local,65,reference,Existing user
+impeccable.style,https://impeccable.style/docs/config,Inline ignore comments,70,reference,all
+impeccable.style,https://impeccable.style/docs/config,Comment syntax and bypassing inline ignores,88,reference,all
+impeccable.style,https://impeccable.style/docs/config,Server-side templates,102,reference,all
+impeccable.style,https://impeccable.style/docs/config,Project boundaries,62,reference,all
+impeccable.style,https://impeccable.style/docs/config,Pattern precedence and private roots,68,reference,Existing user
+impeccable.style,https://impeccable.style/docs/config,Check your configuration,35,reference,Existing user
+impeccable.style,https://impeccable.style/docs/config,Config structure and hook settings,84,reference,all
+impeccable.style,https://impeccable.style/docs/config,Turn off design-system checks,56,reference,Existing user
+impeccable.style,https://impeccable.style/docs/context,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/context,On this page 6 sections,70,reference,all
+impeccable.style,https://impeccable.style/docs/context,Start with your product,104,reference,Non-developer / new to agents
+impeccable.style,https://impeccable.style/docs/context,Record an existing visual system,76,reference,all
+impeccable.style,https://impeccable.style/docs/context,What goes where,115,reference,all
+impeccable.style,https://impeccable.style/docs/context,Name the page you’re working on,47,reference,all
+impeccable.style,https://impeccable.style/docs/context,How Impeccable chooses a page’s approach,94,reference,all
+impeccable.style,https://impeccable.style/docs/context,Keep the files useful,110,reference,Non-developer / new to agents | Existing user
+impeccable.style,https://impeccable.style/docs/context,Starting DESIGN.md before there is any code,84,reference,all
+impeccable.style,https://impeccable.style/docs/context,Reference details,0,reference,all
+impeccable.style,https://impeccable.style/docs/context,"Native apps: iOS, Android, and adaptive (alpha)",141,reference,Skeptic
+impeccable.style,https://impeccable.style/docs/context,"Where to put context files, including in a monorepo",178,reference,Cursor/Codex user
+impeccable.style,https://impeccable.style/docs/context,What to do when context and code disagree,125,reference,Non-developer / new to agents | Skeptic | Existing user
+impeccable.style,https://impeccable.style/docs/context,What the detector checks against your design system,120,reference,all
+impeccable.style,https://impeccable.style/docs/context,Upgrading from the old brand/product register,63,reference,Existing user
+impeccable.style,https://impeccable.style/docs/critique,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/critique,On this page 3 sections,48,reference,all
+impeccable.style,https://impeccable.style/docs/critique,Try it,78,tutorial,all
+impeccable.style,https://impeccable.style/docs/critique,How it works,83,reference,Skeptic
+impeccable.style,https://impeccable.style/docs/critique,Act on the findings,68,reference,all
+impeccable.style,https://impeccable.style/docs/critique,Scores and saved reviews,74,reference,Chat-app user | Skeptic
+impeccable.style,https://impeccable.style/docs/delight,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/delight,On this page 3 sections,37,reference,all
+impeccable.style,https://impeccable.style/docs/delight,Try it,46,tutorial,all
+impeccable.style,https://impeccable.style/docs/delight,How it works,206,reference,all
+impeccable.style,https://impeccable.style/docs/delight,Check the result,58,reference,all
+impeccable.style,https://impeccable.style/docs/design-system,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/design-system,On this page 4 sections,34,reference,Skeptic
+impeccable.style,https://impeccable.style/docs/design-system,Record what you have,79,reference,all
+impeccable.style,https://impeccable.style/docs/design-system,Build within the system,77,reference,all
+impeccable.style,https://impeccable.style/docs/design-system,Keep changes reusable,50,reference,all
+impeccable.style,https://impeccable.style/docs/design-system,Refresh the record when the system changes,67,reference,Existing user
+impeccable.style,https://impeccable.style/docs/detector,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/detector,On this page 5 sections,35,reference,all
+impeccable.style,https://impeccable.style/docs/detector,Run a scan,64,reference,all
+impeccable.style,https://impeccable.style/docs/detector,Read a finding,114,reference,all
+impeccable.style,https://impeccable.style/docs/detector,Exit codes and automation,77,reference,all
+impeccable.style,https://impeccable.style/docs/detector,Save output or hide advisories,38,reference,all
+impeccable.style,https://impeccable.style/docs/detector,Check against your design system,49,reference,all
+impeccable.style,https://impeccable.style/docs/detector,Keep intentional choices,48,reference,all
+impeccable.style,https://impeccable.style/docs/detector,More scan options,0,reference,all
+impeccable.style,https://impeccable.style/docs/detector,File types and server-side templates,62,reference,all
+impeccable.style,https://impeccable.style/docs/detector,"Viewport, design domains, and piped input",65,reference,all
+impeccable.style,https://impeccable.style/docs/detector,Project settings and scans without ignores,52,reference,all
+impeccable.style,https://impeccable.style/docs/distill,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/distill,On this page 3 sections,37,reference,all
+impeccable.style,https://impeccable.style/docs/distill,Try it,40,tutorial,all
+impeccable.style,https://impeccable.style/docs/distill,How it works,76,reference,Existing user
+impeccable.style,https://impeccable.style/docs/distill,Add a gift message,52,reference,all
+impeccable.style,https://impeccable.style/docs/distill,Check what remains,63,reference,all
+impeccable.style,https://impeccable.style/docs/doctor,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/doctor,On this page 4 sections,40,reference,Existing user
+impeccable.style,https://impeccable.style/docs/doctor,Check your project,104,reference,Existing user
+impeccable.style,https://impeccable.style/docs/doctor,A finding you can act on,78,reference,Existing user
+impeccable.style,https://impeccable.style/docs/doctor,What gets repaired automatically?,100,explanation,Existing user
+impeccable.style,https://impeccable.style/docs/doctor,Notices at the start of a session,77,reference,Existing user
+impeccable.style,https://impeccable.style/docs/doctor,Show the report only when I ask,32,reference,Existing user
+impeccable.style,https://impeccable.style/docs/doctor,Reference details,0,reference,all
+impeccable.style,https://impeccable.style/docs/doctor,Which files and settings are checked?,155,explanation,Existing user
+impeccable.style,https://impeccable.style/docs/doctor,Does a lot of changed code mean DESIGN.md is wrong?,60,explanation,Existing user
+impeccable.style,https://impeccable.style/docs/doctor,Projects with several apps,71,reference,Existing user
+impeccable.style,https://impeccable.style/docs/doctor,Is this how I update Impeccable itself?,30,explanation,Existing user
+impeccable.style,https://impeccable.style/docs/doctor,Related,26,reference,all
+impeccable.style,https://impeccable.style/docs/document,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/document,On this page 3 sections,54,reference,all
+impeccable.style,https://impeccable.style/docs/document,Try it,20,tutorial,Existing user
+impeccable.style,https://impeccable.style/docs/document,How it works,184,reference,all
+impeccable.style,https://impeccable.style/docs/document,What is the DESIGN.md format?,76,explanation,Non-developer / new to agents
+impeccable.style,https://impeccable.style/docs/document,No visual system yet? Start with a seed.,107,reference,all
+impeccable.style,https://impeccable.style/docs/document,Check the result,56,reference,Existing user
+impeccable.style,https://impeccable.style/docs/extract,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/extract,On this page 3 sections,71,reference,all
+impeccable.style,https://impeccable.style/docs/extract,Try it,42,tutorial,all
+impeccable.style,https://impeccable.style/docs/extract,How it works,174,reference,Existing user
+impeccable.style,https://impeccable.style/docs/extract,Check the result,77,reference,all
+impeccable.style,https://impeccable.style/docs/generate,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/generate,On this page 4 sections,42,reference,all
+impeccable.style,https://impeccable.style/docs/generate,Try it,73,tutorial,all
+impeccable.style,https://impeccable.style/docs/generate,Give it a direction,158,reference,all
+impeccable.style,https://impeccable.style/docs/generate,Compare and choose,106,reference,Skeptic
+impeccable.style,https://impeccable.style/docs/generate,When to use Live Mode instead,77,reference,all
+impeccable.style,https://impeccable.style/docs/harden,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/harden,On this page 3 sections,35,reference,all
+impeccable.style,https://impeccable.style/docs/harden,Try it,41,tutorial,all
+impeccable.style,https://impeccable.style/docs/harden,How it works,181,reference,Non-developer / new to agents
+impeccable.style,https://impeccable.style/docs/harden,Check the result,48,reference,all
+impeccable.style,https://impeccable.style/docs/hooks,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/hooks,On this page 5 sections,29,reference,all
+impeccable.style,https://impeccable.style/docs/hooks,Turn checks on,25,reference,all
+impeccable.style,https://impeccable.style/docs/hooks,Allow hooks in your coding tool,0,reference,all
+impeccable.style,https://impeccable.style/docs/hooks,Claude Code,35,reference,Claude Code user
+impeccable.style,https://impeccable.style/docs/hooks,Codex,33,reference,Cursor/Codex user
+impeccable.style,https://impeccable.style/docs/hooks,Cursor,37,reference,Cursor/Codex user
+impeccable.style,https://impeccable.style/docs/hooks,GitHub Copilot,37,reference,Cursor/Codex user
+impeccable.style,https://impeccable.style/docs/hooks,Grok Build,23,reference,all
+impeccable.style,https://impeccable.style/docs/hooks,What happens while you work,126,reference,Claude Code user | Cursor/Codex user
+impeccable.style,https://impeccable.style/docs/hooks,Why some checks wait until the end of a turn,138,reference,Claude Code user | Cursor/Codex user | Non-developer / new to agents
+impeccable.style,https://impeccable.style/docs/hooks,Confirm checks are working,52,reference,Existing user
+impeccable.style,https://impeccable.style/docs/hooks,Keep an intentional choice,43,reference,all
+impeccable.style,https://impeccable.style/docs/hooks,Setup and troubleshooting details,0,reference,Existing user
+impeccable.style,https://impeccable.style/docs/hooks,Supported files and skipping installation,65,reference,Existing user
+impeccable.style,https://impeccable.style/docs/hooks,"Quiet mode, logs, and environment overrides",81,reference,all
+impeccable.style,https://impeccable.style/docs/hooks,A malformed hook manifest prevents setup,37,reference,Existing user
+impeccable.style,https://impeccable.style/docs/image-generation,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/image-generation,On this page 6 sections,75,reference,Skeptic
+impeccable.style,https://impeccable.style/docs/image-generation,"What you gain, and what takes work",146,reference,all
+impeccable.style,https://impeccable.style/docs/image-generation,Enable it for your coding tool,43,reference,Cursor/Codex user
+impeccable.style,https://impeccable.style/docs/image-generation,Use your coding tool’s image generation,103,how-to,Cursor/Codex user
+impeccable.style,https://impeccable.style/docs/image-generation,Use an OpenAI API key,32,how-to,all
+impeccable.style,https://impeccable.style/docs/image-generation,1. Create a key and check API billing,29,reference,all
+impeccable.style,https://impeccable.style/docs/image-generation,2. Make the key available to your agent,102,reference,all
+impeccable.style,https://impeccable.style/docs/image-generation,"Desktop apps, remote workspaces, containers, and .env files",54,reference,Existing user
+impeccable.style,https://impeccable.style/docs/image-generation,Check that you’re ready,72,reference,all
+impeccable.style,https://impeccable.style/docs/image-generation,Check the API key from the agent’s terminal,93,reference,all
+impeccable.style,https://impeccable.style/docs/image-generation,What’s the difference between a mockup and a finished asset?,78,explanation,all
+impeccable.style,https://impeccable.style/docs/image-generation,If image generation is unavailable,0,reference,all
+impeccable.style,https://impeccable.style/docs/image-generation,The agent can read screenshots but cannot generate images,17,reference,all
+impeccable.style,https://impeccable.style/docs/image-generation,The key is set in your terminal but missing for the agent,20,reference,all
+impeccable.style,https://impeccable.style/docs/image-generation,A key is detected but generation fails,20,reference,all
+impeccable.style,https://impeccable.style/docs/image-generation,The picker has no mockup/code switch,18,reference,all
+impeccable.style,https://impeccable.style/docs/image-generation,"Image generation works, but the picker starts in code",34,reference,all
+impeccable.style,https://impeccable.style/docs/impeccable,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/impeccable,On this page 3 sections,63,reference,all
+impeccable.style,https://impeccable.style/docs/impeccable,Try it,118,tutorial,all
+impeccable.style,https://impeccable.style/docs/impeccable,How it works,154,reference,all
+impeccable.style,https://impeccable.style/docs/impeccable,Not sure where to start?,69,explanation,all
+impeccable.style,https://impeccable.style/docs/impeccable,Do I need to run init first?,84,explanation,all
+impeccable.style,https://impeccable.style/docs/impeccable,Can I make a shortcut for a command I use often?,70,how-to,Existing user
+impeccable.style,https://impeccable.style/docs/improve-design,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/improve-design,On this page 4 sections,74,reference,all
+impeccable.style,https://impeccable.style/docs/improve-design,Find the problem,54,reference,all
+impeccable.style,https://impeccable.style/docs/improve-design,Make a focused improvement,91,reference,all
+impeccable.style,https://impeccable.style/docs/improve-design,Choose a command for a specific kind of improvement,99,reference,all
+impeccable.style,https://impeccable.style/docs/improve-design,Decide whether you want a redesign,75,reference,all
+impeccable.style,https://impeccable.style/docs/improve-design,Check the result,69,reference,all
+impeccable.style,https://impeccable.style/docs/init,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/init,On this page 3 sections,67,reference,all
+impeccable.style,https://impeccable.style/docs/init,Try it,26,tutorial,Non-developer / new to agents
+impeccable.style,https://impeccable.style/docs/init,How it works,200,reference,Skeptic
+impeccable.style,https://impeccable.style/docs/init,What does setup change besides PRODUCT.md?,92,explanation,all
+impeccable.style,https://impeccable.style/docs/init,Check the result,85,reference,Non-developer / new to agents | Skeptic | Existing user
+impeccable.style,https://impeccable.style/docs/layout,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/layout,On this page 3 sections,29,reference,all
+impeccable.style,https://impeccable.style/docs/layout,Try it,37,tutorial,Non-developer / new to agents
+impeccable.style,https://impeccable.style/docs/layout,How it works,139,reference,all
+impeccable.style,https://impeccable.style/docs/layout,Check the result,73,reference,all
+impeccable.style,https://impeccable.style/docs/live,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/live,On this page 4 sections,57,reference,Existing user
+impeccable.style,https://impeccable.style/docs/live,Try it,88,tutorial,all
+impeccable.style,https://impeccable.style/docs/live,How it works,238,reference,all
+impeccable.style,https://impeccable.style/docs/live,Steer beyond one element,70,reference,all
+impeccable.style,https://impeccable.style/docs/live,What kind of project does Live Mode need?,69,explanation,all
+impeccable.style,https://impeccable.style/docs/live,What changes when I accept a variant?,78,explanation,all
+impeccable.style,https://impeccable.style/docs/live,Finish the session,78,reference,Non-developer / new to agents
+impeccable.style,https://impeccable.style/docs/new-work,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/new-work,On this page 5 sections,90,reference,Non-developer / new to agents
+impeccable.style,https://impeccable.style/docs/new-work,Review a mockup or go straight to code,288,reference,all
+impeccable.style,https://impeccable.style/docs/new-work,Defaults and saving your workflow preference,157,reference,all
+impeccable.style,https://impeccable.style/docs/new-work,Set how much can change,41,reference,Non-developer / new to agents
+impeccable.style,https://impeccable.style/docs/new-work,"Starting fresh, extending a system, or working with incomplete docs",94,reference,all
+impeccable.style,https://impeccable.style/docs/new-work,Choose a direction you want to pursue,150,reference,all
+impeccable.style,https://impeccable.style/docs/new-work,Example: a new page within an established visual system,53,reference,all
+impeccable.style,https://impeccable.style/docs/new-work,Already have a visual idea? Bring it in your prompt,53,reference,all
+impeccable.style,https://impeccable.style/docs/new-work,See a mockup carried into a working page,73,reference,Skeptic
+impeccable.style,https://impeccable.style/docs/new-work,After the build,32,reference,all
+impeccable.style,https://impeccable.style/docs/new-work,What carries into the next session,97,reference,all
+impeccable.style,https://impeccable.style/docs/new-work,Why the options go beyond the obvious,107,reference,Skeptic
+impeccable.style,https://impeccable.style/docs/new-work,More about the process,0,reference,all
+impeccable.style,https://impeccable.style/docs/new-work,How a proposed direction is evaluated,105,reference,all
+impeccable.style,https://impeccable.style/docs/new-work,The written direction and the seed,78,reference,all
+impeccable.style,https://impeccable.style/docs/new-work,Delegated choices and unattended work,88,reference,all
+impeccable.style,https://impeccable.style/docs/new-work,Coming from the craft command?,19,explanation,all
+impeccable.style,https://impeccable.style/docs/new-work,Related,34,reference,all
+impeccable.style,https://impeccable.style/docs/onboard,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/onboard,On this page 3 sections,56,reference,all
+impeccable.style,https://impeccable.style/docs/onboard,Try it,50,tutorial,all
+impeccable.style,https://impeccable.style/docs/onboard,How it works,210,reference,Non-developer / new to agents
+impeccable.style,https://impeccable.style/docs/onboard,Check the result,91,reference,all
+impeccable.style,https://impeccable.style/docs/optimize,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/optimize,On this page 3 sections,28,reference,all
+impeccable.style,https://impeccable.style/docs/optimize,Try it,40,tutorial,Non-developer / new to agents
+impeccable.style,https://impeccable.style/docs/optimize,How it works,162,reference,Skeptic
+impeccable.style,https://impeccable.style/docs/optimize,Check the result,41,reference,all
+impeccable.style,https://impeccable.style/docs/optimize,"What do LCP, INP, and CLS mean?",53,explanation,all
+impeccable.style,https://impeccable.style/docs/overdrive,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/overdrive,On this page 3 sections,67,reference,all
+impeccable.style,https://impeccable.style/docs/overdrive,Try it,46,tutorial,all
+impeccable.style,https://impeccable.style/docs/overdrive,How it works,217,reference,Skeptic
+impeccable.style,https://impeccable.style/docs/overdrive,Check the result,62,reference,all
+impeccable.style,https://impeccable.style/docs/polish,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/polish,On this page 3 sections,41,reference,all
+impeccable.style,https://impeccable.style/docs/polish,Try it,31,tutorial,Non-developer / new to agents
+impeccable.style,https://impeccable.style/docs/polish,How it works,92,reference,all
+impeccable.style,https://impeccable.style/docs/polish,Check the result,92,reference,all
+impeccable.style,https://impeccable.style/docs/quieter,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/quieter,On this page 3 sections,33,reference,all
+impeccable.style,https://impeccable.style/docs/quieter,Try it,49,tutorial,all
+impeccable.style,https://impeccable.style/docs/quieter,How it works,133,reference,Existing user
+impeccable.style,https://impeccable.style/docs/quieter,Check the result,60,reference,all
+impeccable.style,https://impeccable.style/docs/shape,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/shape,On this page 3 sections,60,reference,all
+impeccable.style,https://impeccable.style/docs/shape,Try it,41,tutorial,all
+impeccable.style,https://impeccable.style/docs/shape,How it works,222,reference,all
+impeccable.style,https://impeccable.style/docs/shape,What happens next,59,reference,all
+impeccable.style,https://impeccable.style/docs/shape,Can I plan and build in one request?,34,how-to,all
+impeccable.style,https://impeccable.style/docs/typeset,(intro),3,reference,all
+impeccable.style,https://impeccable.style/docs/typeset,On this page 3 sections,37,reference,all
+impeccable.style,https://impeccable.style/docs/typeset,Try it,30,tutorial,all
+impeccable.style,https://impeccable.style/docs/typeset,How it works,185,reference,all
+impeccable.style,https://impeccable.style/docs/typeset,Check the result,48,reference,all
+impeccable.style,https://impeccable.style/faq,(intro),3,how-to,all
+impeccable.style,https://impeccable.style/faq,Frequently asked questions,14,how-to,all
+impeccable.style,https://impeccable.style/faq,I’m new to AI coding tools. Where do I start?,105,explanation,Non-developer / new to agents
+impeccable.style,https://impeccable.style/faq,"How do I install Impeccable, or use the downloaded files?",124,how-to,Cursor/Codex user
+impeccable.style,https://impeccable.style/faq,How do I update Impeccable?,138,how-to,Existing user
+impeccable.style,https://impeccable.style/faq,Impeccable isn’t appearing or responding. What should I check?,237,explanation,Cursor/Codex user
+impeccable.style,https://impeccable.style/faq,Can I make a shortcut for a command I use often?,75,how-to,Existing user
+impeccable.style,https://impeccable.style/faq,When should I use generate instead of live?,96,explanation,all
+impeccable.style,https://impeccable.style/faq,Is Impeccable free?,53,explanation,all
+impeccable.style,https://impeccable.style/gallery,(intro),57,explanation,all
+impeccable.style,https://impeccable.style/gallery,Without Impeccable · 5 runs,0,explanation,all
+impeccable.style,https://impeccable.style/gallery,With Impeccable · 3 runs,49,explanation,all
+impeccable.style,https://impeccable.style/gallery,Without Impeccable · 5 runs,0,explanation,all
+impeccable.style,https://impeccable.style/gallery,With Impeccable · 3 runs,59,explanation,all
+impeccable.style,https://impeccable.style/gallery,Without Impeccable · 5 runs,0,explanation,all
+impeccable.style,https://impeccable.style/gallery,With Impeccable · 3 runs,114,explanation,all
+impeccable.style,https://impeccable.style/gallery,Without Impeccable · 5 runs,0,explanation,all
+impeccable.style,https://impeccable.style/gallery,With Impeccable · 3 runs,46,explanation,all
+impeccable.style,https://impeccable.style/gallery,Without Impeccable · 5 runs,0,explanation,all
+impeccable.style,https://impeccable.style/gallery,With Impeccable · 3 runs,43,explanation,all
+impeccable.style,https://impeccable.style/gallery,Without Impeccable · 5 runs,0,explanation,all
+impeccable.style,https://impeccable.style/gallery,With Impeccable · 3 runs,49,explanation,all
+impeccable.style,https://impeccable.style/gallery,Without Impeccable · 5 runs,0,explanation,all
+impeccable.style,https://impeccable.style/gallery,With Impeccable · 3 runs,0,explanation,all
+impeccable.style,https://impeccable.style/gallery,About the examples,138,explanation,all
+impeccable.style,https://impeccable.style/,(intro),3,explanation,all
+impeccable.style,https://impeccable.style/,The missing design vocabulary for agents.,522,explanation,Claude Code user | Existing user
+impeccable.style,https://impeccable.style/,Start with what you want to change.,31,explanation,all
+impeccable.style,https://impeccable.style/,typeset,237,explanation,Cursor/Codex user | Existing user
+impeccable.style,https://impeccable.style/,Give your design a different starting point.,39,explanation,Skeptic
+impeccable.style,https://impeccable.style/,Built around your project.,0,explanation,all
+impeccable.style,https://impeccable.style/,Respects your design system.,76,explanation,all
+impeccable.style,https://impeccable.style/,Tell it what matters to your users.,21,explanation,all
+impeccable.style,https://impeccable.style/,Keep your design decisions.,42,explanation,all
+impeccable.style,https://impeccable.style/,Design for the job at hand.,23,explanation,all
+impeccable.style,https://impeccable.style/,Catch slop as your agent works.,55,explanation,all
+impeccable.style,https://impeccable.style/,Install Impeccable,14,how-to,all
+impeccable.style,https://impeccable.style/,1Install Impeccable,100,explanation,Claude Code user | Cursor/Codex user | Chat-app user
+impeccable.style,https://impeccable.style/,Tool support & updates,70,explanation,Claude Code user | Cursor/Codex user | Chat-app user | Existing user
+impeccable.style,https://impeccable.style/,2Initialize & enable hooks,20,explanation,all
+impeccable.style,https://impeccable.style/,Your coding tool must also allow hooks,57,explanation,Cursor/Codex user
+impeccable.style,https://impeccable.style/,Initialize your project,11,how-to,all
+impeccable.style,https://impeccable.style/,Turn on automatic checks,17,how-to,all
+impeccable.style,https://impeccable.style/,3Stay in the loop,132,explanation,Non-developer / new to agents | Existing user
+impeccable.style,https://impeccable.style/live-mode,(intro),21,explanation,all
+impeccable.style,https://impeccable.style/live-mode,"Pick, compare, keep",3,explanation,all
+impeccable.style,https://impeccable.style/live-mode,Point at what you want to change,28,explanation,Phone visitor
+impeccable.style,https://impeccable.style/live-mode,Explore three alternatives,26,explanation,all
+impeccable.style,https://impeccable.style/live-mode,Keep the result in source,29,explanation,all
+impeccable.style,https://impeccable.style/live-mode,A direction for the whole page,33,explanation,all
+impeccable.style,https://impeccable.style/live-mode,Get started,1,tutorial,all
+impeccable.style,https://impeccable.style/live-mode,Follow the tutorial,23,explanation,all
+impeccable.style,https://impeccable.style/live-mode,Explore what Live Mode can do,22,explanation,all
+impeccable.style,https://impeccable.style/live-mode,Install Impeccable,56,how-to,all
+impeccable.style,https://impeccable.style/privacy,(intro),3,reference,all
+impeccable.style,https://impeccable.style/privacy,Privacy Policy,18,reference,all
+impeccable.style,https://impeccable.style/privacy,Your project and coding tool,73,reference,all
+impeccable.style,https://impeccable.style/privacy,Version checks and downloads,74,reference,all
+impeccable.style,https://impeccable.style/privacy,Visual worlds and previews,101,reference,all
+impeccable.style,https://impeccable.style/privacy,Optional choice reporting,208,reference,Existing user
+impeccable.style,https://impeccable.style/privacy,What our servers keep from rolls and choices,202,reference,all
+impeccable.style,https://impeccable.style/privacy,Image generation,80,reference,all
+impeccable.style,https://impeccable.style/privacy,Live Mode and the direction picker,69,reference,all
+impeccable.style,https://impeccable.style/privacy,Website services and browser storage,264,reference,Non-developer / new to agents
+impeccable.style,https://impeccable.style/privacy,Impeccable Pro waitlist,114,reference,all
+impeccable.style,https://impeccable.style/privacy,Chrome extension,110,reference,all
+impeccable.style,https://impeccable.style/privacy,GitHub and contact,54,reference,all
+impeccable.style,https://impeccable.style/privacy,Changes to this policy,14,reference,Existing user
+impeccable.style,https://impeccable.style/slop,(intro),3,explanation,all
+impeccable.style,https://impeccable.style/slop,New eras. Familiar model habits.,75,explanation,all
+impeccable.style,https://impeccable.style/slop,Purple Gradients Everywhere,8,explanation,all
+impeccable.style,https://impeccable.style/slop,"Lazy ""Cool""",15,explanation,all
+impeccable.style,https://impeccable.style/slop,"Lazy ""Impact""",13,explanation,all
+impeccable.style,https://impeccable.style/slop,Side-Tab Cards,11,explanation,all
+impeccable.style,https://impeccable.style/slop,Cardocalypse,20,explanation,all
+impeccable.style,https://impeccable.style/slop,Copy-Paste Layouts,18,explanation,Chat-app user
+impeccable.style,https://impeccable.style/slop,Inter Everywhere,16,explanation,all
+impeccable.style,https://impeccable.style/slop,Massive Icons,12,explanation,all
+impeccable.style,https://impeccable.style/slop,Bad Contrast Choices,11,explanation,all
+impeccable.style,https://impeccable.style/slop,Redundant UX Writing,18,explanation,all
+impeccable.style,https://impeccable.style/slop,Modal Abuse,17,explanation,all
+impeccable.style,https://impeccable.style/slop,How Impeccable checks these patterns,83,explanation,all
+impeccable.style,https://impeccable.style/slop,Font outside DESIGN.md,27,explanation,Existing user
+impeccable.style,https://impeccable.style/slop,Color outside DESIGN.md,26,explanation,all
+impeccable.style,https://impeccable.style/slop,Radius outside DESIGN.md,28,explanation,Existing user
+impeccable.style,https://impeccable.style/slop,Font size outside DESIGN.md,27,explanation,all
+impeccable.style,https://impeccable.style/slop,Decorative grid-line background,26,explanation,all
+impeccable.style,https://impeccable.style/slop,Border accent on rounded element,30,explanation,all
+impeccable.style,https://impeccable.style/slop,Glassmorphism everywhere,23,explanation,all
+impeccable.style,https://impeccable.style/slop,Side-tab accent border,31,explanation,Existing user
+impeccable.style,https://impeccable.style/slop,Hairline border with wide shadow,30,explanation,all
+impeccable.style,https://impeccable.style/slop,Repeating-gradient stripes,26,explanation,all
+impeccable.style,https://impeccable.style/slop,Extreme border-radius on cards,32,explanation,all
+impeccable.style,https://impeccable.style/slop,Rough SVG illustrations,28,explanation,all
+impeccable.style,https://impeccable.style/slop,Label above a heading,31,explanation,Existing user
+impeccable.style,https://impeccable.style/slop,Tiny interface text,28,explanation,all
+impeccable.style,https://impeccable.style/slop,One word alone on the last line,27,explanation,all
+impeccable.style,https://impeccable.style/slop,Heading with a stub last line,24,explanation,all
+impeccable.style,https://impeccable.style/slop,Flat type hierarchy,27,explanation,all
+impeccable.style,https://impeccable.style/slop,Icon tile stacked above heading,31,explanation,Existing user
+impeccable.style,https://impeccable.style/slop,Italic serif display headline,35,explanation,all
+impeccable.style,https://impeccable.style/slop,Badge above the main headline,35,explanation,Existing user
+impeccable.style,https://impeccable.style/slop,Oversized hero headline,39,explanation,all
+impeccable.style,https://impeccable.style/slop,Crushed letter spacing,27,explanation,all
+impeccable.style,https://impeccable.style/slop,Overused font,36,explanation,all
+impeccable.style,https://impeccable.style/slop,Single font for everything,31,explanation,all
+impeccable.style,https://impeccable.style/slop,All-caps body text,27,explanation,all
+impeccable.style,https://impeccable.style/slop,Radial-gradient background halo,34,explanation,Existing user
+impeccable.style,https://impeccable.style/slop,Soft spotlight behind content,27,explanation,all
+impeccable.style,https://impeccable.style/slop,AI color palette,30,explanation,all
+impeccable.style,https://impeccable.style/slop,Dark mode with glowing accents,37,explanation,all
+impeccable.style,https://impeccable.style/slop,Gradient text,29,explanation,all
+impeccable.style,https://impeccable.style/slop,Gray text on colored background,33,explanation,all
+impeccable.style,https://impeccable.style/slop,Cream / beige palette,35,explanation,all
+impeccable.style,https://impeccable.style/slop,Tiny numbered section labels,26,explanation,all
+impeccable.style,https://impeccable.style/slop,Cards flush against the scroller edge,29,explanation,all
+impeccable.style,https://impeccable.style/slop,Text covered by another element,19,explanation,all
+impeccable.style,https://impeccable.style/slop,Unbalanced opening columns,27,explanation,all
+impeccable.style,https://impeccable.style/slop,Heading closer to the previous section,25,explanation,all
+impeccable.style,https://impeccable.style/slop,Hero metric layout,39,explanation,all
+impeccable.style,https://impeccable.style/slop,Identical card grids,30,explanation,all
+impeccable.style,https://impeccable.style/slop,Monotonous spacing,27,explanation,all
+impeccable.style,https://impeccable.style/slop,Nested cards,25,explanation,all
+impeccable.style,https://impeccable.style/slop,Line length too long,32,explanation,all
+impeccable.style,https://impeccable.style/slop,Content overflowing its container,30,explanation,all
+impeccable.style,https://impeccable.style/slop,Clipped menus and popovers,41,explanation,all
+impeccable.style,https://impeccable.style/slop,Pulsing status dot,27,explanation,all
+impeccable.style,https://impeccable.style/slop,Decorative blinking cursor,28,explanation,Cursor/Codex user | Existing user
+impeccable.style,https://impeccable.style/slop,Auto-scrolling marquee,27,explanation,all
+impeccable.style,https://impeccable.style/slop,Bounce or elastic easing,31,explanation,all
+impeccable.style,https://impeccable.style/slop,Same text repeated inside one container,21,explanation,all
+impeccable.style,https://impeccable.style/slop,Em-dash overuse,35,explanation,all
+impeccable.style,https://impeccable.style/slop,Generic marketing claims,27,explanation,all
+impeccable.style,https://impeccable.style/slop,Forced contrast,32,explanation,all
+impeccable.style,https://impeccable.style/slop,Calling things “theater”,24,explanation,Non-developer / new to agents
+impeccable.style,https://impeccable.style/slop,Placeholder-style illustrations,26,explanation,all
+impeccable.style,https://impeccable.style/slop,Jagged image masks,29,explanation,all
+impeccable.style,https://impeccable.style/slop,Images hidden under overlays,27,explanation,Existing user
+impeccable.style,https://impeccable.style/slop,Broken or placeholder image,30,explanation,Existing user
+impeccable.style,https://impeccable.style/slop,JavaScript errors on load,27,explanation,all
+impeccable.style,https://impeccable.style/slop,Content stuck waiting to appear,30,explanation,all
+impeccable.style,https://impeccable.style/slop,Cramped padding,28,explanation,all
+impeccable.style,https://impeccable.style/slop,Body text touching the page edge,28,explanation,all
+impeccable.style,https://impeccable.style/slop,Justified text,32,explanation,all
+impeccable.style,https://impeccable.style/slop,Low-contrast text,31,explanation,all
+impeccable.style,https://impeccable.style/slop,Skipped heading level,29,explanation,all
+impeccable.style,https://impeccable.style/slop,Tight line height,27,explanation,all
+impeccable.style,https://impeccable.style/slop,Tiny body text,30,explanation,all
+impeccable.style,https://impeccable.style/slop,Wide letter spacing on body text,25,explanation,all
+impeccable.style,https://impeccable.style/slop,Run it yourself,0,explanation,all
+impeccable.style,https://impeccable.style/slop,Check from the terminal,32,explanation,all
+impeccable.style,https://impeccable.style/slop,Ask for a design review,41,explanation,Non-developer / new to agents
+impeccable.style,https://impeccable.style/slop,Inspect a page in Chrome,26,explanation,all
+impeccable.style,https://impeccable.style/tutorials/critique-with-overlay,(intro),3,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/critique-with-overlay,On this page 7 sections,70,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/critique-with-overlay,Before you start,66,tutorial,Non-developer / new to agents
+impeccable.style,https://impeccable.style/tutorials/critique-with-overlay,1. Ask for a critique,93,tutorial,Skeptic
+impeccable.style,https://impeccable.style/tutorials/critique-with-overlay,Why does critique use separate assessments?,67,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/critique-with-overlay,2. Read the priority issues,152,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/critique-with-overlay,3. Locate detected problems on the page,83,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/critique-with-overlay,Try the overlay on a deliberately flawed page,46,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/critique-with-overlay,4. Ask for the changes you want,70,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/critique-with-overlay,5. Check the result,82,tutorial,Skeptic
+impeccable.style,https://impeccable.style/tutorials/critique-with-overlay,How should I use the scores and saved reviews?,80,tutorial,Skeptic
+impeccable.style,https://impeccable.style/tutorials/critique-with-overlay,If the results are confusing,106,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/getting-started,(intro),3,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/getting-started,On this page 5 sections,23,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/getting-started,Which coding tools can I use?,78,tutorial,Claude Code user | Cursor/Codex user
+impeccable.style,https://impeccable.style/tutorials/getting-started,1. Install Impeccable,44,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/getting-started,Keep a shared team version with a Git submodule,171,tutorial,Cursor/Codex user | Existing user
+impeccable.style,https://impeccable.style/tutorials/getting-started,"Not showing up, or enabled automatic checks?",45,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/getting-started,2. Give Impeccable the context for your project,123,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/getting-started,Choose how new designs start,72,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/getting-started,Already have a design system? Record it before you build,44,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/getting-started,3. Choose your first task,32,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/getting-started,Build something new,102,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/getting-started,Improve an existing design,71,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/getting-started,4. Review the result,86,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/getting-started,What to try next,90,tutorial,Existing user
+impeccable.style,https://impeccable.style/tutorials/iterate-live,(intro),3,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/iterate-live,On this page 9 sections,75,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/iterate-live,Before you start,79,tutorial,Non-developer / new to agents | Skeptic
+impeccable.style,https://impeccable.style/tutorials/iterate-live,Start from a written request,106,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/iterate-live,1. Start Live Mode,29,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/iterate-live,What happens during first-time setup?,80,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/iterate-live,2. Pick the part you want to change,133,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/iterate-live,3. Compare the variations,142,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/iterate-live,4. Keep one and check it,92,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/iterate-live,5. Finish the session,61,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/iterate-live,Try page-wide steering,65,tutorial,all
+impeccable.style,https://impeccable.style/tutorials/iterate-live,If something gets stuck,120,tutorial,all
+deeper.tools,https://deeper.tools/changelog/,(intro),6,reference,all
+deeper.tools,https://deeper.tools/changelog/,Changelog,0,reference,all
+deeper.tools,https://deeper.tools/changelog/,1.1.0 (2026-11-02),114,reference,Skeptic
+deeper.tools,https://deeper.tools/changelog/,1.0.0 (2026-11-02),140,reference,Claude Code user | Cursor/Codex user
+deeper.tools,https://deeper.tools/docs/,(intro),6,reference,all
+deeper.tools,https://deeper.tools/docs/,Docs,41,reference,all
+deeper.tools,https://deeper.tools/docs/,Install,0,how-to,all
+deeper.tools,https://deeper.tools/docs/,"Any agent, with the skills CLI",65,how-to,all
+deeper.tools,https://deeper.tools/docs/,"Claude Code, as a plugin",7,how-to,Claude Code user
+deeper.tools,https://deeper.tools/docs/,By hand,25,how-to,Claude Code user | Cursor/Codex user
+deeper.tools,https://deeper.tools/docs/,In a chat app,66,how-to,Chat-app user
+deeper.tools,https://deeper.tools/docs/,Where it’s tested,31,reference,Claude Code user | Cursor/Codex user | Skeptic
+deeper.tools,https://deeper.tools/docs/,"Update, remove or pin",45,how-to,Existing user
+deeper.tools,https://deeper.tools/docs/,Your first run,180,tutorial,Claude Code user | Non-developer / new to agents | Skeptic
+deeper.tools,https://deeper.tools/docs/,Use,60,how-to,all
+deeper.tools,https://deeper.tools/docs/,The four questions,0,reference,all
+deeper.tools,https://deeper.tools/docs/,1. Expert moves,43,reference,all
+deeper.tools,https://deeper.tools/docs/,2. Raw material,55,reference,all
+deeper.tools,https://deeper.tools/docs/,3. Instruments,89,reference,all
+deeper.tools,https://deeper.tools/docs/,4. Outside check,53,reference,all
+deeper.tools,https://deeper.tools/docs/,Same deliverables,112,reference,Skeptic
+deeper.tools,https://deeper.tools/docs/,When it stops early,54,reference,Skeptic
+deeper.tools,https://deeper.tools/docs/,Questions,0,reference,all
+deeper.tools,https://deeper.tools/docs/,Does it do the work?,12,explanation,all
+deeper.tools,https://deeper.tools/docs/,Does it send my files anywhere?,34,explanation,all
+deeper.tools,https://deeper.tools/docs/,Why not make it do the work too?,20,explanation,all
+deeper.tools,https://deeper.tools/docs/,How is it different from be-ambitious?,64,explanation,all
+deeper.tools,https://deeper.tools/docs/,Who makes it?,23,explanation,all
+deeper.tools,https://deeper.tools/docs/,/deeper doesn’t appear. What do I check?,16,explanation,all
+deeper.tools,https://deeper.tools/docs/,How do I report a problem?,44,how-to,Existing user
+deeper.tools,https://deeper.tools/,(intro),13,explanation,all
+deeper.tools,https://deeper.tools/,Ask for the version an expert would ask for.,66,explanation,Claude Code user | Cursor/Codex user | Chat-app user
+deeper.tools,https://deeper.tools/,"Your request, marked up.",64,explanation,all
+deeper.tools,https://deeper.tools/,Read the full deeper prompt,364,explanation,Non-developer / new to agents | Skeptic
+deeper.tools,https://deeper.tools/,Compare the plain rewrite,403,explanation,Non-developer / new to agents | Skeptic
+deeper.tools,https://deeper.tools/,Read the full deeper prompt,355,explanation,Non-developer / new to agents | Skeptic
+deeper.tools,https://deeper.tools/,Compare the plain rewrite,374,explanation,Non-developer / new to agents | Skeptic
+deeper.tools,https://deeper.tools/,Read the full deeper prompt,282,explanation,Non-developer / new to agents | Skeptic
+deeper.tools,https://deeper.tools/,Compare the plain rewrite,380,explanation,Non-developer / new to agents | Skeptic
+deeper.tools,https://deeper.tools/,Read the full deeper prompt,341,explanation,Non-developer / new to agents | Skeptic
+deeper.tools,https://deeper.tools/,Compare the plain rewrite,386,explanation,Non-developer / new to agents | Skeptic
+deeper.tools,https://deeper.tools/,Read the full deeper prompt,318,explanation,Non-developer / new to agents | Skeptic
+deeper.tools,https://deeper.tools/,Compare the plain rewrite,255,explanation,Non-developer / new to agents | Skeptic
+deeper.tools,https://deeper.tools/,Four questions before any rewrite.,0,explanation,all
+deeper.tools,https://deeper.tools/,Expert moves,23,explanation,all
+deeper.tools,https://deeper.tools/,Raw material,22,explanation,all
+deeper.tools,https://deeper.tools/,Instruments,22,explanation,all
+deeper.tools,https://deeper.tools/,Outside check,80,explanation,all
+deeper.tools,https://deeper.tools/,Best on 4 of 5 blind tasks.,121,explanation,Skeptic
+deeper.tools,https://deeper.tools/,Installs where you already work.,64,how-to,Claude Code user | Cursor/Codex user | Chat-app user | Skeptic | Existing user
+deeper.tools,https://deeper.tools/,Hear when it changes.,74,explanation,Skeptic
+deeper.tools,https://deeper.tools/legal/,(intro),7,reference,all
+deeper.tools,https://deeper.tools/legal/,Legal notice,27,reference,all
+deeper.tools,https://deeper.tools/patterns/,(intro),7,reference,all
+deeper.tools,https://deeper.tools/patterns/,Shallow patterns,27,reference,all
+deeper.tools,https://deeper.tools/patterns/,Vocabulary without method,39,reference,all
+deeper.tools,https://deeper.tools/patterns/,The digest instead of the source,40,reference,all
+deeper.tools,https://deeper.tools/patterns/,A nicer table,42,reference,all
+deeper.tools,https://deeper.tools/patterns/,Grading its own homework,32,reference,all
+deeper.tools,https://deeper.tools/patterns/,A check with no fail,35,reference,all
+deeper.tools,https://deeper.tools/patterns/,"Bigger, not deeper",58,reference,all
+deeper.tools,https://deeper.tools/patterns/,Taking the belief as given,45,reference,all
+deeper.tools,https://deeper.tools/privacy/,(intro),5,reference,all
+deeper.tools,https://deeper.tools/privacy/,Privacy,5,reference,all
+deeper.tools,https://deeper.tools/privacy/,Who we are,39,reference,all
+deeper.tools,https://deeper.tools/privacy/,The skill,18,reference,all
+deeper.tools,https://deeper.tools/privacy/,The email list,128,reference,Phone visitor
+deeper.tools,https://deeper.tools/privacy/,How long we keep it,36,reference,all
+deeper.tools,https://deeper.tools/privacy/,Who else handles it,38,reference,all
+deeper.tools,https://deeper.tools/privacy/,Your rights,67,reference,all
+deeper.tools,https://deeper.tools/research/,(intro),6,explanation,Skeptic
+deeper.tools,https://deeper.tools/research/,The blind tests,58,explanation,Skeptic
+deeper.tools,https://deeper.tools/research/,Why there's a 1.1,105,explanation,all
+deeper.tools,https://deeper.tools/research/,How the current test ran,100,explanation,Skeptic
+deeper.tools,https://deeper.tools/research/,Averages,65,explanation,Skeptic
+deeper.tools,https://deeper.tools/research/,Task by task,0,explanation,all
+deeper.tools,https://deeper.tools/research/,T1 Honey caption,121,explanation,Skeptic
+deeper.tools,https://deeper.tools/research/,T2 Book typesetting,104,explanation,Skeptic
+deeper.tools,https://deeper.tools/research/,T3 Selling a car,121,explanation,Skeptic
+deeper.tools,https://deeper.tools/research/,T4 Leaving Vercel,106,explanation,Skeptic
+deeper.tools,https://deeper.tools/research/,T5 Tidy Downloads,101,explanation,Skeptic
+deeper.tools,https://deeper.tools/research/,The first test,63,explanation,Skeptic
+deeper.tools,https://deeper.tools/research/,Limits,99,explanation,Skeptic
+deeper.tools,https://deeper.tools/start/,(intro),7,tutorial,all
+deeper.tools,https://deeper.tools/start/,Start here,75,tutorial,all
+deeper.tools,https://deeper.tools/start/,Pick the way you already talk to an AI,34,tutorial,Claude Code user | Cursor/Codex user | Chat-app user
+deeper.tools,https://deeper.tools/start/,In a chat app,50,how-to,Chat-app user | Skeptic
+deeper.tools,https://deeper.tools/start/,Read it before you paste it,828,tutorial,Claude Code user | Cursor/Codex user | Chat-app user | Non-developer / new to agents
+deeper.tools,https://deeper.tools/start/,Keep it so you don't paste it every time,33,tutorial,Chat-app user
+deeper.tools,https://deeper.tools/start/,In a coding agent,163,tutorial,Claude Code user | Cursor/Codex user | Skeptic
+deeper.tools,https://deeper.tools/start/,If /deeper doesn't appear,102,tutorial,Claude Code user | Chat-app user | Existing user
+deeper.tools,https://deeper.tools/start/,After the first run,63,tutorial,Non-developer / new to agents | Skeptic
+deeper.tools,https://deeper.tools/404,(intro),8,explanation,all
+deeper.tools,https://deeper.tools/404,Nothing here.,12,explanation,all

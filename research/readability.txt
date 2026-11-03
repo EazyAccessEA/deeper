@@ -1,0 +1,11 @@
+deeper.tools page              FK grade  words
+/changelog/                         5.2    258
+/docs/                              4.8   1175
+/                                   5.8   1002
+/legal/                            10.4     37
+/patterns/                          4.4    357
+/privacy/                           5.5    356
+/research/                          6.1   1086
+/start/                             3.8    643
+
+impeccable.style, 45 pages: median 8.1, range 6.6-10.2
