@@ -32,7 +32,7 @@ ChatGPT, Claude.ai and Gemini have no skills folder. Paste the contents of `SKIL
 
 ### Where it's tested
 
-Running deeper is tested in Claude Code. Installing into Codex and Cursor is tested; running inside them isn't yet. If you try it there, an [issue](https://github.com/EazyAccessEA/deeper/issues) saying how it went helps.
+Running deeper is tested in Claude Code, in Cursor with Grok 4.6 and in Codex with GPT-5.6. In Cursor, `/deeper` on its own asked for a task, and with a task it wrote the prompt and the "Worth knowing" line. In Codex it answered the four questions, named the one deliverable and wrote the prompt. Cursor and Codex were one run each, by hand. If you try it there, an [issue](https://github.com/EazyAccessEA/deeper/issues) saying how it went helps.
 
 ## Update, remove or pin
 

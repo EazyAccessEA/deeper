@@ -12,7 +12,7 @@
     {"reader": "Cursor/Codex user", "question": "Does it run in my agent?",
      "impeccable": ["/tutorials/getting-started", "Impeccable supports Claude Code, Codex, Cursor"],
      "deeper_before": ["/docs/", "Installing into Codex and Cursor is tested"],
-     "deeper": ["/docs/", "Installing into Codex and Cursor is tested"]},
+     "deeper": ["/docs/", "in Codex with GPT-5.6"]},
     {"reader": "Cursor/Codex user", "question": "How do I call it there?",
      "impeccable": null,
      "deeper_before": null,
