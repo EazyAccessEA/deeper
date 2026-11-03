@@ -1,0 +1,163 @@
+[
+ {
+  "label": "car colour 11",
+  "model": "runware:101@1",
+  "seed": 11,
+  "task_uuid": "0852dbfd-37e7-48dd-b1d0-d4ee8399fe9d",
+  "cost_usd": 0.0045
+ },
+ {
+  "label": "car sketch 11",
+  "model": "bfl:4@1",
+  "seed": 11,
+  "task_uuid": "44678b7f-0885-4e0b-8c3a-2dd01c112f69",
+  "cost_usd": 0.08
+ },
+ {
+  "label": "car-person colour 21",
+  "model": "runware:101@1",
+  "seed": 21,
+  "task_uuid": "03a7c405-deec-479d-be82-f92947b58c28",
+  "cost_usd": null
+ },
+ {
+  "label": "car colour 12",
+  "model": "runware:101@1",
+  "seed": 12,
+  "task_uuid": "a7aa238d-c46b-4820-b8d0-78edd5da3417",
+  "cost_usd": null
+ },
+ {
+  "label": "car-person colour 21",
+  "model": "runware:101@1",
+  "seed": 21,
+  "task_uuid": "6bf9d7c6-3429-446d-9c75-05a539ed94bb",
+  "cost_usd": 0.0038
+ },
+ {
+  "label": "car-person sketch 21",
+  "model": "bfl:4@1",
+  "seed": 21,
+  "task_uuid": "8d61fb55-f476-44a7-afde-59e6965de3f0",
+  "cost_usd": 0.08
+ },
+ {
+  "label": "car-person colour 22",
+  "model": "runware:101@1",
+  "seed": 22,
+  "task_uuid": "cb59b56f-0bfa-4016-9997-01110d99036b",
+  "cost_usd": 0.0038
+ },
+ {
+  "label": "car-person sketch 22",
+  "model": "bfl:4@1",
+  "seed": 22,
+  "task_uuid": "9f0f72c6-1feb-4431-b554-6e9b5f51089c",
+  "cost_usd": 0.08
+ },
+ {
+  "label": "car-person sparse 21",
+  "model": "bfl:4@1",
+  "seed": 21,
+  "task_uuid": "8cb36b10-294c-4e55-a43b-8fbc60440490",
+  "cost_usd": 0.08
+ },
+ {
+  "label": "car-gpt colour 1",
+  "model": "openai:gpt-image@2",
+  "seed": null,
+  "task_uuid": "0850a600-f04e-4829-8afd-dfe6320c33b0",
+  "cost_usd": 0.042325
+ },
+ {
+  "label": "car-gpt sketch 1",
+  "model": "bfl:4@1",
+  "seed": 1,
+  "task_uuid": "74b874ec-a6ab-40bb-9d7b-c8620803ce72",
+  "cost_usd": 0.08
+ },
+ {
+  "label": "car-gpt sparse 1",
+  "model": "bfl:4@1",
+  "seed": 1,
+  "task_uuid": "4269fa79-ee4e-455e-8ff0-2c62158e6a33",
+  "cost_usd": 0.08
+ },
+ {
+  "label": "car-gpt sparse 1",
+  "model": "openai:gpt-image@2",
+  "seed": null,
+  "task_uuid": "a61956b9-574e-4424-8bac-60440cc68aa7",
+  "cost_usd": 0.023023
+ },
+ {
+  "label": "downloads colour 1",
+  "model": "openai:gpt-image@2",
+  "seed": null,
+  "task_uuid": "0cd7567e-d78c-42f7-8b99-7879ac08796f",
+  "cost_usd": 0.042255
+ },
+ {
+  "label": "downloads sparse 1",
+  "model": "openai:gpt-image@2",
+  "seed": null,
+  "task_uuid": "fbeb0cb0-78b8-4d9e-b45c-1ba7e9efc1d7",
+  "cost_usd": 0.023023
+ },
+ {
+  "label": "book colour 1",
+  "model": "openai:gpt-image@2",
+  "seed": null,
+  "task_uuid": "2cbb75d6-cda1-42ab-8b3d-98c458a5c118",
+  "cost_usd": 0.042175
+ },
+ {
+  "label": "book sparse 1",
+  "model": "openai:gpt-image@2",
+  "seed": null,
+  "task_uuid": "84470c7a-6642-4acb-879b-28198e4291a2",
+  "cost_usd": 0.022988
+ },
+ {
+  "label": "vercel colour 1",
+  "model": "openai:gpt-image@2",
+  "seed": null,
+  "task_uuid": "fed13787-4a98-432c-aa94-a1a82e44dcf2",
+  "cost_usd": 0.042215
+ },
+ {
+  "label": "vercel sparse 1",
+  "model": "openai:gpt-image@2",
+  "seed": null,
+  "task_uuid": "089b573b-42d9-4796-b572-5c3281e0ed85",
+  "cost_usd": 0.017478
+ },
+ {
+  "label": "honey colour 1",
+  "model": "openai:gpt-image@2",
+  "seed": null,
+  "task_uuid": "9e153e96-0955-4ef2-a857-e7440a48ee3f",
+  "cost_usd": 0.042205
+ },
+ {
+  "label": "honey sparse 1",
+  "model": "openai:gpt-image@2",
+  "seed": null,
+  "task_uuid": "13a8d229-7a69-4389-bbc5-aae3ae5cc1f7",
+  "cost_usd": 0.023058
+ },
+ {
+  "label": "blind colour 1",
+  "model": "openai:gpt-image@2",
+  "seed": null,
+  "task_uuid": "fa84ad5e-2230-4899-a45b-cb500f4f0f43",
+  "cost_usd": 0.005715
+ },
+ {
+  "label": "blind sparse 1",
+  "model": "openai:gpt-image@2",
+  "seed": null,
+  "task_uuid": "2ce95223-f212-47ca-9f44-631bf9b6d6d8",
+  "cost_usd": 0.022943
+ }
+]
