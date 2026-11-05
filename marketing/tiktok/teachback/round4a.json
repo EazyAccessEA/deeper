@@ -1,0 +1,17 @@
+{
+ "downloads": {
+  "score": 4,
+  "marks": {
+   "what": true,
+   "does": true,
+   "who": true,
+   "next": true
+  },
+  "answers": {
+   "what": "Deeper is a free add-on for AI assistants such as ChatGPT, Claude, or Gemini.",
+   "does": "It rewrites a simple request into a more detailed, expert-style prompt, including what to start with, which tools to use, and how to check the result. It shows you the rewritten request for approval before the AI begins.",
+   "who": "It seems aimed at ordinary AI users who want better results without knowing how an expert would phrase a request.",
+   "next": "Go to deeper.tools, copy the add-on into your AI assistant, then type \u201c/deeper\u201d before your request. The video does not clearly show the exact copying and installation steps."
+  }
+ }
+}

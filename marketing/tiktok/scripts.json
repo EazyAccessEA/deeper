@@ -1,164 +1,198 @@
 {
- "_doc": "One line per shot. sparse/sketch/colour/end hold spoken lines; objects pairs each region (scenes.json order) with its spoken line and its on-screen caret caption. Sources: examples/raw/v1.1/final.md (T1-T5) and the README blind-test table.",
+ "_doc": "One line per shot. sparse: the first line plays over the finished colour scene, the second over the pencil sketch. objects pairs each region (scenes.json order) with its spoken line and its plain on-screen caption. Sources: examples/raw/v1.1/final.md (T1-T5) and the README blind-test table. Tested by teachback.py.",
  "car": {
-  "headline": "New skill: deeper",
-  "request": "Sell my Polo, buy a Golf.",
+  "headline": "Ask AI like an expert.",
+  "request": "Sell my car and buy a Golf.",
   "sparse": [
-   "There's a new skill for your coding agent. It's called deeper.",
-   "Ask your agent to sell your car, and you get a sketch."
+   "Ask AI like an expert, and you get the full picture.",
+   "Most of us just type ‘sell my car and buy a Golf’, and get a sketch."
   ],
   "sketch": [
-   "Type slash deeper first.",
-   "It asks what a top dealer would: the expert's move, the raw material, the tools, and the check."
+   "Meet deeper, a free add-on. Before the AI answers, it rewrites your prompt the way an expert would write it.",
+   "It adds what a car dealer would think of: where to start, which tools to use, and how to check it worked."
   ],
   "objects": [
    [
-    "Price it from real listings.",
-    "Price it from comparable listings"
+    "Price it from real listings of the same car.",
+    "Price it from similar cars for sale"
    ],
    [
-    "Two binding offers set your floor.",
-    "Two binding offers set the floor"
+    "Get two firm offers before you sell.",
+    "Two firm offers set your lowest price"
    ],
    [
-    "Inspect before you buy.",
-    "Inspect any used car before you buy"
+    "Have any used car checked before you buy it.",
+    "Get a used car inspected before you buy"
    ],
    [
-    "And check a Golf even fits how you drive.",
-    "Check a Golf fits how you drive"
+    "And make sure a Golf suits the way you drive.",
+    "Check a Golf suits how you drive"
    ]
   ],
   "colour": [
-   "Same task. The dealer's method. And it asks before it runs."
+   "You see the new prompt first, and nothing runs until you say yes."
   ],
-  "payoff": "Same task. The dealer's method."
+  "payoff": "Same prompt. A car dealer's answer."
  },
- "downloads": {
-  "headline": "New skill: deeper",
-  "request": "Tidy my Downloads folder.",
+ "cover": {
+  "headline": "Ask AI like an expert.",
+  "request": "Write a cover letter for a data analyst job.",
   "sparse": [
-   "Here's a new skill for your coding agent. It's called deeper.",
-   "Ask your agent to tidy your Downloads folder, and you get a sketch."
+   "Ask AI like an expert, and you get the full picture.",
+   "Most of us just type ‘write me a cover letter’, and get a sketch."
   ],
   "sketch": [
-   "Type slash deeper first.",
-   "It asks what a careful sysadmin would: the expert's move, the raw material, the tools, and the check."
+   "Meet deeper, a free add-on. Before the AI answers, it rewrites your prompt the way an expert would write it.",
+   "It adds what a hiring manager looks for, and how to check the letter worked."
   ],
   "objects": [
    [
-    "Find duplicates by what's inside them, not by name.",
-    "Find duplicates by hash, not by name"
+    "Show one real piece of work, with a real number, instead of a list of skills.",
+    "Show one real result, with its number"
    ],
    [
-    "Flag the files that exist nowhere else.",
-    "Flag files that exist nowhere else"
+    "Match each thing the advert asks for with proof from your CV.",
+    "Match the advert with proof from your CV"
    ],
    [
-    "Move things to the Trash. Never delete for good.",
-    "Trash, never rm"
+    "Use the advert's own key words, because software screens letters first.",
+    "Use the advert's key words"
    ],
    [
-    "And count every file, before and after.",
+    "Then let someone who does the job read your letter for thirty seconds.",
+    "Give it a 30-second test with a real reader"
+   ]
+  ],
+  "colour": [
+   "You see the new prompt, rewritten the way an expert would ask, and nothing runs until you say yes."
+  ],
+  "payoff": "Same prompt. A hiring manager's answer."
+ },
+ "blind": {
+  "headline": "We tested it blind.",
+  "request": "Does deeper make AI better?",
+  "band": "Marked blind, out of 5",
+  "sparse": [
+   "Does this actually make AI better? We tested it blind.",
+   "Meet deeper, a free add-on. Before the AI answers, it rewrites your prompt the way an expert would write it."
+  ],
+  "sketch": [
+   "We ran five real requests with and without deeper, and a separate AI marked each answer blind."
+  ],
+  "objects": [
+   [
+    "For starting from your own files and facts, the score went from one point eight to five.",
+    "Starts from your own facts: 1.8 to 5.0"
+   ],
+   [
+    "For working the way an expert would, the score went from two point six to five.",
+    "Works like an expert: 2.6 to 5.0"
+   ],
+   [
+    "For checking the result properly, it went from one to four point eight.",
+    "Checks the result: 1.0 to 4.8"
+   ],
+   [
+    "And for sticking to what you asked for, it went from two point two to four.",
+    "Sticks to what you asked: 2.2 to 4.0"
+   ]
+  ],
+  "colour": [
+   "Five requests is a small test, and every one of them is public."
+  ],
+  "payoff": "Every request is on GitHub."
+ },
+ "downloads": {
+  "headline": "Ask AI like an expert.",
+  "request": "Tidy my Downloads folder.",
+  "sparse": [
+   "Ask AI like an expert, and you get the full picture.",
+   "Most of us just type ‘tidy my Downloads folder’, and get a sketch."
+  ],
+  "sketch": [
+   "Meet deeper, a free add-on. Before the AI answers, it rewrites your prompt the way an expert would write it.",
+   "It adds what an IT expert would think of: where to start, which tools to use, and how to check it worked."
+  ],
+  "objects": [
+   [
+    "An expert would find true duplicates by what's inside them, not by their names.",
+    "Find duplicates by their contents"
+   ],
+   [
+    "Flag the files with no backup anywhere else.",
+    "Flag files with no backup"
+   ],
+   [
+    "Move things to the bin, never delete them for good.",
+    "Bin it, never delete for good"
+   ],
+   [
+    "And count every file before and after.",
     "Count every file before and after"
    ]
   ],
   "colour": [
-   "Same task. Nothing lost. And it asks before it runs."
+   "You see the new prompt first, and nothing runs until you say yes."
   ],
-  "payoff": "Same task. Nothing lost."
+  "payoff": "Same prompt. An IT expert's answer."
  },
  "book": {
-  "headline": "New skill: deeper",
-  "request": "The inner margins look too big.",
+  "headline": "Ask AI like an expert.",
+  "request": "My book's margins look too big.",
   "sparse": [
-   "There's a new skill for your coding agent. It's called deeper.",
-   "Tell it your book's margins look too big, and you get a sketch."
+   "Ask AI like an expert, and you get the full picture.",
+   "Most of us just type ‘my book's margins look too big’, and get a sketch."
   ],
   "sketch": [
-   "Type slash deeper first.",
-   "It asks what a book typographer would: the expert's move, the raw material, the tools, and the check."
+   "Meet deeper, a free add-on. Before the AI answers, it rewrites your prompt the way an expert would write it.",
+   "It adds what a book designer would think of: where to start, which tools to use, and how to check it worked."
   ],
   "objects": [
    [
-    "Treat ‘too big’ as a guess, then test it.",
-    "Treat that as a guess to test"
+    "Don't assume the margins are too big. Measure first.",
+    "Treat it as a guess, then measure"
    ],
    [
-    "Judge the margins on two-page spreads.",
-    "Judge margins on two-page spreads"
+    "Judge margins on two facing pages, the way a reader sees them.",
+    "Judge margins on two facing pages"
    ],
    [
-    "Keep lines between forty-five and seventy-five characters.",
-    "45 to 75 characters per line"
+    "Keep lines between forty-five and seventy-five letters long.",
+    "45 to 75 letters per line"
    ],
    [
-    "Then print a proof at full size, and look.",
-    "Print a proof at 100% and look"
+    "Then print a page at real size, and look.",
+    "Print a proof at full size and look"
    ]
   ],
   "colour": [
-   "Same task. The typographer's method. And it asks before it runs."
+   "You see the new prompt first, and nothing runs until you say yes."
   ],
-  "payoff": "Same task. The typographer's method."
- },
- "vercel": {
-  "headline": "New skill: deeper",
-  "request": "Move our Next.js app off Vercel.",
-  "sparse": [
-   "There's a new skill for your coding agent. It's called deeper.",
-   "Ask it to move your Next.js app off Vercel, and you get a sketch."
-  ],
-  "sketch": [
-   "Type slash deeper first.",
-   "It asks what a platform engineer would: the expert's move, the raw material, the tools, and the check."
-  ],
-  "objects": [
-   [
-    "Compare every route against production.",
-    "Diff every route against production"
-   ],
-   [
-    "List every Vercel package you depend on.",
-    "List every @vercel/* dependency"
-   ],
-   [
-    "Build it with the OpenNext adapter.",
-    "Build it with the OpenNext adapter"
-   ],
-   [
-    "Then answer yes, no, or not yet.",
-    "Answer yes, no or not yet"
-   ]
-  ],
-  "colour": [
-   "Same task. The engineer's checklist. And it asks before it runs."
-  ],
-  "payoff": "Same task. The engineer's checklist."
+  "payoff": "Same prompt. A book designer's answer."
  },
  "honey": {
-  "headline": "New skill: deeper",
-  "request": "A caption for our borage honey.",
+  "headline": "Ask AI like an expert.",
+  "request": "Write a caption for my honey.",
   "sparse": [
-   "deeper is a new skill for your agent, and it works on any task, code or not.",
-   "Ask for a caption for your borage honey, and you get a sketch."
+   "Ask AI like an expert, and you get the full picture.",
+   "Most of us just type ‘write a caption for my honey’, and get a sketch."
   ],
   "sketch": [
-   "Type slash deeper first.",
-   "It asks what a food copywriter would: the expert's move, the raw material, the tools, and the check."
+   "Meet deeper, a free add-on. Before the AI answers, it rewrites your prompt the way an expert would write it.",
+   "It adds what a food copywriter would think of: where to start, which tools to use, and how to check it worked."
   ],
   "objects": [
    [
-    "Check the pollen report before you call it borage.",
-    "Check the pollen report before calling it borage"
+    "Make sure the honey really comes from borage flowers before you say so.",
+    "Prove it's borage before you say so"
    ],
    [
-    "Match your best posts by saves, not likes.",
-    "Match your best posts by saves"
+    "Copy what worked in your most-saved posts.",
+    "Copy your most-saved posts"
    ],
    [
-    "Put the hook in the first hundred and twenty-five characters.",
-    "Hook inside the first 125 characters"
+    "Put the hook in the first line people see.",
+    "Hook in the first line people see"
    ],
    [
     "And make no health claims.",
@@ -166,42 +200,9 @@
    ]
   ],
   "colour": [
-   "Same task. The copywriter's method. And it asks before it runs."
+   "You see the new prompt first, and nothing runs until you say yes."
   ],
-  "payoff": "Same task. The copywriter's method."
+  "payoff": "Same prompt. A food copywriter's answer."
  },
- "blind": {
-  "headline": "We tested it blind.",
-  "request": "Does deeper make a difference?",
-  "sparse": [
-   "Does deeper make a difference? We tested it blind."
-  ],
-  "sketch": [
-   "Five real tasks, each rewritten with and without it. A judge on another model scored them out of five, without knowing which was which."
-  ],
-  "objects": [
-   [
-    "Starting from the raw material: one point eight without it, five with it.",
-    "Starts from raw material: 1.8 to 5.0"
-   ],
-   [
-    "Expert method: two point six, then five.",
-    "Expert method: 2.6 to 5.0"
-   ],
-   [
-    "A check outside the model: one, then four point eight.",
-    "Check outside the model: 1.0 to 4.8"
-   ],
-   [
-    "The judge never saw the key.",
-    "Scored without the key"
-   ]
-  ],
-  "colour": [
-   "Five tasks is a small test, and every prompt is public."
-  ],
-  "payoff": "Every prompt is on GitHub.",
-  "band": "Scored blind, out of 5"
- },
- "_end": "deeper. Free, for Claude Code, Codex and Cursor."
+ "_end": "Get it free at deeper dot tools."
 }

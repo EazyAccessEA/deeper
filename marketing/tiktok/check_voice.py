@@ -7,7 +7,7 @@ import difflib, json, os, pathlib, re, subprocess, sys, tempfile
 
 HERE = pathlib.Path(__file__).parent
 NUM = {w: str(i) for i, w in enumerate("zero one two three four five six seven eight nine ten".split())}
-SAY = [(r"\bdeeper\b", "deeper"), (r"/deeper", "slash deeper"), (r"colou?r", "color"),
+SAY = [(r"\bdeeper\b", "deeper"), (r"\bdot tools\b", "tools"), (r"deeper\.tools", "deeper tools"), (r"/deeper", "slash deeper"), (r"\bchat ?gpt\b", "chatgpt"), (r"\bkey words\b", "keywords"), (r"\bthirty\b", "30"), (r"colou?r", "color"),
        (r"\bforty-five\b", "45"), (r"\bseventy-five\b", "75"), (r"\bhundred and twenty-five\b", "125"),
        (r"\bone hundred (and )?twenty-five\b", "125")]
 

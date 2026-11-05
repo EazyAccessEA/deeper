@@ -1,0 +1,209 @@
+{
+ "_doc": "One line per shot. sparse: the first line plays over the finished colour scene, the second over the pencil sketch. objects pairs each region (scenes.json order) with its spoken line and its plain on-screen caption. Sources: examples/raw/v1.1/final.md (T1-T5) and the README blind-test table. Tested by teachback.py.",
+ "car": {
+  "headline": "Ask AI like an expert.",
+  "request": "Sell my Polo, buy a Golf.",
+  "sparse": [
+   "This is what AI gives you when you ask like an expert.",
+   "Ask the way most of us do, ‘sell my car’, and you get a sketch."
+  ],
+  "sketch": [
+   "deeper is a free add-on for AI assistants. Before the AI starts, it rewrites your request the way an expert would ask it.",
+   "It asks what a car dealer would: what to start from, which tools to use, and how to check it worked."
+  ],
+  "objects": [
+   [
+    "Price it from real listings of the same car.",
+    "Price it from similar cars for sale"
+   ],
+   [
+    "Get two firm offers before you sell.",
+    "Two firm offers set your lowest price"
+   ],
+   [
+    "Have any used car checked before you buy it.",
+    "Get a used car inspected before you buy"
+   ],
+   [
+    "And make sure a Golf suits the way you drive.",
+    "Check a Golf suits how you drive"
+   ]
+  ],
+  "colour": [
+   "Same request. A dealer's answer. And it checks with you before it starts."
+  ],
+  "payoff": "Same request. A dealer's answer."
+ },
+ "downloads": {
+  "headline": "Ask AI like an expert.",
+  "request": "Tidy my Downloads folder.",
+  "sparse": [
+   "This is what AI gives you when you ask like an expert.",
+   "Ask the way most of us do, ‘tidy my Downloads folder’, and you get a sketch."
+  ],
+  "sketch": [
+   "deeper is a free add-on for AI assistants. Before the AI starts, it rewrites your request the way an expert would ask it.",
+   "It asks what a careful IT person would: what to start from, which tools to use, and how to check it worked."
+  ],
+  "objects": [
+   [
+    "Find true duplicates by what's inside them, not their names.",
+    "Find duplicates by their contents"
+   ],
+   [
+    "Flag the files you have nowhere else.",
+    "Flag files that exist nowhere else"
+   ],
+   [
+    "Move things to the bin, never delete them for good.",
+    "Bin it, never delete for good"
+   ],
+   [
+    "And count every file before and after.",
+    "Count every file before and after"
+   ]
+  ],
+  "colour": [
+   "Same request. Nothing lost. And it checks with you before it starts."
+  ],
+  "payoff": "Same request. Nothing lost."
+ },
+ "book": {
+  "headline": "Ask AI like an expert.",
+  "request": "My book's margins look too big.",
+  "sparse": [
+   "This is what AI gives you when you ask like an expert.",
+   "Ask the way most of us do, ‘my book's margins look too big’, and you get a sketch."
+  ],
+  "sketch": [
+   "deeper is a free add-on for AI assistants. Before the AI starts, it rewrites your request the way an expert would ask it.",
+   "It asks what a book designer would: what to start from, which tools to use, and how to check it worked."
+  ],
+  "objects": [
+   [
+    "Treat ‘too big’ as a guess, then test it.",
+    "Treat it as a guess, then test it"
+   ],
+   [
+    "Judge margins on two facing pages, the way a reader sees them.",
+    "Judge margins on two facing pages"
+   ],
+   [
+    "Keep lines between forty-five and seventy-five letters long.",
+    "45 to 75 letters per line"
+   ],
+   [
+    "Then print a page at real size, and look.",
+    "Print a proof at full size and look"
+   ]
+  ],
+  "colour": [
+   "Same request. A book designer's answer. And it checks with you before it starts."
+  ],
+  "payoff": "Same request. A book designer's answer."
+ },
+ "vercel": {
+  "headline": "Ask AI like an expert.",
+  "request": "Move our Next.js app off Vercel.",
+  "sparse": [
+   "This is what AI gives you when you ask like an expert.",
+   "Ask the way most of us do, ‘move my website to another host’, and you get a sketch."
+  ],
+  "sketch": [
+   "deeper is a free add-on for AI assistants. Before the AI starts, it rewrites your request the way an expert would ask it.",
+   "It asks what an experienced engineer would: what to start from, which tools to use, and how to check it worked."
+  ],
+  "objects": [
+   [
+    "Compare every page on the new host with the live site.",
+    "Compare every page with the live site"
+   ],
+   [
+    "List everything the site depends on first.",
+    "List everything the site depends on"
+   ],
+   [
+    "Build it with the tool made for that move.",
+    "Build it with the OpenNext adapter"
+   ],
+   [
+    "Then give a straight answer: yes, no, or not yet.",
+    "Answer yes, no or not yet"
+   ]
+  ],
+  "colour": [
+   "Same request. An engineer's answer. And it checks with you before it starts."
+  ],
+  "payoff": "Same request. An engineer's answer."
+ },
+ "honey": {
+  "headline": "Ask AI like an expert.",
+  "request": "Write a caption for our borage honey.",
+  "sparse": [
+   "This is what AI gives you when you ask like an expert.",
+   "Ask the way most of us do, ‘write a caption for my honey’, and you get a sketch."
+  ],
+  "sketch": [
+   "deeper is a free add-on for AI assistants. Before the AI starts, it rewrites your request the way an expert would ask it.",
+   "It asks what a food copywriter would: what to start from, which tools to use, and how to check it worked."
+  ],
+  "objects": [
+   [
+    "Check the lab report before you call it borage honey.",
+    "Check the lab report before naming the flower"
+   ],
+   [
+    "Copy what worked in your best posts, by saves, not likes.",
+    "Copy your best posts, by saves"
+   ],
+   [
+    "Put the hook in the first line people see.",
+    "Hook in the first line people see"
+   ],
+   [
+    "And make no health claims.",
+    "No health claims"
+   ]
+  ],
+  "colour": [
+   "Same request. A copywriter's answer. And it checks with you before it starts."
+  ],
+  "payoff": "Same request. A copywriter's answer."
+ },
+ "blind": {
+  "headline": "We tested it blind.",
+  "request": "Does deeper make AI better?",
+  "band": "Marked blind, out of 5",
+  "sparse": [
+   "Does this actually make AI better? We tested it blind.",
+   "Five real requests, each asked plainly, and each asked through deeper."
+  ],
+  "sketch": [
+   "deeper is a free add-on for AI assistants. Before the AI starts, it rewrites your request the way an expert would ask it.",
+   "A separate AI marked every answer out of five, without knowing which was which."
+  ],
+  "objects": [
+   [
+    "Starting from the real facts: one point eight without it, five with it.",
+    "Starts from the real facts: 1.8 to 5.0"
+   ],
+   [
+    "Working like an expert: two point six, then five.",
+    "Works like an expert: 2.6 to 5.0"
+   ],
+   [
+    "Checking the result properly: one, then four point eight.",
+    "Checks the result: 1.0 to 4.8"
+   ],
+   [
+    "The marker never knew which was which.",
+    "Marked without knowing which was which"
+   ]
+  ],
+  "colour": [
+   "Five requests is a small test, and every one is public."
+  ],
+  "payoff": "Every request is on GitHub."
+ },
+ "_end": "deeper. It's free. Find it at deeper dot tools."
+}
