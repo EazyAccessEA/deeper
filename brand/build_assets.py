@@ -106,5 +106,84 @@ def main():
     print("\n".join(sorted(p.name for p in OUT.iterdir())))
 
 
+SOCIAL = ROOT.parent / "marketing/social/assets"
+DISPLAY = ROOT.parent / "site/src/assets/fonts/display.woff2"
+GIANT = "M380 0L760 560H560L380 270L200 560H0Z"   # the site's hero caret, 760 x 560
+# Banner sizes and the box every platform keeps visible (x, y, w, h). Sources: marketing/social/README.md.
+BANNERS = {
+    "x-header": (1500, 500, (60, 60, 1380, 300)),          # bottom-left sits under the avatar
+    "bluesky-banner": (3000, 1000, (150, 150, 2700, 600)),
+    "youtube-banner": (2560, 1440, (712, 571, 1135, 298)),   # YouTube safe area 1235 x 338 at (662, 551), inset 50
+    "linkedin-cover": (1512, 256, (380, 30, 900, 196)),     # logo covers the left; keep clear of lower right
+}
+AVATARS = {"x": 400, "bluesky": 1000, "youtube": 800, "linkedin": 400, "tiktok": 720,
+           "github": 500, "reddit": 256, "instagram": 320, "threads": 320}
+
+
+def display_font():
+    from fontTools.varLib.instancer import instantiateVariableFont
+    return instantiateVariableFont(TTFont(DISPLAY), {"wght": 800, "opsz": 96})
+
+
+def text_paths(font, text, tracking=-0.045):
+    """Text as SVG path data in font units (y down), and its advance width."""
+    gs, cmap, hmtx = font.getGlyphSet(), font.getBestCmap(), font["hmtx"]
+    upm = font["head"].unitsPerEm
+    out, x = [], 0.0
+    for ch in text:
+        name = cmap[ord(ch)]
+        pen = SVGPathPen(gs)
+        gs[name].draw(pen)
+        out.append(f'<path transform="translate({x:.1f},0) scale(1,-1)" d="{pen.getCommands()}"/>')
+        x += hmtx[name][0] + tracking * upm
+    return "".join(out), x - tracking * upm
+
+
+def banner_svg(font, w, h, safe):
+    upm = font["head"].unitsPerEm
+    sx, sy, sw, sh = safe
+    l1, w1 = text_paths(font, "Ask for the version")
+    l2, w2 = text_paths(font, "an expert would ask for.")
+    cw = 0.42 * upm                                     # caret before "an expert", as on the site
+    line2 = cw * 1.25 + w2
+    s = min(sw * 0.66 / max(w1, line2), sh / (2 * 0.92 * upm))   # two lines at 0.92 leading
+    lead = 0.92 * upm
+    top = sy + (sh - 2 * lead * s) / 2 + 0.78 * upm * s
+    # Giant caret: apex at the top of the safe box, feet past the bottom edge, left foot clear of the text.
+    gh = (h - sy) * 1.08
+    gx = sx + s * max(w1, line2) + 0.05 * sw
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}">'
+            f'<rect width="{w}" height="{h}" fill="{RED}"/>'
+            f'<path fill="{WHITE}" transform="translate({gx:.1f},{h - gh:.1f}) scale({gh / 560:.4f})" d="{GIANT}"/>'
+            f'<g fill="{WHITE}" transform="translate({sx},{top:.1f}) scale({s:.5f})">{l1}'
+            f'<g transform="translate(0,{lead:.0f})">'
+            f'<path d="{caret(0, -0.31 * upm, cw, 0.31 * upm, cw * 0.25)}"/>'
+            f'<g transform="translate({cw * 1.25:.0f},0)">{l2}'
+            f'<rect y="{0.1 * upm:.0f}" width="{text_paths(font, "an expert")[1]:.0f}" height="{0.06 * upm:.0f}"/>'
+            f'</g></g></g></svg>')
+
+
+def avatar_svg():
+    # White caret on Proof Red. Corners stay inside the circle crop: 56% wide, centred optically.
+    return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">'
+            f'<rect width="100" height="100" fill="{RED}"/>'
+            f'<path fill="{WHITE}" d="{caret(22, 28, 56, 42, 14)}"/></svg>')
+
+
+def social():
+    SOCIAL.mkdir(parents=True, exist_ok=True)
+    font = display_font()
+    (SOCIAL / "avatar.svg").write_text(avatar_svg())
+    for name, px in AVATARS.items():
+        run("rsvg-convert", "-w", str(px), "-h", str(px), str(SOCIAL / "avatar.svg"), "-o", str(SOCIAL / f"avatar-{name}.png"))
+    for name, (w, h, safe) in BANNERS.items():
+        svg = SOCIAL / f"{name}.svg"
+        svg.write_text(banner_svg(font, w, h, safe))
+        run("rsvg-convert", str(svg), "-o", str(SOCIAL / f"{name}.png"))
+        svg.unlink()
+    print("\n".join(sorted(p.name for p in SOCIAL.iterdir())))
+
+
 if __name__ == "__main__":
-    main()
+    import sys
+    social() if sys.argv[1:] == ["social"] else main()
