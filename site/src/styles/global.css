@@ -1,68 +1,109 @@
-@import "@fontsource/schibsted-grotesk/400.css";
-@import "@fontsource/schibsted-grotesk/500.css";
-@import "@fontsource/schibsted-grotesk/600.css";
-@import "@fontsource/schibsted-grotesk/700.css";
-@import "@fontsource/schibsted-grotesk/500-italic.css";
+/* Bricolage Grotesque, cut in two by scripts/subset-fonts.py: the browser picks the file by font-stretch. */
+@font-face { font-family: "Bricolage"; src: url("../assets/fonts/display.woff2") format("woff2"); font-stretch: 75%; font-weight: 700 800; font-display: swap; }
+@font-face { font-family: "Bricolage"; src: url("../assets/fonts/text.woff2") format("woff2"); font-stretch: 100%; font-weight: 400 700; font-display: swap; }
 @import "@fontsource/jetbrains-mono/400.css";
 
+/* Red field: full-bleed bands of Proof Red, white and black. Bricolage Grotesque throughout,
+   condensed 800 for display. Red is a band colour; deeper's insertions are marked by caret + underline. */
 :root {
-  --page: #ffffff;
-  --margin: #f4f5f6;
-  --ink: #141414;
-  --graphite: #5b5f66;
-  --rule: #e3e5e8;
   --red: #d0241b;
-  --on-red: #ffffff;
-  --sans: "Schibsted Grotesk", system-ui, sans-serif;
+  --black: #141414;
+  --white: #ffffff;
+  --paper: #ffffff;       /* white band ground */
+  --ink: #141414;         /* text on white bands */
+  --grey: #6b6e73;        /* secondary text on white, 5.1:1 */
+  --rule: #d9d9d6;
+  --panel: #f2f2f0;       /* code panels on white */
+  --on-black: #c9cbcf;    /* secondary text on black, 11:1 */
+  --placeholder: #6b6f76;
+  --red-text: #d0241b;    /* red used as text on the paper ground; lighter in dark mode for 4.5:1 */
+  --sans: "Bricolage", system-ui, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, monospace;
-  --wrap: 72rem;
-  --gutter: clamp(1.25rem, 4vw, 2rem);
-  --measure: 36em;
-  --gap: clamp(4rem, 9vw, 8rem);
+
+  /* Three display steps (128 / 72 / 32) and body steps. */
+  --d1: clamp(3.75rem, 9vw, 8rem);
+  --d2: clamp(3.25rem, 5.4vw, 4.5rem);
+  --d3: clamp(1.75rem, 2.4vw, 2rem);
+  --t-sm: 0.875rem;
+  --t-base: 1.0625rem;
+  --t-lg: 1.25rem;
+
+  --wrap: 90rem;
+  --gutter: clamp(1.25rem, 3.9vw, 3.5rem);
+  --measure: 38em;
+  --band: clamp(4.5rem, 9vw, 8rem);
   color-scheme: light dark;
+  accent-color: var(--red);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --page: #121212;
-    --margin: #1c1c1c;
+    --paper: #121212;
     --ink: #ededed;
-    --graphite: #a3a3a3;
-    --rule: #2a2a2a;
-    --red: #ff5a4e;
-    --on-red: #121212;
+    --grey: #a3a3a3;
+    --rule: #2e2e2e;
+    --panel: #1d1d1d;
+    --placeholder: #9a9a9a;
+    --red-text: #ff5a4e;  /* 6.0:1 on #121212 */
   }
 }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--page); color: var(--ink); font: 400 1.0625rem/1.6 var(--sans); }
-a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 var(--t-base)/1.6 var(--sans); caret-color: var(--red); }
+::selection { background: var(--black); color: var(--white); }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
 a:hover { text-decoration-thickness: 2px; }
-:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
-h1, h2, h3 { font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; margin: 0; text-wrap: balance; }
-p { margin: 0; text-wrap: pretty; }
+/* Visible on red, white and black alike. */
+:focus-visible { outline: 3px solid var(--black); outline-offset: 2px; box-shadow: 0 0 0 5px var(--white); }
+h1, h2, h3 { font-weight: 800; font-stretch: 75%; letter-spacing: -0.045em; line-height: 0.95; margin: 0; text-wrap: balance; }
+p, li { margin: 0; text-wrap: pretty; }
 code, pre, kbd { font-family: var(--mono); font-size: 0.88em; }
 img { max-width: 100%; height: auto; display: block; }
+::placeholder { color: var(--placeholder); opacity: 1; }
 
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
-.muted { color: var(--graphite); }
-.ins { color: var(--red); font-style: italic; font-weight: 500; text-decoration: none; }
+.muted { color: var(--grey); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* Bands */
+.band { padding-block: var(--band); }
+.band-red { background: var(--red); color: var(--white); }
+.band-black { background: var(--black); color: var(--white); }
+.band-red .muted, .band-black .muted { color: var(--on-black); }
+.band-red .muted { color: var(--white); }
+
+/* An insertion: caret before, underline under, so the meaning never rests on colour. */
+.ins { text-decoration: underline; text-decoration-thickness: 0.07em; text-underline-offset: 0.14em; text-decoration-skip-ink: none; }
+.caret {
+  display: inline-block; width: 0.5em; height: 0.37em; margin-right: 0.08em; vertical-align: -0.04em; background: currentColor;
+  clip-path: polygon(50% 0, 100% 100%, 73.7% 100%, 50% 48.2%, 26.3% 100%, 0 100%);
+}
 
 table { border-collapse: collapse; width: 100%; }
-td { font-variant-numeric: tabular-nums; }
+td { font-variant-numeric: lining-nums proportional-nums; }
 th, td { text-align: left; padding: 0.75rem 1rem 0.75rem 0; vertical-align: top; }
-thead th { font-weight: 500; color: var(--graphite); border-bottom: 1px solid var(--rule); }
+thead th { font-weight: 600; border-bottom: 1px solid var(--rule); }
 
-.prose { max-width: var(--measure); }
+/* Inner pages: the first heading sits in a red band that runs on from the header. */
+.page { padding-bottom: var(--band); }
+.page h1:first-of-type {
+  position: relative; color: var(--white); font-size: var(--d1); padding: clamp(2rem, 5vw, 4.5rem) 0 clamp(2.5rem, 5vw, 4.5rem);
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  background: var(--red); box-shadow: 0 0 0 100vmax var(--red); clip-path: inset(-100vmax -100vmax 0 -100vmax);
+}
+.page h1:first-of-type::after {
+  content: ""; position: absolute; right: 0; bottom: 0; width: clamp(7rem, 22vw, 20rem); aspect-ratio: 760 / 560; background: var(--white);
+  clip-path: polygon(50% 0, 100% 100%, 73.7% 100%, 50% 48.2%, 26.3% 100%, 0 100%);
+}
+
+.prose > * { max-width: var(--measure); }
 .prose > * + * { margin-top: 1em; }
-.prose h2 { margin-top: 2.5em; font-size: 1.75rem; }
-.prose h3 { margin-top: 1.8em; font-size: 1.25rem; }
-.prose pre { background: var(--margin); padding: 1rem 1.25rem; overflow-x: auto; border-radius: 4px; }
-.prose :not(pre) > code { background: var(--margin); padding: 0.1em 0.35em; border-radius: 3px; }
+.prose h2 { margin-top: 2.2em; padding-top: 0.6em; border-top: 3px solid currentColor; font-size: var(--d3); max-width: none; }
+.prose h3 { margin-top: 1.8em; font-size: var(--t-lg); font-stretch: 100%; letter-spacing: -0.015em; font-weight: 700; line-height: 1.2; }
+.prose pre { background: var(--panel); padding: 1rem 1.25rem; overflow-x: auto; border-radius: 4px; }
+.prose :not(pre) > code { background: var(--panel); padding: 0.1em 0.35em; border-radius: 3px; }
 .prose ul, .prose ol { padding-left: 1.2em; }
 .prose li + li { margin-top: 0.35em; }
-.prose strong { font-weight: 500; font-style: italic; color: var(--red); }
-
-.page { padding-top: clamp(3rem, 7vw, 5rem); }
-.page h1 { font-size: clamp(2.6rem, 5vw, 3.6rem); margin-bottom: 1.5rem; }
+.prose strong { font-weight: 700; }
+@media (min-width: 900px) { .page.prose > :not(h1) { margin-left: 22%; } }

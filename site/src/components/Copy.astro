@@ -1,34 +1,51 @@
 ---
-interface Props { text: string; }
-const { text } = Astro.props;
+interface Props { text: string; label?: string; }
+const { text, label = "Copy" } = Astro.props;
 ---
 <div class="copy">
   <code>{text}</code>
-  <button type="button" data-copy={text} aria-label={`Copy: ${text}`}>Copy</button>
+  <button type="button" data-copy={text} data-label={label} aria-label={`${label}: ${text}`}><span class="long">{label}</span><span class="short">Copy</span></button>
+  <span class="sr" role="status" aria-live="polite"></span>
 </div>
 
 <script>
   document.querySelectorAll<HTMLButtonElement>("[data-copy]").forEach((b) => {
+    const status = b.parentElement!.querySelector<HTMLElement>('[role="status"]')!;
+    const parts = [...b.querySelectorAll("span")];
+    const say = (t: string) => { parts.forEach((p) => (p.textContent = t)); status.textContent = t; };
     b.addEventListener("click", async () => {
       try {
         await navigator.clipboard.writeText(b.dataset.copy!);
-        b.textContent = "Copied";
+        say("Copied");
       } catch {
-        b.textContent = "Select and copy";
+        say("Select and copy");
       }
-      setTimeout(() => (b.textContent = "Copy"), 1800);
+      setTimeout(() => { parts[0].textContent = b.dataset.label!; parts[1].textContent = "Copy"; status.textContent = ""; }, 1800);
     });
   });
 </script>
 
 <style>
-  .copy { display: flex; align-items: center; gap: 0.5rem; min-width: 0; max-width: 30rem; background: var(--margin); border-radius: 4px; padding: 0.4rem 0.4rem 0.4rem 1rem; }
-  code { flex: 1; min-width: 0; overflow-x: auto; white-space: nowrap; font-size: 0.92rem; }
+  /* On white: grey panel, red button. On a red band: white panel, black button. */
+  .copy { display: flex; align-items: center; gap: 0.5rem; min-width: 0; max-width: 34rem; background: var(--panel); border-radius: 4px; padding: 0.5rem 0.5rem 0.5rem 1.25rem; min-height: 4rem; }
+  code { flex: 1; min-width: 0; overflow-x: auto; white-space: nowrap; font-size: 0.9375rem; color: var(--ink); }
   button {
-    flex: none; min-height: 2.75rem; padding: 0 1.1rem; border: 0; border-radius: 4px; cursor: pointer;
-    background: var(--red); color: var(--on-red); font: 600 0.95rem var(--sans);
+    flex: none; min-height: 3rem; padding: 0 1.4rem; border: 0; border-radius: 3px; cursor: pointer;
+    background: var(--red); color: var(--white); font: 700 1rem var(--sans);
     transition: transform 0.12s;
   }
   button:active { transform: translateY(1px); }
-  @media (max-width: 480px) { code { white-space: normal; overflow-wrap: anywhere; font-size: 0.85rem; } }
+  :global(.band-red) .copy { background: var(--white); }
+  :global(.band-red) code { color: var(--black); }
+  :global(.band-red) button { background: var(--black); }
+  .long { display: none; }
+  @media (max-width: 560px) {
+    .copy { flex-direction: column; align-items: stretch; background: none; padding: 0; gap: 0.5rem; }
+    :global(.band-red) .copy { background: none; }
+    code { background: var(--panel); border-radius: 4px; padding: 0.95rem 0.9rem; font-size: 0.8125rem; }
+    :global(.band-red) code { background: var(--white); }
+    button { min-height: 3rem; font-size: 1rem; }
+    .long { display: inline; }
+    .short { display: none; }
+  }
 </style>

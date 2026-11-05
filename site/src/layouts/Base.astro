@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+// Preloaded so the condensed display type is ready before first paint; a late swap re-wraps the headline (CLS).
+import bricolage from "../assets/fonts/display.woff2?url";
 
 interface Props { title?: string; description?: string; }
 const {
@@ -7,7 +9,8 @@ const {
   description = "A free skill for AI agents. It rewrites a task with the method, sources and checks a top professional would use, then waits for your go-ahead.",
 } = Astro.props;
 const path = Astro.url.pathname;
-const links = [["/start/", "Start"], ["/docs/", "Docs"], ["/patterns/", "Patterns"], ["/research/", "Research"]];
+// "Get started" rather than "Start": Lighthouse flags a bare "Start" link as non-descriptive.
+const links = [["/start/", "Get started"], ["/docs/", "Docs"], ["/patterns/", "Patterns"], ["/research/", "Research"]];
 const og = new URL("/og.png", Astro.site).href;
 const canonical = new URL(path, Astro.site).href;
 // Structured data for search engines; a data block, so the CSP's script-src doesn't apply.
@@ -30,6 +33,7 @@ const software = {
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="preload" href={bricolage} as="font" type="font/woff2" crossorigin />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -46,39 +50,60 @@ const software = {
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    <header class="wrap head">
-      <a class="logo" href="/" aria-label="deeper, home">
-        <img class="light" src="/wordmark.svg" alt="" width="104" height="35" />
-        <img class="dark" src="/wordmark-dark.svg" alt="" width="104" height="35" />
-      </a>
-      <nav aria-label="Main">
-        {links.map(([href, label]) => <a href={href} aria-current={path === href ? "page" : undefined}>{label}</a>)}
-        <a href="https://github.com/EazyAccessEA/deeper">GitHub</a>
-      </nav>
-    </header>
+    <div class="band-red top">
+      <header class="wrap head">
+        <a class="logo" href="/" aria-label="deeper, home"><img src="/wordmark-white.svg" alt="" width="104" height="35" /></a>
+        <nav aria-label="Main">
+          {links.map(([href, label], i) => <a href={href} class:list={{ extra: i > 1 }} aria-current={path === href ? "page" : undefined}>{label}</a>)}
+          <a href="https://github.com/EazyAccessEA/deeper">GitHub</a>
+        </nav>
+      </header>
+    </div>
     <main id="main"><slot /></main>
-    <footer class="wrap foot">
-      <img src="/favicon.svg" alt="" width="20" height="20" />
-      <p class="muted">Apache 2.0. The four questions adapt a prompt from Felix Rieseberg's <a href="https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/">How to be more ambitious</a>.</p>
-      <nav aria-label="Footer"><a href="mailto:hello@deeper.tools">hello@deeper.tools</a><a href="https://github.com/EazyAccessEA/deeper/issues">Report an issue</a><a href="https://github.com/EazyAccessEA/deeper/blob/main/SECURITY.md">Security</a><a href="/privacy/">Privacy</a><a href="/changelog/">Changelog</a><a href="/legal/">Legal</a><a href="https://github.com/EazyAccessEA/deeper">GitHub</a></nav>
+    <footer class="band-black foot">
+      <div class="wrap foot-in">
+        <div class="foot-mark">
+          <img src="/wordmark-white.svg" alt="deeper" width="104" height="35" />
+          <p>Apache 2.0. The four questions adapt a prompt from Felix Rieseberg's <a href="https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/">How to be more ambitious</a>.</p>
+        </div>
+        <nav aria-label="Footer">
+          <ul>{links.map(([href, label]) => <li><a href={href}>{label}</a></li>)}</ul>
+          <ul><li><a href="https://github.com/EazyAccessEA/deeper">GitHub</a></li><li><a href="/changelog/">Changelog</a></li><li><a href="https://github.com/EazyAccessEA/deeper/issues">Report an issue</a></li><li><a href="https://github.com/EazyAccessEA/deeper/blob/main/SECURITY.md">Security</a></li></ul>
+          <ul><li><a href="mailto:hello@deeper.tools">hello@deeper.tools</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/legal/">Legal</a></li></ul>
+        </nav>
+      </div>
     </footer>
   </body>
 </html>
 
 <style>
   .skip { position: absolute; left: -999px; }
-  .skip:focus { left: 1rem; top: 1rem; background: var(--page); padding: 0.5rem; z-index: 10; }
-  .head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 5rem; flex-wrap: wrap; }
-  .logo { display: inline-flex; padding: 0.5rem 0; }
-  .logo img { height: 2.1rem; width: auto; }
-  .dark { display: none; }
-  @media (prefers-color-scheme: dark) { .light { display: none; } .dark { display: block; } }
-  nav { display: flex; flex-wrap: wrap; }
-  nav a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 0.7rem; text-decoration: none; color: var(--graphite); }
-  nav a:hover, nav a[aria-current="page"] { color: var(--ink); }
-  nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 2px; }
-  .head nav { margin-right: -0.7rem; }
-  .foot { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; margin-top: var(--gap); padding-top: 2rem; padding-bottom: 3rem; border-top: 1px solid var(--rule); font-size: 0.95rem; }
-  .foot p { max-width: var(--measure); }
-  @media (max-width: 640px) { .foot { grid-template-columns: 1fr; } .foot img { display: none; } .foot nav { margin-left: -0.7rem; } }
+  .skip:focus { left: 1rem; top: 1rem; background: var(--white); color: var(--black); padding: 0.5rem; z-index: 10; }
+  /* Fixed height, one row at every width, so the header never reflows when fonts load. */
+  .head { display: flex; align-items: center; justify-content: space-between; height: 5.25rem; }
+  .logo { display: inline-flex; }
+  .logo img { height: 2.1rem; width: auto; aspect-ratio: 104 / 35; }
+  .head nav { display: flex; gap: 1.9rem; font-size: 1.0625rem; font-weight: 500; }
+  .head nav a { display: inline-flex; align-items: center; min-height: 2.75rem; text-decoration: none; white-space: nowrap; }
+  .head nav a:hover, .head nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.4em; }
+  @media (max-width: 640px) {
+    .head { height: 3.75rem; }
+    .logo img { height: 1.75rem; }
+    .head nav { gap: 1.1rem; font-size: 0.9375rem; }
+    .head nav a.extra { display: none; }
+  }
+
+  .foot { padding-block: 4rem 4.5rem; font-size: 0.9375rem; line-height: 1.5; }
+  .foot-in { display: flex; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
+  .foot-mark { display: flex; flex-direction: column; gap: 1rem; max-width: 26rem; }
+  .foot-mark img { height: 2.1rem; width: auto; align-self: flex-start; }
+  .foot-mark p { color: var(--on-black); }
+  .foot nav { display: flex; gap: 4rem; flex-wrap: wrap; }
+  .foot ul { list-style: none; margin: 0; padding: 0; }
+  .foot li a { display: inline-flex; align-items: center; min-height: 2.25rem; text-decoration: none; }
+  .foot li a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .foot nav { gap: 2.5rem; }
+    .foot li a { min-height: 2.75rem; }
+  }
 </style>
