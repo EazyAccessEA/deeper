@@ -1,14 +1,20 @@
-// Handles POST /api/subscribe; every other request goes straight to the static files in dist/.
+// Handles POST /api/subscribe and POST /api/e (Copy-click counting); pages get the counting script added,
+// and every other request goes straight to the static files in dist/.
 // Stores the email with where the signup came from, so each channel (TikTok, X, the README) can be counted.
 // Nothing is sent yet: the first email to anyone on this list must be a confirmation.
 
 const EMAIL = /^[^\s@<>()",;:]+@[^\s@<>()",;:]+\.[^\s@<>()",;:]{2,}$/;
 const PER_IP_PER_DAY = 5;
 
+// Pages the counter covers; anything else posted to /api/e is dropped.
+const PAGES = new Set(["/", "/start/", "/docs/", "/patterns/", "/research/", "/changelog/", "/privacy/", "/legal/", "/subscribed/"]);
+const BOT = /bot|crawl|spider|slurp|headless|preview|monitor/i;
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (url.pathname !== "/api/subscribe") return env.ASSETS.fetch(request);
+    if (url.pathname === "/api/e") return count(request, env);
+    if (url.pathname !== "/api/subscribe") return withCounter(await env.ASSETS.fetch(request));
     if (request.method !== "POST") return new Response("Method not allowed", { status: 405, headers: { Allow: "POST" } });
     if (!env.IP_SALT) return new Response("Signup is not configured", { status: 500 });
 
@@ -44,6 +50,30 @@ export default {
     ]);
   },
 };
+
+// Adds the counting script to HTML pages. Static files pass through untouched.
+function withCounter(res) {
+  if (!(res.headers.get("Content-Type") ?? "").includes("text/html")) return res;
+  return new HTMLRewriter().on("body", { element: (el) => el.append('<script src="/count.js" defer></script>', { html: true }) }).transform(res);
+}
+
+// POST /api/e {p, k}: adds one to a counter for today. No IP, user agent or identifier is stored;
+// the user agent is read only to skip obvious bots, then discarded.
+async function count(request, env) {
+  if (request.method !== "POST") return new Response(null, { status: 405, headers: { Allow: "POST" } });
+  if (BOT.test(request.headers.get("User-Agent") ?? "")) return new Response(null, { status: 204 });
+  const body = await request.text().catch(() => "");
+  if (body.length > 200) return new Response(null, { status: 413 });
+  let e;
+  try { e = JSON.parse(body); } catch { return new Response(null, { status: 400 }); }
+  if (!PAGES.has(e?.p) || !["pv", "copy"].includes(e?.k)) return new Response(null, { status: 400 });
+  const day = new Date().toISOString().slice(0, 10);
+  const country = /^[A-Z]{2}$/.test(request.cf?.country ?? "") ? request.cf.country : "XX";
+  await env.DB.prepare(
+    "INSERT INTO events (day, page, kind, country, variant, n) VALUES (?, ?, ?, ?, 'live', 1) ON CONFLICT (day, page, kind, country, variant) DO UPDATE SET n = n + 1",
+  ).bind(day, e.p, e.k, country).run();
+  return new Response(null, { status: 204 });
+}
 
 // The page the form sat on carries ?ref= or ?utm_source= from the link that brought the reader in.
 function sourceOf(referer, fallback) {

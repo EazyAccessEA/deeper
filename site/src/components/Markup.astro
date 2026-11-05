@@ -1,33 +1,66 @@
 ---
 import { markups } from "../lib/markup";
 const start = 0;
+
+// Splits the real prompt so each inserted phrase can be marked where it actually appears.
+function marked(text: string, phrases: string[]) {
+  const parts: { t: string; ins: boolean }[] = [];
+  let rest = text;
+  while (rest) {
+    let at = -1, hit = "";
+    for (const p of phrases) {
+      const i = rest.indexOf(p);
+      if (i !== -1 && (at === -1 || i < at)) { at = i; hit = p; }
+    }
+    if (at === -1) { parts.push({ t: rest, ins: false }); break; }
+    if (at > 0) parts.push({ t: rest.slice(0, at), ins: false });
+    parts.push({ t: hit, ins: true });
+    rest = rest.slice(at + hit.length);
+  }
+  return parts;
+}
+const words = (s: string) => s.trim().split(/\s+/).length;
 ---
-<div class="markup" data-markup>
-  <div class="tabs" role="tablist" aria-label="Example tasks">
-    {markups.map((m, i) => (
-      <button role="tab" id={`mt-${m.id}`} aria-controls={`mp-${m.id}`} aria-selected={i === start ? "true" : "false"} tabindex={i === start ? 0 : -1}>{m.short}</button>
-    ))}
+<div class="demo" data-markup>
+  <div class="side">
+    <h2 id="markup-h">Your request, marked up.</h2>
+    <p class="intro">Five real tasks. Pick one to see what deeper 1.1 inserted, word for word from its rewrite.</p>
+    <div class="tabs" role="tablist" aria-label="Example tasks" aria-orientation="vertical">
+      {markups.map((m, i) => (
+        <button role="tab" id={`mt-${m.id}`} aria-controls={`mp-${m.id}`} aria-selected={i === start ? "true" : "false"} tabindex={i === start ? 0 : -1}>
+          <span>{m.short}</span><span class="n">{m.inserts.length} inserts</span>
+        </button>
+      ))}
+    </div>
   </div>
-  {markups.map((m, i) => (
-    <section class="panel" role="tabpanel" id={`mp-${m.id}`} aria-labelledby={`mt-${m.id}`} hidden={i !== start}>
-      <p class="request">
-        {m.task}
-        {m.inserts.map((phrase, k) => (
-          <ins class="ins" style={`--k:${k}`}><span class="caret" aria-hidden="true"></span>{phrase}</ins>
-        ))}
-      </p>
-      <p class="source muted">Red is what deeper 1.1 inserted, word for word from its rewrite. It asks for the same deliverable you did.</p>
-      <details>
-        <summary>Read the full deeper prompt</summary>
-        <pre>{m.deeper}</pre>
-      </details>
-      <details>
-        <summary>Compare the plain rewrite</summary>
-        <pre>{m.plain}</pre>
-        <p class="verdict"><b>Blind judge:</b> {m.reason}</p>
-      </details>
-    </section>
-  ))}
+  {markups.map((m, i) => {
+    const head = m.deeper.split("\n\n").slice(0, 2).join("\n\n");
+    return (
+      <section class="panel" role="tabpanel" id={`mp-${m.id}`} aria-labelledby={`mt-${m.id}`} hidden={i !== start}>
+        <p class="label">You asked</p>
+        <p class="asked">{m.task}</p>
+        <p class="label red">deeper inserts</p>
+        <ul class="inserts">
+          {m.inserts.map((phrase, k) => (
+            <li style={`--k:${k}`}><span class="caret" aria-hidden="true"></span><ins class="ins"><span class="sr">deeper adds: </span>{phrase}</ins></li>
+          ))}
+        </ul>
+        <div class="prompt">
+          <div class="prompt-head"><p>The full deeper prompt, ready to copy</p><p class="count">{words(m.deeper)} words</p></div>
+          <pre>{marked(head, m.inserts).map((p) => (p.ins ? <mark>{p.t}</mark> : p.t))}</pre>
+          <details>
+            <summary>Read the full prompt</summary>
+            <pre>{marked(m.deeper.slice(head.length).replace(/^\n+/, ""), m.inserts).map((p) => (p.ins ? <mark>{p.t}</mark> : p.t))}</pre>
+          </details>
+          <details>
+            <summary>Compare the plain rewrite</summary>
+            <pre>{m.plain}</pre>
+            <p class="verdict"><b>Blind judge:</b> {m.reason}</p>
+          </details>
+        </div>
+      </section>
+    );
+  })}
 </div>
 
 <script>
@@ -46,38 +79,69 @@ const start = 0;
     tabs.forEach((t, i) => {
       t.addEventListener("click", () => show(t));
       t.addEventListener("keydown", (e) => {
-        const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+        const d = ["ArrowDown", "ArrowRight"].includes(e.key) ? 1 : ["ArrowUp", "ArrowLeft"].includes(e.key) ? -1 : 0;
         if (!d) return;
+        e.preventDefault();
         const next = tabs[(i + d + tabs.length) % tabs.length];
         show(next);
         next.focus();
       });
     });
-    root.querySelector<HTMLElement>(".panel:not([hidden])")?.classList.add("play");
   });
 </script>
 
 <style>
-  .tabs { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; margin-bottom: 2rem; }
+  .demo { display: grid; grid-template-columns: minmax(0, 25rem) minmax(0, 1fr); gap: 2.5rem 5rem; }
+  .side h2 { font-size: var(--d2); }
+  .intro { margin-top: 1.5rem; max-width: 22em; font-size: 1.125rem; }
+  .tabs { display: flex; flex-direction: column; margin-top: 2.25rem; }
   [role="tab"] {
-    min-height: 2.75rem; padding: 0; background: none; border: 0; cursor: pointer;
-    font: 500 1rem var(--sans); color: var(--graphite);
+    display: flex; align-items: center; justify-content: space-between; min-height: 3.5rem; padding: 0 1.1rem;
+    background: none; border: 0; border-bottom: 1px solid var(--rule); border-radius: 4px; cursor: pointer; text-align: left;
+    font: 600 1.25rem var(--sans); color: var(--ink);
   }
-  [role="tab"][aria-selected="true"] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 0.35em; }
-  .request { font-size: clamp(1.7rem, 3.6vw, 2.9rem); line-height: 1.32; letter-spacing: -0.025em; font-weight: 500; max-width: 26em; }
-  .ins { display: inline; margin-left: 0.3em; }
-  .caret {
-    display: inline-block; width: 0.42em; height: 0.32em; margin-right: 0.12em; vertical-align: -0.12em; background: var(--red);
-    clip-path: polygon(0 100%, 50% 0, 100% 100%, 70% 100%, 50% 40%, 30% 100%);
+  [role="tab"] .n { display: none; font-size: 0.9375rem; font-weight: 500; }
+  [role="tab"][aria-selected="true"] { background: var(--ink); color: var(--paper); border-bottom-color: transparent; }
+  [role="tab"][aria-selected="true"] .n { display: inline; }
+  [role="tab"]:hover:not([aria-selected="true"]) { text-decoration: underline; }
+
+  .panel { grid-column: 2; grid-row: 1; min-width: 0; }
+  .label { font-size: 0.9375rem; font-weight: 600; color: var(--grey); }
+  .label.red { color: var(--red-text); margin-top: 1.75rem; }
+  .asked { margin-top: 0.75rem; padding-bottom: 2.25rem; border-bottom: 3px solid var(--ink); font-size: clamp(2rem, 3.6vw, 3.25rem); line-height: 1.08; font-weight: 700; font-stretch: 75%; letter-spacing: -0.035em; }
+  .inserts { list-style: none; margin: 0.5rem 0 2.5rem; padding: 0; }
+  .inserts li { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); gap: 1.5rem; align-items: baseline; padding: 1.35rem 0 1.6rem; border-bottom: 1px solid var(--rule); font-size: clamp(1.3rem, 2.4vw, 2.25rem); line-height: 1.22; font-weight: 600; letter-spacing: -0.025em; }
+  .inserts li:last-child { border-bottom: 0; }
+  .inserts .caret { width: 2.5rem; height: 1.85rem; color: var(--red-text); vertical-align: 0; }
+  .inserts .ins { text-decoration-color: var(--red-text); text-decoration-thickness: 3px; text-underline-offset: 0.22em; }
+
+  .prompt { padding: 1.75rem 2rem 1.25rem; background: var(--black); color: var(--white); border-radius: 4px; }
+  .prompt-head { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; font-size: 0.9375rem; }
+  .prompt-head p:first-child { font-weight: 600; }
+  .count { color: var(--on-black); }
+  pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.875rem; line-height: 1.65; color: #e6e6e3; }
+  mark { background: none; color: #ff7a70; }
+  details { margin-top: 0.4rem; }
+  details pre { margin-top: 0.75rem; max-height: 28rem; overflow-y: auto; }
+  summary { display: inline-flex; align-items: center; min-height: 2.75rem; cursor: pointer; text-decoration: underline; text-underline-offset: 0.2em; font-weight: 600; }
+  .verdict { margin-top: 0.75rem; color: var(--on-black); max-width: var(--measure); }
+
+  @media (max-width: 900px) {
+    .demo { grid-template-columns: minmax(0, 1fr); }
+    .panel { grid-column: 1; grid-row: auto; }
+    .intro { font-size: 1rem; margin-top: 1rem; }
+    .tabs { flex-direction: row; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; }
+    [role="tab"] { min-height: 2.75rem; padding: 0 0.85rem; border: 1.5px solid var(--ink); font-size: 0.9375rem; }
+    [role="tab"][aria-selected="true"] .n { display: none; }
+    .inserts li { grid-template-columns: 1.6rem minmax(0, 1fr); gap: 0.85rem; padding: 0.9rem 0 1rem; }
+    .inserts .caret { width: 1.6rem; height: 1.2rem; }
+    .inserts .ins { text-decoration-thickness: 2px; }
+    .prompt { padding: 1.15rem; }
+    .prompt > pre { max-height: 9.5rem; overflow: hidden; mask-image: linear-gradient(#000 60%, transparent); }
+    pre { font-size: 0.8125rem; }
   }
-  .source { margin-top: 1.5rem; max-width: var(--measure); }
-  details { margin-top: 1rem; max-width: 48rem; }
-  details + details { margin-top: 0.25rem; }
-  summary { display: inline-flex; align-items: center; min-height: 2.75rem; cursor: pointer; text-decoration: underline; text-underline-offset: 0.18em; }
-  pre { margin: 0.5rem 0 0; background: var(--margin); padding: 1.25rem; border-radius: 4px; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.82rem; line-height: 1.6; max-height: 28rem; overflow-y: auto; }
-  .verdict { margin-top: 0.75rem; color: var(--graphite); max-width: var(--measure); }
   @media (prefers-reduced-motion: no-preference) {
-    .play .ins { animation: write 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both; animation-delay: calc(0.35s + var(--k) * 0.32s); }
-    @keyframes write { from { opacity: 0; transform: translateY(4px); } }
+    .play .inserts li { animation: in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; animation-delay: calc(var(--k) * 0.12s); }
+    @keyframes in { from { opacity: 0; transform: translateY(6px); } }
   }
 </style>
