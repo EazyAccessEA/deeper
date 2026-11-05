@@ -1,0 +1,208 @@
+{
+ "_doc": "One line per shot. sparse: the first line plays over the finished colour scene, the second over the pencil sketch. objects pairs each region (scenes.json order) with its spoken line and its plain on-screen caption. Sources: examples/raw/v1.1/final.md (T1-T5) and the README blind-test table. Tested by teachback.py.",
+ "car": {
+  "headline": "Ask AI like an expert.",
+  "request": "Sell my car and buy a Golf.",
+  "sparse": [
+   "Ask AI like an expert, and you get the full picture.",
+   "Most of us just type ‘sell my car and buy a Golf’, and get a sketch."
+  ],
+  "sketch": [
+   "Meet deeper, a free add-on for AI assistants. Before the AI starts, deeper rewrites your prompt the way an expert would write it.",
+   "It adds what a car dealer would think of: where to start, which tools to use, and how to check it worked."
+  ],
+  "objects": [
+   [
+    "Price it from real listings of the same car.",
+    "Price it from similar cars for sale"
+   ],
+   [
+    "Get two firm offers before you sell.",
+    "Two firm offers set your lowest price"
+   ],
+   [
+    "Have any used car checked before you buy it.",
+    "Get a used car inspected before you buy"
+   ],
+   [
+    "And make sure a Golf suits the way you drive.",
+    "Check a Golf suits how you drive"
+   ]
+  ],
+  "colour": [
+   "You see the new prompt first, and nothing runs until you say yes."
+  ],
+  "payoff": "Same prompt. A car dealer's answer."
+ },
+ "cover": {
+  "headline": "Ask AI like an expert.",
+  "request": "Write a cover letter for a data analyst job.",
+  "sparse": [
+   "Ask AI like an expert, and you get the full picture.",
+   "Most of us just type ‘write me a cover letter’, and get a sketch."
+  ],
+  "sketch": [
+   "Meet deeper, a free add-on for AI assistants. Before the AI starts, deeper rewrites your prompt the way an expert would write it.",
+   "It adds what a hiring manager would think of: where to start, which tools to use, and how to check it worked."
+  ],
+  "objects": [
+   [
+    "Show one real piece of work, with a real number, instead of a list of skills.",
+    "Show one real result, with its number"
+   ],
+   [
+    "Match each thing the advert asks for with proof from your CV.",
+    "Match the advert with proof from your CV"
+   ],
+   [
+    "Use the advert's own key words, because software screens letters first.",
+    "Use the advert's key words"
+   ],
+   [
+    "Then give it a thirty-second test with someone who does the job.",
+    "Give it a 30-second test with a real reader"
+   ]
+  ],
+  "colour": [
+   "You see the new prompt first, and nothing runs until you say yes."
+  ],
+  "payoff": "Same prompt. A hiring manager's answer."
+ },
+ "blind": {
+  "headline": "We tested it blind.",
+  "request": "Does deeper make AI better?",
+  "band": "Marked blind, out of 5",
+  "sparse": [
+   "Does this actually make AI better? We tested it blind.",
+   "Meet deeper, a free add-on for AI assistants. Before the AI starts, deeper rewrites your prompt the way an expert would write it."
+  ],
+  "sketch": [
+   "We took five real requests and ran each one twice, once plainly and once with deeper. A separate AI marked every answer out of five, without knowing which was which."
+  ],
+  "objects": [
+   [
+    "For starting from your own files and facts, the score went from one point eight to five.",
+    "Starts from your own facts: 1.8 to 5.0"
+   ],
+   [
+    "For working the way an expert would, the score went from two point six to five.",
+    "Works like an expert: 2.6 to 5.0"
+   ],
+   [
+    "For checking the result properly, it went from one to four point eight.",
+    "Checks the result: 1.0 to 4.8"
+   ],
+   [
+    "And for sticking to what you asked for, it went from two point two to four.",
+    "Sticks to what you asked: 2.2 to 4.0"
+   ]
+  ],
+  "colour": [
+   "Five requests is a small test, and every one of them is public."
+  ],
+  "payoff": "Every request is on GitHub."
+ },
+ "downloads": {
+  "headline": "Ask AI like an expert.",
+  "request": "Tidy my Downloads folder.",
+  "sparse": [
+   "Ask AI like an expert, and you get the full picture.",
+   "Most of us just type ‘tidy my Downloads folder’, and get a sketch."
+  ],
+  "sketch": [
+   "Meet deeper, a free add-on for AI assistants. Before the AI starts, deeper rewrites your prompt the way an expert would write it.",
+   "It adds what an IT expert would think of: where to start, which tools to use, and how to check it worked."
+  ],
+  "objects": [
+   [
+    "An expert would find true duplicates by what's inside them, not by their names.",
+    "Find duplicates by their contents"
+   ],
+   [
+    "Flag the files with no backup anywhere else.",
+    "Flag files with no backup"
+   ],
+   [
+    "Move things to the bin, never delete them for good.",
+    "Bin it, never delete for good"
+   ],
+   [
+    "And count every file before and after.",
+    "Count every file before and after"
+   ]
+  ],
+  "colour": [
+   "You see the new prompt first, and nothing runs until you say yes."
+  ],
+  "payoff": "Same prompt. An IT expert's answer."
+ },
+ "book": {
+  "headline": "Ask AI like an expert.",
+  "request": "My book's margins look too big.",
+  "sparse": [
+   "Ask AI like an expert, and you get the full picture.",
+   "Most of us just type ‘my book's margins look too big’, and get a sketch."
+  ],
+  "sketch": [
+   "Meet deeper, a free add-on for AI assistants. Before the AI starts, deeper rewrites your prompt the way an expert would write it.",
+   "It adds what a book designer would think of: where to start, which tools to use, and how to check it worked."
+  ],
+  "objects": [
+   [
+    "Don't assume the margins are too big. Measure first.",
+    "Treat it as a guess, then measure"
+   ],
+   [
+    "Judge margins on two facing pages, the way a reader sees them.",
+    "Judge margins on two facing pages"
+   ],
+   [
+    "Keep lines between forty-five and seventy-five letters long.",
+    "45 to 75 letters per line"
+   ],
+   [
+    "Then print a page at real size, and look.",
+    "Print a proof at full size and look"
+   ]
+  ],
+  "colour": [
+   "You see the new prompt first, and nothing runs until you say yes."
+  ],
+  "payoff": "Same prompt. A book designer's answer."
+ },
+ "honey": {
+  "headline": "Ask AI like an expert.",
+  "request": "Write a caption for my honey.",
+  "sparse": [
+   "Ask AI like an expert, and you get the full picture.",
+   "Most of us just type ‘write a caption for my honey’, and get a sketch."
+  ],
+  "sketch": [
+   "Meet deeper, a free add-on for AI assistants. Before the AI starts, deeper rewrites your prompt the way an expert would write it.",
+   "It adds what a food copywriter would think of: where to start, which tools to use, and how to check it worked."
+  ],
+  "objects": [
+   [
+    "Make sure the honey really comes from borage flowers before you say so.",
+    "Prove it's borage before you say so"
+   ],
+   [
+    "Copy what worked in your most-saved posts.",
+    "Copy your most-saved posts"
+   ],
+   [
+    "Put the hook in the first line people see.",
+    "Hook in the first line people see"
+   ],
+   [
+    "And make no health claims.",
+    "No health claims"
+   ]
+  ],
+  "colour": [
+   "You see the new prompt first, and nothing runs until you say yes."
+  ],
+  "payoff": "Same prompt. A food copywriter's answer."
+ },
+ "_end": "Copy its instructions from deeper dot tools slash start. Paste them into a ChatGPT chat, then type slash deeper before your prompt."
+}

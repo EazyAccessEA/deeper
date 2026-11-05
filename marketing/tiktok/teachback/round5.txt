@@ -1,0 +1,30 @@
+car: 4/4 {'what': True, 'does': True, 'who': True, 'next': True}
+   what: Deeper is a free add-on for AI assistants such as ChatGPT, Claude, or Gemini.
+   does: It rewrites a simple request into a more detailed, expert-style request, including where to start, which tools to use, and how to check the result. You review and approve the rewrite before the AI starts.
+   who: It is for people who want more complete answers from an AI assistant, even if they do not know how an expert would phrase the question.
+   next: Go to deeper.tools, copy its text, and paste it into a ChatGPT chat. Then type “/deeper” followed by your request.
+downloads: 4/4 {'what': True, 'does': True, 'who': True, 'next': True}
+   what: Deeper is a free add-on for AI assistants such as ChatGPT, Claude, or Gemini.
+   does: It rewrites a simple request into a more detailed, expert-style version, including where to start, which tools to use, and how to check the result. You review and approve the rewrite before the AI does the task.
+   who: It appears to be for anyone who wants to give an AI clearer, more thorough instructions, including people who are not experts.
+   next: Go to deeper.tools, copy its text, paste it into a ChatGPT chat, then type “/deeper” followed by your request. The video did not clearly explain exactly what text you would be copying.
+book: 4/4 {'what': True, 'does': True, 'who': True, 'next': True}
+   what: Deeper is a free add-on for AI assistants such as ChatGPT, Claude, or Gemini.
+   does: It rewrites your request into a more detailed, expert-style version, shows it to you for approval, and then lets the AI answer that version.
+   who: It seems to be for anyone who wants fuller, more expert-style answers from an AI assistant, even if they are not an expert themselves.
+   next: Go to deeper.tools, copy its text into a ChatGPT chat, then type “/deeper” followed by your request. The video did not explain exactly where or how that copied text should be pasted.
+vercel: 4/4 {'what': True, 'does': True, 'who': True, 'next': True}
+   what: Deeper is a free add-on for AI assistants such as ChatGPT, Claude, or Gemini.
+   does: It rewrites your request into a more detailed, expert-style version—covering how to approach it, what tools to use, and how to check the result—then lets you approve it before the AI begins.
+   who: It seems intended for anyone who wants fuller, more expert-like AI answers, including people without specialist knowledge.
+   next: Go to deeper.tools, copy its text into your AI chat, then type “/deeper” followed by your request. The video also mentions deeper.tools/start for coding tools, but it does not explain that option further.
+honey: 4/4 {'what': True, 'does': True, 'who': True, 'next': True}
+   what: Deeper is a free add-on for AI assistants such as ChatGPT, Claude, or Gemini.
+   does: It rewrites your request into a more detailed, expert-style version, shows it to you for approval, and then the AI answers that improved request.
+   who: It is for people who want fuller, more expert-like AI answers, including everyday users; the video also mentions coding tools.
+   next: Go to deeper.tools, copy its text into a ChatGPT chat, then type “/deeper” before your request. The video does not explain exactly what text you copy or where you paste it within ChatGPT.
+blind: 4/4 {'what': True, 'does': True, 'who': True, 'next': True}
+   what: Deeper is a free add-on for AI assistants such as ChatGPT, Claude, or Gemini.
+   does: Before the AI answers, it rewrites your request in the more detailed way an expert might ask it, which the video says produced better answers in a small five-request test.
+   who: It seems to be for anyone who wants better results from an AI assistant, including people using AI for everyday requests or coding.
+   next: Go to deeper.tools, copy its text into a ChatGPT chat, then type “/deeper” followed by your request. The video does not show exactly what text you need to copy.

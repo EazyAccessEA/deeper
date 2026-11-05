@@ -12,3 +12,6 @@ vercel/
 honey/
 blind/
 scope/
+cover/
+# A real /deeper run made on this machine; it addresses the user by name, so it stays local.
+teachback/coverletter-run.md

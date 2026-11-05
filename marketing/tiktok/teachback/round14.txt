@@ -1,0 +1,30 @@
+car: 4/4 {'what': True, 'does': True, 'who': True, 'next': True}
+   what: Deeper is a free add-on for AI chat tools such as ChatGPT, Claude, or Gemini.
+   does: It rewrites your request into a more detailed, expert-style prompt, shows it to you first, and waits for your approval before anything runs.
+   who: It is for people who want fuller, more expert-like AI answers without knowing how to write detailed prompts themselves.
+   next: Go to deeper.tools/start, get Deeper’s instructions, paste them into your AI chat, then type “/deeper” followed by your request.
+cover: 4/4 {'what': True, 'does': True, 'who': True, 'next': True}
+   what: Deeper is a free add-on that gives AI a more expert-style version of your question.
+   does: It rewrites your prompt to include expert approaches, useful source material and tools, and ways to check the result. It shows you the rewritten prompt first and waits for your approval before anything runs.
+   who: It is for people who use ChatGPT, Claude, or Gemini and want fuller, more practical answers without knowing how an expert would phrase the request.
+   next: Go to deeper.tools/start, get Deeper’s instructions, and paste them into ChatGPT, Claude, or Gemini. Then type “/deeper” followed by your request and approve the rewritten prompt if you are happy with it.
+blind: 4/4 {'what': True, 'does': True, 'who': True, 'next': True}
+   what: Deeper is a free add-on for AI chat tools such as ChatGPT, Claude, or Gemini.
+   does: Before the AI answers, it rewrites your request in a more expert way, aiming to use your facts, follow your instructions, work methodically, and check the result better.
+   who: It seems to be for anyone who wants better answers from an AI chatbot; the video doesn’t say that you need technical skills.
+   next: Go to deeper.tools/start, get Deeper’s instructions, paste them into your AI chat, then type /deeper followed by your request.
+downloads: 3/4 {'what': True, 'does': False, 'who': True, 'next': True}
+   what: Deeper is a free add-on that gives AI more detailed, expert-style instructions.
+   does: It rewrites your request to include how to approach the task, what tools to use, and how to check the result. It shows you the rewritten request first and waits for your approval before anything runs.
+   who: It is for people who use ChatGPT, Claude, or Gemini and want more thorough answers without knowing how an expert would phrase the request.
+   next: Go to deeper.tools/start, get Deeper’s instructions, and paste them into ChatGPT, Claude, or Gemini. Then type “/deeper” followed by your request and review the rewritten version before saying yes.
+book: 3/4 {'what': True, 'does': False, 'who': True, 'next': True}
+   what: Deeper is a free add-on that gives AI more expert-style instructions before it answers.
+   does: It rewrites your question into a more thorough prompt, adding what to examine, where to start, which tools to use, and how to check the result. You see the rewritten prompt and approve it before anything runs.
+   who: It is for people who use ChatGPT, Claude, or Gemini and want fuller, more expert-like answers without knowing how to write detailed prompts themselves.
+   next: Go to deeper.tools/start, get Deeper’s instructions, and paste them into ChatGPT, Claude, or Gemini. Then type “/deeper” followed by your question.
+honey: 4/4 {'what': True, 'does': True, 'who': True, 'next': True}
+   what: Deeper is a free add-on that gives ChatGPT, Claude, or Gemini a set of extra instructions.
+   does: When you type “/deeper” with your request, it rewrites that request into a more expert, detailed version for you to review. Nothing runs until you approve it.
+   who: It seems aimed at people who want better, more thorough AI answers without knowing how an expert would phrase the request.
+   next: Go to deeper.tools/start, get Deeper’s instructions, and paste them into ChatGPT, Claude, or Gemini. Then type “/deeper” followed by your request.

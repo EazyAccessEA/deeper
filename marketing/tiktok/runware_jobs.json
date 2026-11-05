@@ -159,5 +159,19 @@
   "seed": null,
   "task_uuid": "2ce95223-f212-47ca-9f44-631bf9b6d6d8",
   "cost_usd": 0.022943
+ },
+ {
+  "label": "cover colour 1",
+  "model": "openai:gpt-image@2",
+  "seed": null,
+  "task_uuid": "26e68d0e-77db-4dab-b747-cc174a93b28b",
+  "cost_usd": 0.042285
+ },
+ {
+  "label": "cover sparse 1",
+  "model": "openai:gpt-image@2",
+  "seed": null,
+  "task_uuid": "b06da188-1efb-4b95-8483-564af5ec5a30",
+  "cost_usd": 0.023068
  }
 ]

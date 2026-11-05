@@ -24,6 +24,7 @@ FONT_FILES = {
     "sg-700.woff2": "schibsted-grotesk/files/schibsted-grotesk-latin-700-normal.woff2",
     "sg-500i.woff2": "schibsted-grotesk/files/schibsted-grotesk-latin-500-italic.woff2",
     "jbm-400.woff2": "jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2",
+    "bricolage.woff2": "../@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-standard-normal.woff2",
 }
 
 CSS = """
@@ -32,6 +33,7 @@ CSS = """
 @font-face { font-family: "Schibsted Grotesk"; font-weight: 700; src: url(assets/fonts/sg-700.woff2); }
 @font-face { font-family: "Schibsted Grotesk"; font-weight: 500; font-style: italic; src: url(assets/fonts/sg-500i.woff2); }
 @font-face { font-family: "JetBrains Mono"; font-weight: 400; src: url(assets/fonts/jbm-400.woff2); }
+@font-face { font-family: "Bricolage"; font-weight: 200 800; font-stretch: 75% 100%; src: url(assets/fonts/bricolage.woff2) format("woff2"); }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { width: 1080px; height: 1920px; overflow: hidden; background: #ffffff; }
 #root { width: 1080px; height: 1920px; position: relative; font-family: "Schibsted Grotesk", sans-serif; color: #141414; }
@@ -46,12 +48,18 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: #fffff
 .qs { position: absolute; left: 60px; width: 880px; top: 330px; display: flex; flex-direction: column; gap: 14px; }
 .qs p { align-self: flex-start; background: rgba(255,255,255,0.95); border-radius: 10px; padding: 14px 22px; font-size: 46px; font-weight: 600; letter-spacing: -0.02em; box-shadow: 0 2px 18px rgba(0,0,0,0.08); }
 .qs p span { color: #d0241b; font-weight: 700; margin-right: 14px; }
-#end { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: #ffffff; }
-#end .in { position: absolute; left: 88px; top: 430px; width: 840px; }
-#end .mark { width: 500px; height: auto; }
-#end .line { margin-top: 64px; font-size: 52px; line-height: 1.25; letter-spacing: -0.02em; font-weight: 600; }
-#end .cmd { margin-top: 44px; background: #f4f5f6; border-radius: 8px; padding: 28px 30px; font-family: "JetBrains Mono", monospace; font-size: 33px; }
-#end .then { margin-top: 28px; font-size: 40px; color: #5b5f66; }
+#end { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: #d0241b; color: #ffffff; overflow: hidden; font-family: "Bricolage", sans-serif; }
+#end .giant { position: absolute; right: -70px; bottom: -60px; width: 760px; height: auto; fill: #ffffff; }
+#end .in { position: absolute; left: 80px; top: 210px; width: 860px; }
+#end .mark { width: 300px; height: auto; }
+#end h1 { margin-top: 70px; max-width: 7.6em; font-weight: 800; font-stretch: 75%; font-size: 112px; line-height: 0.92; letter-spacing: -0.045em; }
+#end .ins { white-space: nowrap; text-decoration: underline; text-decoration-skip-ink: none; text-decoration-thickness: 0.06em; text-underline-offset: 0.1em; }
+#end .caret { display: inline-block; width: 0.42em; height: 0.31em; margin-right: 0.06em; vertical-align: 0; background: #ffffff;
+  clip-path: polygon(50% 0, 100% 100%, 73.7% 100%, 50% 48.2%, 26.3% 100%, 0 100%); }
+#end .lede { margin-top: 56px; font-weight: 500; font-size: 42px; line-height: 1.4; max-width: 820px; }
+#end .lede code { font-family: "JetBrains Mono", monospace; font-size: 0.9em; }
+#end .box { margin-top: 44px; background: #ffffff; border-radius: 6px; padding: 26px 32px; font-family: "JetBrains Mono", monospace; font-size: 42px; color: #141414; }
+#end .btn { margin-top: 14px; background: #141414; border-radius: 6px; padding: 26px 32px; text-align: center; font-weight: 700; font-size: 42px; color: #ffffff; }
 """
 
 
@@ -91,6 +99,7 @@ def build(short):
         shutil.copyfile(FONTS / src, d / "assets/fonts" / out)
     shutil.copyfile(ROOT / "brand/assets/mark.svg", d / "assets/mark.svg")
     shutil.copyfile(ROOT / "brand/assets/wordmark.svg", d / "assets/wordmark.svg")
+    shutil.copyfile(ROOT / "site/public/wordmark-white.svg", d / "assets/wordmark-white.svg")
     shutil.copyfile(HERE / "art" / short / "picture.mp4", d / "assets/picture.mp4")
 
     # When each spoken line starts: lines fill their shot in order, with GAP after each.
@@ -143,8 +152,8 @@ def build(short):
                  f'<p><img src="assets/mark.svg" alt="" /><span>{esc(sc["objects"][j][1])}</span></p>', 3)
         else:
             clip(f"c{k}", "cap", t, dur, f"<p>{esc(lines[k]['text'])}</p>", 3)
-        if "the expert's move" in lines[k]["text"]:     # the four questions land one by one as she names them
-            qs = ["The expert's move", "The raw material", "The tools", "The check"]
+        if lines[k]["text"].startswith("It adds what"):     # the four questions land one by one as she names them
+            qs = ["What an expert would do", "What to start from", "Which tools to use", "How to check it worked"]
             q0 = t + lines[k]["seconds"] * 0.42
             step = lines[k]["seconds"] * 0.58 / 4
             items = "".join(f'<p id="q{k}_{i}"><span>{i + 1}</span>{esc(q)}</p>' for i, q in enumerate(qs))
@@ -153,11 +162,15 @@ def build(short):
                 tweens.append(f'tl.fromTo("#q{k}_{i}", {{ opacity: 0, x: -16 }}, {{ opacity: 1, x: 0, duration: 0.22, ease: "power2.out" }}, {q0 + i * step:.2f});')
 
     end = (f'<div id="end" class="clip" data-start="{end_start}" data-duration="{round(total - end_start, 2)}" data-track-index="4">'
-           f'<div class="in"><img id="wm" class="mark" src="assets/wordmark.svg" alt="deeper" />'
-           f'<p id="e1" class="line">Free, for Claude Code, Codex and Cursor.</p>'
-           f'<p id="e2" class="cmd">npx skills add EazyAccessEA/deeper</p>'
-           f'<p id="e3" class="then">Then type /deeper and your task.</p></div></div>')
-    tweens.append(f'tl.fromTo(["#wm", "#e1", "#e2", "#e3"], {{ opacity: 0, y: 14 }}, {{ opacity: 1, y: 0, duration: 0.35, stagger: 0.35 }}, {end_start + 0.1:.2f});')
+           f'<svg class="giant" viewBox="0 0 760 560" aria-hidden="true"><path d="M380 0L760 560H560L380 270L200 560H0Z" /></svg>'
+           f'<div class="in"><img id="wm" class="mark" src="assets/wordmark-white.svg" alt="deeper" />'
+           f'<h1 id="e0">Ask for the version <span class="ins" id="eins"><span class="caret"></span>an&nbsp;expert</span> would ask&nbsp;for.</h1>'
+           f'<p id="e1" class="lede">Free. Paste deeper into ChatGPT, Claude or Gemini, then type <code>/deeper</code> and your prompt.</p>'
+           f'<p id="e2" class="box">deeper.tools/start</p>'
+           f'<p id="e3" class="btn">Get deeper&#39;s instructions</p></div></div>')
+    # The site's one animation: the inserted words sharpen from a blur, with no fade.
+    tweens.append(f'tl.fromTo("#eins", {{ filter: "blur(6px)" }}, {{ filter: "blur(0px)", duration: 0.8, ease: "expo.out" }}, {end_start + 0.1:.2f});')
+    tweens.append(f'tl.fromTo(["#e1", "#e2", "#e3"], {{ opacity: 0, y: 14 }}, {{ opacity: 1, y: 0, duration: 0.35, stagger: 0.25 }}, {end_start + 0.6:.2f});')
 
     page = f"""<!doctype html>
 <html lang="en" data-resolution="portrait">

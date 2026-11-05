@@ -1,0 +1,207 @@
+{
+ "_doc": "One line per shot. sparse/sketch/colour/end hold spoken lines; objects pairs each region (scenes.json order) with its spoken line and its on-screen caret caption. Sources: examples/raw/v1.1/final.md (T1-T5) and the README blind-test table.",
+ "car": {
+  "headline": "New skill: deeper",
+  "request": "Sell my Polo, buy a Golf.",
+  "sparse": [
+   "There's a new skill for your coding agent. It's called deeper.",
+   "Ask your agent to sell your car, and you get a sketch."
+  ],
+  "sketch": [
+   "Type slash deeper first.",
+   "It asks what a top dealer would: the expert's move, the raw material, the tools, and the check."
+  ],
+  "objects": [
+   [
+    "Price it from real listings.",
+    "Price it from comparable listings"
+   ],
+   [
+    "Two binding offers set your floor.",
+    "Two binding offers set the floor"
+   ],
+   [
+    "Inspect before you buy.",
+    "Inspect any used car before you buy"
+   ],
+   [
+    "And check a Golf even fits how you drive.",
+    "Check a Golf fits how you drive"
+   ]
+  ],
+  "colour": [
+   "Same task. The dealer's method. And it asks before it runs."
+  ],
+  "payoff": "Same task. The dealer's method."
+ },
+ "downloads": {
+  "headline": "New skill: deeper",
+  "request": "Tidy my Downloads folder.",
+  "sparse": [
+   "Here's a new skill for your coding agent. It's called deeper.",
+   "Ask your agent to tidy your Downloads folder, and you get a sketch."
+  ],
+  "sketch": [
+   "Type slash deeper first.",
+   "It asks what a careful sysadmin would: the expert's move, the raw material, the tools, and the check."
+  ],
+  "objects": [
+   [
+    "Find duplicates by what's inside them, not by name.",
+    "Find duplicates by hash, not by name"
+   ],
+   [
+    "Flag the files that exist nowhere else.",
+    "Flag files that exist nowhere else"
+   ],
+   [
+    "Move things to the Trash. Never delete for good.",
+    "Trash, never rm"
+   ],
+   [
+    "And count every file, before and after.",
+    "Count every file before and after"
+   ]
+  ],
+  "colour": [
+   "Same task. Nothing lost. And it asks before it runs."
+  ],
+  "payoff": "Same task. Nothing lost."
+ },
+ "book": {
+  "headline": "New skill: deeper",
+  "request": "The inner margins look too big.",
+  "sparse": [
+   "There's a new skill for your coding agent. It's called deeper.",
+   "Tell it your book's margins look too big, and you get a sketch."
+  ],
+  "sketch": [
+   "Type slash deeper first.",
+   "It asks what a book typographer would: the expert's move, the raw material, the tools, and the check."
+  ],
+  "objects": [
+   [
+    "Treat ‘too big’ as a guess, then test it.",
+    "Treat that as a guess to test"
+   ],
+   [
+    "Judge the margins on two-page spreads.",
+    "Judge margins on two-page spreads"
+   ],
+   [
+    "Keep lines between forty-five and seventy-five characters.",
+    "45 to 75 characters per line"
+   ],
+   [
+    "Then print a proof at full size, and look.",
+    "Print a proof at 100% and look"
+   ]
+  ],
+  "colour": [
+   "Same task. The typographer's method. And it asks before it runs."
+  ],
+  "payoff": "Same task. The typographer's method."
+ },
+ "vercel": {
+  "headline": "New skill: deeper",
+  "request": "Move our Next.js app off Vercel.",
+  "sparse": [
+   "There's a new skill for your coding agent. It's called deeper.",
+   "Ask it to move your Next.js app off Vercel, and you get a sketch."
+  ],
+  "sketch": [
+   "Type slash deeper first.",
+   "It asks what a platform engineer would: the expert's move, the raw material, the tools, and the check."
+  ],
+  "objects": [
+   [
+    "Compare every route against production.",
+    "Diff every route against production"
+   ],
+   [
+    "List every Vercel package you depend on.",
+    "List every @vercel/* dependency"
+   ],
+   [
+    "Build it with the OpenNext adapter.",
+    "Build it with the OpenNext adapter"
+   ],
+   [
+    "Then answer yes, no, or not yet.",
+    "Answer yes, no or not yet"
+   ]
+  ],
+  "colour": [
+   "Same task. The engineer's checklist. And it asks before it runs."
+  ],
+  "payoff": "Same task. The engineer's checklist."
+ },
+ "honey": {
+  "headline": "New skill: deeper",
+  "request": "A caption for our borage honey.",
+  "sparse": [
+   "deeper is a new skill for your agent, and it works on any task, code or not.",
+   "Ask for a caption for your borage honey, and you get a sketch."
+  ],
+  "sketch": [
+   "Type slash deeper first.",
+   "It asks what a food copywriter would: the expert's move, the raw material, the tools, and the check."
+  ],
+  "objects": [
+   [
+    "Check the pollen report before you call it borage.",
+    "Check the pollen report before calling it borage"
+   ],
+   [
+    "Match your best posts by saves, not likes.",
+    "Match your best posts by saves"
+   ],
+   [
+    "Put the hook in the first hundred and twenty-five characters.",
+    "Hook inside the first 125 characters"
+   ],
+   [
+    "And make no health claims.",
+    "No health claims"
+   ]
+  ],
+  "colour": [
+   "Same task. The copywriter's method. And it asks before it runs."
+  ],
+  "payoff": "Same task. The copywriter's method."
+ },
+ "blind": {
+  "headline": "We tested it blind.",
+  "request": "Does deeper make a difference?",
+  "sparse": [
+   "Does deeper make a difference? We tested it blind."
+  ],
+  "sketch": [
+   "Five real tasks, each rewritten with and without it. A judge on another model scored them out of five, without knowing which was which."
+  ],
+  "objects": [
+   [
+    "Starting from the raw material: one point eight without it, five with it.",
+    "Starts from raw material: 1.8 to 5.0"
+   ],
+   [
+    "Expert method: two point six, then five.",
+    "Expert method: 2.6 to 5.0"
+   ],
+   [
+    "A check outside the model: one, then four point eight.",
+    "Check outside the model: 1.0 to 4.8"
+   ],
+   [
+    "The judge never saw the key.",
+    "Scored without the key"
+   ]
+  ],
+  "colour": [
+   "Five tasks is a small test, and every prompt is public."
+  ],
+  "payoff": "Every prompt is on GitHub.",
+  "band": "Scored blind, out of 5"
+ },
+ "_end": "deeper. Free, for Claude Code, Codex and Cursor."
+}
