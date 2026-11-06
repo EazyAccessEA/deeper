@@ -1,0 +1,88 @@
+{
+ "throttled-375": {
+  "cls": "m go",
+  "lcp": [
+   {
+    "t": 680,
+    "el": "H1.:Ask for the ver",
+    "size": 72522
+   }
+  ],
+  "clsv": 5.4599723361401635e-06,
+  "running": 0,
+  "copy": [
+   551,
+   599
+  ],
+  "long_frames": 3,
+  "max_frame": 326.5,
+  "csp_errors": [],
+  "csp_hash_in_header": true
+ },
+ "throttled-1440": {
+  "cls": "m go",
+  "lcp": [
+   {
+    "t": 668,
+    "el": "H1.:Ask for the ver",
+    "size": 335142
+   }
+  ],
+  "clsv": 0.05325150134762946,
+  "running": 0,
+  "copy": [
+   542,
+   590
+  ],
+  "long_frames": 3,
+  "max_frame": 319.6,
+  "csp_errors": [],
+  "csp_hash_in_header": true
+ },
+ "reduce": {
+  "html_class": "",
+  "anims_load": 0,
+  "words_opacity": "1",
+  "anims_after_tab": 0
+ },
+ "no-js": [
+  "1",
+  "1"
+ ],
+ "forced-colors": [
+  "none",
+  "underline"
+ ],
+ "demo": {
+  "before_scroll_play_opacity": [
+   false,
+   "0"
+  ],
+  "on_scroll": [
+   true,
+   [
+    [
+     320,
+     0
+    ],
+    [
+     320,
+     60
+    ],
+    [
+     320,
+     120
+    ]
+   ]
+  ],
+  "running_after_tab_click": 3
+ },
+ "copy_at_100ms": {
+  "clipboard": "npx skills add EazyAccessEA/deeper",
+  "beacons": [
+   null,
+   null
+  ],
+  "label": "Copied"
+ }
+}

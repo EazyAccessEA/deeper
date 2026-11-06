@@ -73,11 +73,20 @@ const words = (s: string) => s.trim().split(/\s+/).length;
         t.tabIndex = on ? 0 : -1;
         const panel = root.querySelector<HTMLElement>(`#${t.getAttribute("aria-controls")}`)!;
         panel.hidden = !on;
-        if (on) { panel.classList.remove("play"); void panel.offsetWidth; panel.classList.add("play"); }
+        if (on) { panel.classList.add("play"); panel.getAnimations({ subtree: true }).forEach((a) => { a.cancel(); a.play(); }); }
       });
     };
+    // The first panel plays once as it scrolls in, but only when the head script turned motion on (html.m).
+    const first = root.querySelector<HTMLElement>(".panel:not([hidden])");
+    let seen: IntersectionObserver | undefined;
+    if (first && document.documentElement.classList.contains("m")) {
+      seen = new IntersectionObserver((es) => {
+        if (es.some((e) => e.isIntersecting)) { first.classList.add("play"); seen!.disconnect(); }
+      }, { rootMargin: "0px 0px -20% 0px" });
+      seen.observe(first.querySelector(".inserts")!);
+    }
     tabs.forEach((t, i) => {
-      t.addEventListener("click", () => show(t));
+      t.addEventListener("click", () => { seen?.disconnect(); show(t); });
       t.addEventListener("keydown", (e) => {
         const d = ["ArrowDown", "ArrowRight"].includes(e.key) ? 1 : ["ArrowUp", "ArrowLeft"].includes(e.key) ? -1 : 0;
         if (!d) return;
@@ -141,7 +150,9 @@ const words = (s: string) => s.trim().split(/\s+/).length;
     pre { font-size: 0.8125rem; }
   }
   @media (prefers-reduced-motion: no-preference) {
-    .play .inserts li { animation: in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; animation-delay: calc(var(--k) * 0.12s); }
-    @keyframes in { from { opacity: 0; transform: translateY(6px); } }
+    /* M2: each insert drops in, 60 ms apart, the same direction and curve as the headline. */
+    :global(html.m) .panel:not(.play) .inserts li { opacity: 0; }
+    .play .inserts li { animation: in 320ms cubic-bezier(0.23, 1, 0.32, 1) both; animation-delay: calc(var(--k) * 60ms); }
+    @keyframes in { from { opacity: 0; transform: translateY(-6px); } }
   }
 </style>
