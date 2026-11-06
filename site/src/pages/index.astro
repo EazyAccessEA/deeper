@@ -16,7 +16,7 @@ const questions = [
   <section class="band-red hero">
     <svg class="giant" viewBox="0 0 760 560" aria-hidden="true"><path d="M380 0L760 560H560L380 270L200 560H0Z" /></svg>
     <div class="wrap hero-in">
-      <h1>Ask for the version <ins class="ins"><span class="caret" aria-hidden="true"></span>an&nbsp;expert</ins> would ask&nbsp;for.</h1>
+      <h1>Ask for the version <ins class="ins"><span class="caret" aria-hidden="true"></span><span class="w">an&nbsp;expert</span></ins> would ask&nbsp;for.</h1>
       <p class="lede">A free skill for coding agents. Type <code>/deeper</code> before a task and it asks for the method, sources and checks a top professional would use. Same scope. You approve before it runs.</p>
       <div class="act">
         <Copy text="npx skills add EazyAccessEA/deeper" label="Copy the install command" />
@@ -96,11 +96,26 @@ const questions = [
   .act { display: flex; align-items: center; gap: 1.5rem 2rem; flex-wrap: wrap; margin-top: 1.75rem; }
   .chat { font-weight: 500; }
   .chat a { display: inline-flex; align-items: center; min-height: 2.75rem; }
-  /* The page's one authored moment: the inserted words come into focus. Blur only, so the headline paints at once (LCP). */
-  @media (prefers-reduced-motion: no-preference) {
-    h1 .ins { animation: focus 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
-    @keyframes focus { from { filter: blur(6px); } }
+  /* The page's one motion (research/motion): the expert's words drop into the gap, then the underline is drawn.
+     html.m and html.go come from the head script in Base.astro; without them the headline is simply static,
+     with its ordinary text underline. */
+  :global(html.m) h1 .w { opacity: 0; }
+  /* Only once the display font is in (html.go): the words become a box that can move, and the underline a bar
+     that can be drawn. Switching earlier re-wraps the fallback headline (CLS 0.05 → 0.19 at 1440).
+     The bar sits where the text underline does: baseline + 0.1em, 0.06em thick
+     (Bricolage ascent 0.93, descent 0.27, line-height 0.92, so the baseline is 0.79em down the box). */
+  :global(html.m.go) h1 .ins { text-decoration: none; }
+  :global(html.m.go) h1 .w { display: inline-block; position: relative; animation: drop 380ms cubic-bezier(0.23, 1, 0.32, 1) 250ms both; }
+  :global(html.m.go) h1 .w::after {
+    content: ""; position: absolute; left: 0; right: 0; top: calc(0.89em - 1px); height: 0.06em; background: currentColor;
+    transform-origin: left; animation: draw 280ms cubic-bezier(0.65, 0, 0.35, 1) 450ms both;
   }
+  @media (forced-colors: active) {
+    :global(html.m.go) h1 .w::after { display: none; }
+    :global(html.m.go) h1 .ins { text-decoration: underline; }
+  }
+  @keyframes drop { from { opacity: 0; transform: translateY(-0.1em); } to { opacity: 1; transform: none; } }
+  @keyframes draw { from { transform: scaleX(0); } to { transform: none; } }
 
   .questions h2, .evidence h2, .close h2 { font-size: var(--d2); }
   .q-head { padding-bottom: clamp(1.75rem, 3vw, 3rem); }

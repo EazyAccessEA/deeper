@@ -1,0 +1,4656 @@
+{
+ "https://vercel.com": {
+  "no-preference": [
+   {
+    "type": "CSSTransition",
+    "name": "opacity",
+    "dur": 1200,
+    "delay": 0,
+    "easing": "linear",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "CANVAS.absolute",
+    "at": "load"
+   }
+  ],
+  "reduce": []
+ },
+ "https://stripe.com": {
+  "no-preference": [
+   {
+    "type": "CSSTransition",
+    "name": "color",
+    "dur": 1200,
+    "delay": 0,
+    "easing": "cubic-bezier(0.65, 0, 0.35, 1)",
+    "iter": 1,
+    "props": [
+     "color"
+    ],
+    "el": "H2.hds-heading",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "color",
+    "dur": 300,
+    "delay": 0,
+    "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+    "iter": 1,
+    "props": [
+     "color"
+    ],
+    "el": "P#stat-payment-methods-value.hds-text",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "color",
+    "dur": 300,
+    "delay": 0,
+    "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+    "iter": 1,
+    "props": [
+     "color"
+    ],
+    "el": "SPAN#stat-payment-methods-description.hds-text",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "color",
+    "dur": 300,
+    "delay": 0,
+    "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+    "iter": 1,
+    "props": [
+     "color"
+    ],
+    "el": "P#stat-payments-volume-value.hds-text",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "color",
+    "dur": 300,
+    "delay": 0,
+    "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+    "iter": 1,
+    "props": [
+     "color"
+    ],
+    "el": "SPAN#stat-payments-volume-description.hds-text",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "color",
+    "dur": 300,
+    "delay": 0,
+    "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+    "iter": 1,
+    "props": [
+     "color"
+    ],
+    "el": "P#stat-historical-uptime-value.hds-text",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "color",
+    "dur": 300,
+    "delay": 0,
+    "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+    "iter": 1,
+    "props": [
+     "color"
+    ],
+    "el": "SPAN#stat-historical-uptime-description.hds-text",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "color",
+    "dur": 300,
+    "delay": 0,
+    "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+    "iter": 1,
+    "props": [
+     "color"
+    ],
+    "el": "A.hds-link",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "background-color",
+    "dur": 500,
+    "delay": 0,
+    "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+    "iter": 1,
+    "props": [
+     "backgroundColor"
+    ],
+    "el": "A.hds-link",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "color",
+    "dur": 300,
+    "delay": 0,
+    "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+    "iter": 1,
+    "props": [
+     "color"
+    ],
+    "el": "P#stat-active-subscriptions-value.hds-text",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "color",
+    "dur": 300,
+    "delay": 0,
+    "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+    "iter": 1,
+    "props": [
+     "color"
+    ],
+    "el": "SPAN#stat-active-subscriptions-description.hds-text",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "opacity",
+    "dur": 1200,
+    "delay": 0,
+    "easing": "cubic-bezier(0.65, 0, 0.35, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.stats-animation-gradient__grad",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "width",
+    "dur": 400,
+    "delay": 0,
+    "easing": "cubic-bezier(0.3, 0, 0.2, 1)",
+    "iter": 1,
+    "props": [
+     "width"
+    ],
+    "el": "A.hds-button",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "width",
+    "dur": 400,
+    "delay": 0,
+    "easing": "cubic-bezier(0.3, 0, 0.2, 1)",
+    "iter": 1,
+    "props": [
+     "width"
+    ],
+    "el": "DIV.customer-story-button__contain",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "max-height",
+    "dur": 500,
+    "delay": 0,
+    "easing": "cubic-bezier(0.65, 0, 0.35, 1)",
+    "iter": 1,
+    "props": [
+     "maxHeight"
+    ],
+    "el": "DIV#detail-customer-content-Hertz.customer-stories__customer-con",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "background-color",
+    "dur": 400,
+    "delay": 0,
+    "easing": "cubic-bezier(0.3, 0, 0.2, 1)",
+    "iter": 1,
+    "props": [
+     "backgroundColor"
+    ],
+    "el": "A.hds-button",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "border-bottom-color",
+    "dur": 400,
+    "delay": 0,
+    "easing": "cubic-bezier(0.3, 0, 0.2, 1)",
+    "iter": 1,
+    "props": [
+     "borderBottomColor"
+    ],
+    "el": "A.hds-button",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "border-left-color",
+    "dur": 400,
+    "delay": 0,
+    "easing": "cubic-bezier(0.3, 0, 0.2, 1)",
+    "iter": 1,
+    "props": [
+     "borderLeftColor"
+    ],
+    "el": "A.hds-button",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "border-right-color",
+    "dur": 400,
+    "delay": 0,
+    "easing": "cubic-bezier(0.3, 0, 0.2, 1)",
+    "iter": 1,
+    "props": [
+     "borderRightColor"
+    ],
+    "el": "A.hds-button",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "border-top-color",
+    "dur": 400,
+    "delay": 0,
+    "easing": "cubic-bezier(0.3, 0, 0.2, 1)",
+    "iter": 1,
+    "props": [
+     "borderTopColor"
+    ],
+    "el": "A.hds-button",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "opacity",
+    "dur": 400,
+    "delay": 0,
+    "easing": "cubic-bezier(0.3, 0, 0.2, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.customer-story-button__text",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "opacity",
+    "dur": 400,
+    "delay": 0,
+    "easing": "cubic-bezier(0.3, 0, 0.2, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.customer-story-button__icon",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "visibility",
+    "dur": 0,
+    "delay": 500,
+    "easing": "steps(1)",
+    "iter": 1,
+    "props": [
+     "visibility"
+    ],
+    "el": "DIV#detail-customer-content-URBN.customer-stories__customer-con",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "visibility",
+    "dur": 0,
+    "delay": 500,
+    "easing": "steps(1)",
+    "iter": 1,
+    "props": [
+     "visibility"
+    ],
+    "el": "DIV#detail-customer-content-Instacart.customer-stories__customer-con",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "visibility",
+    "dur": 0,
+    "delay": 500,
+    "easing": "steps(1)",
+    "iter": 1,
+    "props": [
+     "visibility"
+    ],
+    "el": "DIV#detail-customer-content-LeMonde.customer-stories__customer-con",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "detect-scroll",
+    "dur": NaN,
+    "delay": 0,
+    "easing": "linear",
+    "iter": 1,
+    "props": [],
+    "el": "NAV#navigation-menu.hds-navigation-menu",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "book-of-the-week-fade-in",
+    "dur": 500,
+    "delay": 0,
+    "easing": "linear kf:cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.book-of-the-week__picture",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "book-of-the-week-fade-in",
+    "dur": 500,
+    "delay": 0,
+    "easing": "linear kf:cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.book-of-the-week__content",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 0,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 50,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 100,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 150,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 200,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 250,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 300,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 350,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 400,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 450,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 500,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "opacity",
+    "dur": 500,
+    "delay": 0,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.lazy-animation",
+    "at": "scroll900"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "grid-template-rows",
+    "dur": 300,
+    "delay": 0,
+    "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+    "iter": 1,
+    "props": [
+     "gridTemplateRows"
+    ],
+    "el": "DIV.UniversalChatCtaCard__collapsi",
+    "at": "scroll900"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "transform",
+    "dur": 300,
+    "delay": 0,
+    "easing": "cubic-bezier(0.25, 1, 0.5, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV.UniversalChatCtaCard__card",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1420,
+    "delay": 4000,
+    "easing": "linear kf:cubic-bezier(0.78, 0, 0.22, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV.payments-graphic__terminal-pay",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1420,
+    "delay": 4000,
+    "easing": "linear kf:cubic-bezier(0.78, 0, 0.22, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV.payments-graphic__checkout-bro",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1420,
+    "delay": 4000,
+    "easing": "linear kf:ease-in-out|cubic-bezier(0.78, 0, 0.22, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV.payments-graphic__terminal-pay",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1420,
+    "delay": 4000,
+    "easing": "linear kf:ease-in-out|cubic-bezier(0.78, 0, 0.22, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV.payments-graphic__terminal-mes",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1420,
+    "delay": 4000,
+    "easing": "linear kf:ease-in-out|cubic-bezier(0.78, 0, 0.22, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV.payments-graphic__terminal-tra",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1420,
+    "delay": 4000,
+    "easing": "linear kf:ease-in-out|cubic-bezier(0.78, 0, 0.22, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV.payments-graphic__checkout-pay",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1420,
+    "delay": 4000,
+    "easing": "linear kf:ease-in-out|cubic-bezier(0.78, 0, 0.22, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV.payments-graphic__checkout-sep",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1420,
+    "delay": 4000,
+    "easing": "linear kf:ease-in-out|cubic-bezier(0.78, 0, 0.22, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "svg",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1420,
+    "delay": 4000,
+    "easing": "linear kf:ease-in-out|cubic-bezier(0.78, 0, 0.22, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV.payments-graphic__checkout-hea",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1420,
+    "delay": 4000,
+    "easing": "linear kf:ease-in-out|cubic-bezier(0.78, 0, 0.22, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV.payments-graphic__checkout-inp",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1420,
+    "delay": 4000,
+    "easing": "linear kf:ease-in-out|cubic-bezier(0.78, 0, 0.22, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV.payments-graphic__checkout-ord",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1420,
+    "delay": 4000,
+    "easing": "linear kf:ease-in-out|cubic-bezier(0.78, 0, 0.22, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV.payments-graphic__checkout-ite",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1420,
+    "delay": 4000,
+    "easing": "linear kf:ease-in-out|cubic-bezier(0.47, 0, 0.75, 0.72)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "svg",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1420,
+    "delay": 4000,
+    "easing": "linear kf:ease-in-out|cubic-bezier(0.78, 0, 0.22, 1)",
+    "iter": 1,
+    "props": [
+     "clipPath"
+    ],
+    "el": "DIV.payments-graphic__checkout-pay",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1420,
+    "delay": 4000,
+    "easing": "linear kf:ease-in-out|cubic-bezier(0.78, 0, 0.22, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.payments-graphic__checkout-pay",
+    "at": "scroll900"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 2260,
+    "delay": 0,
+    "easing": "linear kf:ease-out|cubic-bezier(0.165, 0.84, 0.44, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.agentic-commerce-graphic__chat",
+    "at": "scroll1800"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 2260,
+    "delay": 0,
+    "easing": "linear kf:ease-out|cubic-bezier(0.165, 0.84, 0.44, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV.agentic-commerce-graphic__chat",
+    "at": "scroll1800"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 2260,
+    "delay": 0,
+    "easing": "linear kf:ease-out|cubic-bezier(0.165, 0.84, 0.44, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.agentic-commerce-graphic__prod",
+    "at": "scroll1800"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 2260,
+    "delay": 0,
+    "easing": "linear kf:ease-out|cubic-bezier(0.165, 0.84, 0.44, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV.agentic-commerce-graphic__prod",
+    "at": "scroll1800"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 2260,
+    "delay": 0,
+    "easing": "linear kf:ease-out",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN",
+    "at": "scroll1800"
+   }
+  ],
+  "reduce": [
+   {
+    "type": "CSSAnimation",
+    "name": "detect-scroll",
+    "dur": NaN,
+    "delay": 0,
+    "easing": "linear",
+    "iter": 1,
+    "props": [],
+    "el": "NAV#navigation-menu.hds-navigation-menu",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 0,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 50,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 100,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 150,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 200,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 250,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 300,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 350,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 400,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 450,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 325,
+    "delay": 500,
+    "easing": "cubic-bezier(0.33, 1, 0.68, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   }
+  ]
+ },
+ "https://linear.app": {
+  "no-preference": [
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-0-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-1-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-2-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-3-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-4-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-0-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-1-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-2-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-3-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-4-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-0-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-1-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-2-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-3-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-4-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-0-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-1-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-2-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-3-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-4-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-0-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-1-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-2-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-3-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-4-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-0-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-1-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-2-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-3-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-4-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-0-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-1-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-2-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-3-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-4-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-0-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-1-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-2-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-3-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-4-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-0-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-1-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-2-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-3-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-4-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-0-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-1-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-2-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-3-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-4-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-0-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-1-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-2-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-3-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-4-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-0-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-1-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-2-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-3-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-4-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-0-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-1-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-2-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-3-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-4-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-0-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-1-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-2-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-3-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-4-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-0-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-1-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-2-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-3-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-4-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "qM9FAa_cursorBlink",
+    "dur": 1250,
+    "delay": 0,
+    "easing": "linear kf:ease",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.qM9FAa_cursor",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "-VOcTG_agentBorderSweep",
+    "dur": 2000,
+    "delay": -80,
+    "easing": "linear",
+    "iter": Infinity,
+    "props": [
+     "backgroundPositionX",
+     "backgroundPositionY"
+    ],
+    "el": "SPAN.-VOcTG_badge",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "-VOcTG_agentLabelSweep",
+    "dur": 2000,
+    "delay": 0,
+    "easing": "linear",
+    "iter": 1,
+    "props": [
+     "backgroundPositionX",
+     "backgroundPositionY"
+    ],
+    "el": "SPAN.sx-1n2onr6",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "sx-45fvhf-B",
+    "dur": 2400,
+    "delay": 0,
+    "easing": "linear",
+    "iter": Infinity,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN.sx-iy17q3",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 400,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.show-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 400,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "filter"
+    ],
+    "el": "SPAN.show-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 400,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN.show-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 433,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.show-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 433,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "filter"
+    ],
+    "el": "SPAN.show-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 433,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN.show-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 466,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.show-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 466,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "filter"
+    ],
+    "el": "SPAN.show-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 466,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN.show-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 499,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.show-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 499,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "filter"
+    ],
+    "el": "SPAN.show-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 499,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN.show-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 400,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.hide-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 400,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "filter"
+    ],
+    "el": "SPAN.hide-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 400,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN.hide-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 500,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.hide-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 500,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "filter"
+    ],
+    "el": "SPAN.hide-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 500,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN.hide-mobile",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 600,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.QI8oKG_description",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 600,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "filter"
+    ],
+    "el": "SPAN.QI8oKG_description",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 600,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN.QI8oKG_description",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 850,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 850,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "filter"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 850,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 2000,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 2000,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "filter"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1000,
+    "delay": 2000,
+    "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "SPAN",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1500,
+    "delay": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.WS84WW_background",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1500,
+    "delay": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.WS84WW_shadows",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1500,
+    "delay": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.WS84WW_shade",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 500,
+    "delay": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.WS84WW_frameBackground",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1500,
+    "delay": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "NAV.Mmx1Wq_sidebar",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1500,
+    "delay": 1300,
+    "easing": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.WS84WW_view",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1500,
+    "delay": 600,
+    "easing": "ease-out",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 1300,
+    "delay": 1400,
+    "easing": "ease-out",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 500,
+    "delay": 200,
+    "easing": "ease-out",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.WS84WW_frameWrapper",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 350,
+    "delay": 0,
+    "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.aFfDra_conversation",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 800,
+    "delay": 0,
+    "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.qM9FAa_sendButtonGroup",
+    "at": "scroll2700"
+   }
+  ],
+  "reduce": [
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-0-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-1-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-2-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-3-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-4-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-0-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-1-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-2-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-3-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-4-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-0-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-1-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-2-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-3-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-4-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-0-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-1-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-2-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-3-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-4-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-0-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-1-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-2-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-3-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-4-upDown",
+    "dur": 2800,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-0-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-1-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-2-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-3-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-4-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-0-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-1-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-2-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-3-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-4-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-0-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-1-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-2-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-3-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-4-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-0-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-1-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-2-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-3-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-4-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-0-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-1-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-2-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-3-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-4-pong",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-0-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-1-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-2-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-3-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-0-4-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-0-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-1-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-2-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-3-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-1-4-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-0-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-1-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-2-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-3-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-2-4-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-0-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-1-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-2-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-3-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-3-4-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-0-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-1-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-2-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-3-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "grid-dot-4-4-agent",
+    "dur": 3200,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "circle",
+    "at": "load"
+   }
+  ]
+ },
+ "https://www.raycast.com": {
+  "no-preference": [
+   {
+    "type": "CSSTransition",
+    "name": "transform",
+    "dur": 300,
+    "delay": 0,
+    "easing": "ease",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV._3Yq4tG_activeBackdrop",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "color",
+    "dur": 300,
+    "delay": 0,
+    "easing": "ease",
+    "iter": 1,
+    "props": [
+     "color"
+    ],
+    "el": "BUTTON._3Yq4tG_previous",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "box-shadow",
+    "dur": 200,
+    "delay": 0,
+    "easing": "ease",
+    "iter": 1,
+    "props": [
+     "boxShadow"
+    ],
+    "el": "DIV.NFhuXW_embla__slide",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "H3BVAa_fade-in-up",
+    "dur": 1000,
+    "delay": 0,
+    "easing": "linear kf:ease",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV.H3BVAa_heroText",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "H3BVAa_fade-in-up",
+    "dur": 1000,
+    "delay": 1000,
+    "easing": "linear kf:ease",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "P.H3BVAa_fadeInUpStagger",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "ezSJPa_rotating2",
+    "dur": 3000,
+    "delay": -640,
+    "easing": "linear",
+    "iter": Infinity,
+    "props": [],
+    "el": "DIV.ezSJPa_announcementOuter",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "ezSJPa_x",
+    "dur": 3000,
+    "delay": -640,
+    "easing": "linear",
+    "iter": Infinity,
+    "props": [],
+    "el": "DIV.ezSJPa_announcementOuter",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 100,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 180,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 260,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 340,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 420,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 500,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 580,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 660,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 740,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 820,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 900,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 980,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 1060,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 1140,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 1220,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 1300,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 1380,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "OvGovq_blink",
+    "dur": 1100,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.OvGovq_cursor",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3QuK8a_progress",
+    "dur": 5000,
+    "delay": 0,
+    "easing": "linear",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV._3QuK8a_page",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "hk6uka_blink",
+    "dur": 1100,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.hk6uka_cursor",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_0Keh4G_blink",
+    "dur": 1100,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN._0Keh4G_cursor",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "opacity",
+    "dur": 400,
+    "delay": 300,
+    "easing": "cubic-bezier(0.23, 1, 0.32, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.h8MSgW_key",
+    "at": "scroll1800"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "opacity",
+    "dur": 400,
+    "delay": 900,
+    "easing": "cubic-bezier(0.23, 1, 0.32, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.h8MSgW_key",
+    "at": "scroll1800"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "opacity",
+    "dur": 400,
+    "delay": 600,
+    "easing": "cubic-bezier(0.23, 1, 0.32, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.h8MSgW_key",
+    "at": "scroll1800"
+   }
+  ],
+  "reduce": [
+   {
+    "type": "CSSTransition",
+    "name": "transform",
+    "dur": 300,
+    "delay": 0,
+    "easing": "ease",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV._3Yq4tG_activeBackdrop",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "color",
+    "dur": 300,
+    "delay": 0,
+    "easing": "ease",
+    "iter": 1,
+    "props": [
+     "color"
+    ],
+    "el": "BUTTON._3Yq4tG_previous",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "box-shadow",
+    "dur": 200,
+    "delay": 0,
+    "easing": "ease",
+    "iter": 1,
+    "props": [
+     "boxShadow"
+    ],
+    "el": "DIV.NFhuXW_embla__slide",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "H3BVAa_fade-in-up",
+    "dur": 1000,
+    "delay": 0,
+    "easing": "linear kf:ease",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV.H3BVAa_heroText",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "H3BVAa_fade-in-up",
+    "dur": 1000,
+    "delay": 1000,
+    "easing": "linear kf:ease",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "P.H3BVAa_fadeInUpStagger",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "ezSJPa_rotating2",
+    "dur": 3000,
+    "delay": -640,
+    "easing": "linear",
+    "iter": Infinity,
+    "props": [],
+    "el": "DIV.ezSJPa_announcementOuter",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "ezSJPa_x",
+    "dur": 3000,
+    "delay": -640,
+    "easing": "linear",
+    "iter": Infinity,
+    "props": [],
+    "el": "DIV.ezSJPa_announcementOuter",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 100,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 180,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 260,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 340,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 420,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 500,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 580,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 660,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 740,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 820,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 900,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 980,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 1060,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 1140,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 1220,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 1300,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3Yq4tG_slideIn",
+    "dur": 700,
+    "delay": 1380,
+    "easing": "linear kf:cubic-bezier(0.215, 0.61, 0.355, 1)",
+    "iter": 1,
+    "props": [
+     "transform",
+     "opacity"
+    ],
+    "el": "DIV._3Yq4tG_extensionCardWrapper",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "OvGovq_blink",
+    "dur": 1100,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.OvGovq_cursor",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_3QuK8a_progress",
+    "dur": 5000,
+    "delay": 0,
+    "easing": "linear",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV._3QuK8a_page",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "hk6uka_blink",
+    "dur": 1100,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.hk6uka_cursor",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "_0Keh4G_blink",
+    "dur": 1100,
+    "delay": 0,
+    "easing": "linear kf:steps(1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN._0Keh4G_cursor",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "opacity",
+    "dur": 400,
+    "delay": 900,
+    "easing": "cubic-bezier(0.23, 1, 0.32, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.h8MSgW_key",
+    "at": "scroll1800"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "opacity",
+    "dur": 400,
+    "delay": 600,
+    "easing": "cubic-bezier(0.23, 1, 0.32, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.h8MSgW_key",
+    "at": "scroll1800"
+   }
+  ]
+ },
+ "https://cursor.com": {
+  "no-preference": [
+   {
+    "type": "CSSAnimation",
+    "name": "mobileWorkingVerticalOpacity",
+    "dur": 3100,
+    "delay": 0,
+    "easing": "linear kf:ease-in-out",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.mobile-working-icon__dot",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "mobileWorkingHorizontalOpacity",
+    "dur": 3100,
+    "delay": 0,
+    "easing": "linear kf:ease-in-out",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.mobile-working-icon__dot",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "mobileWorkingCenterOpacity",
+    "dur": 3100,
+    "delay": 0,
+    "easing": "linear kf:ease-in-out",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.mobile-working-icon__dot",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "shimmer",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear",
+    "iter": Infinity,
+    "props": [
+     "backgroundPositionX",
+     "backgroundPositionY"
+    ],
+    "el": "SPAN.shimmer",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "shimmer",
+    "dur": 2500,
+    "delay": 0,
+    "easing": "linear",
+    "iter": Infinity,
+    "props": [
+     "backgroundPositionX",
+     "backgroundPositionY"
+    ],
+    "el": "SPAN.shimmer",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "pulse",
+    "dur": 2000,
+    "delay": 0,
+    "easing": "linear kf:cubic-bezier(0.4, 0, 0.6, 1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.w-[2px]",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "baby-grok-bot-mount-fade",
+    "dur": 1000,
+    "delay": 0,
+    "easing": "linear kf:cubic-bezier(0.22, 1, 0.36, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.baby-grok-bot-mount-fade",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "sheet-slide-up",
+    "dur": 250,
+    "delay": 0,
+    "easing": "linear kf:cubic-bezier(0.25, 1, 0.5, 1)",
+    "iter": 1,
+    "props": [
+     "transform"
+    ],
+    "el": "DIV.bg-theme-card-hex",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 340,
+    "delay": 570,
+    "easing": "ease-out",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 340,
+    "delay": 740,
+    "easing": "ease-out",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 250,
+    "delay": 0,
+    "easing": "ease-out",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.relative",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 180,
+    "delay": 0,
+    "easing": "ease-out",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.w-full",
+    "at": "scroll900"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "opacity",
+    "dur": 500,
+    "delay": 0,
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "VIDEO.video-smooth",
+    "at": "scroll1800"
+   }
+  ],
+  "reduce": [
+   {
+    "type": "CSSAnimation",
+    "name": "mobileWorkingVerticalOpacity",
+    "dur": 3100,
+    "delay": 0,
+    "easing": "linear kf:ease-in-out",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.mobile-working-icon__dot",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "mobileWorkingHorizontalOpacity",
+    "dur": 3100,
+    "delay": 0,
+    "easing": "linear kf:ease-in-out",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.mobile-working-icon__dot",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "mobileWorkingCenterOpacity",
+    "dur": 3100,
+    "delay": 0,
+    "easing": "linear kf:ease-in-out",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.mobile-working-icon__dot",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "shimmer",
+    "dur": 1600,
+    "delay": 0,
+    "easing": "linear",
+    "iter": Infinity,
+    "props": [
+     "backgroundPositionX",
+     "backgroundPositionY"
+    ],
+    "el": "SPAN.shimmer",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "border-bottom-color",
+    "dur": 200,
+    "delay": 0,
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "iter": 1,
+    "props": [
+     "borderBottomColor"
+    ],
+    "el": "DIV.border",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "border-left-color",
+    "dur": 200,
+    "delay": 0,
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "iter": 1,
+    "props": [
+     "borderLeftColor"
+    ],
+    "el": "DIV.border",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "border-right-color",
+    "dur": 200,
+    "delay": 0,
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "iter": 1,
+    "props": [
+     "borderRightColor"
+    ],
+    "el": "DIV.border",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "border-top-color",
+    "dur": 200,
+    "delay": 0,
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "iter": 1,
+    "props": [
+     "borderTopColor"
+    ],
+    "el": "DIV.border",
+    "at": "load"
+   },
+   {
+    "type": "CSSAnimation",
+    "name": "pulse",
+    "dur": 2000,
+    "delay": 0,
+    "easing": "linear kf:cubic-bezier(0.4, 0, 0.6, 1)",
+    "iter": Infinity,
+    "props": [
+     "opacity"
+    ],
+    "el": "SPAN.w-[2px]",
+    "at": "load"
+   },
+   {
+    "type": "Animation",
+    "name": "",
+    "dur": 250,
+    "delay": 0,
+    "easing": "ease-out",
+    "iter": 1,
+    "props": [
+     "opacity"
+    ],
+    "el": "DIV.relative",
+    "at": "load"
+   },
+   {
+    "type": "CSSTransition",
+    "name": "color",
+    "dur": 150,
+    "delay": 0,
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "iter": 1,
+    "props": [
+     "color"
+    ],
+    "el": "DIV.flex",
+    "at": "scroll2700"
+   }
+  ]
+ },
+ "https://deeper.tools": {
+  "no-preference": [
+   {
+    "type": "CSSAnimation",
+    "name": "focus",
+    "dur": 800,
+    "delay": 100,
+    "easing": "linear kf:cubic-bezier(0.16, 1, 0.3, 1)",
+    "iter": 1,
+    "props": [
+     "filter"
+    ],
+    "el": "INS.ins",
+    "at": "load"
+   }
+  ],
+  "reduce": []
+ }
+}

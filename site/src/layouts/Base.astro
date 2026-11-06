@@ -3,6 +3,19 @@ import "../styles/global.css";
 // Preloaded so the condensed display type is ready before first paint; a late swap re-wraps the headline (CLS).
 import bricolage from "../assets/fonts/display.woff2?url";
 
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
+
+// Home only. Turns on the headline's insertion motion (html.m) once the display font is ready (html.go).
+// If the font isn't ready in 400 ms, or motion is reduced, or this doesn't run, the page stays static.
+// It sits first in <body>: after the stylesheets (so the @font-face rules exist; Astro puts them last in <head>)
+// and before any content paints. Inline, so the CSP allows it by hash (public/_headers).
+const MOTION = `(function(){var d=document.documentElement,f=document.fonts;if(!f||!matchMedia("(prefers-reduced-motion: no-preference)").matches)return;d.classList.add("m");function off(){d.classList.remove("m")}var t=setTimeout(off,400);f.load("condensed 800 1em Bricolage").then(function(a){clearTimeout(t);if(a.length&&d.classList.contains("m"))d.classList.add("go");else off()},off)})()`;
+const motionHash = `'sha256-${createHash("sha256").update(MOTION).digest("base64")}'`;
+if (!readFileSync("public/_headers", "utf8").includes(motionHash)) {
+  throw new Error(`public/_headers: add ${motionHash} to script-src, or the motion script is blocked.`);
+}
+
 interface Props { title?: string; description?: string; }
 const {
   title = "deeper: ask for the version an expert would ask for",
@@ -49,6 +62,7 @@ const software = {
     {path === "/" && <script type="application/ld+json" set:html={JSON.stringify(software)} />}
   </head>
   <body>
+    {path === "/" && <script is:inline set:html={MOTION} />}
     <a class="skip" href="#main">Skip to content</a>
     <div class="band-red top">
       <header class="wrap head">
