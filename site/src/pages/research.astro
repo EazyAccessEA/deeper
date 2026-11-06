@@ -6,15 +6,31 @@ const name = Object.fromEntries(ARMS);
 ---
 <Base title="Research | deeper" description="Blind tests of deeper against a plain rewrite on five real tasks, with every prompt, score and reason.">
   <article class="wrap page">
+    <h1>The blind tests</h1>
+    <p class="intro">Five tasks from real use, with names and project details taken out: a product caption, book typesetting, selling a car, moving an app off Vercel and tidying a Downloads folder. Each test rewrote them in several ways and had a judge score the results without knowing which was which. deeper 1.1 was judged best on {bestCount("v1.1b")} of {round2.length}.</p>
+    <div class="layout">
+    <nav class="toc" aria-label="On this page">
+      <p class="toc-h">On this page</p>
+      <ol>
+        <li><a href="#why">Why there's a 1.1</a></li>
+        <li><a href="#method">How the current test ran</a></li>
+        <li><a href="#averages">Averages</a></li>
+        <li><a href="#tasks">Task by task</a>
+          <ol>{round2.map((r) => <li><a href={`#task-${r.id}`}>{r.short}</a></li>)}</ol>
+        </li>
+        <li><a href="#first">The first test</a></li>
+        <li><a href="#limits">Limits</a></li>
+      </ol>
+    </nav>
+    <div class="main">
     <div class="prose">
-      <h1>The blind tests</h1>
-      <p>Five tasks from real use, with names and project details taken out: a product caption, book typesetting, selling a car, moving an app off Vercel and tidying a Downloads folder. Each test rewrote them in several ways and had a judge score the results without knowing which was which. deeper 1.1 was judged best on {bestCount("v1.1b")} of {round2.length}.</p>
 
-      <h2>Why there's a 1.1</h2>
+
+      <h2 id="why">Why there's a 1.1</h2>
       <p>deeper 1.0 made prompts more expert, but it also grew them. In a sample of 40 of my own past runs, 33 asked for at least one deliverable I hadn't. Version 1.1 adds a rule: the prompt asks for the same deliverables as the task, and anything else goes on one line, "Worth knowing, not in this task", for you to choose.</p>
       <p>The first wording of that rule kept scope tight but thinned the methods and checks. The final wording keeps every check that tests what you asked for, however much work it takes, and only cuts things you'd be left to keep or maintain.</p>
 
-      <h2>How the current test ran</h2>
+      <h2 id="method">How the current test ran</h2>
       <ol>
         <li>The same five tasks were rewritten four ways: with no skill, with deeper 1.0, with the first 1.1 draft and with the final 1.1.</li>
         <li>A script shuffled the four prompts for each task into A to D and kept the answer key in a separate file.</li>
@@ -23,7 +39,7 @@ const name = Object.fromEntries(ARMS);
       <p>The writers ran on Claude Opus 5.5 and the judge on Claude Sonnet 5.5. Every prompt, key and score is in <a href={`${gh}/v1.1/`}>examples/raw/v1.1</a>.</p>
     </div>
 
-    <h2 class="sec">Averages</h2>
+    <h2 class="sec" id="averages">Averages</h2>
     <div class="scroll">
       <table class="avg">
         <caption class="sr">Average scores out of 5 for each version, round 2</caption>
@@ -32,10 +48,10 @@ const name = Object.fromEntries(ARMS);
       </table>
     </div>
 
-    <h2 class="sec">Task by task</h2>
+    <h2 class="sec" id="tasks">Task by task</h2>
     <div class="tasks">
       {round2.map((r) => (
-        <section class="task">
+        <section class="task" id={`task-${r.id}`}>
           <h3>{r.id} {r.short}</h3>
           <p class="muted">{r.task}</p>
           <div class="scroll">
@@ -55,12 +71,14 @@ const name = Object.fromEntries(ARMS);
     </div>
 
     <div class="prose">
-      <h2>The first test</h2>
+      <h2 id="first">The first test</h2>
       <p>Before 1.1, deeper 1.0 was tested against a plain rewrite alone, by a judge who wasn't asked to count extra deliverables. deeper won 5 of 5, and scope was already its weak spot. Its numbers, out of 5: expert method {averages[0].plain} to {averages[0].deeper}, raw material {averages[1].plain} to {averages[1].deeper}, outside check {averages[2].plain} to {averages[2].deeper}, scope {averages[3].plain} to {averages[3].deeper}. The files are in <a href={gh}>examples/raw</a>.</p>
 
-      <h2>Limits</h2>
+      <h2 id="limits">Limits</h2>
       <p>Five tasks is a small sample, and each round is one run. Scores for the same prompts moved by up to 0.6 between the two judging passes, which is why the current test judged every version together. The judge is a model, though a different one from the writers, and the writers knew they were in a test. A person judging <a href={`${gh}/v1.1/round2-quads.md`}>the shuffled prompts</a> blind would be a stronger check.</p>
       <p>The skill's own rule applies here too: a model grading model output doesn't count as proof. Treat these numbers as a reason to try it, not as a verdict.</p>
+    </div>
+    </div>
     </div>
   </article>
 </Base>
@@ -81,4 +99,23 @@ const name = Object.fromEntries(ARMS);
   .why { margin-top: 0.75rem; max-width: var(--measure); font-size: 0.95rem; color: var(--grey); }
   .why b { color: var(--ink); font-weight: 500; }
   .prose + h2, .tasks + .prose { margin-top: 3rem; }
+
+  /* Section list: first on phones; on wide screens it holds the empty right column and stays in view. */
+  .intro { max-width: var(--measure); margin-bottom: 2.5rem; }
+  .layout { display: grid; gap: 2.5rem; }
+  .main { min-width: 0; }
+  .toc { font-size: 0.9375rem; }
+  .toc-h { font-weight: 700; padding: 0.6rem 0 0.5rem; border-top: 3px solid var(--ink); border-bottom: 1px solid var(--rule); }
+  .main > .prose:first-child > h2:first-child { margin-top: 0; }
+  .toc ol { list-style: none; margin: 0; padding: 0; }
+  .toc ol ol { padding-left: 1rem; }
+  .toc a { display: block; padding: 0.35rem 0; line-height: 1.35; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  .toc > ol > li { border-bottom: 1px solid var(--rule); }
+  .main :is(h2, section) { scroll-margin-top: 1.5rem; }
+  @media (min-width: 1100px) {
+    .layout { grid-template-columns: minmax(0, 1fr) 15rem; gap: 4rem; }
+    .toc { grid-column: 2; grid-row: 1; position: sticky; top: 1.5rem; align-self: start; }
+    .main { grid-column: 1; grid-row: 1; }
+  }
 </style>
