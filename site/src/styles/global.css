@@ -56,7 +56,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em
 a:hover { text-decoration-thickness: 2px; }
 /* Visible on red, white and black alike. */
 :focus-visible { outline: 3px solid var(--black); outline-offset: 2px; box-shadow: 0 0 0 5px var(--white); }
-h1, h2, h3 { font-weight: 800; font-stretch: 75%; letter-spacing: -0.045em; line-height: 0.95; margin: 0; text-wrap: balance; }
+h1, h2, h3 { font-weight: 800; font-stretch: 75%; letter-spacing: -0.02em; line-height: 0.95; margin: 0; text-wrap: balance; }
 p, li { margin: 0; text-wrap: pretty; }
 code, pre, kbd { font-family: var(--mono); font-size: 0.88em; }
 img { max-width: 100%; height: auto; display: block; }
@@ -85,12 +85,14 @@ td { font-variant-numeric: lining-nums proportional-nums; }
 th, td { text-align: left; padding: 0.75rem 1rem 0.75rem 0; vertical-align: top; }
 thead th { font-weight: 600; border-bottom: 1px solid var(--rule); }
 
-/* Inner pages: the first heading sits in a red band that runs on from the header. */
+/* Inner pages: the first heading sits in a red band that runs on from the header. The shadow widens it to the
+   full viewport; clipped at the top, so it never paints over the header and its nav. */
 .page { padding-bottom: var(--band); }
 .page h1:first-of-type {
   position: relative; color: var(--white); font-size: var(--d1); padding: clamp(2rem, 5vw, 4.5rem) 0 clamp(2.5rem, 5vw, 4.5rem);
+  padding-right: calc(clamp(7rem, 22vw, 20rem) + 1rem); /* keeps the words clear of the giant caret */
   margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
-  background: var(--red); box-shadow: 0 0 0 100vmax var(--red); clip-path: inset(-100vmax -100vmax 0 -100vmax);
+  background: var(--red); box-shadow: 0 0 0 100vmax var(--red); clip-path: inset(0 -100vmax 0 -100vmax);
 }
 .page h1:first-of-type::after {
   content: ""; position: absolute; right: 0; bottom: 0; width: clamp(7rem, 22vw, 20rem); aspect-ratio: 760 / 560; background: var(--white);
