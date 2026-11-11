@@ -24,6 +24,9 @@ const {
 const path = Astro.url.pathname;
 // "Get started" rather than "Start": Lighthouse flags a bare "Start" link as non-descriptive.
 const links = [["/start/", "Get started"], ["/docs/", "Docs"], ["/patterns/", "Patterns"], ["/research/", "Research"]];
+// deeper's own accounts. Add one only once it's open, its profile links back to deeper.tools/?ref=<platform>,
+// and `curl` on the URL returns 200. They show in the footer (rel="me") and as sameAs in the structured data.
+const socials: [string, string][] = [["https://bsky.app/profile/deeper.tools", "Bluesky"], ["https://www.youtube.com/@deeper-tools", "YouTube"], ["https://x.com/deepertools", "X (Twitter)"], ["https://www.tiktok.com/@deepertools", "TikTok"], ["https://www.instagram.com/deeper.tools/", "Instagram"], ["https://www.facebook.com/profile.php?id=61596409051860", "Facebook"]];
 const og = new URL("/og.png", Astro.site).href;
 const canonical = new URL(path, Astro.site).href;
 // Structured data for search engines; a data block, so the CSP's script-src doesn't apply.
@@ -40,6 +43,7 @@ const software = {
   codeRepository: "https://github.com/EazyAccessEA/deeper",
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   author: { "@type": "Organization", name: "Eazy Access Ltd", url: "https://github.com/EazyAccessEA" },
+  ...(socials.length && { sameAs: socials.map(([href]) => href) }),
 };
 ---
 <!doctype html>
@@ -84,6 +88,7 @@ const software = {
           <ul>{links.map(([href, label]) => <li><a href={href}>{label}</a></li>)}</ul>
           <ul><li><a href="https://github.com/EazyAccessEA/deeper">GitHub</a></li><li><a href="/changelog/">Changelog</a></li><li><a href="https://github.com/EazyAccessEA/deeper/issues">Report an issue</a></li><li><a href="https://github.com/EazyAccessEA/deeper/blob/main/SECURITY.md">Security</a></li></ul>
           <ul><li><a href="mailto:hello@deeper.tools">hello@deeper.tools</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/legal/">Legal</a></li></ul>
+          {socials.length > 0 && <ul>{socials.map(([href, label]) => <li><a href={href} rel="me">{label}</a></li>)}</ul>}
         </nav>
       </div>
     </footer>

@@ -1,2 +1,8 @@
 .claude/
 brand/lineup/
+
+# Kept out of the public repo: marketing lives in the private repo EazyAccessEA/deeper-private, checked out at marketing/;
+# design research captures and the session handover stay on the maintainer's machine.
+marketing/
+research/design-elevate/
+/HANDOVER.md
