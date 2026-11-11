@@ -115,6 +115,7 @@ BANNERS = {
     "bluesky-banner": (3000, 1000, (150, 150, 2700, 600)),
     "youtube-banner": (2560, 1440, (712, 571, 1135, 298)),   # YouTube safe area 1235 x 338 at (662, 551), inset 50
     "linkedin-cover": (1512, 256, (380, 30, 900, 196)),     # logo covers the left; keep clear of lower right
+    "facebook-cover": (1640, 624, (300, 110, 1040, 380)),   # phones show only the middle 1109 px; page photo sits lower left
 }
 AVATARS = {"x": 400, "bluesky": 1000, "youtube": 800, "linkedin": 400, "tiktok": 720,
            "github": 500, "reddit": 256, "instagram": 320, "threads": 320}
