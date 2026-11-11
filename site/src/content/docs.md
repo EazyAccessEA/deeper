@@ -15,9 +15,11 @@ The [skills CLI](https://github.com/vercel-labs/skills) is an open-source instal
 ### Claude Code, as a plugin
 
 ```
-/plugin marketplace add EazyAccessEA/deeper
+/plugin marketplace add https://deeper.tools/marketplace.json
 /plugin install deeper@deeper
 ```
+
+This fetches only the skill, pinned to the latest release. If your Claude Code version won't add a marketplace from a URL, use `/plugin marketplace add EazyAccessEA/deeper` instead. That copies the whole repo.
 
 ### By hand
 

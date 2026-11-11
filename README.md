@@ -42,15 +42,17 @@ Then it writes one prompt in a code block and asks whether to run it. The prompt
 **Claude Code plugin.**
 
 ```
-/plugin marketplace add EazyAccessEA/deeper
+/plugin marketplace add https://deeper.tools/marketplace.json
 /plugin install deeper@deeper
 ```
+
+This fetches only the skill, pinned to the latest release. If your Claude Code version won't add a marketplace from a URL, use `/plugin marketplace add EazyAccessEA/deeper` instead. That copies the whole repo.
 
 **By hand.** Copy `skills/deeper/SKILL.md` into a `deeper` folder: `~/.claude/skills/` for Claude Code, `~/.agents/skills/` for Codex, Cursor and others that read the shared folder.
 
 **A chat app.** ChatGPT, Claude.ai and Gemini have no skills folder. Paste the contents of `skills/deeper/SKILL.md` into the chat, then type `/deeper` and your task. With no files to read, deeper asks you for the raw material.
 
-**A fixed version.** The commands above follow `main`. To install an exact release, see [SECURITY.md](SECURITY.md).
+**A fixed version.** The plugin installs the latest release. The other commands follow `main`. To install an exact release, see [SECURITY.md](SECURITY.md).
 
 ## Does it work?
 
