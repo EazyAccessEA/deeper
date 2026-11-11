@@ -22,10 +22,15 @@ deeper has one maintainer. Expect a first reply within 7 days.
 npx skills add https://github.com/EazyAccessEA/deeper/tree/v1.1.2/skills/deeper
 ```
 
-Each release on GitHub lists the SHA-256 of its `SKILL.md`, so you can check the file you got:
+Release tags can't be moved or deleted once they're pushed. A repository rule blocks it.
+
+Each release on GitHub lists the SHA-256 of its `SKILL.md`. deeper.tools publishes the hash of the latest release too, at [deeper.tools/skill-sha256.txt](https://deeper.tools/skill-sha256.txt). The site is deployed from Cloudflare, not from GitHub, so changing both the file and its hash takes two separate break-ins. Check the file you got against the site:
 
 ```bash
 shasum -a 256 .claude/skills/deeper/SKILL.md
+curl -s https://deeper.tools/skill-sha256.txt
 ```
+
+The two hashes should match.
 
 Read the skill before you install it. It's short.

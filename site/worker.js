@@ -59,8 +59,12 @@ function withCounter(res) {
 
 // POST /api/e {p, k}: adds one to a counter for today. No IP, user agent or identifier is stored;
 // the user agent is read only to skip obvious bots, then discarded.
+// COUNT_LIMIT (wrangler.jsonc) caps each IP before anything is read, so one client can't inflate the A/B counts
+// or burn D1 writes. Cloudflare keeps that counter for a minute; we never see or store the IP.
 async function count(request, env) {
   if (request.method !== "POST") return new Response(null, { status: 405, headers: { Allow: "POST" } });
+  const { success } = await env.COUNT_LIMIT.limit({ key: request.headers.get("CF-Connecting-IP") ?? "" });
+  if (!success) return new Response(null, { status: 429 });
   if (BOT.test(request.headers.get("User-Agent") ?? "")) return new Response(null, { status: 204 });
   const body = await request.text().catch(() => "");
   if (body.length > 200) return new Response(null, { status: 413 });
