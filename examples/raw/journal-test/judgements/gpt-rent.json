@@ -1,0 +1,210 @@
+{
+ "A": {
+  "1": [
+   1,
+   "States a monthly mortgage payment of \u00a31,336, within 2% of \u00a31,336.43."
+  ],
+  "2": [
+   1,
+   "Compares buyer and renter net worth numerically at both 5 and 7 years."
+  ],
+  "3": [
+   1,
+   "Starts the renter with \u00a346,500 invested at 4% and compounds it alongside monthly savings."
+  ],
+  "4": [
+   1,
+   "Includes service charge and ground rent, upkeep, and 1.5% selling costs."
+  ],
+  "5": [
+   1,
+   "Quantifies price sensitivity, including flat-price losses and break-even growth rates."
+  ],
+  "6": [
+   1,
+   "Clearly recommends buying under specified checks and growth assumptions, while keeping a cash buffer."
+  ]
+ },
+ "B": {
+  "1": [
+   1,
+   "States the exact \u00a31,336.43 monthly mortgage payment."
+  ],
+  "2": [
+   1,
+   "Provides numerical buy and rent net-worth results for both 5 and 7 years."
+  ],
+  "3": [
+   1,
+   "Separately shows the \u00a346,500 compounding and the invested monthly cost differences."
+  ],
+  "4": [
+   1,
+   "Includes service charge and ground rent, upkeep, purchase friction, and selling costs."
+  ],
+  "5": [
+   1,
+   "Shows flat-price losses and quantified break-even growth for both horizons."
+  ],
+  "6": [
+   1,
+   "Gives a conditional buy-or-rent recommendation tied to lease checks, growth, reserves, and holding period."
+  ]
+ },
+ "C": {
+  "1": [
+   1,
+   "States a \u00a31,336 monthly mortgage payment, within the permitted range."
+  ],
+  "2": [
+   1,
+   "Compares buyer wealth and renter savings numerically after 5 and 7 years."
+  ],
+  "3": [
+   1,
+   "Explicitly grows the renter's \u00a346,500 at 4% and saves the monthly difference."
+  ],
+  "4": [
+   1,
+   "Includes service charge and ground rent, upkeep, and selling costs."
+  ],
+  "5": [
+   1,
+   "Provides quantified outcomes across several price-growth scenarios and break-even rates."
+  ],
+  "6": [
+   1,
+   "Recommends buying if staying at least five years, subject to preserving cash reserves and passing lease checks."
+  ]
+ },
+ "D": {
+  "1": [
+   1,
+   "States a \u00a31,336 monthly mortgage payment, within 2% of the reference."
+  ],
+  "2": [
+   1,
+   "Shows buyer cash and renter savings at both 5 and 7 years."
+  ],
+  "3": [
+   1,
+   "Invests the renter's initial savings and monthly spending difference at 4%, including interest earned."
+  ],
+  "4": [
+   1,
+   "Counts service charge and ground rent, upkeep, and 1.5% selling costs."
+  ],
+  "5": [
+   1,
+   "Shows that renting wins with flat prices and gives break-even growth rates."
+  ],
+  "6": [
+   1,
+   "Clearly recommends buying only under stated holding-period, lease, and cash-buffer conditions."
+  ]
+ },
+ "E": {
+  "1": [
+   1,
+   "Calculates the monthly payment as \u00a31,336.42."
+  ],
+  "2": [
+   1,
+   "Gives numerical buyer and renter net worth at years 5 and 7."
+  ],
+  "3": [
+   1,
+   "Includes returns on the renter's \u00a346,500 and monthly differences, with savings tax modeled."
+  ],
+  "4": [
+   1,
+   "Includes service charge and ground rent, upkeep, and selling costs."
+  ],
+  "5": [
+   1,
+   "Provides quantified break-even rates and multiple price-growth scenarios."
+  ],
+  "6": [
+   1,
+   "Clearly recommends renting for now and specifies the conditions that would change the recommendation to buying."
+  ]
+ },
+ "F": {
+  "1": [
+   1,
+   "States a monthly mortgage payment of about \u00a31,336."
+  ],
+  "2": [
+   1,
+   "Compares buyer equity and renter savings numerically at 5 and 7 years."
+  ],
+  "3": [
+   1,
+   "Keeps the renter's \u00a346,500 invested at 4% and explicitly discusses lost interest on the buyer's deposit."
+  ],
+  "4": [
+   1,
+   "Includes service charge and ground rent, upkeep, and selling costs."
+  ],
+  "5": [
+   1,
+   "Shows flat-price losses and a quantified 5-year and 7-year break-even."
+  ],
+  "6": [
+   1,
+   "Clearly leans toward buying under stated stay, affordability, paperwork, and price-growth assumptions."
+  ]
+ },
+ "G": {
+  "1": [
+   1,
+   "Calculates the monthly mortgage payment as \u00a31,336.44."
+  ],
+  "2": [
+   1,
+   "Provides numerical buy and rent net worth at months 60 and 84."
+  ],
+  "3": [
+   1,
+   "Starts renting with the same \u00a346,500 and compounds it with monthly cost differences, including taxed and ISA cases."
+  ],
+  "4": [
+   1,
+   "Includes service charge and ground rent, upkeep, and selling costs in the model."
+  ],
+  "5": [
+   1,
+   "Quantifies results over several price-growth rates and gives break-even growth."
+  ],
+  "6": [
+   1,
+   "Clearly recommends buying subject to clean lease checks and retaining a cash buffer."
+  ]
+ },
+ "H": {
+  "1": [
+   1,
+   "States a \u00a31,336 monthly mortgage payment, within the accepted range."
+  ],
+  "2": [
+   1,
+   "Shows numerical buy and rent wealth at both 5 and 7 years."
+  ],
+  "3": [
+   1,
+   "Explains that the renter's \u00a346,500 earns 4% and quantifies its growth plus monthly savings."
+  ],
+  "4": [
+   1,
+   "Includes service charge and ground rent, upkeep, and selling costs."
+  ],
+  "5": [
+   1,
+   "Shows flat-price outcomes and quantified break-even growth at both horizons."
+  ],
+  "6": [
+   1,
+   "Clearly recommends leaning toward buying at seven years under stated paperwork and cash-buffer conditions, while favoring renting for a likely five-year stay."
+  ]
+ }
+}

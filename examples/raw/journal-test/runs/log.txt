@@ -1,0 +1,16 @@
+2026-11-12 06:38:24 cv-felix-1: extraction rule = whole reply
+2026-11-12 06:38:51 cv-deeper-1: extraction rule = last fenced block
+2026-11-12 06:39:13 cv-felix-2: extraction rule = whole reply
+2026-11-12 06:39:34 cv-deeper-2: extraction rule = last fenced block
+2026-11-12 06:42:24 rent-deeper-1: extraction rule = last fenced block
+2026-11-12 06:42:39 rent-felix-1: extraction rule = whole reply
+2026-11-12 06:42:48 rent-deeper-2: extraction rule = last fenced block
+2026-11-12 06:44:48 rent-felix-2: extraction rule = last fenced block
+2026-11-12 06:44:53 complaint-felix-1: extraction rule = whole reply
+2026-11-12 06:44:59 complaint-deeper-1: extraction rule = last fenced block
+2026-11-12 06:45:08 complaint-felix-2: extraction rule = whole reply
+2026-11-12 06:46:09 complaint-deeper-2: extraction rule = last fenced block
+2026-11-12 06:48:08 downloads-deeper-2: extraction rule = last fenced block
+2026-11-12 06:48:50 downloads-deeper-1: extraction rule = last fenced block
+2026-11-12 06:51:26 downloads-felix-2: extraction rule = whole reply
+2026-11-12 06:56:00 downloads-felix-1: extraction rule = whole reply

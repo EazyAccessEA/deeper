@@ -1,0 +1,210 @@
+{
+ "A": {
+  "1": [
+   1,
+   "Names all four same-size pairs as probable duplicates and checks them by hash."
+  ],
+  "2": [
+   1,
+   "Says budget and budget (1) are different versions and to ask before deleting either."
+  ],
+  "3": [
+   1,
+   "Trashes the Docker, Figma and Zoom installers when the installed app is the same or newer."
+  ],
+  "4": [
+   1,
+   "Puts P60, passport and tenancy agreement into an encrypted vault or Documents."
+  ],
+  "5": [
+   1,
+   "Trashes through Finder with Put Back, requires a backup, and defaults to a dry run."
+  ],
+  "6": [
+   1,
+   "Checks the zip against the extracted folder and flags the .download file as possibly incomplete."
+  ]
+ },
+ "B": {
+  "1": [
+   1,
+   "Lists the four same-size pairs as candidate duplicates and applies a cmp check."
+  ],
+  "2": [
+   1,
+   "Says the budget pair has different sizes, so they are versions, and keeps both."
+  ],
+  "3": [
+   1,
+   "Trashes Docker and Figma installers if the installed version is the same or newer; Zoom is trashed after confirmation."
+  ],
+  "4": [
+   1,
+   "Moves P60, passport and tenancy into a chosen secure location."
+  ],
+  "5": [
+   1,
+   "Uses Finder trash, undo functions, and nothing runs until approved."
+  ],
+  "6": [
+   1,
+   "Examines the .download file for completeness and diffs the zip against the folder."
+  ]
+ },
+ "C": {
+  "1": [
+   1,
+   "Marks all four '(1)' copies as byte-identical candidates, to be trashed if the hash matches."
+  ],
+  "2": [
+   1,
+   "Treats budget as distinct versions and keeps both by default."
+  ],
+  "3": [
+   1,
+   "Proposes trashing the installers if the apps are installed."
+  ],
+  "4": [
+   1,
+   "Marks P60, passport and tenancy as sensitive and moves rather than deletes them, after asking where."
+  ],
+  "5": [
+   1,
+   "Trashes via Finder with Put Back, and verifies hashes before and after."
+  ],
+  "6": [
+   1,
+   "Flags the .download file as an incomplete download and plans a zip-versus-folder diff."
+  ]
+ },
+ "D": {
+  "1": [
+   1,
+   "Trashes the four '(1)' copies only if cmp shows they are identical."
+  ],
+  "2": [
+   1,
+   "Keeps both budget files because they are different versions."
+  ],
+  "3": [
+   1,
+   "Trashes the installers if the app is in /Applications."
+  ],
+  "4": [
+   1,
+   "Files passport, P60 and tenancy in Documents, with a security note about the passport and P60."
+  ],
+  "5": [
+   1,
+   "Dry run by default, plus Trash."
+  ],
+  "6": [
+   1,
+   "Flags the .download file as unfinished and compares the zip with the folder."
+  ]
+ },
+ "E": {
+  "1": [
+   1,
+   "Trashes the four '(1)' copies after a cmp check."
+  ],
+  "2": [
+   1,
+   "Keeps both budget files and renames them by date."
+  ],
+  "3": [
+   1,
+   "Trashes the installers if the app is installed."
+  ],
+  "4": [
+   1,
+   "Moves the passport and P60 into a sensitive folder and files the tenancy agreement."
+  ],
+  "5": [
+   1,
+   "Dry run by default and Trash via Finder."
+  ],
+  "6": [
+   1,
+   "Leaves the .download file for review and notes the zip beside the extracted folder."
+  ]
+ },
+ "F": {
+  "1": [
+   1,
+   "Trashes the four '(1)' copies only if cmp confirms they are identical."
+  ],
+  "2": [
+   1,
+   "Keeps both budget files as different versions."
+  ],
+  "3": [
+   1,
+   "Trashes installers if the app is installed."
+  ],
+  "4": [
+   1,
+   "Files the passport, tenancy and P60 and recommends encrypted storage."
+  ],
+  "5": [
+   1,
+   "Dry run by default and moves to ~/.Trash."
+  ],
+  "6": [
+   1,
+   "Flags the .download file as unfinished and notes the zip alongside the folder."
+  ]
+ },
+ "G": {
+  "1": [
+   1,
+   "Checks the four pairs with cmp and stages proven duplicates."
+  ],
+  "2": [
+   1,
+   "Treats budget (1) as a newer version, not a duplicate, and keeps both or reviews."
+  ],
+  "3": [
+   1,
+   "Stages installers once an app is confirmed as installed and launched."
+  ],
+  "4": [
+   1,
+   "Puts passport, P60 and tenancy into an encrypted vault with retention guidance."
+  ],
+  "5": [
+   1,
+   "Dry run, staging folder, undo script and a backup."
+  ],
+  "6": [
+   1,
+   "Flags the .download file as possibly newer and incomplete, and checks the zip against the folder."
+  ]
+ },
+ "H": {
+  "1": [
+   1,
+   "Trashes the four '(1)' copies only if cmp shows they are identical."
+  ],
+  "2": [
+   1,
+   "Keeps both budget files as different versions."
+  ],
+  "3": [
+   1,
+   "Says the Installers folder can be trashed once the apps are installed."
+  ],
+  "4": [
+   1,
+   "Files the passport, P60 and tenancy agreement and advises encryption for the passport."
+  ],
+  "5": [
+   1,
+   "Duplicates go to the Trash, with no overwriting and no rm."
+  ],
+  "6": [
+   1,
+   "Flags the .download file as unfinished and keeps the zip until the folder is verified."
+  ]
+ }
+}

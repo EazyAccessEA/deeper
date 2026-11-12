@@ -1,0 +1,210 @@
+{
+ "A": {
+  "1": [
+   1,
+   "It specifically acknowledges the nine-day delay, broken desk, and both missed callbacks."
+  ],
+  "2": [
+   1,
+   "It treats the missed callbacks as the company's failure and does not attribute them to the carrier."
+  ],
+  "3": [
+   1,
+   "It offers the customer a replacement instead of the approved \u00a3198.95 refund and confirms free collection."
+  ],
+  "4": [
+   1,
+   "The goodwill payment is limited to Priya's authorized maximum of \u00a325."
+  ],
+  "5": [
+   1,
+   "Priya commits to emailing collection-date choices by 4pm on Wednesday 11 November."
+  ],
+  "6": [
+   1,
+   "It recognizes that the photos were already received and does not request them again."
+  ]
+ },
+ "B": {
+  "1": [
+   1,
+   "It specifically acknowledges the late delivery, broken desk, and two unfulfilled callback promises."
+  ],
+  "2": [
+   1,
+   "It explicitly says the missed callbacks were entirely the company's fault."
+  ],
+  "3": [
+   1,
+   "It offers either the \u00a3198.95 refund or a replacement and confirms free collection."
+  ],
+  "4": [
+   1,
+   "It limits the goodwill payment to \u00a325."
+  ],
+  "5": [
+   0,
+   "Although Priya is named, the email provides no fixed time or date for her next action and instead asks Dana to propose one."
+  ],
+  "6": [
+   1,
+   "It thanks Dana for the photos and does not ask her to resend them."
+  ]
+ },
+ "C": {
+  "1": [
+   1,
+   "The email specifically apologizes for the late arrival, cracked leg, and both dated missed callbacks."
+  ],
+  "2": [
+   1,
+   "It describes the broken callback promises as the company's own handling failure."
+  ],
+  "3": [
+   0,
+   "The customer email gives only a refund and does not offer the policy choice of a replacement or refund."
+  ],
+  "4": [
+   1,
+   "The \u00a350 goodwill is expressly conditional on recorded manager approval before sending, with \u00a325 specified as the fallback."
+  ],
+  "5": [
+   0,
+   "The collection date and time are unresolved placeholders, so the email contains no concrete scheduled next step from Priya."
+  ],
+  "6": [
+   1,
+   "It explicitly says the photos are already held and that nothing further is needed."
+  ]
+ },
+ "D": {
+  "1": [
+   1,
+   "It specifically lists the delayed delivery, cracked leg, and both missed callbacks."
+  ],
+  "2": [
+   1,
+   "It says the company let Dana down and does not blame the carrier for the missed callbacks."
+  ],
+  "3": [
+   0,
+   "It provides a refund and free collection but does not offer Dana the choice of a replacement."
+  ],
+  "4": [
+   1,
+   "It grants only \u00a325 and makes any additional compensation subject to a manager's decision."
+  ],
+  "5": [
+   1,
+   "Priya commits to emailing by 3pm on Friday 13 November, despite the answer's incorrect scenario date."
+  ],
+  "6": [
+   1,
+   "It does not ask Dana to send photos or other already-supplied information."
+  ]
+ },
+ "E": {
+  "1": [
+   1,
+   "It specifically acknowledges the nine-day delay, damage, and missed callbacks on both 4 and 6 November."
+  ],
+  "2": [
+   1,
+   "It explicitly characterizes the missed callbacks as the company's own failure."
+  ],
+  "3": [
+   1,
+   "It offers a replacement or the full \u00a3198.95 refund and states that collection is free."
+  ],
+  "4": [
+   1,
+   "It grants \u00a325 and clearly says anything further must be decided by a manager."
+  ],
+  "5": [
+   1,
+   "Priya commits to calling between 10am and noon on Wednesday 11 November and gives a dated manager-update deadline."
+  ],
+  "6": [
+   1,
+   "It explicitly confirms the photos were received and that Dana need provide nothing more."
+  ]
+ },
+ "F": {
+  "1": [
+   1,
+   "The draft specifically acknowledges the late delivery, cracked leg, and both missed callbacks."
+  ],
+  "2": [
+   1,
+   "It says the company made and broke both callback promises without blaming the carrier for them."
+  ],
+  "3": [
+   1,
+   "It offers the full \u00a3198.95 refund or a replacement and states that collection is free."
+  ],
+  "4": [
+   1,
+   "It presents \u00a350 only as a suggestion for a manager and leaves the actual goodwill amount unpromised pending confirmation."
+  ],
+  "5": [
+   0,
+   "Priya's promised follow-up date and time remain bracketed placeholders rather than a concrete commitment."
+  ],
+  "6": [
+   1,
+   "It does not ask Dana for photos, although it unnecessarily makes acknowledgment of them conditional on an internal check."
+  ]
+ },
+ "G": {
+  "1": [
+   1,
+   "It specifically identifies the late delivery, cracked leg, and the two missed callbacks."
+  ],
+  "2": [
+   1,
+   "It presents the missed callbacks as part of how the company handled the case badly, without blaming the carrier for them."
+  ],
+  "3": [
+   1,
+   "It honors the \u00a3198.95 refund, offers a replacement alternative, and confirms free collection."
+  ],
+  "4": [
+   1,
+   "It issues only \u00a325 immediately and makes any further compensation subject to manager review."
+  ],
+  "5": [
+   1,
+   "Priya commits to emailing the manager's decision by 12pm on Thursday 12 November."
+  ],
+  "6": [
+   1,
+   "It relies on the photos already on file and does not ask Dana to resend them."
+  ]
+ },
+ "H": {
+  "1": [
+   1,
+   "It specifically acknowledges the nine-day delay, broken desk, and both missed callbacks."
+  ],
+  "2": [
+   1,
+   "It explicitly calls the missed callbacks a failure on the company's side."
+  ],
+  "3": [
+   1,
+   "It gives Dana the choice between a replacement and the full \u00a3198.95 refund and confirms free collection."
+  ],
+  "4": [
+   1,
+   "It grants \u00a325 and refers any possibility of more compensation to a manager without promising it."
+  ],
+  "5": [
+   1,
+   "Priya commits to emailing an outcome by 5pm on Thursday 12 November and offers a specific Wednesday call window."
+  ],
+  "6": [
+   1,
+   "It says the order history and photos have been reviewed and does not request them again."
+  ]
+ }
+}

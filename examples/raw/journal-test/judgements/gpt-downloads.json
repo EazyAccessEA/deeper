@@ -1,0 +1,210 @@
+{
+ "A": {
+  "1": [
+   1,
+   "Identifies all four same-size \u201c(1)\u201d pairs as likely duplicates pending hash confirmation."
+  ],
+  "2": [
+   1,
+   "Keeps both budget files because their sizes and dates differ."
+  ],
+  "3": [
+   1,
+   "Says Zoom, Docker, and Figma installers can be trashed if their apps are installed."
+  ],
+  "4": [
+   1,
+   "Names P60, passport scan, and tenancy agreement as sensitive documents to move somewhere safe."
+  ],
+  "5": [
+   1,
+   "Uses Finder Trash and verification, so removals remain reversible."
+  ],
+  "6": [
+   1,
+   "Flags the .download item as incomplete and also checks whether the holiday ZIP duplicates the extracted folder."
+  ]
+ },
+ "B": {
+  "1": [
+   1,
+   "Identifies and byte-compares all four likely duplicate \u201c(1)\u201d copies."
+  ],
+  "2": [
+   1,
+   "Keeps both differently sized budget files and renames them as versions."
+  ],
+  "3": [
+   1,
+   "Trashes installers only when the corresponding app is installed."
+  ],
+  "4": [
+   1,
+   "Files the P60, passport scan, and tenancy agreement into appropriate document folders."
+  ],
+  "5": [
+   1,
+   "Defaults to a dry run and sends removals to Finder Trash."
+  ],
+  "6": [
+   1,
+   "Recognizes the unfinished tenancy download and the possible redundancy of the holiday ZIP."
+  ]
+ },
+ "C": {
+  "1": [
+   1,
+   "Identifies all four likely duplicate \u201c(1)\u201d files and checks them with cmp."
+  ],
+  "2": [
+   1,
+   "Explicitly keeps both budget files because their sizes and dates differ."
+  ],
+  "3": [
+   1,
+   "Says the installer folder can be trashed once Docker, Figma, and Zoom are installed."
+  ],
+  "4": [
+   1,
+   "Moves the P60, passport scan, and tenancy agreement into document folders rather than deleting them."
+  ],
+  "5": [
+   1,
+   "Moves confirmed duplicates to the Trash with overwrite protection."
+  ],
+  "6": [
+   1,
+   "Identifies the .download file as unfinished and notes that the holiday ZIP may duplicate the extracted folder."
+  ]
+ },
+ "D": {
+  "1": [
+   1,
+   "Lists all four same-size \u201c(1)\u201d pairs as candidate duplicates requiring comparison."
+  ],
+  "2": [
+   1,
+   "Explicitly treats the differently sized budget files as versions and keeps both."
+  ],
+  "3": [
+   1,
+   "Allows installer removal when the installed app is the same or newer."
+  ],
+  "4": [
+   1,
+   "Names the P60, passport scan, and tenancy agreement as sensitive files to retain securely."
+  ],
+  "5": [
+   1,
+   "Uses Finder Trash and provides undo and verification safeguards."
+  ],
+  "6": [
+   1,
+   "Investigates whether the tenancy download is incomplete and whether the holiday ZIP is redundant."
+  ]
+ },
+ "E": {
+  "1": [
+   1,
+   "Identifies all four likely duplicate \u201c(1)\u201d copies and verifies them with cmp."
+  ],
+  "2": [
+   1,
+   "Keeps both budget files because they differ in size and date."
+  ],
+  "3": [
+   1,
+   "Says all three installers can be trashed when their matching apps are installed."
+  ],
+  "4": [
+   1,
+   "Keeps and files the P60, passport scan, and tenancy agreement."
+  ],
+  "5": [
+   1,
+   "Defaults to a dry run and moves removals to the Trash."
+  ],
+  "6": [
+   1,
+   "Flags the tenancy file as an interrupted download and notes the extracted holiday folder."
+  ]
+ },
+ "F": {
+  "1": [
+   1,
+   "Identifies all four same-size \u201c(1)\u201d pairs and enforces hash equality before removal."
+  ],
+  "2": [
+   1,
+   "Treats both budget files as distinct versions and requires checking before either is deleted."
+  ],
+  "3": [
+   1,
+   "Allows installer files to be trashed after confirming the installed apps and versions."
+  ],
+  "4": [
+   1,
+   "Keeps the P60, passport scan, and tenancy agreement in secure or organized locations."
+  ],
+  "5": [
+   1,
+   "Uses Finder Trash, backup gates, logs, and independent verification before permanent deletion."
+  ],
+  "6": [
+   1,
+   "Investigates the possibly incomplete tenancy download and verifies whether the holiday ZIP duplicates the folder."
+  ]
+ },
+ "G": {
+  "1": [
+   1,
+   "Identifies all four likely duplicate \u201c(1)\u201d copies and checks byte identity."
+  ],
+  "2": [
+   1,
+   "Explicitly keeps both differently sized budget versions."
+  ],
+  "3": [
+   1,
+   "Trashes installers when the corresponding application is installed."
+  ],
+  "4": [
+   1,
+   "Keeps and organizes the P60, passport scan, and tenancy agreement."
+  ],
+  "5": [
+   1,
+   "Defaults to a dry run and sends removals to the Trash."
+  ],
+  "6": [
+   1,
+   "Recognizes the unfinished tenancy download and tests whether the holiday ZIP is redundant."
+  ]
+ },
+ "H": {
+  "1": [
+   1,
+   "Identifies all four likely duplicate \u201c(1)\u201d copies and stages them only after cmp confirmation."
+  ],
+  "2": [
+   1,
+   "Treats the budget pair as different versions and defaults to review rather than deletion."
+  ],
+  "3": [
+   1,
+   "Stages installers for later trashing only after the corresponding apps are confirmed installed and working."
+  ],
+  "4": [
+   1,
+   "Moves the P60, passport scan, and tenancy agreement into an encrypted vault."
+  ],
+  "5": [
+   1,
+   "Uses a holding folder, backup copy, dry run, move log, and undo script before anything is deleted."
+  ],
+  "6": [
+   1,
+   "Flags the tenancy download as possibly incomplete and checks the holiday ZIP against the extracted folder."
+  ]
+ }
+}

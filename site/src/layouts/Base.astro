@@ -23,7 +23,7 @@ const {
 } = Astro.props;
 const path = Astro.url.pathname;
 // "Get started" rather than "Start": Lighthouse flags a bare "Start" link as non-descriptive.
-const links = [["/start/", "Get started"], ["/docs/", "Docs"], ["/patterns/", "Patterns"], ["/research/", "Research"]];
+const links = [["/start/", "Get started"], ["/journal/", "Journal"], ["/docs/", "Docs"], ["/patterns/", "Patterns"], ["/research/", "Research"]];
 // deeper's own accounts. Add one only once it's open, its profile links back to deeper.tools/?ref=<platform>,
 // and `curl` on the URL returns 200. They show in the footer (rel="me") and as sameAs in the structured data.
 const socials: [string, string][] = [["https://bsky.app/profile/deeper.tools", "Bluesky"], ["https://www.youtube.com/@deeper-tools", "YouTube"], ["https://x.com/deepertools", "X (Twitter)"], ["https://www.tiktok.com/@deepertools", "TikTok"], ["https://www.instagram.com/deeper.tools/", "Instagram"], ["https://www.facebook.com/profile.php?id=61596409051860", "Facebook"]];

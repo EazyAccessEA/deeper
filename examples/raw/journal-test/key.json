@@ -1,0 +1,87 @@
+{
+ "seed": 921202723,
+ "claude": {
+  "cv": {
+   "A": "cv-plain-2",
+   "B": "cv-felix-2",
+   "C": "cv-deeper-1",
+   "D": "cv-plain-1",
+   "E": "cv-deeper-2",
+   "F": "cv-persona-1",
+   "G": "cv-felix-1",
+   "H": "cv-persona-2"
+  },
+  "rent": {
+   "A": "rent-felix-2",
+   "B": "rent-plain-1",
+   "C": "rent-persona-1",
+   "D": "rent-deeper-1",
+   "E": "rent-deeper-2",
+   "F": "rent-plain-2",
+   "G": "rent-felix-1",
+   "H": "rent-persona-2"
+  },
+  "complaint": {
+   "A": "complaint-deeper-1",
+   "B": "complaint-persona-2",
+   "C": "complaint-plain-1",
+   "D": "complaint-felix-2",
+   "E": "complaint-felix-1",
+   "F": "complaint-plain-2",
+   "G": "complaint-persona-1",
+   "H": "complaint-deeper-2"
+  },
+  "downloads": {
+   "A": "downloads-felix-1",
+   "B": "downloads-deeper-1",
+   "C": "downloads-deeper-2",
+   "D": "downloads-persona-1",
+   "E": "downloads-plain-2",
+   "F": "downloads-persona-2",
+   "G": "downloads-felix-2",
+   "H": "downloads-plain-1"
+  }
+ },
+ "gpt": {
+  "cv": {
+   "A": "cv-plain-2",
+   "B": "cv-deeper-1",
+   "C": "cv-felix-1",
+   "D": "cv-felix-2",
+   "E": "cv-persona-2",
+   "F": "cv-plain-1",
+   "G": "cv-deeper-2",
+   "H": "cv-persona-1"
+  },
+  "rent": {
+   "A": "rent-felix-1",
+   "B": "rent-felix-2",
+   "C": "rent-persona-2",
+   "D": "rent-persona-1",
+   "E": "rent-deeper-2",
+   "F": "rent-plain-2",
+   "G": "rent-deeper-1",
+   "H": "rent-plain-1"
+  },
+  "complaint": {
+   "A": "complaint-persona-1",
+   "B": "complaint-plain-2",
+   "C": "complaint-felix-2",
+   "D": "complaint-deeper-2",
+   "E": "complaint-persona-2",
+   "F": "complaint-deeper-1",
+   "G": "complaint-felix-1",
+   "H": "complaint-plain-1"
+  },
+  "downloads": {
+   "A": "downloads-deeper-2",
+   "B": "downloads-plain-2",
+   "C": "downloads-plain-1",
+   "D": "downloads-deeper-1",
+   "E": "downloads-persona-2",
+   "F": "downloads-felix-1",
+   "G": "downloads-persona-1",
+   "H": "downloads-felix-2"
+  }
+ }
+}

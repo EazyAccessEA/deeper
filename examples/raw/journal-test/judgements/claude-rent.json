@@ -1,0 +1,210 @@
+{
+ "A": {
+  "1": [
+   1,
+   "Gives \u00a31,336.43/mo."
+  ],
+  "2": [
+   1,
+   "Compares buy and rent net worth at years 5 and 7 with figures for both."
+  ],
+  "3": [
+   1,
+   "Renter's pot compounds the \u00a346,500 at 4%, which counts the opportunity cost."
+  ],
+  "4": [
+   1,
+   "Buying side includes service charge, upkeep and 1.5% selling costs."
+  ],
+  "5": [
+   1,
+   "Gives break-evens of about 1.25% at year 5 and 0.9% at year 7, plus a 0% growth row."
+  ],
+  "6": [
+   1,
+   "Gives a conditional buy-or-rent recommendation tied to its assumptions, with a specific step (wait ~12 months with a LISA)."
+  ]
+ },
+ "B": {
+  "1": [
+   1,
+   "Gives \u00a31,336/mo."
+  ],
+  "2": [
+   1,
+   "Buy and rent wealth tables at 5 and 7 years."
+  ],
+  "3": [
+   1,
+   "Renter's pot is \u00a346.5k growing at 4%."
+  ],
+  "4": [
+   1,
+   "Includes service charge, upkeep and selling costs."
+  ],
+  "5": [
+   1,
+   "Gives break-evens of about 1.2% and 0.8%, plus rows for 0% and -1% growth."
+  ],
+  "6": [
+   1,
+   "Leans towards buying at 7 years and calls 5 years a coin flip, tied to the stated assumptions."
+  ]
+ },
+ "C": {
+  "1": [
+   1,
+   "Gives \u00a31,336/mo."
+  ],
+  "2": [
+   1,
+   "Buyer cash versus renter pot at 5 and 7 years, with a cost cross-check."
+  ],
+  "3": [
+   1,
+   "Renter's pot earns 4%, and the cross-check nets out interest earned."
+  ],
+  "4": [
+   1,
+   "Includes service charge, upkeep and selling costs."
+  ],
+  "5": [
+   1,
+   "Sensitivity table with break-evens of about 1.2% and 0.8%."
+  ],
+  "6": [
+   1,
+   "Says buying is reasonable if the stated conditions hold, with a clear rent-instead condition."
+  ]
+ },
+ "D": {
+  "1": [
+   1,
+   "Gives \u00a31,336.44/mo."
+  ],
+  "2": [
+   1,
+   "Buy and rent net worth at months 60 and 84."
+  ],
+  "3": [
+   1,
+   "Renter's pot starts at \u00a346,500 and earns 4%, taxed and ISA cases."
+  ],
+  "4": [
+   1,
+   "Includes service charge, upkeep and 1.5% selling costs."
+  ],
+  "5": [
+   1,
+   "Growth-by-rate grid with break-evens of about 1.1% and 0.7%."
+  ],
+  "6": [
+   1,
+   "Headline recommendation is to buy, conditional on lease checks and a cash buffer."
+  ]
+ },
+ "E": {
+  "1": [
+   1,
+   "Gives \u00a31,336.42/mo."
+  ],
+  "2": [
+   1,
+   "Buy and rent net worth at years 5 and 7, with a year-1 line-by-line check."
+  ],
+  "3": [
+   1,
+   "Renter's pot earns 4% less tax on the \u00a346.5k."
+  ],
+  "4": [
+   1,
+   "Includes service charge, upkeep and selling costs."
+  ],
+  "5": [
+   1,
+   "Break-evens of about 1.1% and 0.8%, with a flip shown at 1% growth."
+  ],
+  "6": [
+   1,
+   "Clear recommendation to rent for now, with conditions that would change it to buy."
+  ]
+ },
+ "F": {
+  "1": [
+   1,
+   "Gives about \u00a31,336/mo."
+  ],
+  "2": [
+   1,
+   "Buyer equity versus renter's pot at years 5 and 7."
+  ],
+  "3": [
+   1,
+   "Renter's pot earns 4%, and the lost interest on the deposit is stated."
+  ],
+  "4": [
+   1,
+   "Includes service charge, upkeep and selling costs."
+  ],
+  "5": [
+   1,
+   "Break-even of about 1.2% at 5 years and 0.9% at 7, with a growth table."
+  ],
+  "6": [
+   1,
+   "Leans towards buying, with rent-instead conditions."
+  ]
+ },
+ "G": {
+  "1": [
+   1,
+   "Gives \u00a31,336/mo."
+  ],
+  "2": [
+   1,
+   "Year-by-year pots plus net worth at years 5 and 7."
+  ],
+  "3": [
+   1,
+   "Renter's pot compounds the \u00a346.5k at 4%."
+  ],
+  "4": [
+   1,
+   "Includes service charge, upkeep and selling costs."
+  ],
+  "5": [
+   1,
+   "Break-even of about 1.2% and 0.9%, plus a downside table for flat and falling prices."
+  ],
+  "6": [
+   1,
+   "Clear view: buy if the checks are clean, using a 10% deposit with a cash buffer."
+  ]
+ },
+ "H": {
+  "1": [
+   1,
+   "Gives \u00a31,336/mo."
+  ],
+  "2": [
+   1,
+   "Buyer wealth versus renter pot at 5 and 7 years."
+  ],
+  "3": [
+   1,
+   "Renter's savings pot earns 4% on the \u00a346,500."
+  ],
+  "4": [
+   1,
+   "Includes service charge, upkeep and selling costs."
+  ],
+  "5": [
+   1,
+   "Sensitivity table with break-evens of about 1.25% and 0.9%."
+  ],
+  "6": [
+   1,
+   "Says buying is the better financial bet if staying 5+ years, with ordered next steps."
+  ]
+ }
+}

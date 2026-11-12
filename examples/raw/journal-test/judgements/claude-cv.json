@@ -1,0 +1,210 @@
+{
+ "A": {
+  "1": [
+   1,
+   "Walks through all five essentials by name and says which are met or weak."
+  ],
+  "2": [
+   1,
+   "Says the \u00a320k+ budget is not on the CV and names it the biggest weakness."
+  ],
+  "3": [
+   1,
+   "Flags the Mar 2022 to Feb 2023 gap of about 11 months."
+  ],
+  "4": [
+   1,
+   "Rewrites the profile and a paid social bullet using CV facts, with bracketed placeholders for numbers."
+  ],
+  "5": [
+   1,
+   "Flags 'Recieved' as a typo."
+  ],
+  "6": [
+   1,
+   "Ends with an explicit priority order list."
+  ]
+ },
+ "B": {
+  "1": [
+   1,
+   "Evidence matrix grades all five essentials by name."
+  ],
+  "2": [
+   1,
+   "Calls the \u00a320k+/month budget missing and the knockout criterion."
+  ],
+  "3": [
+   1,
+   "Notes the 11-month gap in the red-team list and in the rebuild."
+  ],
+  "4": [
+   1,
+   "Full rebuild with [NEEDS NUMBER] placeholders, though it renames the award and adds some unsupported ownership claims."
+  ],
+  "5": [
+   1,
+   "Lists 'Recieved' as a typo in the red-team section."
+  ],
+  "6": [
+   1,
+   "Names E2 and E3 as the knockouts and marks the budget questions as most important."
+  ]
+ },
+ "C": {
+  "1": [
+   1,
+   "Screening matrix covers E1 to E5 with status for each."
+  ],
+  "2": [
+   1,
+   "States that E2 has no budget figure and is the biggest risk."
+  ],
+  "3": [
+   1,
+   "Identifies the gap and proposes a line to explain it."
+  ],
+  "4": [
+   1,
+   "Gives multiple rewrites using CV facts and bracketed placeholders."
+  ],
+  "5": [
+   1,
+   "Spots 'Recieved' and corrects it."
+  ],
+  "6": [
+   1,
+   "Fixes are presented in priority order."
+  ]
+ },
+ "D": {
+  "1": [
+   1,
+   "Mapping table covers all five essentials."
+  ],
+  "2": [
+   1,
+   "Names the budget size as the biggest gap."
+  ],
+  "3": [
+   1,
+   "Mentions the 11-month gap under smaller points."
+  ],
+  "4": [
+   1,
+   "Rewrites the profile and the Fernbrook section with placeholders."
+  ],
+  "5": [
+   1,
+   "Flags the 'Recieved' typo."
+  ],
+  "6": [
+   1,
+   "Gives numbered priority fixes, then smaller points."
+  ]
+ },
+ "E": {
+  "1": [
+   1,
+   "Matrix rates all five essentials against exact CV lines."
+  ],
+  "2": [
+   1,
+   "Says there is no spend figure, so E2 is a likely knockout."
+  ],
+  "3": [
+   1,
+   "Identifies the 11-month gap as a rejection risk."
+  ],
+  "4": [
+   0,
+   "Gives no rewritten bullets or profile; it only asks for evidence."
+  ],
+  "5": [
+   1,
+   "Flags 'Recieved' as an error."
+  ],
+  "6": [
+   1,
+   "Ranks feedback by impact on shortlisting."
+  ]
+ },
+ "F": {
+  "1": [
+   1,
+   "Scorecard covers all five essentials."
+  ],
+  "2": [
+   1,
+   "Names the missing \u00a320k+ budget as the biggest gap."
+  ],
+  "3": [
+   1,
+   "Flags the March 2022 to February 2023 gap."
+  ],
+  "4": [
+   1,
+   "Rewrites the profile and several bullets with [X] placeholders."
+  ],
+  "5": [
+   1,
+   "Flags the 'Recieved' typo."
+  ],
+  "6": [
+   1,
+   "Gives a top 5 fixes list in priority order."
+  ]
+ },
+ "G": {
+  "1": [
+   1,
+   "Matrix covers all five essentials."
+  ],
+  "2": [
+   1,
+   "Marks E2 as missing: no budget figure and the likely reason to be screened out."
+  ],
+  "3": [
+   1,
+   "Lists the unexplained 11-month gap as a red flag and leaves a line for it."
+  ],
+  "4": [
+   0,
+   "The rewrite assumes GA4 use and adds unsupported claims such as building flows and recruiting the intern."
+  ],
+  "5": [
+   1,
+   "Lists the 'Recieved' typo among the red flags."
+  ],
+  "6": [
+   1,
+   "Marks E2 as the most likely reason to be screened out, though the rest of the red flags are not ranked."
+  ]
+ },
+ "H": {
+  "1": [
+   1,
+   "Scorecard covers all five essentials."
+  ],
+  "2": [
+   1,
+   "Calls the missing \u00a320k+ budget the critical gap."
+  ],
+  "3": [
+   1,
+   "Mentions the Mar 2022 to Feb 2023 gap under secondary improvements."
+  ],
+  "4": [
+   1,
+   "Rewrites the profile and the Fernbrook section with placeholders."
+  ],
+  "5": [
+   1,
+   "Flags 'Recieved' as a typo."
+  ],
+  "6": [
+   1,
+   "Gives priority fixes in order, then secondary improvements."
+  ]
+ }
+}

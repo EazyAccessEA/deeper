@@ -8,6 +8,9 @@ export const GET: APIRoute = ({ site }) => {
     .map((f) => f.replace("./", "").replace(".astro", ""))
     .filter((name) => !SKIP.has(name))
     .map((name) => new URL(name === "index" ? "/" : `/${name}/`, site).href)
+    // Journal pages live in pages/journal/ (one dynamic route), so list them from their Markdown files.
+    .concat(new URL("/journal/", site).href)
+    .concat(Object.keys(import.meta.glob("../content/journal/*.md")).map((f) => new URL(`/journal/${f.split("/").pop()!.replace(".md", "")}/`, site).href))
     .sort();
   const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages
     .map((u) => `  <url><loc>${u}</loc></url>`)

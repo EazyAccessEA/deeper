@@ -1,0 +1,10 @@
+Frozen 2026-11-12 06:36:24 UTC, before the first test call. SHA-256:
+4d49bcc573ae279da853a7457a54b72a0f08c0f4511d8dbeef4095f05ac0400d  README.md
+7f2d0749c112d4dfb6d3e85bb170a08009ce55eeccc2a086689a6605b8af6438  run.py
+bddcd3d59e5c8d6a28452429ac7d99f05dfd5301e013bf4be062ac0db57ea13a  score.py
+7da5e685937b0da65d027fbc7d424141053e3e019180fd484b296e7375f45f78  reference_rent.py
+b654c133b33de0f9f1bb619057e98b686581822c56efbe609f362c74fdade1a7  fixtures/complaint.md
+b51003396d8f0c903aaaffe85ea802e07ae7aa96993b5362a69b38047d507ebe  fixtures/cv.md
+e7332a0b5e6e55972c97d0ba87a6882ee6ab2a8e6b20d77700d8f90516741dcb  fixtures/downloads.md
+82458ef97f681dbf577d5def5c0313b004c1c576bbdfd2adb8b997060224fed1  fixtures/rent.md
+f50db9267156fe1152cf99b13ae169d9e22b34bfee3a7c9bae48be19a231e4bf  ../../../skills/deeper/SKILL.md

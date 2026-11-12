@@ -1,0 +1,120 @@
+---
+// One page per Markdown file in src/content/journal/. Design: Paper, "deeper.tools — elevate", page "Journal".
+import Base from "../../layouts/Base.astro";
+
+export function getStaticPaths() {
+  const files = import.meta.glob("../../content/journal/*.md", { eager: true });
+  return Object.entries(files).map(([path, mod]: [string, any]) => ({
+    params: { slug: path.split("/").pop()!.replace(".md", "") },
+    props: { mod },
+  }));
+}
+
+const { mod } = Astro.props as { mod: any };
+const { title, description, date, minutes, sources = [] } = mod.frontmatter;
+const { Content } = mod;
+const nice = new Date(date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const article = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  datePublished: date,
+  dateModified: date,
+  url,
+  mainEntityOfPage: url,
+  image: new URL("/og.png", Astro.site).href,
+  author: { "@type": "Organization", name: "Eazy Access Ltd", url: "https://deeper.tools/" },
+  publisher: { "@type": "Organization", name: "Eazy Access Ltd", url: "https://deeper.tools/" },
+};
+---
+<Base title={`${title} | deeper`} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(article)} />
+  <div class="band-red jband">
+    <header class="wrap jtitle">
+      <p class="meta"><a href="/journal/">Journal</a> · <time datetime={date}>{nice}</time> · {minutes} min read</p>
+      <h1>{title}</h1>
+      <p class="stand">{description}</p>
+      <p class="disclaimer">Felix Rieseberg hasn't seen or endorsed deeper. We're not affiliated with him or Anthropic. deeper adapts the four questions from his post <a href="https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/">How to be more ambitious</a>.</p>
+    </header>
+  </div>
+  <div class="wrap jbody">
+    <aside class="margin" aria-label="About this article">
+      <p class="label">Evidence</p>
+      <p>Every figure comes from files in <a href="https://github.com/EazyAccessEA/deeper/tree/main/examples/raw">examples/raw</a>, recomputed by script.</p>
+      <p class="label">Sources</p>
+      <p><a href="#sources">{sources.length}, listed at the end</a></p>
+    </aside>
+    <article class="prose jprose">
+      <Content />
+      <section id="sources" class="sources" aria-label="Sources">
+        <p class="label">Sources</p>
+        <ol>{sources.map((s: { text: string; url: string }) => <li><a href={s.url}>{s.text}</a></li>)}</ol>
+      </section>
+    </article>
+  </div>
+</Base>
+
+<style>
+  .jband { padding: clamp(2.5rem, 6vw, 6rem) 0 clamp(2.5rem, 5vw, 4.5rem); }
+  .jtitle { display: flex; flex-direction: column; gap: 1.5rem; }
+  .jtitle > * { max-width: 45rem; }
+  .meta, .label { font-family: var(--mono); font-size: 0.875rem; line-height: 1.25rem; letter-spacing: 0.04em; text-transform: uppercase; }
+  .meta a { text-decoration: none; }
+  .meta a:hover { text-decoration: underline; }
+  .jtitle h1 { font-size: clamp(3.3125rem, 5.8vw, 5.1875rem); line-height: 0.96; max-width: 65rem; }
+  .stand { font-size: 1.3125rem; line-height: 2rem; }
+  .disclaimer { font-size: 0.875rem; line-height: 1.375rem; padding-top: 1rem; border-top: 1px solid rgb(255 255 255 / 0.5); }
+  .jbody { display: flex; gap: 4rem; padding-top: clamp(2.5rem, 6vw, 6rem); padding-bottom: var(--band); }
+  .margin { width: 15rem; flex-shrink: 0; font-size: 0.875rem; line-height: 1.375rem; padding-top: 0.375rem; }
+  .margin .label { color: var(--grey); margin-top: 1.5rem; }
+  .margin .label:first-child { margin-top: 0; }
+  .margin p + p:not(.label) { margin-top: 0.25rem; }
+  .jprose { max-width: 38.25rem; min-width: 0; }
+  .jprose > :global(*) { max-width: none; }
+  .label { color: var(--grey); }
+  .sources { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid currentColor; }
+  .sources ol { margin: 0.75rem 0 0; padding-left: 1.5rem; font-size: 0.875rem; line-height: 1.375rem; }
+  .sources li::marker { color: var(--red-text); font-family: var(--mono); }
+  .sources li + li { margin-top: 0.75rem; }
+  .jprose :global(h2) { font-size: clamp(2.125rem, 3vw, 2.625rem); line-height: 1; }
+  .jprose :global(figure.run) { margin: 1.5rem 0 0; padding: 1.5rem; background: var(--panel); border-radius: 4px; }
+  .jprose :global(figure.run figcaption) { font-family: var(--mono); font-size: 0.875rem; line-height: 1.25rem; color: var(--grey); }
+  .jprose :global(figure.run blockquote) { margin: 0.75rem 0 0; }
+  .jprose :global(figure.run p.note) { margin-top: 0.75rem; font-size: 0.875rem; line-height: 1.375rem; color: var(--grey); }
+  .jprose :global(.pull) { margin: 2rem 0 0; padding: 1.5rem 0 0; border-top: 3px solid var(--red); }
+  .jprose :global(.pull p) { font-weight: 800; font-stretch: 75%; font-size: clamp(2.125rem, 3vw, 2.625rem); line-height: 1.05; letter-spacing: -0.02em; text-wrap: balance; }
+  .jprose :global(.pull cite) { display: block; margin-top: 0.75rem; font-style: normal; font-size: 0.875rem; color: var(--grey); }
+  /* The border only shows in dark mode, where the black box would otherwise sit unseen on the dark ground. */
+  .jprose :global(aside.limits) { margin-top: 2rem; padding: 2rem; background: var(--black); color: var(--white); border: 1px solid var(--rule); }
+  @media (prefers-color-scheme: light) { .jprose :global(aside.limits) { border-color: var(--black); } }
+  .jprose :global(aside.limits .label) { color: var(--on-black); }
+  .jprose :global(aside.limits p + p) { margin-top: 0.75rem; }
+  .jprose :global(.scores) { margin-top: 1.5rem; border-top: 1px solid currentColor; }
+  .jprose :global(.scores th), .jprose :global(.scores td) { padding: 0.75rem 0; text-align: right; font-weight: 400; }
+  .jprose :global(.scores th:first-child), .jprose :global(.scores td:first-child) { text-align: left; }
+  .jprose :global(.scores thead th) { font-size: 0.875rem; color: var(--grey); border-bottom: 1px solid var(--rule); }
+  .jprose :global(.scores td) { font-family: var(--mono); border-bottom: 1px solid var(--rule); }
+  .jprose :global(.scores td:first-child) { font-family: var(--sans); }
+  .jprose :global(.scores tr.mark td) { font-weight: 700; border-bottom-color: currentColor; }
+  .jprose :global(.scores tr.mark td:first-child) { box-shadow: inset 4px 0 var(--red); padding-left: 0.75rem; }
+  .jprose :global(.scores caption) { caption-side: bottom; text-align: left; padding-top: 0.75rem; font-size: 0.875rem; line-height: 1.375rem; color: var(--grey); }
+  @media (max-width: 899px) {
+    .jbody { flex-direction: column; gap: 1.5rem; }
+    .margin { width: auto; }
+    .margin .label { display: inline; margin: 0; }
+    .margin .label:not(:first-child) { display: none; }
+    .margin p:nth-child(4) { display: none; }
+  }
+  /* Phone: each version becomes a row with its figures beneath, labelled from the header (data-label). */
+  @media (max-width: 599px) {
+    .jprose :global(.scores thead) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    .jprose :global(.scores tr) { display: grid; grid-template-columns: repeat(4, 1fr); padding: 0.75rem 0 0.75rem 1rem; border-bottom: 1px solid var(--rule); }
+    .jprose :global(.scores td) { border: 0; padding: 0; text-align: left; }
+    .jprose :global(.scores td:first-child) { grid-column: 1 / -1; margin-bottom: 0.5rem; }
+    .jprose :global(.scores td:not(:first-child)::before) { content: attr(data-label); display: block; font-family: var(--sans); font-size: 0.875rem; color: var(--grey); font-weight: 400; }
+    .jprose :global(.scores tr.mark) { box-shadow: inset 4px 0 var(--red); }
+    .jprose :global(.scores tr.mark td:first-child) { box-shadow: none; padding-left: 0; }
+  }
+</style>

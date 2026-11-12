@@ -1,0 +1,210 @@
+{
+ "A": {
+  "1": [
+   1,
+   "Names the late delivery, cracked leg and both missed callbacks."
+  ],
+  "2": [
+   1,
+   "Says 'we said... and nobody did' and 'broke it again', with no carrier blame."
+  ],
+  "3": [
+   1,
+   "Refunds \u00a3198.95, offers a replacement instead, and says collection is free."
+  ],
+  "4": [
+   0,
+   "The goodwill amount is a placeholder, with \u00a350 suggested separately, and the email never says more than \u00a325 needs a manager."
+  ],
+  "5": [
+   0,
+   "Priya's call date and time and the collection slot are all bracketed placeholders, so no concrete commitment is made."
+  ],
+  "6": [
+   1,
+   "Only thanks her for the photos and asks for nothing already supplied."
+  ]
+ },
+ "B": {
+  "1": [
+   1,
+   "Covers the late and damaged desk and both missed callbacks."
+  ],
+  "2": [
+   1,
+   "Calls the missed callbacks 'entirely ours'."
+  ],
+  "3": [
+   1,
+   "Refunds \u00a3198.95, offers a replacement, and says collection is free."
+  ],
+  "4": [
+   1,
+   "Gives \u00a325 and says a manager must approve anything more."
+  ],
+  "5": [
+   1,
+   "Priya will call Wed 11 Nov 10am\u201312pm and give a manager decision by 5pm Thursday."
+  ],
+  "6": [
+   1,
+   "Says explicitly that no photos are needed."
+  ]
+ },
+ "C": {
+  "1": [
+   1,
+   "Mentions the late delivery, broken desk and the twice-promised callback."
+  ],
+  "2": [
+   1,
+   "Calls the callbacks a failure on our side; the carrier is blamed only for the delay."
+  ],
+  "3": [
+   1,
+   "Refunds \u00a3198.95, offers a replacement, and says collection is free."
+  ],
+  "4": [
+   1,
+   "Gives \u00a325 and refers anything more to a manager without promising it."
+  ],
+  "5": [
+   1,
+   "Offers a Priya call Wed 11 Nov 10\u201311am and a manager update by Thursday 5pm."
+  ],
+  "6": [
+   1,
+   "Does not ask for photos."
+  ]
+ },
+ "D": {
+  "1": [
+   1,
+   "Acknowledges the late delivery, cracked leg and both missed callbacks."
+  ],
+  "2": [
+   1,
+   "Apologises for the unmade callbacks with no carrier blame."
+  ],
+  "3": [
+   0,
+   "Offers a refund and free collection but never offers a replacement or says she can choose."
+  ],
+  "4": [
+   0,
+   "The email states a \u00a350 payment as approved, which is above the agent limit and depends on manager sign-off."
+  ],
+  "5": [
+   1,
+   "Priya will rearrange the collection by the end of the next working day, though the collection date itself is a placeholder."
+  ],
+  "6": [
+   1,
+   "Says the photos are already held and nothing more is needed."
+  ]
+ },
+ "E": {
+  "1": [
+   1,
+   "Lists late delivery, the cracked leg and both missed callbacks."
+  ],
+  "2": [
+   1,
+   "Says 'we let you down', and the callbacks are not blamed on the courier."
+  ],
+  "3": [
+   1,
+   "Refunds \u00a3198.95, mentions a replacement option, and says collection is free."
+  ],
+  "4": [
+   1,
+   "Pays \u00a325 and says a manager is reviewing more without naming an amount."
+  ],
+  "5": [
+   1,
+   "Priya will email the manager's decision by 12pm Thursday 12 Nov."
+  ],
+  "6": [
+   1,
+   "Does not ask for photos."
+  ]
+ },
+ "F": {
+  "1": [
+   1,
+   "Covers the delay, the broken desk and the two unmade callbacks."
+  ],
+  "2": [
+   1,
+   "Calls the missed callbacks 'entirely our fault'."
+  ],
+  "3": [
+   1,
+   "Refunds \u00a3198.95, offers a replacement, and says collection is free."
+  ],
+  "4": [
+   1,
+   "Gives \u00a325 and promises nothing above it."
+  ],
+  "5": [
+   0,
+   "Next steps depend on the customer replying, and no time is committed for Priya's action or call."
+  ],
+  "6": [
+   1,
+   "Only thanks her for the photos."
+  ]
+ },
+ "G": {
+  "1": [
+   1,
+   "Mentions the late delivery, broken desk and both missed callbacks."
+  ],
+  "2": [
+   1,
+   "Says 'we promised you a callback twice and didn't call', without blaming the carrier for that."
+  ],
+  "3": [
+   1,
+   "Refunds \u00a3198.95, offers a replacement, and says collection is free."
+  ],
+  "4": [
+   1,
+   "Gives \u00a325 and promises nothing more."
+  ],
+  "5": [
+   1,
+   "Priya will email collection dates by 4pm Wed 11 Nov."
+  ],
+  "6": [
+   1,
+   "Does not ask for photos."
+  ]
+ },
+ "H": {
+  "1": [
+   1,
+   "Covers the late delivery, cracked leg and both missed callbacks."
+  ],
+  "2": [
+   1,
+   "Says 'nobody called' and 'we let you down' without blaming the carrier for it."
+  ],
+  "3": [
+   0,
+   "Gives a refund and free collection but deliberately omits the replacement choice."
+  ],
+  "4": [
+   1,
+   "Gives \u00a325 and refers more to a named manager for approval."
+  ],
+  "5": [
+   1,
+   "Priya will email by 3pm Friday 13 Nov with the manager's decision."
+  ],
+  "6": [
+   1,
+   "Does not ask for photos."
+  ]
+ }
+}

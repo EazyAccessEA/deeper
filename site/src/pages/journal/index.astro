@@ -1,0 +1,45 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const files = import.meta.glob("../../content/journal/*.md", { eager: true });
+const posts = Object.entries(files)
+  .map(([path, mod]: [string, any]) => ({ slug: path.split("/").pop()!.replace(".md", ""), ...mod.frontmatter }))
+  .sort((a, b) => (b.date + (b.order ?? 0)).localeCompare(a.date + (a.order ?? 0)));
+const nice = (d: string) => new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+---
+<Base title="Journal | deeper" description="What we've tested, what held up, and what didn't. Every figure links to the files it came from.">
+  <div class="band-red jband">
+    <header class="wrap">
+      <h1>Journal</h1>
+      <p class="stand">What we've tested, what held up, and what didn't. Every figure links to the files it came from.</p>
+    </header>
+  </div>
+  <div class="wrap list">
+    <ol>
+      {posts.map((p, i) => (
+        <li class:list={{ lead: i === 0 }}>
+          <p class="meta"><time datetime={p.date}>{nice(p.date)}</time> · {p.minutes} min read</p>
+          <h2><a href={`/journal/${p.slug}/`}>{p.title}</a></h2>
+          <p>{p.description}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</Base>
+
+<style>
+  .jband { padding: clamp(2.5rem, 6vw, 6rem) 0 clamp(2.5rem, 5vw, 4.5rem); }
+  h1 { font-size: clamp(4.125rem, 7.2vw, 6.5rem); letter-spacing: -0.035em; }
+  .stand { margin-top: 1.5rem; max-width: 40rem; font-size: 1.3125rem; line-height: 2rem; }
+  .list { padding-top: clamp(2rem, 4vw, 4rem); padding-bottom: var(--band); }
+  ol { list-style: none; margin: 0; padding: 0; max-width: 42.5rem; }
+  @media (min-width: 900px) { ol { margin-left: calc(15rem + 4rem); } }
+  li { display: flex; flex-direction: column; gap: 0.75rem; padding: 2rem 0; border-top: 1px solid currentColor; }
+  li.lead { border-top-width: 3px; }
+  li:last-child { border-bottom: 1px solid currentColor; }
+  .meta { font-family: var(--mono); font-size: 0.875rem; line-height: 1.25rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--grey); }
+  h2 { font-size: clamp(1.6875rem, 3vw, 2.625rem); line-height: 1; }
+  li.lead h2 { font-size: clamp(2.125rem, 3.7vw, 3.3125rem); }
+  h2 a { text-decoration: none; }
+  h2 a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+</style>
