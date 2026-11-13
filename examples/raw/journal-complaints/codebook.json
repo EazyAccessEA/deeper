@@ -1,0 +1,24 @@
+{
+  "complaint": {
+    "C1": "Limits and money: message caps, paywalls, price, subscriptions, billing, refunds, being charged.",
+    "C2": "Refusals and restriction: won't answer, censorship, content policy, too cautious, flagged or blocked content.",
+    "C3": "Wrong or made-up answers: factual errors, invented facts or sources, bad maths, confidently wrong.",
+    "C4": "Forgets or loses things: memory, lost or deleted chats, loses context mid-conversation, can't find history.",
+    "C5": "App broken: crashes, errors, won't load, slow, login or account access problems, voice or upload features not working.",
+    "C6": "Got worse: a change made it worse than before, new model or update is a downgrade, features removed.",
+    "C7": "Ignores instructions or does half the job: doesn't follow what was asked, lazy, incomplete, repeats itself, won't finish.",
+    "C8": "Tone: flattering, agrees with everything, preachy, lectures, wordy, too many emojis or follow-up questions.",
+    "C9": "Trust in the company: privacy, data use, account bans, politics or bias of the company or its answers, ethics.",
+    "C10": "Other: anything else, or no clear subject."
+  },
+  "praise": {
+    "P1": "Gets things done: work, writing, productivity, saves time, coding, organising.",
+    "P2": "Learning: explains things, study help, homework, teaches.",
+    "P3": "Company and comfort: like a friend, therapist or companion, emotional support, someone to talk to.",
+    "P4": "Agrees and encourages: supportive, positive, validates, never judges, makes me feel good about my ideas.",
+    "P5": "Advice for big decisions: health, medical, legal, money or relationship advice the user relies on.",
+    "P6": "Trust in its accuracy: always right, knows everything, reliable, trusts its answers.",
+    "P7": "Creative and fun: images, stories, games, entertainment.",
+    "P8": "Other: generic praise (\"great app\"), or no clear subject."
+  }
+}

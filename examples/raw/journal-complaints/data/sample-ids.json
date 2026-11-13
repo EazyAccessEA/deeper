@@ -1,0 +1,2323 @@
+{
+ "complaint": [
+  {
+   "id": "ChatGPT-14775584798",
+   "app": "ChatGPT",
+   "apple_id": "14775584798",
+   "rating": 2,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14776822576",
+   "app": "ChatGPT",
+   "apple_id": "14776822576",
+   "rating": 1,
+   "date": "2026-11-11"
+  },
+  {
+   "id": "ChatGPT-14775853072",
+   "app": "ChatGPT",
+   "apple_id": "14775853072",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14774412053",
+   "app": "ChatGPT",
+   "apple_id": "14774412053",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14776968539",
+   "app": "ChatGPT",
+   "apple_id": "14776968539",
+   "rating": 1,
+   "date": "2026-11-11"
+  },
+  {
+   "id": "ChatGPT-14773386805",
+   "app": "ChatGPT",
+   "apple_id": "14773386805",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14776351246",
+   "app": "ChatGPT",
+   "apple_id": "14776351246",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14772724645",
+   "app": "ChatGPT",
+   "apple_id": "14772724645",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14771789913",
+   "app": "ChatGPT",
+   "apple_id": "14771789913",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "ChatGPT-14776057857",
+   "app": "ChatGPT",
+   "apple_id": "14776057857",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14776484744",
+   "app": "ChatGPT",
+   "apple_id": "14776484744",
+   "rating": 2,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14773880075",
+   "app": "ChatGPT",
+   "apple_id": "14773880075",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14772281329",
+   "app": "ChatGPT",
+   "apple_id": "14772281329",
+   "rating": 2,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "ChatGPT-14775993314",
+   "app": "ChatGPT",
+   "apple_id": "14775993314",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14774706985",
+   "app": "ChatGPT",
+   "apple_id": "14774706985",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14776667027",
+   "app": "ChatGPT",
+   "apple_id": "14776667027",
+   "rating": 1,
+   "date": "2026-11-11"
+  },
+  {
+   "id": "ChatGPT-14774717371",
+   "app": "ChatGPT",
+   "apple_id": "14774717371",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14772936802",
+   "app": "ChatGPT",
+   "apple_id": "14772936802",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14771808518",
+   "app": "ChatGPT",
+   "apple_id": "14771808518",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "ChatGPT-14774645756",
+   "app": "ChatGPT",
+   "apple_id": "14774645756",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14774503464",
+   "app": "ChatGPT",
+   "apple_id": "14774503464",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14774352535",
+   "app": "ChatGPT",
+   "apple_id": "14774352535",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14773564442",
+   "app": "ChatGPT",
+   "apple_id": "14773564442",
+   "rating": 2,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14773309522",
+   "app": "ChatGPT",
+   "apple_id": "14773309522",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14775705651",
+   "app": "ChatGPT",
+   "apple_id": "14775705651",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14775269157",
+   "app": "ChatGPT",
+   "apple_id": "14775269157",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14774499815",
+   "app": "ChatGPT",
+   "apple_id": "14774499815",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14775485779",
+   "app": "ChatGPT",
+   "apple_id": "14775485779",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14772185466",
+   "app": "ChatGPT",
+   "apple_id": "14772185466",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "ChatGPT-14773806892",
+   "app": "ChatGPT",
+   "apple_id": "14773806892",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14772685687",
+   "app": "ChatGPT",
+   "apple_id": "14772685687",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14775272915",
+   "app": "ChatGPT",
+   "apple_id": "14775272915",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14774028044",
+   "app": "ChatGPT",
+   "apple_id": "14774028044",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14775553986",
+   "app": "ChatGPT",
+   "apple_id": "14775553986",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14775586135",
+   "app": "ChatGPT",
+   "apple_id": "14775586135",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14772060450",
+   "app": "ChatGPT",
+   "apple_id": "14772060450",
+   "rating": 2,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "ChatGPT-14775813724",
+   "app": "ChatGPT",
+   "apple_id": "14775813724",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14772076842",
+   "app": "ChatGPT",
+   "apple_id": "14772076842",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "ChatGPT-14776107923",
+   "app": "ChatGPT",
+   "apple_id": "14776107923",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14776587079",
+   "app": "ChatGPT",
+   "apple_id": "14776587079",
+   "rating": 1,
+   "date": "2026-11-11"
+  },
+  {
+   "id": "ChatGPT-14771686259",
+   "app": "ChatGPT",
+   "apple_id": "14771686259",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "ChatGPT-14775352204",
+   "app": "ChatGPT",
+   "apple_id": "14775352204",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14773997198",
+   "app": "ChatGPT",
+   "apple_id": "14773997198",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14775818767",
+   "app": "ChatGPT",
+   "apple_id": "14775818767",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14772668132",
+   "app": "ChatGPT",
+   "apple_id": "14772668132",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14775669322",
+   "app": "ChatGPT",
+   "apple_id": "14775669322",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14775050413",
+   "app": "ChatGPT",
+   "apple_id": "14775050413",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14773739991",
+   "app": "ChatGPT",
+   "apple_id": "14773739991",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14774802450",
+   "app": "ChatGPT",
+   "apple_id": "14774802450",
+   "rating": 2,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14775483777",
+   "app": "ChatGPT",
+   "apple_id": "14775483777",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14775515156",
+   "app": "ChatGPT",
+   "apple_id": "14775515156",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14776077068",
+   "app": "ChatGPT",
+   "apple_id": "14776077068",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14772131883",
+   "app": "ChatGPT",
+   "apple_id": "14772131883",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "ChatGPT-14772627864",
+   "app": "ChatGPT",
+   "apple_id": "14772627864",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14774946835",
+   "app": "ChatGPT",
+   "apple_id": "14774946835",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14776265018",
+   "app": "ChatGPT",
+   "apple_id": "14776265018",
+   "rating": 2,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14773383180",
+   "app": "ChatGPT",
+   "apple_id": "14773383180",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14777071898",
+   "app": "ChatGPT",
+   "apple_id": "14777071898",
+   "rating": 1,
+   "date": "2026-11-11"
+  },
+  {
+   "id": "ChatGPT-14775562469",
+   "app": "ChatGPT",
+   "apple_id": "14775562469",
+   "rating": 2,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14776485829",
+   "app": "ChatGPT",
+   "apple_id": "14776485829",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Claude-14671865667",
+   "app": "Claude",
+   "apple_id": "14671865667",
+   "rating": 1,
+   "date": "2026-10-15"
+  },
+  {
+   "id": "Claude-14770848002",
+   "app": "Claude",
+   "apple_id": "14770848002",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Claude-14762295110",
+   "app": "Claude",
+   "apple_id": "14762295110",
+   "rating": 1,
+   "date": "2026-11-07"
+  },
+  {
+   "id": "Claude-14775377930",
+   "app": "Claude",
+   "apple_id": "14775377930",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Claude-14675694269",
+   "app": "Claude",
+   "apple_id": "14675694269",
+   "rating": 1,
+   "date": "2026-10-16"
+  },
+  {
+   "id": "Claude-14696563205",
+   "app": "Claude",
+   "apple_id": "14696563205",
+   "rating": 1,
+   "date": "2026-10-22"
+  },
+  {
+   "id": "Claude-14706996502",
+   "app": "Claude",
+   "apple_id": "14706996502",
+   "rating": 1,
+   "date": "2026-10-24"
+  },
+  {
+   "id": "Claude-14691618159",
+   "app": "Claude",
+   "apple_id": "14691618159",
+   "rating": 1,
+   "date": "2026-10-20"
+  },
+  {
+   "id": "Claude-14698959873",
+   "app": "Claude",
+   "apple_id": "14698959873",
+   "rating": 1,
+   "date": "2026-10-22"
+  },
+  {
+   "id": "Claude-14776124052",
+   "app": "Claude",
+   "apple_id": "14776124052",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Claude-14758125192",
+   "app": "Claude",
+   "apple_id": "14758125192",
+   "rating": 1,
+   "date": "2026-11-06"
+  },
+  {
+   "id": "Claude-14727167070",
+   "app": "Claude",
+   "apple_id": "14727167070",
+   "rating": 1,
+   "date": "2026-10-29"
+  },
+  {
+   "id": "Claude-14671991390",
+   "app": "Claude",
+   "apple_id": "14671991390",
+   "rating": 1,
+   "date": "2026-10-15"
+  },
+  {
+   "id": "Claude-14685741926",
+   "app": "Claude",
+   "apple_id": "14685741926",
+   "rating": 1,
+   "date": "2026-10-19"
+  },
+  {
+   "id": "Claude-14762389084",
+   "app": "Claude",
+   "apple_id": "14762389084",
+   "rating": 1,
+   "date": "2026-11-07"
+  },
+  {
+   "id": "Claude-14710874243",
+   "app": "Claude",
+   "apple_id": "14710874243",
+   "rating": 2,
+   "date": "2026-10-25"
+  },
+  {
+   "id": "Claude-14752972613",
+   "app": "Claude",
+   "apple_id": "14752972613",
+   "rating": 1,
+   "date": "2026-11-05"
+  },
+  {
+   "id": "Claude-14715401793",
+   "app": "Claude",
+   "apple_id": "14715401793",
+   "rating": 1,
+   "date": "2026-10-26"
+  },
+  {
+   "id": "Claude-14738943885",
+   "app": "Claude",
+   "apple_id": "14738943885",
+   "rating": 1,
+   "date": "2026-11-01"
+  },
+  {
+   "id": "Claude-14673114950",
+   "app": "Claude",
+   "apple_id": "14673114950",
+   "rating": 1,
+   "date": "2026-10-16"
+  },
+  {
+   "id": "Claude-14772245168",
+   "app": "Claude",
+   "apple_id": "14772245168",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Claude-14693435722",
+   "app": "Claude",
+   "apple_id": "14693435722",
+   "rating": 1,
+   "date": "2026-10-21"
+  },
+  {
+   "id": "Claude-14707380141",
+   "app": "Claude",
+   "apple_id": "14707380141",
+   "rating": 2,
+   "date": "2026-10-24"
+  },
+  {
+   "id": "Claude-14739933740",
+   "app": "Claude",
+   "apple_id": "14739933740",
+   "rating": 2,
+   "date": "2026-11-01"
+  },
+  {
+   "id": "Claude-14776912651",
+   "app": "Claude",
+   "apple_id": "14776912651",
+   "rating": 1,
+   "date": "2026-11-11"
+  },
+  {
+   "id": "Claude-14702594485",
+   "app": "Claude",
+   "apple_id": "14702594485",
+   "rating": 1,
+   "date": "2026-10-23"
+  },
+  {
+   "id": "Claude-14751115492",
+   "app": "Claude",
+   "apple_id": "14751115492",
+   "rating": 1,
+   "date": "2026-11-04"
+  },
+  {
+   "id": "Claude-14729498721",
+   "app": "Claude",
+   "apple_id": "14729498721",
+   "rating": 1,
+   "date": "2026-10-30"
+  },
+  {
+   "id": "Claude-14732600412",
+   "app": "Claude",
+   "apple_id": "14732600412",
+   "rating": 1,
+   "date": "2026-10-31"
+  },
+  {
+   "id": "Claude-14713070098",
+   "app": "Claude",
+   "apple_id": "14713070098",
+   "rating": 1,
+   "date": "2026-10-26"
+  },
+  {
+   "id": "Claude-14730397401",
+   "app": "Claude",
+   "apple_id": "14730397401",
+   "rating": 2,
+   "date": "2026-10-30"
+  },
+  {
+   "id": "Claude-14772535200",
+   "app": "Claude",
+   "apple_id": "14772535200",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Claude-14695240212",
+   "app": "Claude",
+   "apple_id": "14695240212",
+   "rating": 1,
+   "date": "2026-10-21"
+  },
+  {
+   "id": "Claude-14682307157",
+   "app": "Claude",
+   "apple_id": "14682307157",
+   "rating": 1,
+   "date": "2026-10-18"
+  },
+  {
+   "id": "Claude-14765473724",
+   "app": "Claude",
+   "apple_id": "14765473724",
+   "rating": 1,
+   "date": "2026-11-08"
+  },
+  {
+   "id": "Claude-14726152606",
+   "app": "Claude",
+   "apple_id": "14726152606",
+   "rating": 1,
+   "date": "2026-10-29"
+  },
+  {
+   "id": "Claude-14750201846",
+   "app": "Claude",
+   "apple_id": "14750201846",
+   "rating": 1,
+   "date": "2026-11-04"
+  },
+  {
+   "id": "Claude-14759439132",
+   "app": "Claude",
+   "apple_id": "14759439132",
+   "rating": 1,
+   "date": "2026-11-06"
+  },
+  {
+   "id": "Claude-14762797213",
+   "app": "Claude",
+   "apple_id": "14762797213",
+   "rating": 1,
+   "date": "2026-11-07"
+  },
+  {
+   "id": "Claude-14711516258",
+   "app": "Claude",
+   "apple_id": "14711516258",
+   "rating": 1,
+   "date": "2026-10-25"
+  },
+  {
+   "id": "Claude-14733579344",
+   "app": "Claude",
+   "apple_id": "14733579344",
+   "rating": 1,
+   "date": "2026-10-31"
+  },
+  {
+   "id": "Claude-14747944860",
+   "app": "Claude",
+   "apple_id": "14747944860",
+   "rating": 1,
+   "date": "2026-11-03"
+  },
+  {
+   "id": "Claude-14772934820",
+   "app": "Claude",
+   "apple_id": "14772934820",
+   "rating": 2,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Claude-14679899977",
+   "app": "Claude",
+   "apple_id": "14679899977",
+   "rating": 1,
+   "date": "2026-10-17"
+  },
+  {
+   "id": "Claude-14768852515",
+   "app": "Claude",
+   "apple_id": "14768852515",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Claude-14736483676",
+   "app": "Claude",
+   "apple_id": "14736483676",
+   "rating": 1,
+   "date": "2026-10-31"
+  },
+  {
+   "id": "Claude-14690651916",
+   "app": "Claude",
+   "apple_id": "14690651916",
+   "rating": 1,
+   "date": "2026-10-20"
+  },
+  {
+   "id": "Claude-14704138658",
+   "app": "Claude",
+   "apple_id": "14704138658",
+   "rating": 1,
+   "date": "2026-10-23"
+  },
+  {
+   "id": "Claude-14698208477",
+   "app": "Claude",
+   "apple_id": "14698208477",
+   "rating": 1,
+   "date": "2026-10-22"
+  },
+  {
+   "id": "Claude-14726564537",
+   "app": "Claude",
+   "apple_id": "14726564537",
+   "rating": 1,
+   "date": "2026-10-29"
+  },
+  {
+   "id": "Claude-14759866659",
+   "app": "Claude",
+   "apple_id": "14759866659",
+   "rating": 1,
+   "date": "2026-11-06"
+  },
+  {
+   "id": "Claude-14711636401",
+   "app": "Claude",
+   "apple_id": "14711636401",
+   "rating": 1,
+   "date": "2026-10-25"
+  },
+  {
+   "id": "Claude-14734201266",
+   "app": "Claude",
+   "apple_id": "14734201266",
+   "rating": 2,
+   "date": "2026-10-31"
+  },
+  {
+   "id": "Claude-14768814103",
+   "app": "Claude",
+   "apple_id": "14768814103",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Claude-14682434163",
+   "app": "Claude",
+   "apple_id": "14682434163",
+   "rating": 1,
+   "date": "2026-10-18"
+  },
+  {
+   "id": "Claude-14748441225",
+   "app": "Claude",
+   "apple_id": "14748441225",
+   "rating": 1,
+   "date": "2026-11-03"
+  },
+  {
+   "id": "Claude-14775051589",
+   "app": "Claude",
+   "apple_id": "14775051589",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Claude-14745730218",
+   "app": "Claude",
+   "apple_id": "14745730218",
+   "rating": 1,
+   "date": "2026-11-03"
+  },
+  {
+   "id": "Claude-14769794863",
+   "app": "Claude",
+   "apple_id": "14769794863",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Claude-14702544749",
+   "app": "Claude",
+   "apple_id": "14702544749",
+   "rating": 1,
+   "date": "2026-10-23"
+  },
+  {
+   "id": "Gemini-14772156595",
+   "app": "Gemini",
+   "apple_id": "14772156595",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14770952829",
+   "app": "Gemini",
+   "apple_id": "14770952829",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14771657434",
+   "app": "Gemini",
+   "apple_id": "14771657434",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14768577703",
+   "app": "Gemini",
+   "apple_id": "14768577703",
+   "rating": 1,
+   "date": "2026-11-08"
+  },
+  {
+   "id": "Gemini-14772056124",
+   "app": "Gemini",
+   "apple_id": "14772056124",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14777017974",
+   "app": "Gemini",
+   "apple_id": "14777017974",
+   "rating": 1,
+   "date": "2026-11-11"
+  },
+  {
+   "id": "Gemini-14769615032",
+   "app": "Gemini",
+   "apple_id": "14769615032",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14775161852",
+   "app": "Gemini",
+   "apple_id": "14775161852",
+   "rating": 2,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14768742231",
+   "app": "Gemini",
+   "apple_id": "14768742231",
+   "rating": 1,
+   "date": "2026-11-08"
+  },
+  {
+   "id": "Gemini-14776971026",
+   "app": "Gemini",
+   "apple_id": "14776971026",
+   "rating": 1,
+   "date": "2026-11-11"
+  },
+  {
+   "id": "Gemini-14775737189",
+   "app": "Gemini",
+   "apple_id": "14775737189",
+   "rating": 2,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14774475080",
+   "app": "Gemini",
+   "apple_id": "14774475080",
+   "rating": 2,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14770299228",
+   "app": "Gemini",
+   "apple_id": "14770299228",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14772285864",
+   "app": "Gemini",
+   "apple_id": "14772285864",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14776014890",
+   "app": "Gemini",
+   "apple_id": "14776014890",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14771814022",
+   "app": "Gemini",
+   "apple_id": "14771814022",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14768843181",
+   "app": "Gemini",
+   "apple_id": "14768843181",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14771353858",
+   "app": "Gemini",
+   "apple_id": "14771353858",
+   "rating": 2,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14771732520",
+   "app": "Gemini",
+   "apple_id": "14771732520",
+   "rating": 2,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14774455854",
+   "app": "Gemini",
+   "apple_id": "14774455854",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14777021084",
+   "app": "Gemini",
+   "apple_id": "14777021084",
+   "rating": 1,
+   "date": "2026-11-11"
+  },
+  {
+   "id": "Gemini-14768437408",
+   "app": "Gemini",
+   "apple_id": "14768437408",
+   "rating": 1,
+   "date": "2026-11-08"
+  },
+  {
+   "id": "Gemini-14769699192",
+   "app": "Gemini",
+   "apple_id": "14769699192",
+   "rating": 2,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14773684859",
+   "app": "Gemini",
+   "apple_id": "14773684859",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14774921846",
+   "app": "Gemini",
+   "apple_id": "14774921846",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14774383821",
+   "app": "Gemini",
+   "apple_id": "14774383821",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14772309725",
+   "app": "Gemini",
+   "apple_id": "14772309725",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14770068803",
+   "app": "Gemini",
+   "apple_id": "14770068803",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14774808729",
+   "app": "Gemini",
+   "apple_id": "14774808729",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14771422947",
+   "app": "Gemini",
+   "apple_id": "14771422947",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14772036349",
+   "app": "Gemini",
+   "apple_id": "14772036349",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Copilot-14738469540",
+   "app": "Copilot",
+   "apple_id": "14738469540",
+   "rating": 1,
+   "date": "2026-11-01"
+  },
+  {
+   "id": "Copilot-14773657346",
+   "app": "Copilot",
+   "apple_id": "14773657346",
+   "rating": 1,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Copilot-14748307504",
+   "app": "Copilot",
+   "apple_id": "14748307504",
+   "rating": 1,
+   "date": "2026-11-03"
+  },
+  {
+   "id": "Copilot-14657273788",
+   "app": "Copilot",
+   "apple_id": "14657273788",
+   "rating": 1,
+   "date": "2026-10-12"
+  },
+  {
+   "id": "Copilot-14756298914",
+   "app": "Copilot",
+   "apple_id": "14756298914",
+   "rating": 1,
+   "date": "2026-11-05"
+  },
+  {
+   "id": "Copilot-14744299284",
+   "app": "Copilot",
+   "apple_id": "14744299284",
+   "rating": 1,
+   "date": "2026-11-02"
+  },
+  {
+   "id": "Copilot-14694655244",
+   "app": "Copilot",
+   "apple_id": "14694655244",
+   "rating": 1,
+   "date": "2026-10-21"
+  },
+  {
+   "id": "Copilot-14761521171",
+   "app": "Copilot",
+   "apple_id": "14761521171",
+   "rating": 1,
+   "date": "2026-11-07"
+  },
+  {
+   "id": "Copilot-14767066143",
+   "app": "Copilot",
+   "apple_id": "14767066143",
+   "rating": 1,
+   "date": "2026-11-08"
+  },
+  {
+   "id": "Copilot-14695146172",
+   "app": "Copilot",
+   "apple_id": "14695146172",
+   "rating": 1,
+   "date": "2026-10-21"
+  },
+  {
+   "id": "Copilot-14714144341",
+   "app": "Copilot",
+   "apple_id": "14714144341",
+   "rating": 1,
+   "date": "2026-10-26"
+  },
+  {
+   "id": "Copilot-14658060275",
+   "app": "Copilot",
+   "apple_id": "14658060275",
+   "rating": 1,
+   "date": "2026-10-12"
+  },
+  {
+   "id": "Copilot-14730417118",
+   "app": "Copilot",
+   "apple_id": "14730417118",
+   "rating": 1,
+   "date": "2026-10-30"
+  },
+  {
+   "id": "Copilot-14670469259",
+   "app": "Copilot",
+   "apple_id": "14670469259",
+   "rating": 1,
+   "date": "2026-10-15"
+  },
+  {
+   "id": "Copilot-14704514698",
+   "app": "Copilot",
+   "apple_id": "14704514698",
+   "rating": 1,
+   "date": "2026-10-24"
+  },
+  {
+   "id": "Copilot-14736668727",
+   "app": "Copilot",
+   "apple_id": "14736668727",
+   "rating": 2,
+   "date": "2026-11-01"
+  },
+  {
+   "id": "Copilot-14761273357",
+   "app": "Copilot",
+   "apple_id": "14761273357",
+   "rating": 1,
+   "date": "2026-11-07"
+  },
+  {
+   "id": "Copilot-14710681488",
+   "app": "Copilot",
+   "apple_id": "14710681488",
+   "rating": 1,
+   "date": "2026-10-25"
+  },
+  {
+   "id": "Copilot-14664044323",
+   "app": "Copilot",
+   "apple_id": "14664044323",
+   "rating": 1,
+   "date": "2026-10-13"
+  },
+  {
+   "id": "Copilot-14656609145",
+   "app": "Copilot",
+   "apple_id": "14656609145",
+   "rating": 1,
+   "date": "2026-10-11"
+  },
+  {
+   "id": "Copilot-14726531811",
+   "app": "Copilot",
+   "apple_id": "14726531811",
+   "rating": 1,
+   "date": "2026-10-29"
+  },
+  {
+   "id": "Copilot-14744501604",
+   "app": "Copilot",
+   "apple_id": "14744501604",
+   "rating": 1,
+   "date": "2026-11-02"
+  },
+  {
+   "id": "Copilot-14664980819",
+   "app": "Copilot",
+   "apple_id": "14664980819",
+   "rating": 1,
+   "date": "2026-10-14"
+  },
+  {
+   "id": "Copilot-14693846546",
+   "app": "Copilot",
+   "apple_id": "14693846546",
+   "rating": 1,
+   "date": "2026-10-21"
+  },
+  {
+   "id": "Copilot-14712567469",
+   "app": "Copilot",
+   "apple_id": "14712567469",
+   "rating": 1,
+   "date": "2026-10-25"
+  },
+  {
+   "id": "Copilot-14734520402",
+   "app": "Copilot",
+   "apple_id": "14734520402",
+   "rating": 1,
+   "date": "2026-10-31"
+  },
+  {
+   "id": "Copilot-14690406994",
+   "app": "Copilot",
+   "apple_id": "14690406994",
+   "rating": 1,
+   "date": "2026-10-20"
+  },
+  {
+   "id": "Copilot-14768351596",
+   "app": "Copilot",
+   "apple_id": "14768351596",
+   "rating": 1,
+   "date": "2026-11-08"
+  },
+  {
+   "id": "Copilot-14663454321",
+   "app": "Copilot",
+   "apple_id": "14663454321",
+   "rating": 1,
+   "date": "2026-10-13"
+  },
+  {
+   "id": "Copilot-14714345230",
+   "app": "Copilot",
+   "apple_id": "14714345230",
+   "rating": 2,
+   "date": "2026-10-26"
+  },
+  {
+   "id": "Copilot-14663765833",
+   "app": "Copilot",
+   "apple_id": "14663765833",
+   "rating": 1,
+   "date": "2026-10-13"
+  },
+  {
+   "id": "Copilot-14760032707",
+   "app": "Copilot",
+   "apple_id": "14760032707",
+   "rating": 1,
+   "date": "2026-11-06"
+  },
+  {
+   "id": "Copilot-14712040141",
+   "app": "Copilot",
+   "apple_id": "14712040141",
+   "rating": 2,
+   "date": "2026-10-25"
+  },
+  {
+   "id": "Copilot-14735197945",
+   "app": "Copilot",
+   "apple_id": "14735197945",
+   "rating": 1,
+   "date": "2026-10-31"
+  },
+  {
+   "id": "Copilot-14731868809",
+   "app": "Copilot",
+   "apple_id": "14731868809",
+   "rating": 1,
+   "date": "2026-10-30"
+  },
+  {
+   "id": "Copilot-14665206090",
+   "app": "Copilot",
+   "apple_id": "14665206090",
+   "rating": 1,
+   "date": "2026-10-14"
+  },
+  {
+   "id": "Copilot-14747810518",
+   "app": "Copilot",
+   "apple_id": "14747810518",
+   "rating": 1,
+   "date": "2026-11-03"
+  },
+  {
+   "id": "Copilot-14752368124",
+   "app": "Copilot",
+   "apple_id": "14752368124",
+   "rating": 1,
+   "date": "2026-11-04"
+  },
+  {
+   "id": "Copilot-14770440753",
+   "app": "Copilot",
+   "apple_id": "14770440753",
+   "rating": 1,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Copilot-14734922293",
+   "app": "Copilot",
+   "apple_id": "14734922293",
+   "rating": 1,
+   "date": "2026-10-31"
+  },
+  {
+   "id": "Copilot-14709486007",
+   "app": "Copilot",
+   "apple_id": "14709486007",
+   "rating": 1,
+   "date": "2026-10-25"
+  },
+  {
+   "id": "Copilot-14674745733",
+   "app": "Copilot",
+   "apple_id": "14674745733",
+   "rating": 1,
+   "date": "2026-10-16"
+  },
+  {
+   "id": "Copilot-14710907708",
+   "app": "Copilot",
+   "apple_id": "14710907708",
+   "rating": 1,
+   "date": "2026-10-25"
+  },
+  {
+   "id": "Copilot-14738901193",
+   "app": "Copilot",
+   "apple_id": "14738901193",
+   "rating": 1,
+   "date": "2026-11-01"
+  },
+  {
+   "id": "Copilot-14709490050",
+   "app": "Copilot",
+   "apple_id": "14709490050",
+   "rating": 1,
+   "date": "2026-10-25"
+  },
+  {
+   "id": "Copilot-14764501372",
+   "app": "Copilot",
+   "apple_id": "14764501372",
+   "rating": 1,
+   "date": "2026-11-07"
+  },
+  {
+   "id": "Copilot-14750883518",
+   "app": "Copilot",
+   "apple_id": "14750883518",
+   "rating": 1,
+   "date": "2026-11-04"
+  },
+  {
+   "id": "Copilot-14714710382",
+   "app": "Copilot",
+   "apple_id": "14714710382",
+   "rating": 1,
+   "date": "2026-10-26"
+  },
+  {
+   "id": "Copilot-14689553810",
+   "app": "Copilot",
+   "apple_id": "14689553810",
+   "rating": 1,
+   "date": "2026-10-20"
+  },
+  {
+   "id": "Copilot-14715605719",
+   "app": "Copilot",
+   "apple_id": "14715605719",
+   "rating": 2,
+   "date": "2026-10-26"
+  },
+  {
+   "id": "Copilot-14665597766",
+   "app": "Copilot",
+   "apple_id": "14665597766",
+   "rating": 1,
+   "date": "2026-10-14"
+  },
+  {
+   "id": "Copilot-14742433653",
+   "app": "Copilot",
+   "apple_id": "14742433653",
+   "rating": 2,
+   "date": "2026-11-02"
+  },
+  {
+   "id": "Copilot-14661186807",
+   "app": "Copilot",
+   "apple_id": "14661186807",
+   "rating": 1,
+   "date": "2026-10-13"
+  },
+  {
+   "id": "Copilot-14749252389",
+   "app": "Copilot",
+   "apple_id": "14749252389",
+   "rating": 1,
+   "date": "2026-11-04"
+  },
+  {
+   "id": "Copilot-14728762709",
+   "app": "Copilot",
+   "apple_id": "14728762709",
+   "rating": 1,
+   "date": "2026-10-30"
+  },
+  {
+   "id": "Copilot-14747240546",
+   "app": "Copilot",
+   "apple_id": "14747240546",
+   "rating": 1,
+   "date": "2026-11-03"
+  },
+  {
+   "id": "Copilot-14720005396",
+   "app": "Copilot",
+   "apple_id": "14720005396",
+   "rating": 1,
+   "date": "2026-10-27"
+  },
+  {
+   "id": "Copilot-14727109121",
+   "app": "Copilot",
+   "apple_id": "14727109121",
+   "rating": 2,
+   "date": "2026-10-29"
+  },
+  {
+   "id": "Copilot-14690853507",
+   "app": "Copilot",
+   "apple_id": "14690853507",
+   "rating": 1,
+   "date": "2026-10-20"
+  },
+  {
+   "id": "Copilot-14743305716",
+   "app": "Copilot",
+   "apple_id": "14743305716",
+   "rating": 1,
+   "date": "2026-11-02"
+  }
+ ],
+ "praise": [
+  {
+   "id": "ChatGPT-14771871938",
+   "app": "ChatGPT",
+   "apple_id": "14771871938",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "ChatGPT-14775806413",
+   "app": "ChatGPT",
+   "apple_id": "14775806413",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14771987044",
+   "app": "ChatGPT",
+   "apple_id": "14771987044",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "ChatGPT-14772000006",
+   "app": "ChatGPT",
+   "apple_id": "14772000006",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "ChatGPT-14775962787",
+   "app": "ChatGPT",
+   "apple_id": "14775962787",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14776327158",
+   "app": "ChatGPT",
+   "apple_id": "14776327158",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14774013098",
+   "app": "ChatGPT",
+   "apple_id": "14774013098",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14774534702",
+   "app": "ChatGPT",
+   "apple_id": "14774534702",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14775871990",
+   "app": "ChatGPT",
+   "apple_id": "14775871990",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14773684350",
+   "app": "ChatGPT",
+   "apple_id": "14773684350",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14775459035",
+   "app": "ChatGPT",
+   "apple_id": "14775459035",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14774466045",
+   "app": "ChatGPT",
+   "apple_id": "14774466045",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14774947590",
+   "app": "ChatGPT",
+   "apple_id": "14774947590",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14771968072",
+   "app": "ChatGPT",
+   "apple_id": "14771968072",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "ChatGPT-14775368234",
+   "app": "ChatGPT",
+   "apple_id": "14775368234",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14775484741",
+   "app": "ChatGPT",
+   "apple_id": "14775484741",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14774272140",
+   "app": "ChatGPT",
+   "apple_id": "14774272140",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14774886465",
+   "app": "ChatGPT",
+   "apple_id": "14774886465",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14776154102",
+   "app": "ChatGPT",
+   "apple_id": "14776154102",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14772797055",
+   "app": "ChatGPT",
+   "apple_id": "14772797055",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14776197442",
+   "app": "ChatGPT",
+   "apple_id": "14776197442",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14773590906",
+   "app": "ChatGPT",
+   "apple_id": "14773590906",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14775830012",
+   "app": "ChatGPT",
+   "apple_id": "14775830012",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14772381310",
+   "app": "ChatGPT",
+   "apple_id": "14772381310",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "ChatGPT-14775343155",
+   "app": "ChatGPT",
+   "apple_id": "14775343155",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14771817423",
+   "app": "ChatGPT",
+   "apple_id": "14771817423",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "ChatGPT-14773792545",
+   "app": "ChatGPT",
+   "apple_id": "14773792545",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14774176603",
+   "app": "ChatGPT",
+   "apple_id": "14774176603",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "ChatGPT-14771823809",
+   "app": "ChatGPT",
+   "apple_id": "14771823809",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "ChatGPT-14772308189",
+   "app": "ChatGPT",
+   "apple_id": "14772308189",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Claude-14731332372",
+   "app": "Claude",
+   "apple_id": "14731332372",
+   "rating": 5,
+   "date": "2026-10-30"
+  },
+  {
+   "id": "Claude-14711285419",
+   "app": "Claude",
+   "apple_id": "14711285419",
+   "rating": 5,
+   "date": "2026-10-25"
+  },
+  {
+   "id": "Claude-14675813167",
+   "app": "Claude",
+   "apple_id": "14675813167",
+   "rating": 5,
+   "date": "2026-10-16"
+  },
+  {
+   "id": "Claude-14728647671",
+   "app": "Claude",
+   "apple_id": "14728647671",
+   "rating": 5,
+   "date": "2026-10-30"
+  },
+  {
+   "id": "Claude-14740254198",
+   "app": "Claude",
+   "apple_id": "14740254198",
+   "rating": 5,
+   "date": "2026-11-01"
+  },
+  {
+   "id": "Claude-14748268411",
+   "app": "Claude",
+   "apple_id": "14748268411",
+   "rating": 5,
+   "date": "2026-11-03"
+  },
+  {
+   "id": "Claude-14702611824",
+   "app": "Claude",
+   "apple_id": "14702611824",
+   "rating": 5,
+   "date": "2026-10-23"
+  },
+  {
+   "id": "Claude-14773405318",
+   "app": "Claude",
+   "apple_id": "14773405318",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Claude-14710065485",
+   "app": "Claude",
+   "apple_id": "14710065485",
+   "rating": 5,
+   "date": "2026-10-25"
+  },
+  {
+   "id": "Claude-14734264552",
+   "app": "Claude",
+   "apple_id": "14734264552",
+   "rating": 5,
+   "date": "2026-10-31"
+  },
+  {
+   "id": "Claude-14751353039",
+   "app": "Claude",
+   "apple_id": "14751353039",
+   "rating": 5,
+   "date": "2026-11-04"
+  },
+  {
+   "id": "Claude-14739021385",
+   "app": "Claude",
+   "apple_id": "14739021385",
+   "rating": 5,
+   "date": "2026-11-01"
+  },
+  {
+   "id": "Claude-14732677622",
+   "app": "Claude",
+   "apple_id": "14732677622",
+   "rating": 5,
+   "date": "2026-10-31"
+  },
+  {
+   "id": "Claude-14729179389",
+   "app": "Claude",
+   "apple_id": "14729179389",
+   "rating": 5,
+   "date": "2026-10-30"
+  },
+  {
+   "id": "Claude-14766328565",
+   "app": "Claude",
+   "apple_id": "14766328565",
+   "rating": 5,
+   "date": "2026-11-08"
+  },
+  {
+   "id": "Claude-14764033364",
+   "app": "Claude",
+   "apple_id": "14764033364",
+   "rating": 5,
+   "date": "2026-11-07"
+  },
+  {
+   "id": "Claude-14733280166",
+   "app": "Claude",
+   "apple_id": "14733280166",
+   "rating": 5,
+   "date": "2026-10-31"
+  },
+  {
+   "id": "Claude-14768074361",
+   "app": "Claude",
+   "apple_id": "14768074361",
+   "rating": 5,
+   "date": "2026-11-08"
+  },
+  {
+   "id": "Claude-14724103210",
+   "app": "Claude",
+   "apple_id": "14724103210",
+   "rating": 5,
+   "date": "2026-10-28"
+  },
+  {
+   "id": "Claude-14772067066",
+   "app": "Claude",
+   "apple_id": "14772067066",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Claude-14718215887",
+   "app": "Claude",
+   "apple_id": "14718215887",
+   "rating": 5,
+   "date": "2026-10-27"
+  },
+  {
+   "id": "Claude-14685081344",
+   "app": "Claude",
+   "apple_id": "14685081344",
+   "rating": 5,
+   "date": "2026-10-19"
+  },
+  {
+   "id": "Claude-14752080400",
+   "app": "Claude",
+   "apple_id": "14752080400",
+   "rating": 5,
+   "date": "2026-11-04"
+  },
+  {
+   "id": "Claude-14742383189",
+   "app": "Claude",
+   "apple_id": "14742383189",
+   "rating": 5,
+   "date": "2026-11-02"
+  },
+  {
+   "id": "Claude-14749574955",
+   "app": "Claude",
+   "apple_id": "14749574955",
+   "rating": 5,
+   "date": "2026-11-04"
+  },
+  {
+   "id": "Claude-14766985570",
+   "app": "Claude",
+   "apple_id": "14766985570",
+   "rating": 5,
+   "date": "2026-11-08"
+  },
+  {
+   "id": "Claude-14763755189",
+   "app": "Claude",
+   "apple_id": "14763755189",
+   "rating": 5,
+   "date": "2026-11-07"
+  },
+  {
+   "id": "Claude-14728345405",
+   "app": "Claude",
+   "apple_id": "14728345405",
+   "rating": 5,
+   "date": "2026-10-29"
+  },
+  {
+   "id": "Claude-14773608890",
+   "app": "Claude",
+   "apple_id": "14773608890",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Claude-14714888970",
+   "app": "Claude",
+   "apple_id": "14714888970",
+   "rating": 5,
+   "date": "2026-10-26"
+  },
+  {
+   "id": "Gemini-14771548249",
+   "app": "Gemini",
+   "apple_id": "14771548249",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14775098804",
+   "app": "Gemini",
+   "apple_id": "14775098804",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14769906155",
+   "app": "Gemini",
+   "apple_id": "14769906155",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14771188085",
+   "app": "Gemini",
+   "apple_id": "14771188085",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14775552171",
+   "app": "Gemini",
+   "apple_id": "14775552171",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14772865253",
+   "app": "Gemini",
+   "apple_id": "14772865253",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14771196414",
+   "app": "Gemini",
+   "apple_id": "14771196414",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14774556332",
+   "app": "Gemini",
+   "apple_id": "14774556332",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14775305362",
+   "app": "Gemini",
+   "apple_id": "14775305362",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14773932322",
+   "app": "Gemini",
+   "apple_id": "14773932322",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14774027053",
+   "app": "Gemini",
+   "apple_id": "14774027053",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14771457315",
+   "app": "Gemini",
+   "apple_id": "14771457315",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14771973633",
+   "app": "Gemini",
+   "apple_id": "14771973633",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14775665861",
+   "app": "Gemini",
+   "apple_id": "14775665861",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14770238385",
+   "app": "Gemini",
+   "apple_id": "14770238385",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14771855571",
+   "app": "Gemini",
+   "apple_id": "14771855571",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14768303070",
+   "app": "Gemini",
+   "apple_id": "14768303070",
+   "rating": 5,
+   "date": "2026-11-08"
+  },
+  {
+   "id": "Gemini-14775478089",
+   "app": "Gemini",
+   "apple_id": "14775478089",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14771461997",
+   "app": "Gemini",
+   "apple_id": "14771461997",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14771400539",
+   "app": "Gemini",
+   "apple_id": "14771400539",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14772800034",
+   "app": "Gemini",
+   "apple_id": "14772800034",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14771332078",
+   "app": "Gemini",
+   "apple_id": "14771332078",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14772574754",
+   "app": "Gemini",
+   "apple_id": "14772574754",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14774390982",
+   "app": "Gemini",
+   "apple_id": "14774390982",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14776061528",
+   "app": "Gemini",
+   "apple_id": "14776061528",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14771033664",
+   "app": "Gemini",
+   "apple_id": "14771033664",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14770441922",
+   "app": "Gemini",
+   "apple_id": "14770441922",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14769528987",
+   "app": "Gemini",
+   "apple_id": "14769528987",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Gemini-14775143529",
+   "app": "Gemini",
+   "apple_id": "14775143529",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Gemini-14774473481",
+   "app": "Gemini",
+   "apple_id": "14774473481",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Copilot-14732958913",
+   "app": "Copilot",
+   "apple_id": "14732958913",
+   "rating": 5,
+   "date": "2026-10-31"
+  },
+  {
+   "id": "Copilot-14686807673",
+   "app": "Copilot",
+   "apple_id": "14686807673",
+   "rating": 5,
+   "date": "2026-10-19"
+  },
+  {
+   "id": "Copilot-14662103070",
+   "app": "Copilot",
+   "apple_id": "14662103070",
+   "rating": 5,
+   "date": "2026-10-13"
+  },
+  {
+   "id": "Copilot-14706545033",
+   "app": "Copilot",
+   "apple_id": "14706545033",
+   "rating": 5,
+   "date": "2026-10-24"
+  },
+  {
+   "id": "Copilot-14718109149",
+   "app": "Copilot",
+   "apple_id": "14718109149",
+   "rating": 5,
+   "date": "2026-10-27"
+  },
+  {
+   "id": "Copilot-14704026118",
+   "app": "Copilot",
+   "apple_id": "14704026118",
+   "rating": 5,
+   "date": "2026-10-23"
+  },
+  {
+   "id": "Copilot-14710075198",
+   "app": "Copilot",
+   "apple_id": "14710075198",
+   "rating": 5,
+   "date": "2026-10-25"
+  },
+  {
+   "id": "Copilot-14734303416",
+   "app": "Copilot",
+   "apple_id": "14734303416",
+   "rating": 5,
+   "date": "2026-10-31"
+  },
+  {
+   "id": "Copilot-14698573532",
+   "app": "Copilot",
+   "apple_id": "14698573532",
+   "rating": 5,
+   "date": "2026-10-22"
+  },
+  {
+   "id": "Copilot-14735189740",
+   "app": "Copilot",
+   "apple_id": "14735189740",
+   "rating": 5,
+   "date": "2026-10-31"
+  },
+  {
+   "id": "Copilot-14722964688",
+   "app": "Copilot",
+   "apple_id": "14722964688",
+   "rating": 5,
+   "date": "2026-10-28"
+  },
+  {
+   "id": "Copilot-14664158769",
+   "app": "Copilot",
+   "apple_id": "14664158769",
+   "rating": 5,
+   "date": "2026-10-13"
+  },
+  {
+   "id": "Copilot-14722258152",
+   "app": "Copilot",
+   "apple_id": "14722258152",
+   "rating": 5,
+   "date": "2026-10-28"
+  },
+  {
+   "id": "Copilot-14756303393",
+   "app": "Copilot",
+   "apple_id": "14756303393",
+   "rating": 5,
+   "date": "2026-11-05"
+  },
+  {
+   "id": "Copilot-14724623033",
+   "app": "Copilot",
+   "apple_id": "14724623033",
+   "rating": 5,
+   "date": "2026-10-29"
+  },
+  {
+   "id": "Copilot-14705927468",
+   "app": "Copilot",
+   "apple_id": "14705927468",
+   "rating": 5,
+   "date": "2026-10-24"
+  },
+  {
+   "id": "Copilot-14719200558",
+   "app": "Copilot",
+   "apple_id": "14719200558",
+   "rating": 5,
+   "date": "2026-10-27"
+  },
+  {
+   "id": "Copilot-14764175938",
+   "app": "Copilot",
+   "apple_id": "14764175938",
+   "rating": 5,
+   "date": "2026-11-07"
+  },
+  {
+   "id": "Copilot-14666510414",
+   "app": "Copilot",
+   "apple_id": "14666510414",
+   "rating": 5,
+   "date": "2026-10-14"
+  },
+  {
+   "id": "Copilot-14747094849",
+   "app": "Copilot",
+   "apple_id": "14747094849",
+   "rating": 5,
+   "date": "2026-11-03"
+  },
+  {
+   "id": "Copilot-14686217968",
+   "app": "Copilot",
+   "apple_id": "14686217968",
+   "rating": 5,
+   "date": "2026-10-19"
+  },
+  {
+   "id": "Copilot-14770431140",
+   "app": "Copilot",
+   "apple_id": "14770431140",
+   "rating": 5,
+   "date": "2026-11-09"
+  },
+  {
+   "id": "Copilot-14698400886",
+   "app": "Copilot",
+   "apple_id": "14698400886",
+   "rating": 5,
+   "date": "2026-10-22"
+  },
+  {
+   "id": "Copilot-14695365646",
+   "app": "Copilot",
+   "apple_id": "14695365646",
+   "rating": 5,
+   "date": "2026-10-21"
+  },
+  {
+   "id": "Copilot-14681294978",
+   "app": "Copilot",
+   "apple_id": "14681294978",
+   "rating": 5,
+   "date": "2026-10-18"
+  },
+  {
+   "id": "Copilot-14710291782",
+   "app": "Copilot",
+   "apple_id": "14710291782",
+   "rating": 5,
+   "date": "2026-10-25"
+  },
+  {
+   "id": "Copilot-14773586651",
+   "app": "Copilot",
+   "apple_id": "14773586651",
+   "rating": 5,
+   "date": "2026-11-10"
+  },
+  {
+   "id": "Copilot-14710860937",
+   "app": "Copilot",
+   "apple_id": "14710860937",
+   "rating": 5,
+   "date": "2026-10-25"
+  },
+  {
+   "id": "Copilot-14678761862",
+   "app": "Copilot",
+   "apple_id": "14678761862",
+   "rating": 5,
+   "date": "2026-10-17"
+  },
+  {
+   "id": "Copilot-14698391632",
+   "app": "Copilot",
+   "apple_id": "14698391632",
+   "rating": 5,
+   "date": "2026-10-22"
+  }
+ ]
+}

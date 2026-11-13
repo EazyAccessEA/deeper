@@ -9,3 +9,8 @@ research/design-elevate/
 
 # Licensed stock images: not for redistribution, so kept out of this repo.
 site/src/assets/journal/
+
+# Review text from the App Store: may hold reviewers' personal details, and isn't ours to republish.
+# The public study keeps ids, ratings, dates and codes only (data/sample-ids.json).
+examples/raw/journal-complaints/data/reviews.json
+examples/raw/journal-complaints/data/samples.json
