@@ -18,7 +18,7 @@ const { title, description, date, minutes, sources = [], lead, figures = {} } = 
 // Figures inside the text: <!-- figure:<key> --> in the Markdown, filled from `figures` in the front matter.
 let body: string = await mod.compiledContent();
 for (const [key, fig] of Object.entries(figures) as [string, any][]) {
-  body = body.replace(`<!-- figure:${key} -->`, await figureHtml(fig));
+  body = body.replace(`<!-- figure:${key} -->`, await figureHtml(fig, 612, true));
 }
 const nice = new Date(date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 const url = new URL(Astro.url.pathname, Astro.site).href;
@@ -47,6 +47,7 @@ const article = {
       <p class="disclaimer">Felix Rieseberg hasn't seen or endorsed deeper. We're not affiliated with him or Anthropic. deeper adapts the four questions from his post <a href="https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/">How to be more ambitious</a>.</p>
     </header>
   </div>
+  {lead && hasImage(lead.file) && <div class="jlead"><JournalFigure {...lead} lead bleed /></div>}
   <div class="wrap jbody">
     <aside class="margin" aria-label="About this article">
       <p class="label">Evidence</p>
@@ -55,7 +56,6 @@ const article = {
       <p><a href="#sources">{sources.length}, listed at the end</a></p>
     </aside>
     <article class="prose jprose">
-      {lead && hasImage(lead.file) && <JournalFigure {...lead} lead />}
       <Fragment set:html={body} />
       <section id="sources" class="sources" aria-label="Sources">
         <p class="label">Sources</p>
@@ -66,6 +66,17 @@ const article = {
 </Base>
 
 <style>
+  /* Full-width photos. main clips sideways overflow, so a 100vw figure never adds a horizontal scrollbar. */
+  :global(main) { overflow-x: clip; }
+  .jlead :global(.jfig img) { width: 100%; height: auto; max-height: 82vh; object-fit: cover; display: block; background: var(--panel); }
+  .jlead :global(.jfig figcaption) { box-sizing: border-box; max-width: var(--wrap); margin: 0.75rem auto 0; padding: 0 var(--gutter); font-size: 0.875rem; line-height: 1.375rem; color: var(--grey); }
+  .jlead :global(.jfig .cap) { color: var(--ink); }
+  @media (min-width: 900px) {
+    .jlead :global(.jfig figcaption) { padding-left: calc(var(--gutter) + 19rem); }
+    .jprose :global(.jfig.jfig--bleed) { width: 100vw; margin-left: calc(-1 * (max(0px, (100vw - var(--wrap)) / 2) + var(--gutter) + 19rem)); }
+    .jprose :global(.jfig--bleed img) { max-height: 82vh; object-fit: cover; }
+    .jprose :global(.jfig--bleed figcaption) { padding-left: calc(max(0px, (100vw - var(--wrap)) / 2) + var(--gutter) + 19rem); max-width: calc(max(0px, (100vw - var(--wrap)) / 2) + var(--gutter) + 19rem + 38.25rem); }
+  }
   .jband { padding: clamp(2.5rem, 6vw, 6rem) 0 clamp(2.5rem, 5vw, 4.5rem); }
   .jtitle { display: flex; flex-direction: column; gap: 1.5rem; }
   .jtitle > * { max-width: 45rem; }

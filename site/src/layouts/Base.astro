@@ -82,14 +82,17 @@ const software = {
       <div class="wrap foot-in">
         <div class="foot-mark">
           <img src="/wordmark-white.svg" alt="deeper" width="104" height="35" />
-          <p>Apache 2.0. The four questions adapt a prompt from Felix Rieseberg's <a href="https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/">How to be more ambitious</a>.</p>
+          <p>The four questions adapt a prompt from Felix Rieseberg's <a href="https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/">How to be more ambitious</a>.</p>
         </div>
         <nav aria-label="Footer">
-          <ul>{links.map(([href, label]) => <li><a href={href}>{label}</a></li>)}</ul>
-          <ul><li><a href="https://github.com/EazyAccessEA/deeper">GitHub</a></li><li><a href="/changelog/">Changelog</a></li><li><a href="https://github.com/EazyAccessEA/deeper/issues">Report an issue</a></li><li><a href="https://github.com/EazyAccessEA/deeper/blob/main/SECURITY.md">Security</a></li></ul>
-          <ul><li><a href="mailto:hello@deeper.tools">hello@deeper.tools</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/legal/">Legal</a></li></ul>
-          {socials.length > 0 && <ul>{socials.map(([href, label]) => <li><a href={href} rel="me">{label}</a></li>)}</ul>}
+          <div><h2>Product</h2><ul>{links.map(([href, label]) => <li><a href={href}>{label}</a></li>)}</ul></div>
+          <div><h2>Project</h2><ul><li><a href="https://github.com/EazyAccessEA/deeper">GitHub</a></li><li><a href="/changelog/">Changelog</a></li><li><a href="https://github.com/EazyAccessEA/deeper/issues">Report an issue</a></li><li><a href="https://github.com/EazyAccessEA/deeper/blob/main/SECURITY.md">Security</a></li></ul></div>
+          <div class="foot-connect"><h2>Connect</h2><ul><li><a href="mailto:hello@deeper.tools">hello@deeper.tools</a></li>{socials.map(([href, label]) => <li><a href={href} rel="me">{label}</a></li>)}</ul></div>
         </nav>
+        <div class="foot-base">
+          <p>© 2026 Eazy Access Ltd. Code under Apache 2.0.</p>
+          <ul><li><a href="/privacy/">Privacy</a></li><li><a href="/legal/">Legal</a></li></ul>
+        </div>
       </div>
     </footer>
   </body>
@@ -113,16 +116,31 @@ const software = {
   }
 
   .foot { padding-block: 4rem 4.5rem; font-size: 0.9375rem; line-height: 1.5; }
-  .foot-in { display: flex; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
-  .foot-mark { display: flex; flex-direction: column; gap: 1rem; max-width: 26rem; }
+  /* Grid, not wrapping flex: wrapping left a column alone on its own row at some widths.
+     Wide: mark on 6 of 12 columns, each link group on 2. Medium: mark above, groups 4 across.
+     Below 768: Product and Project side by side, Connect full width with its links in the same two columns. */
+  .foot-in { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: 3rem; }
+  .foot-mark { grid-column: 1 / 7; display: flex; flex-direction: column; gap: 1rem; max-width: 26rem; }
   .foot-mark img { height: 2.1rem; width: auto; align-self: flex-start; }
   .foot-mark p { color: var(--on-black); }
-  .foot nav { display: flex; gap: 4rem; flex-wrap: wrap; }
+  .foot nav { grid-column: 7 / -1; display: grid; grid-template-columns: subgrid; row-gap: 2.5rem; }
+  .foot nav > div { grid-column: span 2; }
+  /* Medium weight, and no gap below: the label sits closer to its links than the links sit to each other. */
+  .foot h2 { font: 500 0.9375rem/1.5 var(--sans); letter-spacing: 0; }
   .foot ul { list-style: none; margin: 0; padding: 0; }
-  .foot li a { display: inline-flex; align-items: center; min-height: 2.25rem; text-decoration: none; }
-  .foot li a:hover { text-decoration: underline; }
-  @media (max-width: 640px) {
-    .foot nav { gap: 2.5rem; }
+  .foot li a { display: inline-flex; align-items: center; min-height: 2.25rem; color: var(--on-black); text-decoration: none; }
+  .foot li a:hover { color: var(--white); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.4em; }
+  .foot-base { grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; column-gap: 2rem; font-size: var(--t-sm); color: var(--on-black); }
+  .foot-base ul { display: flex; gap: 1.5rem; }
+  @media (max-width: 1199px) {
+    .foot-mark { grid-column: 1 / -1; }
+    .foot nav { grid-column: 1 / -1; }
+    .foot nav > div { grid-column: span 4; }
+  }
+  @media (max-width: 767px) {
+    .foot nav > div { grid-column: span 6; }
+    .foot nav > .foot-connect { grid-column: 1 / -1; }
+    .foot-connect ul { columns: 2; column-gap: var(--gutter); }
     .foot li a { min-height: 2.75rem; }
   }
 </style>

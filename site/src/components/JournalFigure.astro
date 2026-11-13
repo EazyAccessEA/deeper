@@ -3,19 +3,19 @@
 // and their licence records are kept outside this repo. Check pages that show them by eye.
 import { Picture } from "astro:assets";
 
-interface Props { file: string; alt: string; caption?: string; credit?: string; creditUrl?: string; lead?: boolean; width?: number; bare?: boolean; }
-const { file, alt, caption, credit, creditUrl, lead = false, width = 612, bare = false } = Astro.props;
+interface Props { file: string; alt: string; caption?: string; credit?: string; creditUrl?: string; lead?: boolean; width?: number; bare?: boolean; bleed?: boolean; }
+const { file, alt, caption, credit, creditUrl, lead = false, width = 612, bare = false, bleed = false } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>("../assets/journal/*.{jpg,jpeg,png,webp}", { eager: true });
 const img = images[`../assets/journal/${file}`]?.default;
 if (!img) throw new Error(`JournalFigure: src/assets/journal/${file} not found`);
 ---
-<figure class="jfig">
+<figure class:list={["jfig", { "jfig--bleed": bleed }]}>
   <Picture
     src={img}
     alt={alt}
     formats={["avif", "webp"]}
-    widths={[Math.min(img.width, 400), Math.min(img.width, width), Math.min(img.width, width * 2)]}
-    sizes={`(max-width: 899px) calc(100vw - 2.5rem), ${width}px`}
+    widths={bleed ? [400, 800, 1224, 1600, 2448].map((w) => Math.min(img.width, w)) : [Math.min(img.width, 400), Math.min(img.width, width), Math.min(img.width, width * 2)]}
+    sizes={bleed ? "100vw" : `(max-width: 899px) calc(100vw - 2.5rem), ${width}px`}
     loading={lead ? "eager" : "lazy"}
     fetchpriority={lead ? "high" : "auto"}
   />

@@ -11,15 +11,16 @@ export const hasImage = (file: string) => Boolean(images[`../assets/journal/${fi
 
 const esc = (s = "") => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-export async function figureHtml(f: Fig, width = 612): Promise<string> {
+export async function figureHtml(f: Fig, width = 612, bleed = false): Promise<string> {
   const img = images[`../assets/journal/${f.file}`]?.default;
   if (!img) return "";
-  const widths = [Math.min(img.width, 400), Math.min(img.width, width), Math.min(img.width, width * 2)];
-  const sizes = `(max-width: 899px) calc(100vw - 2.5rem), ${width}px`;
+  // Bleed: the column width on phones, the full window on desktop (see .jfig--bleed in the article page).
+  const widths = bleed ? [400, 800, 1224, 1600, 2448].map((w) => Math.min(img.width, w)) : [Math.min(img.width, 400), Math.min(img.width, width), Math.min(img.width, width * 2)];
+  const sizes = bleed ? "(max-width: 899px) calc(100vw - 2.5rem), 100vw" : `(max-width: 899px) calc(100vw - 2.5rem), ${width}px`;
   const [avif, webp] = await Promise.all(["avif", "webp"].map((format) => getImage({ src: img, widths, sizes, format: format as "avif" | "webp" })));
   const h = Math.round((img.height / img.width) * width);
   const credit = !f.credit ? "" : f.creditUrl ? ` <a href="${esc(f.creditUrl)}">${esc(f.credit)}</a>` : ` ${esc(f.credit)}`;
-  return `<figure class="jfig"><picture><source type="image/avif" srcset="${avif.srcSet.attribute}" sizes="${sizes}" />` +
+  return `<figure class="jfig${bleed ? " jfig--bleed" : ""}"><picture><source type="image/avif" srcset="${avif.srcSet.attribute}" sizes="${sizes}" />` +
     `<img src="${webp.src}" srcset="${webp.srcSet.attribute}" sizes="${sizes}" alt="${esc(f.alt)}" width="${width}" height="${h}" loading="lazy" decoding="async" /></picture>` +
     (f.caption || credit ? `<figcaption>${f.caption ? `<span class="cap">${esc(f.caption)}</span>` : ""}${credit}</figcaption>` : "") + `</figure>`;
 }
