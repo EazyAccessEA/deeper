@@ -1,5 +1,5 @@
 ---
-title: "We tested Felix Rieseberg's depth prompt against a plain request. It tied."
+title: "We tested our own tool. It tied with just asking."
 description: "A horse that could count, a judge who changed his mind, and 32 answers scored blind. Felix's prompt tied with just asking. So did ours."
 date: "2026-11-12"
 order: 3
