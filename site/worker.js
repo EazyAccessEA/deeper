@@ -8,6 +8,7 @@ const PER_IP_PER_DAY = 5;
 
 // Pages the counter covers; anything else posted to /api/e is dropped.
 const PAGES = new Set(["/", "/start/", "/docs/", "/patterns/", "/research/", "/changelog/", "/privacy/", "/legal/", "/subscribed/"]);
+const JOURNAL = /^\/journal\/([a-z0-9-]{1,80}\/)?$/; // the index and every article, so new articles count without a code change
 const BOT = /bot|crawl|spider|slurp|headless|preview|monitor/i;
 
 export default {
@@ -70,7 +71,7 @@ async function count(request, env) {
   if (body.length > 200) return new Response(null, { status: 413 });
   let e;
   try { e = JSON.parse(body); } catch { return new Response(null, { status: 400 }); }
-  if (!PAGES.has(e?.p) || !["pv", "copy"].includes(e?.k)) return new Response(null, { status: 400 });
+  if (!(PAGES.has(e?.p) || JOURNAL.test(e?.p ?? "")) || !["pv", "copy"].includes(e?.k)) return new Response(null, { status: 400 });
   const day = new Date().toISOString().slice(0, 10);
   const country = /^[A-Z]{2}$/.test(request.cf?.country ?? "") ? request.cf.country : "XX";
   await env.DB.prepare(
