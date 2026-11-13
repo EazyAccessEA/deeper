@@ -4,6 +4,15 @@ description: "I asked for one caption for a jar of honey and got a testing progr
 date: "2026-11-12"
 order: 2
 minutes: 8
+lead:
+  file: "honey-jars.jpg"
+  alt: "Jars of honey on a white background."
+  caption: "The job: one caption for one jar."
+figures:
+  door:
+    file: "forged-door.jpg"
+    alt: "Close-up of an old, heavy forged door."
+    caption: "You agreed to a door. Gold plating is everything that gets bolted on after."
 sources:
   - text: "Felix Rieseberg, How to be more ambitious: A tutorial for humans with models, felixrieseberg.com, 13 October 2026"
     url: "https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/"
@@ -65,6 +74,8 @@ People were overdoing work long before computers.
 In 1955 a historian named C. Northcote Parkinson wrote a piece for The Economist with a line that's been quoted ever since: work expands so as to fill the time available for its completion. <!-- O3 --> Give a man a week to post a letter, and he'll spend the week posting it.
 
 Project managers have a name for the version where the extras are shiny. Gold plating. You agreed to build a door, and the builder adds a brass knocker, a doorbell that plays a tune, and a little window with a stained-glass owl. <!-- O9 --> Nobody asked for the owl. Now you're paying for the owl. Now you have to clean the owl.
+
+<!-- figure:door -->
 
 Programmers have their own rule against it, and it's my favourite name for anything. YAGNI. You aren't gonna need it. It came out of Extreme Programming in the 1990s, from Kent Beck, and Ron Jeffries put it plainly: "Always implement things when you actually need them, never when you just foresee that you need them." <!-- O5 --> Somebody wrote that down as a principle, so it must have been a real problem. You don't write "don't put your hand in the fire" on the wall unless people kept putting their hands in the fire.
 

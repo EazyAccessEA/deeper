@@ -4,6 +4,10 @@ description: "The internet's favourite magic words, a sculptor who didn't want t
 date: "2026-11-12"
 order: 1
 minutes: 8
+lead:
+  file: "chef-hat.jpg"
+  alt: "A white chef's hat on a white background."
+  caption: "The hat doesn't know when the oil is hot."
 sources:
   - text: "Awesome ChatGPT Prompts (now prompts.chat), first README, 5 December 2022"
     url: "https://github.com/f/awesome-chatgpt-prompts/commit/25b78186b32c514273e5003fcb430c53629d934d"

@@ -1,6 +1,9 @@
 ---
 // One page per Markdown file in src/content/journal/. Design: Paper, "deeper.tools — elevate", page "Journal".
 import Base from "../../layouts/Base.astro";
+import JournalFigure from "../../components/JournalFigure.astro";
+import JournalTone from "../../components/JournalTone.astro";
+import { figureHtml, hasImage } from "../../lib/figure";
 
 export function getStaticPaths() {
   const files = import.meta.glob("../../content/journal/*.md", { eager: true });
@@ -11,8 +14,12 @@ export function getStaticPaths() {
 }
 
 const { mod } = Astro.props as { mod: any };
-const { title, description, date, minutes, sources = [] } = mod.frontmatter;
-const { Content } = mod;
+const { title, description, date, minutes, sources = [], lead, figures = {} } = mod.frontmatter;
+// Figures inside the text: <!-- figure:<key> --> in the Markdown, filled from `figures` in the front matter.
+let body: string = await mod.compiledContent();
+for (const [key, fig] of Object.entries(figures) as [string, any][]) {
+  body = body.replace(`<!-- figure:${key} -->`, await figureHtml(fig));
+}
 const nice = new Date(date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 const url = new URL(Astro.url.pathname, Astro.site).href;
 const article = {
@@ -31,6 +38,7 @@ const article = {
 ---
 <Base title={`${title} | deeper`} description={description}>
   <script type="application/ld+json" set:html={JSON.stringify(article)} />
+  <JournalTone />
   <div class="band-red jband">
     <header class="wrap jtitle">
       <p class="meta"><a href="/journal/">Journal</a> · <time datetime={date}>{nice}</time> · {minutes} min read</p>
@@ -47,7 +55,8 @@ const article = {
       <p><a href="#sources">{sources.length}, listed at the end</a></p>
     </aside>
     <article class="prose jprose">
-      <Content />
+      {lead && hasImage(lead.file) && <JournalFigure {...lead} lead />}
+      <Fragment set:html={body} />
       <section id="sources" class="sources" aria-label="Sources">
         <p class="label">Sources</p>
         <ol>{sources.map((s: { text: string; url: string }) => <li><a href={s.url}>{s.text}</a></li>)}</ol>
@@ -79,6 +88,11 @@ const article = {
   .sources li::marker { color: var(--red-text); font-family: var(--mono); }
   .sources li + li { margin-top: 0.75rem; }
   .jprose :global(h2) { font-size: clamp(2.125rem, 3vw, 2.625rem); line-height: 1; }
+  .jprose :global(.jfig) { margin: 2rem 0 0; }
+  .jprose > :global(.jfig:first-child) { margin: 0 0 2rem; }
+  .jprose :global(.jfig img) { width: 100%; height: auto; display: block; background: var(--panel); }
+  .jprose :global(.jfig figcaption) { margin-top: 0.75rem; font-size: 0.875rem; line-height: 1.375rem; color: var(--grey); }
+  .jprose :global(.jfig .cap) { color: var(--ink); }
   .jprose :global(figure.run) { margin: 1.5rem 0 0; padding: 1.5rem; background: var(--panel); border-radius: 4px; }
   .jprose :global(figure.run figcaption) { font-family: var(--mono); font-size: 0.875rem; line-height: 1.25rem; color: var(--grey); }
   .jprose :global(figure.run blockquote) { margin: 0.75rem 0 0; }

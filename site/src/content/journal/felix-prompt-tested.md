@@ -4,6 +4,10 @@ description: "A horse that could count, a judge who changed his mind, and 32 ans
 date: "2026-11-12"
 order: 3
 minutes: 9
+lead:
+  file: "chalkboard.jpg"
+  alt: "Maths formulas written in chalk on a black chalkboard."
+  caption: "Sums on a board. Hans could do none of them. He could read the person asking."
 sources:
   - text: "Felix Rieseberg, How to be more ambitious: A tutorial for humans with models, felixrieseberg.com, 13 October 2026"
     url: "https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/"

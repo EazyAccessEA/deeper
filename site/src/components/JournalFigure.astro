@@ -1,0 +1,30 @@
+---
+// A journal image with its caption. Files live in src/assets/journal/, which git ignores: they are licensed stock,
+// and their licence records are kept outside this repo. Check pages that show them by eye.
+import { Picture } from "astro:assets";
+
+interface Props { file: string; alt: string; caption?: string; credit?: string; creditUrl?: string; lead?: boolean; width?: number; bare?: boolean; }
+const { file, alt, caption, credit, creditUrl, lead = false, width = 612, bare = false } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>("../assets/journal/*.{jpg,jpeg,png,webp}", { eager: true });
+const img = images[`../assets/journal/${file}`]?.default;
+if (!img) throw new Error(`JournalFigure: src/assets/journal/${file} not found`);
+---
+<figure class="jfig">
+  <Picture
+    src={img}
+    alt={alt}
+    formats={["avif", "webp"]}
+    widths={[Math.min(img.width, 400), Math.min(img.width, width), Math.min(img.width, width * 2)]}
+    sizes={`(max-width: 899px) calc(100vw - 2.5rem), ${width}px`}
+    loading={lead ? "eager" : "lazy"}
+    fetchpriority={lead ? "high" : "auto"}
+  />
+  {!bare && (caption || credit) && <figcaption>{caption && <span class="cap">{caption}</span>}{credit && " "}{credit && (creditUrl ? <a href={creditUrl}>{credit}</a> : credit)}</figcaption>}
+</figure>
+
+<style>
+  .jfig { margin: 0; }
+  .jfig :global(img) { width: 100%; height: auto; display: block; background: var(--panel); }
+  figcaption { margin-top: 0.75rem; font-size: 0.875rem; line-height: 1.375rem; color: var(--grey); }
+  .cap { color: var(--ink); }
+</style>

@@ -1,5 +1,8 @@
 ---
 import Base from "../../layouts/Base.astro";
+import JournalFigure from "../../components/JournalFigure.astro";
+import JournalTone from "../../components/JournalTone.astro";
+import { hasImage } from "../../lib/figure";
 
 const files = import.meta.glob("../../content/journal/*.md", { eager: true });
 const posts = Object.entries(files)
@@ -9,6 +12,7 @@ const nice = (d: string) => new Date(d).toLocaleDateString("en-GB", { day: "nume
 ---
 <Base title="Journal | deeper" description="What we've tested, what held up, and what didn't. Every figure links to the files it came from.">
   <div class="band-red jband">
+  <JournalTone />
     <header class="wrap">
       <h1>Journal</h1>
       <p class="stand">What we've tested, what held up, and what didn't. Every figure links to the files it came from.</p>
@@ -18,6 +22,7 @@ const nice = (d: string) => new Date(d).toLocaleDateString("en-GB", { day: "nume
     <ol>
       {posts.map((p, i) => (
         <li class:list={{ lead: i === 0 }}>
+          {i === 0 && p.lead && hasImage(p.lead.file) && <a href={`/journal/${p.slug}/`} tabindex="-1" aria-hidden="true" class="pic"><JournalFigure {...p.lead} width={680} lead bare /></a>}
           <p class="meta"><time datetime={p.date}>{nice(p.date)}</time> · {p.minutes} min read</p>
           <h2><a href={`/journal/${p.slug}/`}>{p.title}</a></h2>
           <p>{p.description}</p>
@@ -41,5 +46,6 @@ const nice = (d: string) => new Date(d).toLocaleDateString("en-GB", { day: "nume
   h2 { font-size: clamp(1.6875rem, 3vw, 2.625rem); line-height: 1; }
   li.lead h2 { font-size: clamp(2.125rem, 3.7vw, 3.3125rem); }
   h2 a { text-decoration: none; }
+  .pic { display: block; margin-bottom: 0.5rem; }
   h2 a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
 </style>

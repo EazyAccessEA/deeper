@@ -44,6 +44,8 @@ Left-aligned 12-column grid, max 72rem. Hero: headline and install on the left 7
 
 Photographs only, generated and kept in brand/plates: a red pencil on bright white paper, no text in frame, cool light. At most one image per section. Never paper texture as a background, never handwriting.
 
+**Journal exception (13 Nov 2026):** journal pages may also use archival public-domain photographs and licensed stock, still at most one per section, never showing a face or an animal, each with a caption that tells the reader something. Licence records and the image files are kept outside this repo. Some stock licences forbid showing the files to an AI model, so those pages are checked by eye. Journal photos are shown in a three-tone map of the palette: ink, Proof Red, white.
+
 ## 8. Motion & Interaction
 
 On load, the red insertions in the hero demo appear one by one (opacity and a 4 px rise, 120 ms apart). Hover: underline thickens. Everything collapses to static under prefers-reduced-motion.
