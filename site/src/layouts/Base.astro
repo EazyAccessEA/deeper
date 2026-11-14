@@ -24,6 +24,7 @@ const {
 const path = Astro.url.pathname;
 // "Get started" rather than "Start": Lighthouse flags a bare "Start" link as non-descriptive.
 const links = [["/start/", "Get started"], ["/journal/", "Journal"], ["/docs/", "Docs"], ["/patterns/", "Patterns"], ["/research/", "Research"]];
+const head = [...links, ["https://github.com/EazyAccessEA/deeper", "GitHub"]];
 // deeper's own accounts. Add one only once it's open, its profile links back to deeper.tools/?ref=<platform>,
 // and `curl` on the URL returns 200. They show in the footer (rel="me") and as sameAs in the structured data.
 const socials: [string, string][] = [["https://bsky.app/profile/deeper.tools", "Bluesky"], ["https://www.youtube.com/@deeper-tools", "YouTube"], ["https://x.com/deepertools", "X (Twitter)"], ["https://www.tiktok.com/@deepertools", "TikTok"], ["https://www.instagram.com/deeper.tools/", "Instagram"], ["https://www.facebook.com/profile.php?id=61596409051860", "Facebook"]];
@@ -72,8 +73,13 @@ const software = {
       <header class="wrap head">
         <a class="logo" href="/" aria-label="deeper, home"><img src="/wordmark-white.svg" alt="" width="104" height="35" /></a>
         <nav aria-label="Main">
-          {links.map(([href, label], i) => <a href={href} class:list={{ extra: i > 1 }} aria-current={path === href ? "page" : undefined}>{label}</a>)}
-          <a href="https://github.com/EazyAccessEA/deeper">GitHub</a>
+          {head.map(([href, label], i) => <a href={href} class:list={{ extra: i > 0 }} aria-current={path === href ? "page" : undefined}>{label}</a>)}
+          {/* Phones: Get started stays in the bar, everything else goes behind Menu. A native popover, so no script
+              (the CSP allows none) and the browser handles Esc, tapping outside, focus and aria-expanded. */}
+          <button class="menu-btn" type="button" popovertarget="menu">Menu</button>
+          <ul id="menu" popover>
+            {head.map(([href, label]) => <li><a href={href} aria-current={path === href ? "page" : undefined}>{label}</a></li>)}
+          </ul>
         </nav>
       </header>
     </div>
@@ -108,11 +114,20 @@ const software = {
   .head nav { display: flex; gap: 1.9rem; font-size: 1.0625rem; font-weight: 500; }
   .head nav a { display: inline-flex; align-items: center; min-height: 2.75rem; text-decoration: none; white-space: nowrap; }
   .head nav a:hover, .head nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.4em; }
+  .menu-btn { display: none; }
+  @media (min-width: 641px) { #menu { display: none; } }
   @media (max-width: 640px) {
     .head { height: 3.75rem; }
     .logo img { height: 1.75rem; }
     .head nav { gap: 1.1rem; font-size: 0.9375rem; }
     .head nav a.extra { display: none; }
+    .menu-btn { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 0.5rem; margin-right: -0.5rem;
+      font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+    .menu-btn:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.4em; }
+    /* Absolute in the top layer is page-relative, so the panel always sits right under the 3.75rem bar. */
+    #menu { position: absolute; inset: 3.75rem 0 auto; width: auto; margin: 0; border: 0; list-style: none;
+      padding: 0.25rem var(--gutter) 1.25rem; background: var(--red); color: var(--white); font-size: 1.125rem; }
+    #menu a { display: flex; align-items: center; min-height: 2.75rem; color: inherit; }
   }
 
   .foot { padding-block: 4rem 4.5rem; font-size: 0.9375rem; line-height: 1.5; }
@@ -130,7 +145,16 @@ const software = {
   .foot ul { list-style: none; margin: 0; padding: 0; }
   .foot li a { display: inline-flex; align-items: center; min-height: 2.25rem; color: var(--on-black); text-decoration: none; }
   .foot li a:hover { color: var(--white); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.4em; }
-  .foot-base { grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; column-gap: 2rem; font-size: var(--t-sm); color: var(--on-black); }
+  /* The mark closes the page as it opens it: the giant caret from the hero and the inner-page bands, here in red
+     on black, feet on the footer's bottom edge. Same size and geometry as .page h1::after in global.css. */
+  .foot-in { position: relative; --cw: clamp(7rem, 22vw, 20rem); }
+  .foot-in::after {
+    content: ""; position: absolute; right: var(--gutter); bottom: -4.5rem; width: var(--cw); aspect-ratio: 760 / 560; background: var(--red);
+    clip-path: polygon(50% 0, 100% 100%, 73.7% 100%, 50% 48.2%, 26.3% 100%, 0 100%); pointer-events: none;
+  }
+  /* The last row makes room for the caret: as tall as the caret's part above the padding, and clear of it on the right. */
+  .foot-base { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: last baseline; align-content: flex-end; column-gap: 2rem;
+    min-height: calc(var(--cw) * 560 / 760 - 4.5rem); padding-right: calc(var(--cw) + 1rem); font-size: var(--t-sm); color: var(--on-black); }
   .foot-base ul { display: flex; gap: 1.5rem; }
   @media (max-width: 1199px) {
     .foot-mark { grid-column: 1 / -1; }
