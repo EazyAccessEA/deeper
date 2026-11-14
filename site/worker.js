@@ -10,6 +10,9 @@ const PER_IP_PER_DAY = 5;
 const PAGES = new Set(["/", "/start/", "/docs/", "/patterns/", "/research/", "/changelog/", "/privacy/", "/legal/", "/subscribed/"]);
 const JOURNAL = /^\/journal\/([a-z0-9-]{1,80}\/)?$/; // the index and every article, so new articles count without a code change
 const BOT = /bot|crawl|spider|slurp|headless|preview|monitor/i;
+// ?ref= values counted per channel (marketing/social/README.md "The goal"); anything else counts as "" (no ref).
+// "test" is for checking links by hand and is left out of every count.
+const REFS = new Set(["tiktok", "youtube", "instagram", "facebook", "bluesky", "x", "linkedin", "github", "test"]);
 
 export default {
   async fetch(request, env) {
@@ -58,7 +61,7 @@ function withCounter(res) {
   return new HTMLRewriter().on("body", { element: (el) => el.append('<script src="/count.js" defer></script>', { html: true }) }).transform(res);
 }
 
-// POST /api/e {p, k}: adds one to a counter for today. No IP, user agent or identifier is stored;
+// POST /api/e {p, k, r}: adds one to a counter for today. No IP, user agent or identifier is stored;
 // the user agent is read only to skip obvious bots, then discarded.
 // COUNT_LIMIT (wrangler.jsonc) caps each IP before anything is read, so one client can't inflate the A/B counts
 // or burn D1 writes. Cloudflare keeps that counter for a minute; we never see or store the IP.
@@ -74,9 +77,10 @@ async function count(request, env) {
   if (!(PAGES.has(e?.p) || JOURNAL.test(e?.p ?? "")) || !["pv", "copy"].includes(e?.k)) return new Response(null, { status: 400 });
   const day = new Date().toISOString().slice(0, 10);
   const country = /^[A-Z]{2}$/.test(request.cf?.country ?? "") ? request.cf.country : "XX";
+  const ref = REFS.has(e.r) ? e.r : "";
   await env.DB.prepare(
-    "INSERT INTO events (day, page, kind, country, variant, n) VALUES (?, ?, ?, ?, 'live', 1) ON CONFLICT (day, page, kind, country, variant) DO UPDATE SET n = n + 1",
-  ).bind(day, e.p, e.k, country).run();
+    "INSERT INTO events (day, page, kind, country, variant, ref, n) VALUES (?, ?, ?, ?, 'live', ?, 1) ON CONFLICT (day, page, kind, country, variant, ref) DO UPDATE SET n = n + 1",
+  ).bind(day, e.p, e.k, country, ref).run();
   return new Response(null, { status: 204 });
 }
 

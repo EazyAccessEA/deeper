@@ -13,13 +13,15 @@ CREATE TABLE IF NOT EXISTS signups (
 CREATE INDEX IF NOT EXISTS signups_ip_hash ON signups (ip_hash);
 
 -- Copy-click counting for the A/B baseline (research/ab/preregistration.md).
--- Counters only: one row per day, page, event, country and variant, never one per person. Nothing identifies a visitor.
+-- Counters only: one row per day, page, event, country, variant and ref, never one per person. Nothing identifies a visitor.
+-- ref is the channel from the link's ?ref= (worker.js REFS), '' when there was none. Added 14 Nov 2026 by migrations/0001-events-ref.sql.
 CREATE TABLE IF NOT EXISTS events (
   day TEXT NOT NULL,
   page TEXT NOT NULL,
   kind TEXT NOT NULL,          -- 'pv' (page view) or 'copy' (a Copy button was clicked)
   country TEXT NOT NULL,
   variant TEXT NOT NULL DEFAULT 'live',
+  ref TEXT NOT NULL DEFAULT '',
   n INTEGER NOT NULL DEFAULT 0,
-  PRIMARY KEY (day, page, kind, country, variant)
+  PRIMARY KEY (day, page, kind, country, variant, ref)
 );
