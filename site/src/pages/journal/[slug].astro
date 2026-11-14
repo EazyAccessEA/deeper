@@ -4,6 +4,7 @@ import Base from "../../layouts/Base.astro";
 import JournalFigure from "../../components/JournalFigure.astro";
 import JournalTone from "../../components/JournalTone.astro";
 import { figureHtml, hasImage } from "../../lib/figure";
+import { blockHtml, reviewCards } from "../../lib/blocks";
 
 export function getStaticPaths() {
   const files = import.meta.glob("../../content/journal/*.md", { eager: true });
@@ -14,12 +15,17 @@ export function getStaticPaths() {
 }
 
 const { mod } = Astro.props as { mod: any };
-const { title, description, date, minutes, sources = [], lead, figures = {} } = mod.frontmatter;
+const { title, description, date, minutes, sources = [], lead, figures = {}, dateline } = mod.frontmatter;
 // Figures inside the text: <!-- figure:<key> --> in the Markdown, filled from `figures` in the front matter.
 let body: string = await mod.compiledContent();
 for (const [key, fig] of Object.entries(figures) as [string, any][]) {
   body = body.replace(`<!-- figure:${key} -->`, await figureHtml(fig));
 }
+// Blocks (charts, stat bands) from examples/raw: <!-- block:<key> -->. Review quotes become App Store cards.
+body = reviewCards(body.replace(/<!-- block:([a-z-]+) -->/g, (_m, key) => blockHtml(key)));
+// A dateline opens the article: one big figure and a short label, e.g. ["1974", "USA · model year"].
+if (dateline) body = `<p class="jdateline"><span class="big">${dateline[0]}</span> <span class="jlabel">${dateline[1]}</span></p>` + body;
+const sections = [...body.matchAll(/<h2 id="([^"]+)">(.*?)<\/h2>/g)].map(([, id, text]) => ({ id, text }));
 const hasPhoto = Boolean(lead && hasImage(lead.file));
 const nice = new Date(date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 const url = new URL(Astro.url.pathname, Astro.site).href;
@@ -40,6 +46,7 @@ const article = {
 <Base title={`${title} | deeper`} description={description}>
   <script type="application/ld+json" set:html={JSON.stringify(article)} />
   <JournalTone />
+  <div class="jprogress" aria-hidden="true"></div>
   {/* With a lead photo, the photo fills the title band behind the text, under an ink overlay (see .jband.photo). */}
   <div class:list={["band-red jband", { photo: hasPhoto }]}>
     {hasPhoto && <div class="jhero"><JournalFigure {...lead} lead hero /></div>}
@@ -56,6 +63,12 @@ const article = {
       <p>Every figure comes from files in <a href="https://github.com/EazyAccessEA/deeper/tree/main/examples/raw">examples/raw</a>, recomputed by script.</p>
       <p class="label">Sources</p>
       <p><a href="#sources">{sources.length}, listed at the end</a></p>
+      {sections.length > 2 && (
+        <nav class="jtoc" aria-label="In this article">
+          <p class="label">In this article</p>
+          <ol>{sections.map((x) => <li><a href={`#${x.id}`} set:html={x.text} /></li>)}</ol>
+        </nav>
+      )}
     </aside>
     <article class="prose jprose">
       <Fragment set:html={body} />
@@ -66,6 +79,24 @@ const article = {
     </article>
   </div>
 </Base>
+
+<script>
+  // Marks the section being read in the margin contents: the last heading above the top third of the window.
+  // Without JavaScript the list still works as links.
+  const links = [...document.querySelectorAll<HTMLAnchorElement>(".jtoc a")];
+  const heads = links.map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1))));
+  let ticking = false;
+  const mark = () => {
+    ticking = false;
+    let i = -1;
+    heads.forEach((h, n) => { if (h && h.getBoundingClientRect().top < innerHeight * 0.3) i = n; });
+    links.forEach((a, n) => (n === i ? a.setAttribute("aria-current", "true") : a.removeAttribute("aria-current")));
+  };
+  if (links.length) {
+    addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(mark); } }, { passive: true });
+    mark();
+  }
+</script>
 
 <style>
   .jband { padding: clamp(2.5rem, 6vw, 6rem) 0 clamp(2.5rem, 5vw, 4.5rem); }
@@ -148,13 +179,103 @@ const article = {
   .jprose :global(.scores tr.mark td) { font-weight: 700; border-bottom-color: currentColor; }
   .jprose :global(.scores tr.mark td:first-child) { box-shadow: inset 4px 0 var(--red); padding-left: 0.75rem; }
   .jprose :global(.scores caption) { caption-side: bottom; text-align: left; padding-top: 0.75rem; font-size: 0.875rem; line-height: 1.375rem; color: var(--grey); }
+
+  /* ---- Feature layer (Paper: "Journal — feature article"). The words are the Markdown's; these only change the pace. ---- */
+  :global(main) { overflow-x: clip; }
+  /* Reading progress: driven by scroll, no JavaScript. Browsers without scroll timelines simply don't show it. */
+  .jprogress { position: fixed; inset: 0 0 auto 0; height: 3px; z-index: 50; background: var(--red); transform: scaleX(0); transform-origin: 0 50%; pointer-events: none; }
+  @supports (animation-timeline: scroll()) { .jprogress { animation: jgrow linear both; animation-timeline: scroll(root); } }
+  @keyframes jgrow { to { transform: scaleX(1); } }
+  @keyframes jfill { from { transform: scaleX(0); } }
+
+  /* Numbered sections. */
+  .jprose { counter-reset: jsec; }
+  .jprose :global(h2) { counter-increment: jsec; display: flex; align-items: baseline; gap: 0.75rem; margin-top: 3.5rem; padding-top: 1rem; border-top: 3px solid currentColor; }
+  .jprose :global(h2)::before { content: counter(jsec, decimal-leading-zero); flex-shrink: 0; width: 1.75rem; font-size: 1.25rem; color: var(--red-text); }
+
+  /* Contents in the margin, following the reader. */
+  .jtoc { position: sticky; top: 1.5rem; margin-top: 2rem; }
+  .jtoc ol { list-style: none; margin: 0.5rem 0 0; padding: 0; counter-reset: jt; }
+  .jtoc li { counter-increment: jt; }
+  .jtoc a { display: flex; gap: 0.5rem; padding: 0.3125rem 0; text-decoration: none; }
+  .jtoc a::before { content: counter(jt, decimal-leading-zero); flex-shrink: 0; width: 1.5rem; color: var(--grey); }
+  .jtoc a:hover { text-decoration: underline; }
+  .jtoc a[aria-current] { color: var(--red-text); font-weight: 600; }
+  .jtoc a[aria-current]::before { color: inherit; }
+
+  .jprose :global(.jlabel) { font-family: var(--mono); font-size: 0.8125rem; line-height: 1.125rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--grey); }
+  .jprose :global(.jnote) { margin-top: 0.75rem; font-size: 0.875rem; line-height: 1.25rem; color: var(--grey); }
+
+  /* Dateline: one big figure opens the story, and the first paragraph reads as a lede. */
+  .jprose :global(.jdateline) { display: flex; align-items: flex-end; flex-wrap: wrap; gap: 0.5rem 1rem; padding-bottom: 1.25rem; margin-bottom: 1.5rem; border-bottom: 3px solid currentColor; }
+  .jprose :global(.jdateline .big) { font-weight: 800; font-stretch: 75%; font-size: clamp(6.5rem, 18vw, 10.5rem); line-height: 0.78; letter-spacing: -0.04em; color: var(--red-text); }
+  .jprose :global(.jdateline .jlabel) { padding-bottom: 0.25rem; }
+  .jprose :global(.jdateline + p) { font-size: clamp(1.3125rem, 2vw, 1.6875rem); line-height: 1.4; font-weight: 500; }
+
+  /* Bar chart. */
+  .jprose :global(.jchart) { margin: 2.5rem 0 0; }
+  .jprose :global(.jchart ol) { list-style: none; margin: 0.875rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+  .jprose :global(.jchart li) { display: grid; grid-template-columns: 1fr auto; row-gap: 0.25rem; column-gap: 1rem; font-size: 0.9375rem; line-height: 1.25rem; }
+  .jprose :global(.jchart .val) { font-variant-numeric: tabular-nums; }
+  .jprose :global(.jchart .bar) { grid-column: 1 / -1; height: 0.875rem; background: var(--panel); position: relative; }
+  .jprose :global(.jchart .bar)::after { content: ""; position: absolute; inset: 0 auto 0 0; width: var(--w); background: var(--ink); transform-origin: 0 50%; }
+  .jprose :global(.jchart .loud .lab), .jprose :global(.jchart .loud .val) { font-weight: 600; }
+  .jprose :global(.jchart .loud .bar)::after { background: var(--red); }
+  .jprose :global(.jchart .warned .bar)::after { background: var(--paper); box-shadow: inset 0 0 0 2px var(--red-text); }
+  .jprose :global(.jchart .tag) { font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--red-text); white-space: nowrap; }
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      .jprose :global(.jchart .bar)::after { animation: jfill linear both; animation-timeline: view(); animation-range: entry 0% cover 30%; }
+    }
+  }
+
+  /* Full-bleed bands inside the article: they leave the column and run the width of the window. */
+  .jprose :global(.jstat), .jprose :global(.jgap) { margin: 3rem calc(-1 * var(--gutter)) 0; padding: 3rem var(--gutter) 3.25rem; position: relative; z-index: 2; }
+  /* The bands pass over the sticky contents in the margin rather than under it. */
+  .jprose :global(.jstat) { background: var(--red); color: var(--white); }
+  .jprose :global(.jstat .jlabel) { color: var(--white); }
+  .jprose :global(.jstat .big) { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.25rem 1rem; margin-top: 0.75rem; font-weight: 800; font-stretch: 75%; letter-spacing: -0.02em; }
+  .jprose :global(.jstat .n) { font-size: clamp(8rem, 22vw, 15rem); line-height: 0.78; letter-spacing: -0.05em; }
+  .jprose :global(.jstat .of) { font-size: clamp(2.25rem, 4.6vw, 4.125rem); line-height: 1; }
+  .jprose :global(.jstat .say) { margin-top: 1rem; max-width: 26rem; font-size: clamp(1.0625rem, 1.5vw, 1.3125rem); line-height: 1.45; }
+  .jprose :global(.jgap) { background: var(--black); color: var(--white); }
+  .jprose :global(.jgap .head) { font-weight: 800; font-stretch: 75%; font-size: clamp(2.25rem, 5vw, 4.5rem); line-height: 0.95; letter-spacing: -0.02em; }
+  .jprose :global(.jgap .cols) { display: flex; gap: 2rem 4rem; margin-top: 1.75rem; }
+  .jprose :global(.jgap .cols > div) { flex: 1; min-width: 0; max-width: 26rem; }
+  .jprose :global(.jgap .jlabel) { color: var(--on-black); padding-bottom: 0.5rem; border-bottom: 1px solid currentColor; }
+  .jprose :global(.jgap .experts .jlabel), .jprose :global(.jgap .experts b) { color: #ff5a4e; }
+  .jprose :global(.jgap ul) { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+  .jprose :global(.jgap li) { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; padding: 0.375rem 0; font-size: clamp(0.9375rem, 1.4vw, 1.3125rem); }
+  .jprose :global(.jgap b) { font-weight: 800; font-stretch: 75%; font-size: clamp(1.375rem, 2.4vw, 2.125rem); white-space: nowrap; }
+  .jprose :global(.jgap .jnote) { color: var(--on-black); }
+  @media (min-width: 900px) {
+    .jprose :global(.jstat), .jprose :global(.jgap) {
+      --off: calc(max(0px, (100vw - var(--wrap)) / 2) + var(--gutter) + 19rem);
+      width: 100vw; margin-left: calc(-1 * var(--off)); margin-right: 0; padding: 5rem var(--gutter) 5.5rem var(--off);
+    }
+  }
+
+  /* App Store review cards. */
+  .jprose :global(figure.run.review) { border-left: 4px solid var(--red); border-radius: 0 4px 4px 0; }
+  .jprose :global(figure.run.review figcaption) { display: flex; align-items: center; gap: 0.75rem; font-family: var(--sans); }
+  .jprose :global(.review .app) { flex-shrink: 0; display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 0.5625rem; background: var(--ink); color: var(--paper); font-weight: 700; font-size: 0.9375rem; }
+  .jprose :global(.review .who) { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 0.5rem; font-size: 0.9375rem; line-height: 1.25rem; color: var(--grey); }
+  .jprose :global(.review .who b) { color: var(--ink); font-weight: 600; }
+  .jprose :global(.review .stars) { flex-basis: 100%; display: flex; gap: 2px; margin-top: 0.25rem; }
+  .jprose :global(.review .stars span) { width: 0.875rem; height: 0.875rem; background: var(--rule);
+    clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+  .jprose :global(.review .stars span.on) { background: var(--red-text); }
+  .jprose :global(.review blockquote p) { font-weight: 800; font-stretch: 75%; font-size: clamp(1.75rem, 3vw, 2.125rem); line-height: 1.05; letter-spacing: -0.01em; }
+
   @media (max-width: 899px) {
     .jbody { flex-direction: column; gap: 1.5rem; }
     .margin { width: auto; }
     .margin .label { display: inline; margin: 0; }
     .margin .label:not(:first-child) { display: none; }
     .margin p:nth-child(4) { display: none; }
+    .jtoc { display: none; }
   }
+  @media (max-width: 599px) { .jprose :global(.jgap .cols) { flex-direction: column; } }
   /* Phone: each version becomes a row with its figures beneath, labelled from the header (data-label). */
   @media (max-width: 599px) {
     .jprose :global(.scores thead) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }

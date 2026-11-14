@@ -4,6 +4,7 @@ description: "A seatbelt that wouldn't let you start the car, 2,000 app reviews,
 date: "2026-11-13"
 order: 1
 minutes: 10
+dateline: ["1974", "USA · model year"]
 lead:
   file: "red-buckle.jpg"
   alt: "A red seat belt buckle, close up."
@@ -62,9 +63,11 @@ The biggest single complaint was limits and money. One angry review in five, 21%
 <blockquote><p>"now I can't use it again for 8hours???"</p></blockquote>
 </figure>
 
-<!-- Q1 --> A Claude user on the free plan sent one short question, got one short answer, and was told to wait five or six hours. A ChatGPT user who pays was told they'd hit a "work limit" after an hour. Across all 623 angry reviews, not just the sample, the word "limit" turns up in 106 of them. <!-- K4 -->
+<!-- Q1 --> A Claude user on the free plan sent one short question, got one short answer, and was told to wait five or six hours. A ChatGPT user who pays was told they'd hit a "work limit" after an hour. Across all 623 angry reviews, beyond the sample, the word "limit" turns up in 106 of them. <!-- K4 -->
 
 Here's the honest bit. We decided in advance that we'd only call something "the top complaint" if it was clearly ahead of the next one, statistically. It isn't. Limits came first, but a broken app (crashes, log-in trouble, voice not working) got 15%, and their margins of error overlap. <!-- K3 --> And the lead leans on two events. About four in ten of the limits complaints were Copilot's, after a change I'll come to, and most of ChatGPT's landed on one day, 10 November, many of them about limits on photos. Take Copilot out and limits drop to 17%. <!-- K3 --> So call it a joint first place: the meter and the engine that won't start.
+
+<!-- block:complaints -->
 
 That's the buzzer. You feel it every single time.
 
@@ -107,6 +110,8 @@ Flattery first. Our coders put 4 of the 211 complaints under "tone", the categor
 
 Made-up and wrong answers: 6%, with a margin of error from about 4% to 10%. <!-- K3 --> Privacy in the sense the researchers mean: a search of all 2,000 reviews for anyone mentioning training on their chats found none. <!-- K6 -->
 
+<!-- block:chats -->
+
 So the thing a company rolled back a whole update over is something its users almost never name.
 
 But hold on. Here's the twist, and it's my favourite thing in the whole pile. Two of the "wrong answers" complaints were about flattery. They just didn't call it that.
@@ -136,6 +141,8 @@ Eight of the 120 called it a friend, a companion, a partner. <!-- K7 --> That's 
 ## Why the quiet ones are quiet
 
 A word of care first. A low count here means people rarely name something. It doesn't mean it rarely happens. That difference is the whole point of this section.
+
+<!-- block:gap -->
 
 Back to the seatbelt. People voted out the buzzer and not the crash for a simple reason. You feel the buzzer every morning. You only feel the crash once, and by then it's too late to write a review.
 

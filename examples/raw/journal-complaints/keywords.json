@@ -1,0 +1,20 @@
+{
+ "all": {
+  "reviews": 2000,
+  "limit": 149,
+  "flattery": 5,
+  "training on chats": 0
+ },
+ "1-2 stars": {
+  "reviews": 623,
+  "limit": 106,
+  "flattery": 3,
+  "training on chats": 0
+ },
+ "5 stars": {
+  "reviews": 1210,
+  "limit": 16,
+  "flattery": 2,
+  "training on chats": 0
+ }
+}

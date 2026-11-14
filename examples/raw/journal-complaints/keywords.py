@@ -13,3 +13,8 @@ for name, rows in pools.items():
     for k, p in TERMS.items():
         hits = [r for r in rows if re.search(p, r["title"] + " " + r["text"], re.I)]
         print(f"{name:9} {k:18} {len(hits):4} of {len(rows)}", [h["id"] for h in hits] if len(hits) < 8 else "")
+
+# Counts only (no review text), for the journal page to read at build time.
+out = {name: {"reviews": len(rows), **{k: sum(bool(re.search(p, r["title"] + " " + r["text"], re.I)) for r in rows) for k, p in TERMS.items()}}
+       for name, rows in pools.items()}
+(HERE / "keywords.json").write_text(json.dumps(out, indent=1))
