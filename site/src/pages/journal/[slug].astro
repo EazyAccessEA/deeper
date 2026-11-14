@@ -92,7 +92,12 @@ const article = {
   .jband.photo .disclaimer { color: var(--on-black); border-top-color: rgb(255 255 255 / 0.35); }
   @media (max-width: 899px) {
     /* --photo-h: the clear strip of photo above the text. The overlay reaches 0.8 just above where the text starts. */
-    .jband.photo { --photo-h: clamp(10rem, 40vw, 16rem); min-height: 0; padding-top: var(--photo-h); padding-bottom: 4rem; }
+    .jband.photo { --photo-h: clamp(5rem, 22vw, 8rem); min-height: 0; padding-top: var(--photo-h); padding-bottom: 2.5rem; }
+    /* Shorter on phones so the article starts on the first screen: a smaller title and stand, tighter gaps. */
+    .jband.photo .jtitle { gap: 1rem; }
+    .jband.photo .jtitle h1 { font-size: clamp(2.375rem, 10.5vw, 3.3125rem); line-height: 1; }
+    .jband.photo .stand { font-size: 1.0625rem; line-height: 1.5rem; }
+    .jband.photo .disclaimer { font-size: 0.8125rem; line-height: 1.25rem; padding-top: 0.75rem; }
     .jhero :global(.jfig)::after { background: linear-gradient(180deg, rgb(20 20 20 / 0.3) 0, rgb(20 20 20 / 0.8) calc(var(--photo-h) - 1.5rem), rgb(20 20 20 / 0.9) 100%); }
     .jhero :global(figcaption) { left: var(--gutter); max-width: none; text-align: left; }
   }
