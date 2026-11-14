@@ -18,8 +18,9 @@ const { title, description, date, minutes, sources = [], lead, figures = {} } = 
 // Figures inside the text: <!-- figure:<key> --> in the Markdown, filled from `figures` in the front matter.
 let body: string = await mod.compiledContent();
 for (const [key, fig] of Object.entries(figures) as [string, any][]) {
-  body = body.replace(`<!-- figure:${key} -->`, await figureHtml(fig, 612, true));
+  body = body.replace(`<!-- figure:${key} -->`, await figureHtml(fig));
 }
+const hasPhoto = Boolean(lead && hasImage(lead.file));
 const nice = new Date(date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 const url = new URL(Astro.url.pathname, Astro.site).href;
 const article = {
@@ -39,7 +40,9 @@ const article = {
 <Base title={`${title} | deeper`} description={description}>
   <script type="application/ld+json" set:html={JSON.stringify(article)} />
   <JournalTone />
-  <div class="band-red jband">
+  {/* With a lead photo, the photo fills the title band behind the text, under an ink overlay (see .jband.photo). */}
+  <div class:list={["band-red jband", { photo: hasPhoto }]}>
+    {hasPhoto && <div class="jhero"><JournalFigure {...lead} lead hero /></div>}
     <header class="wrap jtitle">
       <p class="meta"><a href="/journal/">Journal</a> · <time datetime={date}>{nice}</time> · {minutes} min read</p>
       <h1>{title}</h1>
@@ -47,7 +50,6 @@ const article = {
       <p class="disclaimer">Felix Rieseberg hasn't seen or endorsed deeper. We're not affiliated with him or Anthropic. deeper adapts the four questions from his post <a href="https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/">How to be more ambitious</a>.</p>
     </header>
   </div>
-  {lead && hasImage(lead.file) && <div class="jlead"><JournalFigure {...lead} lead bleed /></div>}
   <div class="wrap jbody">
     <aside class="margin" aria-label="About this article">
       <p class="label">Evidence</p>
@@ -66,18 +68,34 @@ const article = {
 </Base>
 
 <style>
-  /* Full-width photos. main clips sideways overflow, so a 100vw figure never adds a horizontal scrollbar. */
-  :global(main) { overflow-x: clip; }
-  .jlead :global(.jfig img) { width: 100%; height: auto; max-height: 82vh; object-fit: cover; display: block; background: var(--panel); }
-  .jlead :global(.jfig figcaption) { box-sizing: border-box; max-width: var(--wrap); margin: 0.75rem auto 0; padding: 0 var(--gutter); font-size: 0.875rem; line-height: 1.375rem; color: var(--grey); }
-  .jlead :global(.jfig .cap) { color: var(--ink); }
-  @media (min-width: 900px) {
-    .jlead :global(.jfig figcaption) { padding-left: calc(var(--gutter) + 19rem); }
-    .jprose :global(.jfig.jfig--bleed) { width: 100vw; margin-left: calc(-1 * (max(0px, (100vw - var(--wrap)) / 2) + var(--gutter) + 19rem)); }
-    .jprose :global(.jfig--bleed img) { max-height: 82vh; object-fit: cover; }
-    .jprose :global(.jfig--bleed figcaption) { padding-left: calc(max(0px, (100vw - var(--wrap)) / 2) + var(--gutter) + 19rem); max-width: calc(max(0px, (100vw - var(--wrap)) / 2) + var(--gutter) + 19rem + 38.25rem); }
-  }
   .jband { padding: clamp(2.5rem, 6vw, 6rem) 0 clamp(2.5rem, 5vw, 4.5rem); }
+  /* Photo hero. The toned photo can be pure white in its light areas, so the overlay under the text is what keeps it
+     readable: at 0.8 ink or more, white text is above 7:1 and the grey disclaimer above 4.5:1 even over pure white.
+     Wide: the overlay is densest on the left, under the text, and thins out to the right so the photo shows.
+     Narrow: the text runs the full width, so the overlay stays dense everywhere. */
+  .jband.photo { position: relative; isolation: isolate; overflow: hidden; background: var(--black); color: var(--white);
+    min-height: min(46rem, 88vh); display: flex; flex-direction: column; justify-content: flex-end; padding-top: clamp(6rem, 18vh, 12rem); }
+  .jhero { position: absolute; inset: 0; z-index: -1; }
+  .jhero :global(.jfig) { position: absolute; inset: 0; margin: 0; }
+  .jhero :global(picture), .jhero :global(img) { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .jhero :global(img) { object-fit: cover; object-position: 70% 50%; }
+  /* --text-end: the right edge of the text column (46rem from the column's left edge, inside the centred wrap). */
+  .jband.photo { --text-end: calc(max(0px, (100vw - var(--wrap)) / 2) + var(--gutter) + 46rem); }
+  .jband.photo .jtitle h1 { max-width: 45rem; }
+  /* The band is a flex column, and auto side margins would shrink the header to its text and centre it. */
+  .jband.photo .jtitle { width: 100%; box-sizing: border-box; }
+  .jhero :global(.jfig)::after { content: ""; position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgb(20 20 20 / 0.9) 0, rgb(20 20 20 / 0.8) var(--text-end), rgb(20 20 20 / 0.2) 100%); }
+  .jhero :global(figcaption) { position: absolute; z-index: 1; right: var(--gutter); bottom: 1rem; max-width: 22rem; margin: 0; text-align: right;
+    font-family: var(--mono); font-size: 0.75rem; line-height: 1.125rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--white); }
+  .jhero :global(figcaption .cap) { color: inherit; padding: 0.25rem 0.5rem; background: rgb(20 20 20 / 0.82); }
+  .jband.photo .disclaimer { color: var(--on-black); border-top-color: rgb(255 255 255 / 0.35); }
+  @media (max-width: 899px) {
+    /* --photo-h: the clear strip of photo above the text. The overlay reaches 0.8 just above where the text starts. */
+    .jband.photo { --photo-h: clamp(10rem, 40vw, 16rem); min-height: 0; padding-top: var(--photo-h); padding-bottom: 4rem; }
+    .jhero :global(.jfig)::after { background: linear-gradient(180deg, rgb(20 20 20 / 0.3) 0, rgb(20 20 20 / 0.8) calc(var(--photo-h) - 1.5rem), rgb(20 20 20 / 0.9) 100%); }
+    .jhero :global(figcaption) { left: var(--gutter); max-width: none; text-align: left; }
+  }
   .jtitle { display: flex; flex-direction: column; gap: 1.5rem; }
   .jtitle > * { max-width: 45rem; }
   .meta, .label { font-family: var(--mono); font-size: 0.875rem; line-height: 1.25rem; letter-spacing: 0.04em; text-transform: uppercase; }
