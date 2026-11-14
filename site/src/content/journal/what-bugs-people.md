@@ -4,6 +4,10 @@ description: "A seatbelt that wouldn't let you start the car, 2,000 app reviews,
 date: "2026-11-13"
 order: 1
 minutes: 10
+lead:
+  file: "red-buckle.jpg"
+  alt: "A red seat belt buckle, close up."
+  caption: "Not the crash. The buzzer."
 sources:
   - text: "Seat belt, section on automated reminders and engine start interlocks (encyclopedia entry)"
     url: "https://en.wikipedia.org/wiki/Seat_belt#Automated_reminders_and_engine_start_interlocks"
