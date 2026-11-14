@@ -49,12 +49,13 @@ const questions = [
   <section class="band evidence" aria-labelledby="ev-h">
     <div class="wrap ev-in">
       <div class="ev-copy">
-        <h2 id="ev-h">Best on {bestCount("v1.1b")} of {round2.length}<br /> blind tasks.</h2>
-        <p>Five real tasks, each rewritten without the skill and by two versions of deeper, then scored in one pass by a judge on a different model that didn't know which was which. It's one run on five tasks, judged by a model, so treat it as a reason to try deeper rather than proof. Version 1.1 stops adding work you didn't ask for and keeps every check.</p>
+        <h2 id="ev-h">Two blind tests.<br /> One win, one tie.</h2>
+        <p>In the first test, below, a judge scored the rewritten prompts, and deeper 1.1 was best on {bestCount("v1.1b")} of {round2.length} tasks. That test leaned our way: the judge's checklist looked like deeper's own four questions. So we ran a stricter one. Every prompt went all the way to a finished answer, and two judges from two companies marked them blind. On four tasks where the AI already had everything it needed, deeper tied with just asking. Next we test the harder case, where what the work needs is missing.</p>
+        <a href="/journal/felix-prompt-tested/">The stricter test</a>
         <a href="/research/">Every prompt, score and reason</a>
       </div>
       <table>
-        <caption class="sr">Average blind-test scores out of 5</caption>
+        <caption class="sr">First blind test: average scores of the rewritten prompts, out of 5</caption>
         <thead><tr><th scope="col">Average, out of 5</th><th scope="col">No skill</th><th scope="col"><span class="long">deeper </span>1.0</th><th scope="col" class="v11">deeper 1.1</th></tr></thead>
         <tbody>
           {averages2.map((a) => (
@@ -74,7 +75,7 @@ const questions = [
       </div>
       <div class="updates" id="updates">
         <h3>Hear when it changes.</h3>
-        <p>Each version is tested blind before it ships. Get the new skill and the scores when they land.</p>
+        <p>Each version is tested blind, and we publish the result whether we win or not. Get the new skill and the scores when they land.</p>
         <Subscribe />
         <p class="team">Rolling deeper out to a team? <a href="mailto:hello@deeper.tools?subject=deeper%20for%20a%20team">Tell us what you need</a>.</p>
       </div>

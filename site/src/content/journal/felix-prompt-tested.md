@@ -1,6 +1,6 @@
 ---
 title: "We tested our own tool. It tied with just asking."
-description: "A horse that could count, a judge who changed his mind, and 32 answers scored blind. Felix's prompt tied with just asking. So did ours."
+description: "A horse that could count, a judge who changed his mind, and 32 answers scored blind. On four easy tasks where the AI already had everything, Felix's prompt and ours tied with just asking. The harder test is next."
 date: "2026-11-12"
 order: 3
 minutes: 9
@@ -107,6 +107,8 @@ Two judges marked all 32, one Claude model and one GPT model, from two different
 </tbody>
 </table>
 
+A tie by the rule we set in advance: a gap under one action out of six doesn't count.
+
 Nobody. On these four tasks, no way of asking beat any other. <!-- J1 --> Felix's prompt and deeper tied, 0.12 actions apart. <!-- J2 --> Both tied with just asking. "Act as an expert" topped the table by a hair that doesn't count. The two judges, from two different companies, agreed on 97.4% of 192 scores. <!-- J3 -->
 
 I'm going to be honest about how I read that table the first time. Like a man checking lottery numbers. My eyes went straight to the bottom row. Our tool. Last. By the rule we set in advance, a tie. Emotionally? Last.
@@ -180,8 +182,10 @@ Here's the serious part.
 
 On these four tasks, with the material in hand, the model already did nearly everything on our checklists. Adding a step that rewrites your request didn't add anything we could count. Not Felix's version. Not ours. That's the finding, and I'd rather tell you that than sell you a horse.
 
-If deeper earns its place, it'll be on harder jobs. The ones where you haven't gathered what the work needs yet, and something has to tell you what to go and get. That's the next test. We'll lock the room the same way, and we'll publish it whatever it says.
+If deeper earns its place, it'll be on harder jobs. The ones where you haven't gathered what the work needs yet, and something has to tell you what to go and get. That's the next test. We'll lock the room the same way, and we'll publish it whatever it says. [Get an email when it lands](/#updates). Or try the four questions yourself in any chat app, [no install needed](/start/#chat).
 
 Hans the horse, by the way, was never a fraud. Nobody was cheating. Everyone around him wanted the answer to be yes so badly that they leaned in without knowing it. That's the trap. Not lying. Leaning.
 
 So read the files. Every answer, every score, every judge's reason is in there. Lean in all you like. We took the fingerprints before we looked.
+
+*Updated 14 November 2026: the summary now says which tasks the test covered, with a line under the table on how a tie is called, and a link to hear about the next test. The results haven't changed.*
