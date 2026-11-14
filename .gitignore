@@ -14,3 +14,6 @@ site/src/assets/journal/
 # The public study keeps ids, ratings, dates and codes only (data/sample-ids.json).
 examples/raw/journal-complaints/data/reviews.json
 examples/raw/journal-complaints/data/samples.json
+
+# GitHub traffic snapshots (scripts/traffic-snapshot.sh): kept in the private repo, not published.
+data/traffic.csv
