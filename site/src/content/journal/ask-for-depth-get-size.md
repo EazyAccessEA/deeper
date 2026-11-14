@@ -67,6 +67,8 @@ Later we counted it properly, in a blind test where a judge listed every extra t
 
 So in that pass, deeper's first version added about as many extras as no skill at all, 3.6 against 3.2, a gap inside the noise. <!-- D7 --> The tool built to go deeper stayed no smaller than not using it. That's like hiring a personal trainer and weighing exactly the same. You'd want a word.
 
+<!-- block:extras -->
+
 ## This is an old problem with new clothes
 
 People were overdoing work long before computers.
@@ -126,6 +128,8 @@ Within that pass, the final version kept to scope better than no skill and bette
 Now here's where I'd love to stop. Fix found, table drawn, everyone go home.
 
 Except we judged that same final text again. Same words, letter for letter, in a new pass with other versions sitting beside it. Scope came back 3.0, not 4.0. Extras came back 4.2 per task, not 1.8. <!-- D14 -->
+
+<!-- block:twopasses -->
 
 Same words. Different day. Different number. It's like weighing yourself in the morning and again at night. The scale tells you a different story, and neither one is lying exactly. They just aren't telling you the same thing.
 

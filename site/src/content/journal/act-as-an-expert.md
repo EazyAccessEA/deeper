@@ -91,6 +91,8 @@ We tried it ourselves. Four everyday tasks: feedback on a CV, rent or buy a flat
 
 And the spell? Did fine. It scored 6.00 actions out of 6. The plain request got 5.81. Our own tool got 5.56. None of those gaps was big enough to count. <!-- J1 --> All four came out level. The persona just happened to land on top. On these tasks, "act as an expert" didn't hurt one bit.
 
+<!-- block:arms -->
+
 I want to be honest about that, because it's not the story I expected to tell. I built a tool on the idea that the job title is the weak way to ask. And on our four tasks, the job title landed on top, by a margin too small to count.
 
 Here's how one of those persona answers opened, replying to Dana, our made-up customer whose desk came late and broken:
@@ -107,6 +109,8 @@ Here's how one of those persona answers opened, replying to Dana, our made-up cu
 But look at what every answer had. Every single way of asking came with the full material. The CV and the job advert. The mortgage offer and the rent. The order record and the refund policy.
 
 And every answer did nearly everything on the list. 20 of the 24 actions were done by every answer, whoever was asking and however. <!-- J4 --> Every one of them worked out the monthly mortgage payment, whatever the wording. <!-- J7 -->
+
+<!-- block:ceiling -->
 
 So here's what I think was going on. The spell didn't do the work. The groceries did the work. Hand a good cook the groceries and they'll make dinner, whether you call them "chef" or "mate". We never tested what happens when you call them chef and hand them an empty bag. We should. We haven't.
 

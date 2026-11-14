@@ -4,6 +4,7 @@ description: "A horse that could count, a judge who changed his mind, and 32 ans
 date: "2026-11-12"
 order: 3
 minutes: 9
+dateline: ["Berlin", "early 1900s"]
 lead:
   file: "chalkboard.jpg"
   alt: "Maths formulas written in chalk on a black chalkboard."
@@ -118,6 +119,8 @@ The test was too easy.
 
 There's a name for this. A ceiling effect: when a test is so easy that nearly everyone hits the top, it can't tell the strong from the stronger. <!-- O10 --> Of the 24 actions on our lists, 20 were done by every single answer, under both judges. <!-- J4 -->
 
+<!-- block:ceiling -->
+
 Give a strong model the CV, the advert, the mortgage offer, the order record, and it does the work. Every rent answer worked out the monthly payment. Every Downloads answer found the duplicate files. However you asked. Polite. Plain. Dressed up as an expert. Run through a four-step depth ritual. Didn't matter. It's like handing a builder the bricks, the plans and the cement, then arguing about whether to call him sir. He's going to build the wall.
 
 So the honest claim is small. No gain on these tasks. It isn't "no gain anywhere". A harder task, or one where the stuff you need is missing, might come out a different way. We haven't run that. I'm not going to guess.
@@ -158,6 +161,8 @@ Here's my hunch, from a handful of answers. A prompt that keeps asking "what's m
 ## About the judges
 
 Felix warns against asking a model to judge its own work. <!-- F3 --> Fair. Our writer and one of our judges are both Claude models. So we brought a second judge from another company.
+
+<!-- block:judges -->
 
 Does that fix it? Partly. Research from 2025 found that on one leaderboard dataset, when two models both got a question wrong, they picked the same wrong answer 60% of the time. <!-- S8 --> Two judges can be wrong together. They can share a blind spot the way two friends share a bad habit.
 
