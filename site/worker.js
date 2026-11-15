@@ -12,7 +12,7 @@ const JOURNAL = /^\/journal\/([a-z0-9-]{1,80}\/)?$/; // the index and every arti
 const BOT = /bot|crawl|spider|slurp|headless|preview|monitor/i;
 // ?ref= values counted per channel (marketing/social/README.md "The goal"); anything else counts as "" (no ref).
 // "test" is for checking links by hand and is left out of every count.
-const REFS = new Set(["tiktok", "youtube", "instagram", "facebook", "bluesky", "x", "linkedin", "github", "test"]);
+const REFS = new Set(["tiktok", "youtube", "instagram", "facebook", "threads", "bluesky", "x", "linkedin", "github", "test"]);
 
 export default {
   async fetch(request, env) {
